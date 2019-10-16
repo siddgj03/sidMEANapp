@@ -1,0 +1,808 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_OPMSLifecycle" path="/shared/Publish/OPS_SSD/vp_OPMSLifecycle" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Product_Type_Weight_Group" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Type_Weight_Code" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="19" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="HAF_Exclusion_Code" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="16"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="HAF_Exclusion_Account_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Premium_Label" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Premium_Code" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RPP_Whitelist_Exclusion_Flag" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="16"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RPP_Whitelist_Account_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Self_Labelling_Exclusion_Flag" nullable="true">
+      <datatype type="STRING" minLength="27" maxLength="27"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Self_Labelling_Exclusion_Account_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Year" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="22" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Year_And_Quarter" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="25" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Year_And_Month" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="36"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Year_And_Week" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="46" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Calc_Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Day_Name" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Date" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Day_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Year_And_Quarter" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Year_And_Month" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="37"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Year_And_Week" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Day_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="16"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Day_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Calc_Delivery_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Date" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_BU_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_BU_Region_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Area_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Product_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="17" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CIT_Con_Indicator" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="18" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Source_Type_Code" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Source_Code_Group" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Source_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_BU_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_BU_Region_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Area_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Directs_Exclusion_Code" nullable="true">
+      <datatype type="STRING" minLength="24" maxLength="24"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Directs_Account_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hazardous_Indicator" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Trade_Type Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Controlled" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WWTT_Value" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Sub_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Status_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Damaged_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_DUC_Image" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_POD_Image" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="On_Time_POD_Input" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Signature" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Collection_Scan" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Inbound_Scan" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Outbound_Scan" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Inbound_Scan" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dest_Depot_Outbound_Scan" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Check_Volume_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Piece_Volume_Checked_Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Check_Weight_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Piece_Weight_Checked_Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pre_Delivery_Audit" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POD_Image_Processed_Group" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POD_Image_Valid_Group" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quality_Runsheet_Crop_Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Delivery_Partner_Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Road_Parent" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Road_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Cons" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Actual_Pieces" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Con_Pieces" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Piece_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Piece_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Piece_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Piece_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/OPMSLifeCycle/vc_AllTransactions" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_CheckVolume" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_CheckWeight" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ConPresetNet" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ConSourceCode" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_CusDirectFeed" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_CustomCntrl" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DUCImage" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DelPartners" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DeliveryOnTime" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DeliveryPerfectCond" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DestInboundScan" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DestOutboundScan" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DestinationDepots" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Division" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DocNonDoc" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_HAF" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OrigCollectionScan" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OriginDepots" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OriginInboundScan" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OriginOutboundScan" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PACSImage" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PODImage" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PODInput" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PODReadable" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PreDeliveryAudit" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Premium" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_RPPWhiteList" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_SelfLabelling" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Signature" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_TradeType" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_WWTTValue" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_LifecycleCollectionDates" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_LifecycleDeliveryDates" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_DocNonDoc.ProductTypeWeightGroupLabel Product_Type_Weight_Group, 
+    COALESCE(vc_DocNonDoc.ProductTypeWeightLabel, &apos;No Data&apos;) Product_Type_Weight_Code, 
+    vc_HAF.HAF_Exclusion_Label HAF_Exclusion_Code, 
+    vc_HAF.HAF_Exclusion_Account_Code HAF_Exclusion_Account_Code, 
+    vc_Premium.TotalPremiumLabel Total_Premium_Label, 
+    vc_Premium.PremiumLabel Premium_Code, 
+    vc_RPPWhiteList.RPP_Whitelist_Exclusion_Label RPP_Whitelist_Exclusion_Flag, 
+    vc_RPPWhiteList.RPP_Whitelist_Account_Code RPP_Whitelist_Account_Code, 
+    vc_SelfLabelling.Self_Labelling_Exclusion_Label Self_Labelling_Exclusion_Flag, 
+    vc_SelfLabelling.Self_Labelling_Exclusion_Account_Code Self_Labelling_Exclusion_Account_Code, 
+    vc_CollectionDates.ConCollectionYearLabel Con_Collection_Year, 
+    vc_CollectionDates.ConCollectionQuarterLabel Con_Collection_Year_And_Quarter, 
+    vc_CollectionDates.ConCollectionMonthLabel Con_Collection_Year_And_Month, 
+    vc_CollectionDates.ConCollectionWeekLabel Con_Collection_Year_And_Week, 
+    vc_CollectionDates.ConCollectionDate Calc_Collection_Date, 	 
+    vc_CollectionDates.ConCollectionDayName Con_Collection_Day_Name,
+    vc_AllTransactions.Con_Collection_Date Con_Collection_Date,  
+    vc_CollectionDates.ConCollectionDayNumber Con_Collection_Day_Number, 
+    vc_DeliveryDates.Con_Delivery_Year_Label Con_Delivery_Year, 
+    vc_DeliveryDates.Con_Delivery_Quarter_Label Con_Delivery_Year_And_Quarter, 
+    vc_DeliveryDates.Con_Delivery_Month_Label Con_Delivery_Year_And_Month, 
+    vc_DeliveryDates.Con_Delivery_Week_Label Con_Delivery_Year_And_Week, 
+    vc_DeliveryDates.Con_Delivery_Day_Name Con_Delivery_Day_Name,
+    vc_DeliveryDates.Con_Delivery_Day_Number Con_Delivery_Day_Number,  
+    vc_DeliveryDates.Con_Delivery_Date Calc_Delivery_Date,
+    vc_AllTransactions.Con_Delivery_Date Con_Delivery_Date,  
+    vc_OriginDepots.OriginBULabel Origin_BU_Code, 
+    vc_OriginDepots.OriginBURegionLabel Origin_BU_Region_Code, 
+    vc_OriginDepots.OriginCountryGroupLabel Origin_Country_Group_Code, 
+    vc_OriginDepots.OriginCountryLabel Origin_Country_Code, 
+    vc_OriginDepots.OriginAreaLabel Origin_Area_Code, 
+    vc_AllTransactions.Origin_Depot_Code Origin_Depot_Code, 
+    vc_Division.ActualProductGroupLabel Actual_Product_Group_Code, 
+    vc_Division.DivisionCode Division_Code, 
+    vc_Division.ActualProductCode Actual_Product_Code, 
+    vc_ConSourceCode.Daily_Con_CIT_Label CIT_Con_Indicator, 
+    vc_ConSourceCode.Con_Source_Type_Code Con_Source_Type_Code, 
+    vc_ConSourceCode.Con_Source_Code_Group Con_Source_Code_Group, 
+    vc_ConSourceCode.Con_Source_Description Con_Source_Description, 
+    vc_DestinationDepots.DestinationBULabel Destination_BU_Code, 
+    vc_DestinationDepots.DestinationBURegionLabel Destination_BU_Region_Code, 
+    vc_DestinationDepots.DestinationCountryGroupLabel Destination_Country_Group_Code, 
+    vc_DestinationDepots.DestinationCountryLabel Destination_Country_Code, 
+    vc_DestinationDepots.DestinationAreaLabel Destination_Area_Code, 
+    vc_DestinationDepots.DestinationDepotLabel Destination_Depot_Code, 
+    vc_CusDirectFeed.Direct_Feed_Exclusion_Label Customer_Directs_Exclusion_Code, 
+    vc_CusDirectFeed.Direct_Feed_Account_Code Customer_Directs_Account_Code, 
+    vc_AllTransactions.Hazardous_Label Hazardous_Indicator, 
+    vc_TradeType.Trade_Type_Label &quot;Con_Trade_Type Code&quot;, 
+    COALESCE(vc_CustomControl.Customs_Controlled_Label, &apos;No Data&apos;) Customs_Controlled, 
+    COALESCE(vs_WTTValue.WWTT_Value_Label, &apos;No Flag&apos;) WWTT_Value, 
+    vc_DeliveryOnTime.Daily_Con_Delivery_Group_Label Con_Delivery_Group_Indicator, 
+    vc_DeliveryOnTime.Daily_Con_Delivery_Sub_Group_Label Con_Delivery_Sub_Group_Indicator, 
+    vc_DeliveryOnTime.Daily_Con_Delivery_Status_Label Con_Delivery_Status_Indicator, 
+    vc_DeliveryPerfectCond.Daily_Con_Damaged_Label Con_Damaged_Indicator, 
+    vc_DUCImage.Daily_Con_DUC_Image_Label Con_DUC_Image, 
+    vc_PACSImage.Daily_Con_PACS_Image_Label Con_PACS_Image, 
+    vc_PODImage.Daily_Con_POD_Image_Label Con_POD_Image, 
+    vc_LifecycledlyFixedPODInput.Con_On_Time_POD_Label On_Time_POD_Input, 
+    vc_Signature.Daily_Con_Signatory_Label Con_Signature, 
+    vc_OrigCollectionScan.Daily_Con_Origin_Collection_Scan_Label Origin_Depot_Collection_Scan, 
+    vc_OriginInboundScan.Daily_Con_Origin_Inbound_Scan_Label Origin_Depot_Inbound_Scan, 
+    vc_OriginOutboundScan.Daily_Con_Origin_Outbound_Scan_Label Origin_Depot_Outbound_Scan, 
+    vc_DestInboundScan.Daily_Con_Destination_Inbound_Scan_Label Destination_Depot_Inbound_Scan, 
+    vc_DestOutboundScan.Daily_Con_Destination_Outbound_Scan_Label Dest_Depot_Outbound_Scan, 
+    vc_CheckVolume.Con_Check_Volume_Label Con_Check_Volume_Indicator, 
+    vc_CheckVolume.Con_Piece_Volume_Checked_Label Con_Piece_Volume_Checked_Code, 
+    vc_CheckWeight.Con_Check_Weight_Label Con_Check_Weight_Indicator, 
+    vc_CheckWeight.Con_Piece_Weight_Checked_Label Con_Piece_Weight_Checked_Code, 
+    vc_PreDeliveryAudit.Daily_Con_Pre_Delivery_Audit_Label Pre_Delivery_Audit, 
+    vc_PODReadable.POD_Image_Processed_Group POD_Image_Processed_Group, 
+    vc_PODReadable.POD_Image_Valid_Group POD_Image_Valid_Group, 
+    vc_PODReadable.Quality_Runsheet_Crop_Label Quality_Runsheet_Crop_Code, 
+    vc_DelPartners.Delivery_Partner_Label Delivery_Partner_Code, 
+    vc_ConPresetNet.Air_Road_Parent Air_Road_Parent, 
+    vc_ConPresetNet.Air_Road_Label Air_Road_Indicator, 
+    vc_AllTransactions.Number_of_Cons Number_of_Cons, 
+    vc_AllTransactions.Number_of_Actual_Pieces Number_of_Actual_Pieces, 
+    vc_AllTransactions.Number_of_Con_Pieces Number_of_Con_Pieces, 
+    vc_AllTransactions.Piece_Weight Piece_Weight, 
+    vc_AllTransactions.Actual_Piece_Weight Actual_Piece_Weight, 
+    vc_AllTransactions.Contractual_Piece_Weight Contractual_Piece_Weight, 
+    vc_AllTransactions.Piece_Volume Piece_Volume, 
+    vc_AllTransactions.Actual_Piece_Volume Actual_Piece_Volume, 
+    vc_AllTransactions.Contractual_Piece_Volume Contractual_Piece_Volume
+FROM      
+    /shared/Core/Operations/OPS_SSD/OPMSLifeCycle/vc_AllTransactions vc_AllTransactions LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DocNonDoc vc_DocNonDoc
+    ON vc_AllTransactions.Product_Type_Weight_Code = vc_DocNonDoc.ProductTypeWeightCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_HAF vc_HAF
+    ON vc_AllTransactions.HAF_Exclusion_Account_Code = vc_HAF.HAF_Exclusion_Account_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Premium vc_Premium
+    ON vc_AllTransactions.Premium_Code = vc_Premium.PremiumCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_RPPWhiteList vc_RPPWhiteList
+    ON vc_AllTransactions.RPP_Whitelist_Account_Code = vc_RPPWhiteList.RPP_Whitelist_Account_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_SelfLabelling vc_SelfLabelling
+    ON vc_AllTransactions.Self_Labelling_Exclusion_Account_Code = vc_SelfLabelling.Self_Labelling_Exclusion_Account_Code LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_LifecycleCollectionDates vc_CollectionDates
+    ON vc_AllTransactions.Con_Collection_Date = vc_CollectionDates.ConCollectionDate LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_LifecycleDeliveryDates vc_DeliveryDates
+    ON vc_AllTransactions.Con_Delivery_Date = vc_DeliveryDates.Con_Delivery_Date LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OriginDepots vc_OriginDepots
+    ON vc_AllTransactions.Origin_Depot_Code = vc_OriginDepots.OriginDepotCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Division vc_Division
+    ON vc_AllTransactions.Unique_DivProd_Id = vc_Division.UniqueDivProdId LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ConSourceCode vc_ConSourceCode
+    ON vc_AllTransactions.Con_Source_Code = vc_ConSourceCode.Con_Source_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DestinationDepots vc_DestinationDepots
+    ON vc_AllTransactions.Destination_Depot_Code = vc_DestinationDepots.DestinationDepotCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_CusDirectFeed vc_CusDirectFeed
+    ON vc_AllTransactions.Direct_Feed_Account_Code = vc_CusDirectFeed.Direct_Feed_Account_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_CheckVolume vc_CheckVolume
+    ON vc_AllTransactions.Con_Piece_Volume_Checked_Code = vc_CheckVolume.Con_Piece_Volume_Checked_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_CheckWeight vc_CheckWeight
+    ON vc_AllTransactions.Con_Piece_Weight_Checked_Code = vc_CheckWeight.Con_Piece_Weight_Checked_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ConPresetNet vc_ConPresetNet
+    ON vc_AllTransactions.Air_Road_Indicator = vc_ConPresetNet.Air_Road_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_CustomCntrl vc_CustomControl
+    ON vc_AllTransactions.Custom_Controlled_Indicator = vc_CustomControl.Customs_Controlled_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DeliveryOnTime vc_DeliveryOnTime
+    ON vc_AllTransactions.Daily_Con_Delivery_Status_Indicator = vc_DeliveryOnTime.Daily_Con_Delivery_Status_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DelPartners vc_DelPartners
+    ON vc_AllTransactions.Delivery_Partner_Code = vc_DelPartners.Delivery_Partner_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DeliveryPerfectCond vc_DeliveryPerfectCond
+    ON vc_AllTransactions.Daily_Con_Damaged_Indicator = vc_DeliveryPerfectCond.Daily_Con_Damaged_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DestInboundScan vc_DestInboundScan
+    ON vc_AllTransactions.Daily_Con_Destination_Inbound_Scan_Indicator = vc_DestInboundScan.Daily_Con_Destination_Inbound_Scan_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DestOutboundScan vc_DestOutboundScan
+    ON vc_AllTransactions.Daily_Con_Destination_Outbound_Scan_Indicator = vc_DestOutboundScan.Daily_Con_Destination_Outbound_Scan_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DUCImage vc_DUCImage
+    ON vc_AllTransactions.Daily_Con_DUC_Image_Indicator = vc_DUCImage.Daily_Con_DUC_Image_Indicator  LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OrigCollectionScan vc_OrigCollectionScan
+    ON vc_AllTransactions.Daily_Con_Origin_Collection_Scan_Indicator = vc_OrigCollectionScan.Daily_Con_Origin_Collection_Scan_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OriginInboundScan vc_OriginInboundScan
+    ON vc_AllTransactions.Daily_Con_Origin_Inbound_Scan_Indicator = vc_OriginInboundScan.Daily_Con_Origin_Inbound_Scan_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OriginOutboundScan vc_OriginOutboundScan
+    ON vc_AllTransactions.Daily_Con_Origin_Outbound_Scan_Indicator = vc_OriginOutboundScan.Daily_Con_Origin_Outbound_Scan_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PACSImage vc_PACSImage
+    ON vc_AllTransactions.Daily_Con_PACS_Image_Indicator = vc_PACSImage.Daily_Con_PACS_Image_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PODImage vc_PODImage
+    ON vc_AllTransactions.Daily_Con_POD_Image_Indicator = vc_PODImage.Daily_Con_POD_Image_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PODReadable vc_PODReadable
+    ON vc_AllTransactions.Quality_Runsheet_Crop_Code = vc_PODReadable.Quality_Runsheet_Crop_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PreDeliveryAudit vc_PreDeliveryAudit
+    ON vc_AllTransactions.Daily_Con_Pre_Delivery_Audit_Indicator = vc_PreDeliveryAudit.Daily_Con_Pre_Delivery_Audit_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Signature vc_Signature
+    ON vc_AllTransactions.Daily_Con_Signatory_Indicator = vc_Signature.Daily_Con_Signatory_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_TradeType vc_TradeType
+    ON vc_AllTransactions.Trade_Type_Code = vc_TradeType.Trade_Type_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_WWTTValue vs_WTTValue
+    ON vc_AllTransactions.WWTT_Value_Code = vs_WTTValue.WWTT_Value_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PODInput vc_LifecycledlyFixedPODInput
+    ON vc_AllTransactions.Daily_Con_On_Time_POD_Indicator = vc_LifecycledlyFixedPODInput.Con_On_Time_POD_Indicator</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Cache_DB/TDVDEV_CACHE/TDVDEVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1557123048761</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20167</attribute>
+  <attribute name="creatorUserName" type="STRING">o362wtv</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">32</attribute>
+  <attribute name="impactMessage" type="STRING">Invalid table &apos;/shared/Core/Operations/OPS_SSD/OPMSLifeCycle/vc_AllTransactions&apos;.  On line 88,
+    column 5.  [parser-2906435]</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567057335995</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20167</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING">/sharedOPMS_Lifecycle_Security/OPMS_Lifecycle</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/OPS_SSD/vp_OPMSLifecycle</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557123048761</attribute>
+</metadata>

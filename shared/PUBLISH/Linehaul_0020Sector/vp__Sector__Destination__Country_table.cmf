@@ -1,0 +1,64 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Sector_Destination_Country" path="/shared/Publish/Linehaul Sector/vp_Sector_Destination_Country" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="destination" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="depo" nullable="true">
+      <datatype type="STRING" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Linehaul Sector/vc_Depot_v01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_DEPOT_CD">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/Linehaul Sector/vc_Dest_Country_Network_Groupset" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ENT_ID">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select distinct 
+BUL_DEPOT_CD as destination,
+(coalesce(trim(CM_DEPOT_V01.COU_ID), trim(CM_COUNTRY_NTWRK_GROUPSET_V01.COU_ENT_ID), &apos;&apos;))as depo 
+ from  /shared/Core/Finance/&quot;Linehaul Sector&quot;/vc_Depot_v01 CM_DEPOT_V01
+left outer join /shared/Core/Finance/&quot;Linehaul Sector&quot;/vc_Dest_Country_Network_Groupset CM_COUNTRY_NTWRK_GROUPSET_V01
+on  CM_DEPOT_V01.COU_ID=  CM_COUNTRY_NTWRK_GROUPSET_V01.COU_ENT_ID</attribute>
+  <attribute name="creationDate" type="LONG">1564718426711</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566300372064</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564718426711</attribute>
+</metadata>

@@ -1,0 +1,111 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Depot_v01" path="/shared/Core/Finance/Linehaul Sector/vc_Depot_v01" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="BUL_DEPOT_CD" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ID" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/LinehaulSector/PRODCOSTMDLG_P/CM_DEPOT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_DEPOT_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_TAB_VER_FR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUL_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUL_TAB_VER_TO_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_SAP_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_DEPOT_CD_A_INB" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOT_ID_AIR_INB" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_AIR_INB_DI">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_DEPOT_CD_RDINB" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOT_ID_RD_INB" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_RD_INB_DI">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_DEPOT_CD_A_OUT" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOT_ID_AIR_OUT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_AIR_OUT_DI">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_DEPOT_CD_R_OUT" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOT_ID_RD_OUT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_RD_OUT_DI" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_PU_PROVIDER_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DL_PROVIDER_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select distinct 
+trim(CM_DEPOT_V01.BUL_DEPOT_CD) as BUL_DEPOT_CD,
+trim(CM_DEPOT_V01.COU_ID) as COU_ID
+ from  /shared/Source/EDW/LinehaulSector/PRODCOSTMDLG_P/CM_DEPOT_V01
+ WHERE trim(CM_DEPOT_V01.BUL_LATESTVERSN_IN) =&apos;Y&apos;;
+</attribute>
+  <attribute name="creationDate" type="LONG">1566299030500</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">143926</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1569215671493</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">143926</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566299030500</attribute>
+</metadata>

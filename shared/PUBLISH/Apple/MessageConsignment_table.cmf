@@ -1,0 +1,127 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="MessageConsignment" path="/shared/Publish/Apple/MessageConsignment" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CON_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EDW_SENDER_CD" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EDW_DELIVERY_NR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EDW_WEB_ORDER_NR" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Apple_Merchant_Identifier" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Record_Count" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="C5" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Order_Index" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/Apple/PRODCAMGAM_P/MessageConsignment_FV01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="EDW_BUILD_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CON_ID" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="EDW_SENDER_CD" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="EDW_DELIVERY_NR">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="0"/>
+      </element>
+      <element name="EDW_WEB_ORDER_NR" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">/* select	
+MessageConsignment.CON_SRKY_ID,
+MessageConsignment.EDW_SENDER_CD,
+MessageConsignment.EDW_DELIVERY_NR,
+MessageConsignment.EDW_WEB_ORDER_NR,
+Total_Record_Count,
+C2 as Apple_Merchant_Identifier,
+C5,
+sum(C6) over (partition by EDW_WEB_ORDER_NR,EDW_DELIVERY_NR,C2,EDW_SENDER_CD) Order_Index 
+ from (*/
+SELECT 
+MessageConsignment_FV01.CON_SRKY_ID,
+MessageConsignment_FV01.EDW_SENDER_CD,
+MessageConsignment_FV01.EDW_DELIVERY_NR,
+MessageConsignment_FV01.EDW_WEB_ORDER_NR,
+
+case	 when	MessageConsignment_FV01.EDW_SENDER_CD = &apos;WWRTNT&apos; then &apos;TNTR&apos;  else	&apos;&apos; end AS Apple_Merchant_Identifier,
+sum((case	 when	&apos;COD&apos; = &apos;COD&apos; then 1 else	0 end	)) over () AS Total_Record_Count,
+sum((case	 when	&apos;COD&apos; = &apos;POS&apos; then 1 else	0 end	)) over (partition by MessageConsignment_FV01.EDW_WEB_ORDER_NR, 
+						MessageConsignment_FV01.EDW_DELIVERY_NR,
+						(case	 when	MessageConsignment_FV01.EDW_SENDER_CD = &apos;WWRTNT&apos; then &apos;TNTR&apos; else	&apos;&apos; end	), MessageConsignment_FV01.EDW_SENDER_CD) AS C5, 
+count(1) over (order by 100 asc  rows unbounded preceding) Order_Index
+FROM /shared/Source/EDW/Apple/PRODCAMGAM_P/MessageConsignment_FV01
+ MessageConsignment_FV01
+--)MessageConsignment</attribute>
+  <attribute name="creationDate" type="LONG">1567749046776</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567762503828</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567749046776</attribute>
+</metadata>

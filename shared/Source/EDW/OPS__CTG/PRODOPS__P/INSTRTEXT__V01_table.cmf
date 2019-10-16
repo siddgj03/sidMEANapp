@@ -1,0 +1,58 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="INSTRTEXT_V01" path="/shared/Source/EDW/OPS_CTG/PRODOPS_P/INSTRTEXT_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CON_SRKY_ID" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="w256kvj" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_INSTR_TYPE_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="w256kvj" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_INSTRLN_SEQ_NR" nullable="false">
+      <datatype name="byteint" extendedName="byteint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-128" maxValue="127"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="w256kvj" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_INSTR_TX" nullable="true">
+      <datatype name="varchar" extendedName="varchar(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="w256kvj" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="w256kvj" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1570094809147</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">110364</attribute>
+  <attribute name="creatorUserName" type="STRING">w256kvj</attribute>
+  <attribute name="datatype_format" type="STRING">X(60)</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1570165729566</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">110364</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">w256kvj</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1570094809147</attribute>
+</metadata>

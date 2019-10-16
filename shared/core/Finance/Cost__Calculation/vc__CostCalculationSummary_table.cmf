@@ -1,0 +1,610 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_CostCalculationSummary" path="/shared/Core/Finance/Cost_Calculation/vc_CostCalculationSummary" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Run_Number_CCS" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Costed_Country_Code_CCS" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CTM_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Description_CCS" nullable="true">
+      <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Code_CCS" nullable="true">
+      <datatype type="STRING" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Direction_Code__CCS" nullable="true">
+      <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Direction_Description_CCS" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Driver_Description_CCS" nullable="true">
+      <datatype type="STRING" maxLength="50" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Parent_Cost_Item_Code_CCS" nullable="true">
+      <datatype type="STRING" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CTM_SRKY_ID_ITEM" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Parent_Cost_Item_Description_CCS" nullable="true">
+      <datatype type="STRING" maxLength="50" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="International_Domestic_CCS" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Driver_Volume" nullable="true">
+      <datatype type="FLOAT" minValue="1.1754943508222875E-38" maxValue="3.4028234663852886E38"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Allocated_Cost" nullable="true">
+      <datatype type="FLOAT" minValue="1.1754943508222875E-38" maxValue="3.4028234663852886E38"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Weighted_Driver_Volume_CCS" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_COSTELEMENT_RPT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_ID" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="INT_DRIVER_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_COST_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_ALLOC_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_COU_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_DEP_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_HUB_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_ACC_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_SRKY_ID_RELTD">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_INB_OUT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_COST_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_CP_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_CP_CAL_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_SRKY_ID_GRPLVL">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_ODEP_DDEP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_OHUB_DDEP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_OEBODP_OHUB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_DEBODP_DHUB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_FAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CMV_MARGIN_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="GCX_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CTM_MTP_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_FTP_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_LH_SEX_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_LH_HUB_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_RUN_TYPE" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_COU_LEVEL_REP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_DEP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_RUN_TYPE" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFFS_RPT2_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="HUB_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="FCC_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="FCC_DFR_TP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_CT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_DI_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_CS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_DN_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_EU_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_CO_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_HL_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_W2_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_PA_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_TD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_DP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_SP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_WB_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_PP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_PS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_NS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_DZ_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_PZ_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP2_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP3_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP4_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP5_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP6_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP7_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP8_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP9_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_OP10_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_CPS_QT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="FCC_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="FCC_LH_KM">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="FCC_DRIVER_VL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="FCC_WEIGHTING_NR">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+      <element name="FCC_ALLOC_CEK_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="FCC_DFR_GEN1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN2_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN3_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN4_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN5_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN6_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN7_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN8_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN9_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN10_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FCC_DFR_GEN11_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COST_FILE_CITM">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_ID_SEL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRIMARY_DRIVER_SEL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COST_ALLOC_SEL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WEIGHTED_DRVR_SEL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OUP_DEP_OREF_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OUP_DEP_DREF_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OUP_STP_DRIVER_NOEFF">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFF_CODE_RPT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFR_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DFD_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_NM" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DFD_VAL_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DFD_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_RUN_TYPE" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTELEMENT_DESC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_DESCRIPTION">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CTM_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_RUN_TYPE" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTINGRUN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRN_LATESTRUN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_START_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_END_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ACTUALRUN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_NM" nullable="false">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="MRN_DS">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_OUTPUT_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPP_OUTPUT_VER_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID_QCFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTITEM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_CM_UPTS_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTM_CM_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTM_NM" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CTM_DEFINITION_TX" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+   CM_CC_DIFFS_RPT2_V01.MRN_ID	as 	Run_Number_CCS,
+TRIM(CM_CC_DIFFS_RPT2_V01.COU_ID)	as 	Costed_Country_Code_CCS,
+CM_CC_DIFFS_RPT2_V01.CTM_SRKY_ID,
+TRIM(T2.MRN_DS)	as 	Run_Description_CCS,
+TRIM(T4.CTM_ID)	as 	Cost_Item_Code_CCS,
+TRIM(T4.CTM_INB_OUT_CD)	as 	Cost_Item_Direction_Code__CCS,
+case 
+when TRIM(T4.CTM_INB_OUT_CD) = &apos;I&apos; then &apos;Inbound&apos;
+when TRIM(T4.CTM_INB_OUT_CD) = &apos;O&apos; then &apos;Outbound&apos;
+when TRIM(T4.CTM_INB_OUT_CD) = &apos;V&apos; then &apos;Invoiced&apos;
+else &apos;Not Inbound/Outbound&apos; end  as 	Cost_Item_Direction_Description_CCS,
+TRIM(T9.CTM_DESCRIPTION)	as 	Cost_Driver_Description_CCS,
+TRIM(T10.CTM_ID)	as 	Parent_Cost_Item_Code_CCS,
+T11.CTM_SRKY_ID	as 	CTM_SRKY_ID_ITEM,
+TRIM(T11.CTM_NM) 	as 	Parent_Cost_Item_Description_CCS,
+TRIM(T23.DFD_NM)	as 	International_Domestic_CCS,
+cast(case when (TRIM(T4.INT_DRIVER_ID) in (&apos;PU&apos;,&apos;DL&apos;)) then CM_CC_DIFFS_RPT2_V01.OUP_STP_DRIVER_NOEFF
+else CM_CC_DIFFS_RPT2_V01.FCC_DRIVER_VL
+end as float)  as  Driver_Volume,
+cast(CM_CC_DIFFS_RPT2_V01.FCC_ALLOC_CEK_AM as float)	as 	Allocated_Cost,   
+cast(case when TRIM(T4.INT_DRIVER_ID) in (&apos;PU&apos;,&apos;DL&apos;) then CM_CC_DIFFS_RPT2_V01.OUP_STP_DRIVER_NOEFF
+else CM_CC_DIFFS_RPT2_V01.FCC_DRIVER_VL  end as float) *
+case when TRIM(T4.INT_DRIVER_ID) = &apos;DL&apos; then 
+(CM_CC_DIFFS_RPT2_V01.FCC_WEIGHTING_NR * 
+(1 + 
+((((select sum(total) from (select sum(CM_CC_DIFFS_RPT2_V01.FCC_CPS_QT) as total, FCC_WEIGHTING_NR from
+/shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFFS_RPT2_V01 CM_CC_DIFFS_RPT2_V01
+group by FCC_WEIGHTING_NR) a)
+
+ / SUM(cast(case when (TRIM(T4.INT_DRIVER_ID) in (&apos;PU&apos;,&apos;DL&apos;)) then CM_CC_DIFFS_RPT2_V01.OUP_STP_DRIVER_NOEFF
+else CM_CC_DIFFS_RPT2_V01.FCC_DRIVER_VL
+end as float))  over (partition by CM_CC_DIFFS_RPT2_V01.FCC_WEIGHTING_NR ))) - 1) * 0.04))
+when TRIM(T4.INT_DRIVER_ID) = &apos;PU&apos; then 
+(CM_CC_DIFFS_RPT2_V01.FCC_WEIGHTING_NR * (1 +
+ (((select sum(total) from (select sum(CM_CC_DIFFS_RPT2_V01.FCC_CPS_QT) as total, FCC_WEIGHTING_NR
+from /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFFS_RPT2_V01 CM_CC_DIFFS_RPT2_V01
+group by FCC_WEIGHTING_NR) a) 
+ 
+ / SUM(cast(case when (TRIM(T4.INT_DRIVER_ID) in (&apos;PU&apos;,&apos;DL&apos;))
+ then CM_CC_DIFFS_RPT2_V01.OUP_STP_DRIVER_NOEFF
+else CM_CC_DIFFS_RPT2_V01.FCC_DRIVER_VL
+end as float))  over (partition by CM_CC_DIFFS_RPT2_V01.FCC_WEIGHTING_NR ))) - 1) * 0.05)
+else CM_CC_DIFFS_RPT2_V01.FCC_WEIGHTING_NR
+end  as  Weighted_Driver_Volume_CCS
+
+from  /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFFS_RPT2_V01 CM_CC_DIFFS_RPT2_V01 
+left join /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 T2 on
+(((CM_CC_DIFFS_RPT2_V01.MRN_ID = T2.MRN_ID) and (TRIM(T2.MRT_ID) = &apos;C&apos;)) and (TRIM(T2.MRN_STATUS_CD) = &apos;C&apos;)) 
+left join  /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_COU_LEVEL_REP_V01 T3 on
+(((CM_CC_DIFFS_RPT2_V01.COU_ID = T3.COU_ID) and (CM_CC_DIFFS_RPT2_V01.MRN_ID = T3.MRN_ID)) and 
+(TRIM(T3.COU_RUN_TYPE) = &apos;C&apos;)) 
+left join /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_COSTELEMENT_RPT_V01   T4 on
+(((CM_CC_DIFFS_RPT2_V01.CTM_SRKY_ID = T4.CTM_SRKY_ID) and (CM_CC_DIFFS_RPT2_V01.MRN_ID = T4.MRN_ID)) 
+and (TRIM(T4.CTM_RUN_TYPE) = &apos;C&apos;))
+left join /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTELEMENT_DESC_V01 T9 on 
+(((CM_CC_DIFFS_RPT2_V01.CTM_SRKY_ID = T9.CTM_SRKY_ID) and (CM_CC_DIFFS_RPT2_V01.MRN_ID = T9.MRN_ID))
+ and (TRIM(T9.CTM_RUN_TYPE) = &apos;C&apos;)) 
+left join  /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_COSTELEMENT_RPT_V01 T10 on
+(((CM_CC_DIFFS_RPT2_V01.COST_FILE_CITM = T10.CTM_SRKY_ID) and (CM_CC_DIFFS_RPT2_V01.MRN_ID = T10.MRN_ID)) 
+and (TRIM(T10.CTM_RUN_TYPE) = &apos;C&apos;)) 
+left join /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_COSTITEM_V01 T11 on 
+(T10.CTM_SRKY_ID = T11.CTM_SRKY_ID)
+left join /shared/Source/EDW/CostCalculation/PRODCOSTMDLG_P/CM_CC_DIFF_CODE_RPT_V01 T23 on 
+((((T23.DFD_ID = CM_CC_DIFFS_RPT2_V01.FCC_DFR_DI_CD) and (TRIM(T23.DFR_ID) = &apos;DI&apos;)) 
+and (T23.MRN_ID = CM_CC_DIFFS_RPT2_V01.MRN_ID)) and (TRIM(T23.DFD_RUN_TYPE) = &apos;C&apos;))</attribute>
+  <attribute name="creationDate" type="LONG">1565183505304</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566382188387</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565183505304</attribute>
+</metadata>

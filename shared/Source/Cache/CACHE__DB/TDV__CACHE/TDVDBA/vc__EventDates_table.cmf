@@ -1,0 +1,121 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_EventDates" path="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_EventDates" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="cachekey" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Year" nullable="true">
+      <datatype name="char" extendedName="char(4)" subType="DATASOURCE_TYPE" type="STRING" minLength="4" maxLength="4"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Year_Labe" nullable="true">
+      <datatype name="char" extendedName="char(7)" subType="DATASOURCE_TYPE" type="STRING" minLength="7" maxLength="7"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Year_Quar" nullable="true">
+      <datatype name="char" extendedName="char(6)" subType="DATASOURCE_TYPE" type="STRING" minLength="6" maxLength="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Quarter_L" nullable="true">
+      <datatype name="char" extendedName="char(10)" subType="DATASOURCE_TYPE" type="STRING" minLength="10" maxLength="10"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Year_Mont" nullable="true">
+      <datatype name="char" extendedName="char(6)" subType="DATASOURCE_TYPE" type="STRING" minLength="6" maxLength="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Month_Lab" nullable="true">
+      <datatype name="char" extendedName="char(11)" subType="DATASOURCE_TYPE" type="STRING" minLength="11" maxLength="11"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Year_Week" nullable="true">
+      <datatype name="char" extendedName="char(6)" subType="DATASOURCE_TYPE" type="STRING" minLength="6" maxLength="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Week_Labe" nullable="true">
+      <datatype name="char" extendedName="char(13)" subType="DATASOURCE_TYPE" type="STRING" minLength="13" maxLength="13"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Day_Numbe" nullable="true">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Day_Name" nullable="true">
+      <datatype name="char" extendedName="char(12)" subType="DATASOURCE_TYPE" type="STRING" minLength="12" maxLength="12"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status_Local_Event_Date" nullable="true">
+      <datatype name="char" extendedName="char(10)" subType="DATASOURCE_TYPE" type="STRING" minLength="10" maxLength="10"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1564641140914</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564641140914</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564641140914</attribute>
+</metadata>

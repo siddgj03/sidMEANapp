@@ -1,0 +1,136 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Tour_Actual_SAP_Vendor" path="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_SAP_Vendor" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Actual_Vendor_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Name" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Address" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Postal_Code" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Town" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_VAT_ID" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Vendor_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Vendor_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/SAP_VENDOR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="SEN_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="SEN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="SEN_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SEN_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SEN_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="SEN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="SEN_ACTIVE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SEN_ADDR_LINE_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="SEN_POSTAL_CD">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="SEN_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="SEN_COUNTRY_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SEN_VAT_ID">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="SEN_UST_ID">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="SEN_CURRENCY_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="SEN_GL_COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+ SEN_ID Actual_Vendor_ID,
+SEN_NM Actual_Vendor_Name,
+SEN_ADDR_LINE_DS Actual_Vendor_Address,
+SEN_POSTAL_CD Actual_Vendor_Postal_Code,
+SEN_TOWN_NM Actual_Vendor_Town,
+SEN_VAT_ID Actual_Vendor_VAT_ID,
+SEN_COUNTRY_CD Vendor_Country_Code,
+SEN_OBJ_ID  Vendor_Object_ID
+
+FROM
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/SAP_VENDOR_V01
+</attribute>
+  <attribute name="creationDate" type="LONG">1562244840310</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562244840310</attribute>
+</metadata>

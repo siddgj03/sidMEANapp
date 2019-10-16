@@ -1,0 +1,375 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Intermodal_Details" path="/shared/Core/Networks/ROCSTotalPackage/vc_Intermodal_Details" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Voucher_Nr" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Sch_Crossing_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Act_Crossing_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Status_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Status_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Financial_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Financial_Status_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Planned_Actual_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Total_Cost" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Sch_Paid_By_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Act_Paid_By_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Remarks" nullable="true">
+      <datatype type="STRING" maxLength="500"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Mov_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Loc_Object_ID_CMBL" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Location_Object_ID_Dest" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Location_Object_ID_Orig" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Status_Resaon_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="TCD_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Financial_Status_Reason_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Reasons" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Reason_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Reason_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Reason_Type_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Language_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/COSTDETAIL_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCD_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TCD_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCD_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCD_DISC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TCD_FIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BAE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_PAY_BP_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCD_PBY_OPR_ACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCD_PBY_OPR_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_PAY_BP" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUP_OBJ_ID_P">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_FOC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/INTERMODAL_UNITUSAGE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="IUE_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="IUE_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="IUE_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_OBJ_ID_IM_ACT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_VOUCHER_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="IUE_PBY_OPR_ACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_ACTCROSSED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="IUE_SCHCROSSED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_OBJ_ID_IM_SCH">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_PBY_OPR_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_CST_OPR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="IUE_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="IUE_FIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_PLN_ACT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_REMARKS_TX">
+        <datatype type="STRING" maxLength="500"/>
+      </element>
+      <element name="IUE_FIN_YRWK_NR">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select T.IUE_VOUCHER_NR Voucher_Nr 
+, T.IUE_SCHCROSSED_TD Sch_Crossing_Date_Time 
+, T.IUE_ACTCROSSED_TD Act_Crossing_Date_Time 
+, T.IUE_STATUS_CD Status_Code 
+, T8.Reason_Description Status_Description 
+, T9.TCD_FIN_STATUS_CD Financial_Status_Code 
+, T10.Reason_Description Financial_Status_Description 
+, T.IUE_PLN_ACT_CD Planned_Actual_Code 
+, T9.CUY_ID_PAY_BP Currency_Code 
+, sum(T9.TCD_PAY_BP_AM) Total_Cost 
+, T.IUE_PBY_OPR_SCH_IN Sch_Paid_By_Indicator 
+, T.IUE_PBY_OPR_ACT_IN Act_Paid_By_Indicator 
+, T.IUE_REMARKS_TX Remarks 
+,T.BUP_OBJ_ID_IM_ACT	Actual_Object_ID
+,T.BUP_OBJ_ID_IM_SCH Scheduled_Object_ID
+,T.MOV_OBJ_ID   as Mov_Object_ID
+
+,T.LOC_OBJ_ID_CMBL Loc_Object_ID_CMBL
+,T.LOC_OBJ_ID_DEST Location_Object_ID_Dest
+,T.LOC_OBJ_ID_ORIG Location_Object_ID_Orig
+,T8.Reason_Code  Status_Resaon_Code
+,T.IUE_OBJ_ID    as Object_ID
+,T9.TCD_OBJ_ID     TCD_Object_ID
+,T10.Reason_Code   Financial_Status_Reason_Code
+
+ from (( (Select Reason_Code,Reason_Description 
+FROM 
+    /shared/Core/Networks/ROCSTotalPackage/vc_Tour_Reasons T8
+where T8.Reason_Type_Code = &apos;MOVST&apos; and upper (T8.Language_ID) = &apos;EN&apos;) T8  
+INNER JOIN 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/INTERMODAL_UNITUSAGE_V01 T 
+on T8.Reason_Code = T.IUE_STATUS_CD) 
+LEFT OUTER JOIN 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/COSTDETAIL_V01 T9 
+on T.IUE_OBJ_ID = T9.IUE_OBJ_ID) 
+LEFT OUTER JOIN 
+    /shared/Core/Networks/ROCSTotalPackage/vc_Tour_Reasons	T10
+on T9.TCD_FIN_STATUS_CD = T10.Reason_Code
+and T10.Reason_Type_Code = &apos;FINST&apos; 
+and upper (T10.Language_ID) = &apos;EN&apos;
+
+ group by T.IUE_VOUCHER_NR
+, T.IUE_SCHCROSSED_TD
+, T.IUE_ACTCROSSED_TD
+, T.IUE_STATUS_CD
+, T8.Reason_Description
+, T9.TCD_FIN_STATUS_CD
+, T10.Reason_Description
+, T.IUE_PLN_ACT_CD
+, T9.CUY_ID_PAY_BP
+, T.IUE_PBY_OPR_SCH_IN
+, T.IUE_PBY_OPR_ACT_IN
+, T.IUE_REMARKS_TX
+,T.BUP_OBJ_ID_IM_ACT
+,T.BUP_OBJ_ID_IM_SCH 
+,T.MOV_OBJ_ID 
+,T.LOC_OBJ_ID_CMBL
+,T.LOC_OBJ_ID_DEST
+,T.LOC_OBJ_ID_ORIG	   
+,T8.Reason_Code  
+,T.IUE_OBJ_ID    
+,T9.TCD_OBJ_ID   
+,T10.Reason_Code 
+</attribute>
+  <attribute name="creationDate" type="LONG">1563456880347</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563456880347</attribute>
+</metadata>

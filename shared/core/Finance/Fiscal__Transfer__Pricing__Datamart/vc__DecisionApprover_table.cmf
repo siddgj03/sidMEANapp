@@ -1,0 +1,157 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_DecisionApprover" path="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_DecisionApprover" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Reviewer_1_Ranking" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reviewer_2_Ranking" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MRD_ID_2" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reviewer_1" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reviewer_2" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Decision_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MRQ_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT GRANT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQ_APPROVER_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRL_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="USR_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRL_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RET_TYPE_CD">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MAG_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQ_DECISION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRD_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRD_REAS_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRL_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MAG_ID_CURRENT">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">
+select  
+T0.C7 Reviewer_1_Ranking 
+, T0.C9 Reviewer_2_Ranking 
+, T0.C8 MRD_ID_2 
+, T0.C10 Reviewer_1 
+, T0.C11 Reviewer_2 
+, T0.C14 Decision_ID 
+,MRQ_ID
+ from (
+select  
+ T0.C7 C7 
+, T0.C8 C8  
+,T0.C9 MRQ_ID
+, rank() over (partition by T0.C9
+ order by T0.C8 desc) C9 
+, max((case  when T0.C10 = 1 then T0.C11 else &apos; &apos; end )) over (partition by T0.C9) C10 
+, (case  when max((case  when (T0.C10 = 1) then T0.C11 else &apos; &apos; end )) over (partition by T0.C9) &lt;&gt; max(T0.C12) over (partition by T0.C9) then max(T0.C12) over (partition by T0.C9) else NULL end ) C11 
+, T0.C15 C14 
+ from (
+select  
+T0.C7 C7 
+, T0.C8 C8 
+, T0.C9 C9 
+, rank() over (partition by T0.C9
+ order by T0.C8 desc) C10 
+, T0.C10 C11 
+, T0.C11 C12 
+, T0.C14 C15 
+ from (
+select 
+ rank() over (partition by T4.MRQ_ID
+ order by T4.MRD_ID desc) C7 
+, (case  when rank() over (partition by T4.MRQ_ID
+ order by T4.MRD_ID desc) = 1 then 0 else T4.MRD_ID end ) C8 
+, T4.MRQ_ID C9 
+, T5.USR_USER_ID C10 
+, (case  when rank() over (partition by T4.MRQ_ID
+ order by T4.MRD_ID desc) = 1 then T5.USR_USER_ID else &apos; &apos; end ) C11 
+, T4.MRD_ID C14 
+FROM
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQ_DECISION_V01 T4 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQ_APPROVER_V01 T5 
+on T4.MRL_ID = T5.MRL_ID	
+  ) T0) T0) T0</attribute>
+  <attribute name="creationDate" type="LONG">1565612836060</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565612844212</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565612836060</attribute>
+</metadata>

@@ -1,0 +1,305 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_TourActualOperatorBPMNetwork" path="/shared/Core/Networks/ROCSTotalPackage/vc_TourActualOperatorBPMNetwork" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Business_Partner_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Network" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Vendor_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/BPARTNR_IMPLEMENTATION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BVI_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BVI_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BVI_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BVI_LOCAL_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_CONTRACT_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BVI_CNTR_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BVI_CNTR_EXPIRY_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BVI_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_USAGE_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BVI_USAGE_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BVI_XNET_URL_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="CUY_ID_TRADING" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BVI_BLACKLIST_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BVI_MAX_TOALERT_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="BVI_CRED_LIMIT_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="BVI_MGR_ENT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_NUSAGE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="FSI_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BVI_FSURCH_USED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_SAP_VENDOR_ID">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_MYTNT_ACCSS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_SC_EM_ADDR_TX">
+        <datatype type="STRING" maxLength="129"/>
+      </element>
+      <element name="SEN_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_FINANCIAL_NM">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="BVI_MP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_CARRIER_CD" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="LOC_OBJ_ID_CML">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_OBJ_ID_MGR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_CHAMBR_COMM_NR" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BVI_ALC_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_OBJ_ID_BLIST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BVI_MNT_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BVI_PRC_AGR_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/BP_CODEDESCRIPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_SYS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_CAT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/IMPLEMENTATION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BPM_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPM_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPM_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPM_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPM_TYPE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_ENTITY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPM_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPM_MET_IMP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BPM_INTL_REG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_COU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_COU_REG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FST_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="SPN_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BMP_CALD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_MP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_EQ_AVG_SP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ISO_ID_BPM_LOC" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOC_OBJ_ID_TZ">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_ISO_ID_BPM_HOV" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPM_ALC_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_MNT_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_PRC_AGR_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_ONN_TX">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">
+   select distinct 
+           IM.BPM_OBJ_ID as Business_Partner_Object_ID, 
+           BC.AVO_DS as Actual_Vendor_Network,
+T.SEN_OBJ_ID as Vendor_Object_ID
+     from 
+           ( 
+                   ( 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/BPARTNR_IMPLEMENTATION_V01 BPI       
+                   inner  join 	 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/IMPLEMENTATION_V01 IM
+                   on BPI.BPM_OBJ_ID = IM.BPM_OBJ_ID ) 
+            inner  join /shared/Source/EDW/ROCSPackage/PRODROCS_P/BP_CODEDESCRIPTION_V01 BC
+            on IM.BPM_ENTITY_OBJ_ID = BC.AVO_OBJ_ID ) 
+inner join
+
+  /shared/Source/EDW/ROCSPackage/PRODROCS_P/BPARTNR_IMPLEMENTATION_V01 T
+on IM.BPM_OBJ_ID  =T.BPM_OBJ_ID
+   where BC.AVO_SUBTYPE_CD = &apos;IBE&apos;  
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1562244184358</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567146475897</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562244184358</attribute>
+</metadata>

@@ -1,0 +1,139 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_SRateProduct" path="/shared/Core/Finance/RatingDatamart/vc_SRateProduct" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Code" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Desc" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Code" nullable="true">
+      <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Group_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CRG_SEQ_ID" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/PRODNAME_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LPR_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/SRATEPRODUCT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CRG_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RPR_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="RPR_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="RPR_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    trim(SRATEPRODUCT_V01.COM_ID) Company_Code, 
+    trim(SRATEPRODUCT_V01.DIV_ID) Division_Code, 
+    trim(SRATEPRODUCT_V01.PRD_ID) Product_Code, 
+    trim(PRODNAME_V01.LPR_NM) Product_Desc, 
+    trim(SRATEPRODUCT_V01.COU_ID) Country_Code, 
+    trim(SRATEPRODUCT_V01.ACC_ID) Account_Code, 
+    trim(SRATEPRODUCT_V01.ACG_ID) Account_Group_Code, 
+    trim(SRATEPRODUCT_V01.CRG_SEQ_ID) CRG_SEQ_ID
+FROM      
+    /shared/Source/EDW/RatingDatamart/PRODRATING_P/SRATEPRODUCT_V01 SRATEPRODUCT_V01 LEFT OUTER JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/PRODNAME_V01 PRODNAME_V01
+    ON (SRATEPRODUCT_V01.COM_ID = PRODNAME_V01.COM_ID AND 
+        SRATEPRODUCT_V01.DIV_ID = PRODNAME_V01.DIV_ID) AND 
+        SRATEPRODUCT_V01.PRD_ID = PRODNAME_V01.PRD_ID</attribute>
+  <attribute name="creationDate" type="LONG">1564647846193</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565960363924</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564647846193</attribute>
+</metadata>

@@ -1,0 +1,630 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="CONSIGNMENT_RATING_V01" path="/shared/Source/EDW/UKSales/PRODUKSALES_P/CONSIGNMENT_RATING_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CON_SRKY_ID_UK" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DELIVERY_LOCATION_KEY" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LAST_CHANGE_DT" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LAST_CHANGE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATE_CODE_USED" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TRANSIT_LIABILITY_LEVEL" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATE_TYPE_USED" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ACTUAL_CONS_CHARGE" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_CONS_MIN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_WEEK_MIN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_CONS_DISC" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_SURCHARGE" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_WEEK_DISC" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_LOC_SUPPL" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_SUB_S_SUPP" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAG_MIN_WEIGHT" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAT_CHECK" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_FLAT_DECLARE" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_SCHED_CHECK" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE_SCHED_DECLARE" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CONS_ACCRUAL_AMOUNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CONSOL_CONSIGN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CONSIGNMENT_RATED" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DAILY_RATE_CHARGE" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DAILY_CONS_CHARGE" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DLY_DIV_ACC_DISC_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DLY_TOTAL_DISC_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FIRST_RATED_OK_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FIRST_RATED_OK_DT" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FOC_IND_APPLIED_DT" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FOC_IND_APPLIED_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LAST_RATED_OK_DT" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LAST_RATED_OK_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FREE_OF_CHARGE_IND" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FULL_FLAT_CHECK" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FULL_FLAT_DECLARED" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FULL_SCHED_CHECK" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FULL_SCHED_DECLARED" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATE_BASIS_USED" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATED_CONS_ITEM" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATED_CONS_WEIGHT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATE_GROUP_USED" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATED_COUNT" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATED_SUCCESSFULLY" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATED_WEIGHT_USED" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="REINVOICED_AUTH_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="REINVOICED_AUTH_DT" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="REINVOICED_CON" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TRANSIT_LIABILITY_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_DIV_ACC_DISC_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_DIV_ACC_KILO_MIN" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_DIV_ACC_CON_MIN" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_DIV_ACC_REV_MIN" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_DIV_ACC_SURCH_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_ACC_DISC_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_ACC_CON_MIN_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_ACC_KILO_MIN_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_ACC_REV_MIN_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WKLY_ACC_SURCH_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LAST_CHANGE_USERID" nullable="false">
+      <datatype name="char" extendedName="char(8)" subType="DATASOURCE_TYPE" type="STRING" minLength="8" maxLength="8"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DLY_TOTAL_SURCH_AMNT" nullable="false">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_DIVISION_LIMIT" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_QUOTE" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_PREPAYMENT" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_WEIGHT_VARIANCE" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_WEIGHT_OVER_1000" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RELEASE_QUOTE_VALUE" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INV_ROUTING_TABLE_REF" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIGINATING_DEPOT" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COLLECTION_DEPOT" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RATING_DEPOT" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="SALES_LEDGER_DEPOT" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DELIVERY_DEPOT" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WEEK_RATED" nullable="false">
+      <datatype name="byteint" extendedName="byteint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-128" maxValue="127"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="YEAR_RATED" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="SYS_ROWLOCK" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:57:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:58:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:59:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:60:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:61:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:62:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:63:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:64:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:65:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:66:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:67:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:68:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:69:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:70:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:71:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:72:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:73:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:74:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:75:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1566391947396</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">-(5)9</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566796061284</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566391947396</attribute>
+</metadata>

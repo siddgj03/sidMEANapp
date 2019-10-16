@@ -1,0 +1,17 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="OPMSCon2Yr" path="/shared/Core/Operations/OPS_SSD/OPMSCon2Yr" type="CONTAINER" subtype="FOLDER" changeToken="0">
+  <security>
+    <owner user="o362wtv" domain="tntadtest"/>
+    <privilege user="o362wtv" domain="tntadtest" privileges="READ WRITE"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1561623529556</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70116</attribute>
+  <attribute name="creatorUserName" type="STRING">o362wtv</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562732161069</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70116</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1561623529556</attribute>
+</metadata>

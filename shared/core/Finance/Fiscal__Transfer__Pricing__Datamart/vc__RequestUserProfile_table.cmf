@@ -1,0 +1,152 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_RequestUserProfile" path="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_RequestUserProfile" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="ADJ_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_User_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_User_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT GRANT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRQ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="RET_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRQ_REASON_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_HIDDEN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MAG_ID_CURRENT">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MAG_ID_ACTING">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MRQ_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTV_TABLE_NM" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TSV_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CAN_REAS_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_CAN_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_CANCELLED_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ADJ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CRIT_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="SAQ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_WF_USR_PROFILE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="USR_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="USR_DISPLAY_NM">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="USR_MOB_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="USR_EMAIL_ADDR_TX">
+        <datatype type="STRING" maxLength="129"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT  
+	
+T5.ADJ_ID
+,T5.MRQ_ID Request_ID 
+, T5.MRQ_DT Request_Date 
+, T5.MRQ_USER_ID Request_User_ID 
+, T6.USR_DISPLAY_NM Request_User_Name 
+    FROM  /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01 T5  
+ INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_WF_USR_PROFILE_V01 T6 
+on T5.MRQ_USER_ID = T6.USR_USER_ID</attribute>
+  <attribute name="creationDate" type="LONG">1565614909113</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565615589152</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565614909113</attribute>
+</metadata>

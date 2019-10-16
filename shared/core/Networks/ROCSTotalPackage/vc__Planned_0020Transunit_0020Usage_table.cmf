@@ -1,0 +1,198 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Planned Transunit Usage" path="/shared/Core/Networks/ROCSTotalPackage/vc_Planned Transunit Usage" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="ZTU_USE_NEW_TU_IN" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LOC_OBJ_ID_DEST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LDT_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ZMD_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/BP_CODEDESCRIPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_SYS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_CAT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/EQUIPMENT_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LDT_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LDT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="LDT_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LDT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LDT_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LDT_CATEG_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/PLND_TRNSPRT_UNITUSAGE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ZTU_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTU_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZTU_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZTU_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ZTR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ZTU_ID">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTU_EMPTY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZTU_VALID_STA_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ZTU_VALID_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ZTU_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ZMD_ID">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTU_TNT_OWNED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZTU_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZCR_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTU_USE_NEW_TU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZTU_PROVIDED_BY_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUP_OBJ_ID_RES_PRV">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTU_COPY_TO_ALL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZTU_LOOSE_LOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T6.ZTU_USE_NEW_TU_IN ,
+LOC_OBJ_ID_DEST ,
+T6.LDT_OBJ_ID  ,
+ZMD_ID
+FROM
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/PLND_TRNSPRT_UNITUSAGE_V01  T6
+
+        left outer join 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/EQUIPMENT_TYPE_V01  T7
+       
+        on (T7.LDT_OBJ_ID = T6.LDT_OBJ_ID)
+        left outer join 
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/BP_CODEDESCRIPTION_V01 T
+     
+        on (T.AVO_OBJ_ID = T7.LDT_CATEG_OBJ_ID  )</attribute>
+  <attribute name="creationDate" type="LONG">1562591955422</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562591955422</attribute>
+</metadata>

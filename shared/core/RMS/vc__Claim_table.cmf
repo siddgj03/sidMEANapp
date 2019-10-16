@@ -1,0 +1,263 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Claim" path="/shared/Core/RMS/vc_Claim" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="INE_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CON_ID" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="COM_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="BUL_ID_ORIG" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CON_CREATE_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CON_CREATE_TM" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RMS/PRODRMS_P/CLAIM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="XCL_NR">
+        <datatype type="STRING" maxLength="19"/>
+      </element>
+      <element name="XCL_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="INE_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="XCL_UPDT_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="XCL_UPDT_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="XCL_CLAIM_ADD_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="XCL_ADD_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="EXP_ID_CLAIMANT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="EXP_ID_ADVISOR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="EXP_ID_RECOVERY">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="XCL_BUS_TYPE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="XCL_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="XCL_CL_TYPE_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="XCL_CL_SUBTYPE_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="XCL_OCC_FROM_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="XCL_OCC_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COU_ID_ACC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="XCL_SENDER_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCL_CL_LETTER_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="XCL_CL_REF_NR">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CUY_ID_CLAIM">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_RAISED">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="XCL_STATUS_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="XCL_STATUS_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="XCL_CL_HANDLER_NM">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="XCL_CLAIM_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="XCL_GOODS_TYPE_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="XCL_RESOLUTION_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="XCL_REJECTION_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="XCL_REC_ACTION_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCL_MULTI_CLAIM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CCT_COVER_TYPE_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="XCL_DEDUCTIBLE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EST_OUT_AM_PD">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EST_OUT_AM_BI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EST_OUT_AM_FI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_TOTAL_OUT_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_RCLAIM_AM_PD">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_RCLAIM_AM_BI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_RCLAIM_AM_FI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EXP_REC_AM_PD">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EXP_REC_AM_BI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EXP_REC_AM_FI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_EXP_REC_AM_OT">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_REC_OUT_AM_PD">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_REC_OUT_AM_BI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_REC_OUT_AM_FI">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_REC_OUT_AM_OT">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_RECOV_OUTST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="XCL_MORE_RECOV_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCL_REC_REJECTD_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCL_FNL_STTLMNT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCL_THIRD_PARTY_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EXA_ID_LAWYER">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="EXA_ID_SURVEYOR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="XAA_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_ID">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="EXP_ID_SUPPLIER" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+	CLAIM_V01.INE_ID,
+	CLAIM_V01.CON_ID,
+	CLAIM_V01.COM_ID,
+	CLAIM_V01.BUL_ID_ORIG,
+	CLAIM_V01.CON_CREATE_DT,
+	CLAIM_V01.CON_CREATE_TM
+	
+FROM
+
+/shared/Source/EDW/RMS/PRODRMS_P/CLAIM_V01 CLAIM_V01</attribute>
+  <attribute name="creationDate" type="LONG">1568726524933</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">144540</attribute>
+  <attribute name="creatorUserName" type="STRING">x400fdt</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568731614074</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">144540</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x400fdt</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1568726524933</attribute>
+</metadata>

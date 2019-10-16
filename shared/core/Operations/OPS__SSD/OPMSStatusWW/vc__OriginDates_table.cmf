@@ -1,0 +1,253 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_OriginDates" path="/shared/Core/Operations/OPS_SSD/OPMSStatusWW/vc_OriginDates" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Con_Collection_Year_Week" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Week_Label" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Day_Number" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Day_Name" nullable="true">
+      <datatype type="STRING" minLength="12" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/CALENDAR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CAL_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DTE_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DOW_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DAY_NM" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_WEEK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_WEEK_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_MONTH_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_QUARTER_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_QUARTER_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_YEAR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_YEAR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_WEEK_YEAR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOM_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_DAY_OF_MONTH_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOY_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CAL_DAY_OF_YEAR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_THS_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_LST_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOWJAN1_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DOW_JAN01_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+--CAST(Con_Collection_Year AS CHAR(4))  as Con_Collection_Year ,
+--CAST(Con_Collection_Year_Label AS CHAR(7)) as Con_Collection_Year_Label  ,
+--CAST(Con_Collection_Year_Quarter AS CHAR(6))  as Con_Collection_Year_Quarter ,
+--CAST(Con_Collection_Quarter_Label AS CHAR(10)) as Con_Collection_Quarter_Label ,
+--CAST(Con_Collection_Year_Month AS CHAR(6))  as Con_Collection_Year_Month ,
+--CAST(Con_Collection_Month_Label AS CHAR(11))  as Con_Collection_Month_Label,
+CAST(Con_Collection_Year_Week AS CHAR(6))  as Con_Collection_Year_Week ,
+CAST(Con_Collection_Week_Label AS CHAR(13)) as Con_Collection_Week_Label ,
+CAST(Con_Collection_Day_Number AS CHAR(1)) as Con_Collection_Day_Number  ,
+CAST(Con_Collection_Day_Name AS CHAR(12)) as Con_Collection_Day_Name ,
+Con_Collection_Date   as Con_Collection_Date
+  FROM                                                       
+  (SELECT
+		 --CAST(DTE_YEAR_NR_KPN AS SMALLINT) as Con_Collection_Year,
+		 --&apos; o.&apos; || CAST(DTE_YEAR_NR_KPN AS SMALLINT) as Con_Collection_Year_Label,
+		--CAST(T1.DTE_YRQTR_NR_KPN AS INTEGER) as Con_Collection_Year_Quarter,
+		 --&apos; o.&apos;|| (CASE	WHEN DTE_QUARTER_NR_KPN = 1 THEN  CAST(DTE_YEAR_NR_KPN AS SMALLINT) || &apos; Q1&apos;
+				--WHEN DTE_QUARTER_NR_KPN = 2 THEN  CAST(DTE_YEAR_NR_KPN AS SMALLINT) || &apos; Q2&apos;
+				--WHEN DTE_QUARTER_NR_KPN = 3 THEN  CAST(DTE_YEAR_NR_KPN AS SMALLINT) || &apos; Q3&apos;
+				--WHEN DTE_QUARTER_NR_KPN = 4 THEN  CAST(DTE_YEAR_NR_KPN AS SMALLINT) || &apos; Q4&apos;
+		    --END) as Con_Collection_Quarter_Label,
+		 --CAST(T1.DTE_YRMTH_NR_KPN AS INTEGER) as Con_Collection_Year_Month,
+		 --&apos; o.&apos; || CAST(T1.DTE_YEAR_NR_KPN  AS SMALLINT) || &apos; &apos; || substring(T1.DTE_MONTH_NM_KPN,1,3) as Con_Collection_Month_Label,
+		 CAST(T1.DTE_YRWK_NR_KPN  AS INTEGER) as Con_Collection_Year_Week,
+		 &apos; o.&apos; || CAST(T1.DTE_YEAR_NR_KPN AS SMALLINT) || &apos; Wk &apos; || CAST(T1.DTE_WEEK_NR_KPN AS SMALLINT) as Con_Collection_Week_Label,
+		 CAST(T1.DTE_DAY_NR AS SMALLINT) as Con_Collection_Day_Number,
+		 &apos; o.&apos;|| T1.DTE_DAY_NM as Con_Collection_Day_Name,
+		 T1.DTE_DT as Con_Collection_Date
+
+	FROM  /shared/Source/EDW/OPS/PRODOPS_P/CALENDAR_V01 T1
+							Left Outer Join
+  		 /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2  ---temporary view..should be changed when moved to prod
+		on T1.dte_dt = T2.dte_dt
+--    WHERE T1.dte_dt between &apos;2002-06-30&apos; and &apos;2002-08-31&apos;
+	WHERE
+--T2.TNT_Wk=&apos;22&apos; and t2.TNT_yr=&apos;2019&apos;	
+T2.wks_diff &lt;= 13
+	AND	T2.wks_diff &lt;&gt; 0
+	AND	T2.days_diff &gt;= 0 --and edw_active_dt=&apos;2019-06-21&apos;     */--Must be uncommented when going to prod
+  ) as ORIG_DATES
+ORDER BY 1,2,3
+;</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556613504496</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565100577263</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556613504496</attribute>
+</metadata>

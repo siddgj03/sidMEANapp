@@ -1,0 +1,1035 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Premium" path="/shared/Publish/Premium_SSD/vp_Premium" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Ord_Product_Group" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_Div_Id" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_Product_Id" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_DivProd_Id" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_TB_Premium" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="14" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_VA_Premium" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="15" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Region_Cd" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Operating_Unit_Cd" nullable="true">
+      <datatype type="STRING" maxLength="41" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Reporting_Group_Cd" nullable="true">
+      <datatype type="STRING" maxLength="41" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Country_Cd" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Depot_Cd" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Agent" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Key" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Year" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Quarter" nullable="true">
+      <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Yr_Mth_Name" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="34"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Yr_Wk" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Product_Group" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Div_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Product_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_DivProd_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_TB_Premium" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="14"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_VA_Premium" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Trade_Direction_Id" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Id_Inv" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Range" nullable="true">
+      <datatype type="STRING" minLength="24" maxLength="35" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Acc_Label" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Payment_Terms_Id" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Booking_Type_Cd" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Match_Cd" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CubeGrp_Prem_REG_Cubes" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="22"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CubeGrp_Prem_OPU_Cubes" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="23" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CubeGrp_Prem_RPG_Cubes" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="23"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CubeGrp_Prem_CO_Cubes" nullable="true">
+      <datatype type="STRING" minLength="19" maxLength="19"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Orders_Booked_Or_Shipped_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Orders_Booked_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Orders_Booked_And_Shipped_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Booking_Premiums" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Shipped_Premiums" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Net_Revenue_Euro_Monthly_Fx" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Premium_Invoiced_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Premium_Transported_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Cons_Booked_Or_Shipped_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Cons_Booked_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Cons_Booked_And_Shipped_As_Premium" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Invoicing_Customers" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllBookingAgent" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BA_Region_Cd">
+        <datatype type="STRING" minLength="1" maxLength="10"/>
+      </element>
+      <element name="BA_Region_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Operating_Unit_Cd">
+        <datatype type="STRING" minLength="1" maxLength="11" trailingSpaces="false"/>
+      </element>
+      <element name="BA_Operating_Unit_Name">
+        <datatype type="STRING" maxLength="41" trailingSpaces="false"/>
+      </element>
+      <element name="BA_Reporting_Group_Cd">
+        <datatype type="STRING" minLength="1" maxLength="11"/>
+      </element>
+      <element name="BA_Reporting_Group_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="BA_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BA_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Depot_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BA_Depot_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Agent">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BA_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllBookingDivisions" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Ord_Product_Group">
+        <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+      </element>
+      <element name="Ord_Div_Id">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Ord_Div_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Ord_Product_Id">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Ord_Product_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Ord_DivProd_Id">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Ord_Seq_Nr">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllBookingPremiumValueAdded" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Ord_VA_Premium">
+        <datatype type="STRING" minLength="3" maxLength="15" trailingSpaces="false"/>
+      </element>
+      <element name="Ord_VA_Seq_Nr">
+        <datatype type="STRING" minLength="4" maxLength="13" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllCollectionDates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Collection_Year">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Collection_Quarter">
+        <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+      </element>
+      <element name="Collection_Yr_Mth_Name">
+        <datatype type="STRING" minLength="2" maxLength="34"/>
+      </element>
+      <element name="Collection_Yr_Wk_Name">
+        <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      </element>
+      <element name="Collection_Yr_Wk">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllConDivsion" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_Product_Group">
+        <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Div_Id">
+        <datatype type="STRING" minLength="2" maxLength="3"/>
+      </element>
+      <element name="Con_Div_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Product_Id">
+        <datatype type="STRING" minLength="1" maxLength="4"/>
+      </element>
+      <element name="Con_Product_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_DivProd_Id">
+        <datatype type="STRING" minLength="3" maxLength="7"/>
+      </element>
+      <element name="Con_Seq_Nr">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllConPremValueAdded" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_VA_Premium">
+        <datatype type="STRING" minLength="3" maxLength="15"/>
+      </element>
+      <element name="Con_VA_Seq_Nr">
+        <datatype type="STRING" minLength="4" maxLength="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllDirectionOfTrade" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Trade_Direction_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Trade_Direction_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllInvCust" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Cou_Id_Inv">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Acc_Id_Inv">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Account_Key">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Account_Range">
+        <datatype type="STRING" minLength="24" maxLength="35" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllTermsOfPayment" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Payment_Terms_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Payment_Terms_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_AllTransaction" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BA_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Collection_Yr_Wk">
+        <datatype type="STRING" minLength="1" maxLength="6"/>
+      </element>
+      <element name="BA_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Consignment_Match_Cd">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Booking_Type_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Ord_TB_Premium">
+        <datatype type="STRING" minLength="4" maxLength="14"/>
+      </element>
+      <element name="Ord_VA_Premium">
+        <datatype type="STRING" minLength="3" maxLength="15"/>
+      </element>
+      <element name="Ord_DivProd_Id">
+        <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="Con_TB_Premium">
+        <datatype type="STRING" minLength="4" maxLength="14"/>
+      </element>
+      <element name="Con_VA_Premium">
+        <datatype type="STRING" minLength="3" maxLength="15"/>
+      </element>
+      <element name="Con_DivProd_Id">
+        <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="Account_Key">
+        <datatype type="STRING" minLength="1" maxLength="15"/>
+      </element>
+      <element name="Payment_Terms_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Trade_Direction_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="No_Of_Ord_Bkd_Or_Ship_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Ord_Bkd_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Ord_Bkd_And_Ship_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Booking_Premiums">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Shipped_Premiums">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Net_Rev_Mthly_Fx">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="No_Of_Prem_Inv_Cons">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Prem_Trans_Cons">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_OrdCon_Bkd_Or_Ship_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_OrdCon_Bkd_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_OrdCon_Bkd_And_Ship_As_Prem">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_BookingType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Booking_Type_Cd">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Booking_Type_Name">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Product/Premium_SSD/vc_ConsignmentMatch" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Consignment_Match_Cd">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Consignment_Match_Name">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/Premium_SSD/Premium" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="alias" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="resource" direction="IN">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_Premium" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Ord_Product_Group">
+        <datatype type="STRING" maxLength="19"/>
+      </element>
+      <element name="Ord_Div_Id">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Ord_Product_Id">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Ord_DivProd_Id">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Ord_TB_Premium">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="Ord_VA_Premium">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="BA_Region_Cd">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Operating_Unit_Cd">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="BA_Reporting_Group_Cd">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="BA_Country_Cd">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Depot_Cd">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BA_Agent">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BA_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Collection_Year">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Collection_Quarter">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Collection_Yr_Mth_Name">
+        <datatype type="STRING" maxLength="34"/>
+      </element>
+      <element name="Collection_Yr_Wk">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Con_Product_Group">
+        <datatype type="STRING" maxLength="19"/>
+      </element>
+      <element name="Con_Div_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Product_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_DivProd_Name">
+        <datatype type="STRING" maxLength="7"/>
+      </element>
+      <element name="Con_TB_Premium">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="Con_VA_Premium">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="Trade_Direction_Id">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Cou_Id_Inv">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Account_Range">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Cou_Acc_Label">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Payment_Terms_Id">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Booking_Type_Cd">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Consignment_Match_Cd">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="CubeGrp_Prem_REG_Cubes">
+        <datatype type="STRING" maxLength="22"/>
+      </element>
+      <element name="CubeGrp_Prem_OPU_Cubes">
+        <datatype type="STRING" maxLength="23"/>
+      </element>
+      <element name="CubeGrp_Prem_RPG_Cubes">
+        <datatype type="STRING" maxLength="23"/>
+      </element>
+      <element name="CubeGrp_Prem_CO_Cubes">
+        <datatype type="STRING" minLength="19" maxLength="19"/>
+      </element>
+      <element name="Number_Of_Orders_Booked_Or_S">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Orders_Booked_As_P">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Orders_Booked_And_">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Booking_Premiums">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Shipped_Premiums">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Net_Revenue_Euro_Monthly_Fx">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="Number_Of_Premium_Invoiced_C">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Premium_Transporte">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Cons_Booked_Or_Shi">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Cons_Booked_As_Pre">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Cons_Booked_And_Sh">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_of_Invoicing_Customer">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT   
+  Dim_AllBookingDivisions.Ord_Product_Group &quot;Ord_Product_Group&quot;, 
+    Dim_AllBookingDivisions.Ord_Div_Name &quot;Ord_Div_Id&quot;, 
+    Dim_AllBookingDivisions.Ord_Product_Name &quot;Ord_Product_Id&quot;, 
+    Dim_AllBookingDivisions.Ord_DivProd_Id &quot;Ord_DivProd_Id&quot;, 
+    Fact_PremiumTxnQry.&quot;Ord_TB_Premium&quot;,    --Dim_AllBookingPremiumTimeBased
+    Dim_AllBookingPremiumValueAdded.&quot;Ord_VA_Premium&quot;, 
+    Dim_AllBookingAgent.&quot;BA_Region_Name&quot; as BA_Region_Cd, 
+    Dim_AllBookingAgent.&quot;BA_Operating_Unit_Name&quot; BA_Operating_Unit_Cd, 
+	case when trim(Dim_AllBookingAgent.&quot;BA_Reporting_Group_Name&quot;)=&apos; &apos;then &apos;No Reporting Group&apos; else coalesce(trim(Dim_AllBookingAgent.&quot;BA_Reporting_Group_Name&quot;),&apos;No Reporting Group&apos;) end as BA_Reporting_Group_Cd, 
+    Dim_AllBookingAgent.&quot;BA_Country_Name&quot; BA_Country_Cd, 
+    Dim_AllBookingAgent.&quot;BA_Depot_Name&quot; BA_Depot_Cd , 
+    Dim_AllBookingAgent.&quot;BA_Agent&quot;, 
+	Fact_PremiumTxnQry.&quot;BA_Key&quot;,
+    Dim_AllCollectionDates.&quot;Collection_Year&quot; &quot;Collection_Year&quot;, 
+    Dim_AllCollectionDates.&quot;Collection_Quarter&quot; &quot;Collection_Quarter&quot;, 
+    Dim_AllCollectionDates.&quot;Collection_Yr_Mth_Name&quot; &quot;Collection_Yr_Mth_Name&quot;, 
+    Dim_AllCollectionDates.&quot;Collection_Yr_Wk&quot; &quot;Collection_Yr_Wk&quot;, 
+    Dim_AllConDivsion.&quot;Con_Product_Group&quot; &quot;Con_Product_Group&quot;, 
+    Dim_AllConDivsion.&quot;Con_Div_Name&quot; &quot;Con_Div_Name&quot;, 
+    Dim_AllConDivsion.&quot;Con_Product_Name&quot; &quot;Con_Product_Name&quot;, 
+    Dim_AllConDivsion.&quot;Con_DivProd_Id&quot; &quot;Con_DivProd_Name&quot;, 
+    Fact_PremiumTxnQry.&quot;Con_TB_Premium&quot;, 
+ --Dim_AllConPremTimeBased
+    Dim_AllConPremValueAdded.&quot;Con_VA_Premium&quot;, 
+    Dim_AllDirectionOfTrade.&quot;Trade_Direction_Description&quot; &quot;Trade_Direction_Id&quot;, 
+    Dim_AllInvCust.&quot;Cou_Id_Inv&quot;, 
+    Dim_AllInvCust.&quot;Account_Range&quot;, 
+    Dim_AllInvCust.&quot;Account_Key&quot; &quot;Cou_Acc_Label&quot;, 
+	--Dim_AllInvCust.&quot;Account_Key&quot;,
+    Dim_AllTermsOfPayment.&quot;Payment_Terms_Description&quot; &quot;Payment_Terms_Id&quot;, 
+    PREMIUM_FEXP_BookingType.&quot;Booking_Type_Name&quot; &quot;Booking_Type_Cd&quot;, 
+    PREMIUM_FEXP_ConsignmentMatch.&quot;Consignment_Match_Name&quot; &quot;Consignment_Match_Cd&quot;, 
+	&apos;PREMIUM-REG-&apos;||Dim_AllBookingAgent.&quot;BA_Region_Cd&quot; &quot;CubeGrp_Prem_REG_Cubes&quot;,
+	&apos;PREMIUM-OPU-&apos;||Dim_AllBookingAgent.&quot;BA_Operating_Unit_Cd&quot; &quot;CubeGrp_Prem_OPU_Cubes&quot;,
+    &apos;PREMIUM-RPG-&apos;||Dim_AllBookingAgent.&quot;BA_Reporting_Group_Cd&quot; &quot;CubeGrp_Prem_RPG_Cubes&quot;,
+    &apos;PREMIUM-COUNTRY-&apos;||Dim_AllBookingAgent.&quot;BA_Country_Cd&quot; &quot;CubeGrp_Prem_CO_Cubes&quot;,
+    Fact_PremiumTxnQry.&quot;No_Of_Ord_Bkd_Or_Ship_As_Prem&quot; &quot;Number_Of_Orders_Booked_Or_Shipped_As_Premium&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Ord_Bkd_As_Prem&quot; &quot;Number_Of_Orders_Booked_As_Premium&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Ord_Bkd_And_Ship_As_Prem&quot; &quot;Number_Of_Orders_Booked_And_Shipped_As_Premium&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Booking_Premiums&quot; &quot;Number_Of_Booking_Premiums&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Shipped_Premiums&quot; &quot;Number_Of_Shipped_Premiums&quot;, 
+    case when to_char(Fact_PremiumTxnQry.&quot;Net_Rev_Mthly_Fx&quot;)=&apos; &apos; then null else Fact_PremiumTxnQry.&quot;Net_Rev_Mthly_Fx&quot; end&quot;Net_Revenue_Euro_Monthly_Fx&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Prem_Inv_Cons&quot; &quot;Number_Of_Premium_Invoiced_Consignments&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_Prem_Trans_Cons&quot; &quot;Number_Of_Premium_Transported_Consignments&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_OrdCon_Bkd_Or_Ship_As_Prem&quot; &quot;Number_Of_Cons_Booked_Or_Shipped_As_Premium&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_OrdCon_Bkd_As_Prem&quot; &quot;Number_Of_Cons_Booked_As_Premium&quot;, 
+    Fact_PremiumTxnQry.&quot;No_Of_OrdCon_Bkd_And_Ship_As_Prem&quot; &quot;Number_Of_Cons_Booked_And_Shipped_As_Premium&quot;,
+    1 as Number_of_Invoicing_Customers      
+FROM  /shared/Core/Product/Premium_SSD/vc_AllTransaction Fact_PremiumTxnQry LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllBookingDivisions Dim_AllBookingDivisions
+    ON Fact_PremiumTxnQry.&quot;Ord_DivProd_Id&quot; = Dim_AllBookingDivisions.Ord_DivProd_Id LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllBookingAgent Dim_AllBookingAgent
+    ON Fact_PremiumTxnQry.&quot;BA_Key&quot; = Dim_AllBookingAgent.&quot;BA_Key&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllBookingPremiumValueAdded Dim_AllBookingPremiumValueAdded
+    ON Fact_PremiumTxnQry.&quot;Ord_VA_Premium&quot; = Dim_AllBookingPremiumValueAdded.&quot;Ord_VA_Premium&quot; LEFT OUTER JOIN
+       /shared/Core/Product/Premium_SSD/vc_AllCollectionDates Dim_AllCollectionDates
+    ON Fact_PremiumTxnQry.&quot;Collection_Yr_Wk&quot; = Dim_AllCollectionDates.&quot;Collection_Yr_Wk&quot; LEFT OUTER JOIN   
+        /shared/Core/Product/Premium_SSD/vc_AllConDivsion Dim_AllConDivsion
+    ON Fact_PremiumTxnQry.&quot;Con_DivProd_Id&quot; = Dim_AllConDivsion.&quot;Con_DivProd_Id&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllConPremValueAdded Dim_AllConPremValueAdded
+    ON Fact_PremiumTxnQry.&quot;Con_VA_Premium&quot; = Dim_AllConPremValueAdded.&quot;Con_VA_Premium&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllInvCust Dim_AllInvCust
+    ON Fact_PremiumTxnQry.&quot;Account_Key&quot; = Dim_AllInvCust.&quot;Account_Key&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllTermsOfPayment Dim_AllTermsOfPayment
+    ON Fact_PremiumTxnQry.&quot;Payment_Terms_Id&quot; = Dim_AllTermsOfPayment.&quot;Payment_Terms_Id&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_BookingType PREMIUM_FEXP_BookingType
+    ON Fact_PremiumTxnQry.&quot;Booking_Type_Cd&quot; = PREMIUM_FEXP_BookingType.&quot;Booking_Type_Cd&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_ConsignmentMatch PREMIUM_FEXP_ConsignmentMatch
+    ON Fact_PremiumTxnQry.&quot;Consignment_Match_Cd&quot; = PREMIUM_FEXP_ConsignmentMatch.&quot;Consignment_Match_Cd&quot; LEFT OUTER JOIN 
+        /shared/Core/Product/Premium_SSD/vc_AllDirectionOfTrade Dim_AllDirectionOfTrade
+    ON Fact_PremiumTxnQry.&quot;Trade_Direction_Id&quot; = Dim_AllDirectionOfTrade.&quot;Trade_Direction_Id&quot;   
+</attribute>
+  <attribute name="cacheClearRule" type="STRING">ON_LOAD</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">SCHEDULED</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_Premium</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1561529656961</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40107</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563462685381</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40107</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING">/shared/Publish/Premium_SSD/Premium</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/Premium_SSD/vp_Premium</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1561529656961</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/Premium_SSD/vp_Premium" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Ord_Product_Group">
+          <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+        </element>
+        <element name="Ord_Div_Id">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Ord_Product_Id">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Ord_DivProd_Id">
+          <datatype type="STRING" minLength="7" maxLength="7"/>
+        </element>
+        <element name="Ord_TB_Premium">
+          <datatype type="STRING" minLength="4" maxLength="14" trailingSpaces="false"/>
+        </element>
+        <element name="Ord_VA_Premium">
+          <datatype type="STRING" minLength="3" maxLength="15" trailingSpaces="false"/>
+        </element>
+        <element name="BA_Region_Cd">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="BA_Operating_Unit_Cd">
+          <datatype type="STRING" maxLength="41" trailingSpaces="false"/>
+        </element>
+        <element name="BA_Reporting_Group_Cd">
+          <datatype type="STRING" maxLength="41" trailingSpaces="false"/>
+        </element>
+        <element name="BA_Country_Cd">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="BA_Depot_Cd">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="BA_Agent">
+          <datatype type="STRING" minLength="8" maxLength="8"/>
+        </element>
+        <element name="BA_Key">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="Collection_Year">
+          <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+        </element>
+        <element name="Collection_Quarter">
+          <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+        </element>
+        <element name="Collection_Yr_Mth_Name">
+          <datatype type="STRING" minLength="2" maxLength="34"/>
+        </element>
+        <element name="Collection_Yr_Wk">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="Con_Product_Group">
+          <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+        </element>
+        <element name="Con_Div_Name">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_Product_Name">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_DivProd_Name">
+          <datatype type="STRING" minLength="3" maxLength="7"/>
+        </element>
+        <element name="Con_TB_Premium">
+          <datatype type="STRING" minLength="4" maxLength="14"/>
+        </element>
+        <element name="Con_VA_Premium">
+          <datatype type="STRING" minLength="3" maxLength="15"/>
+        </element>
+        <element name="Trade_Direction_Id">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="Cou_Id_Inv">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="Account_Range">
+          <datatype type="STRING" minLength="24" maxLength="35" trailingSpaces="false"/>
+        </element>
+        <element name="Cou_Acc_Label">
+          <datatype type="STRING" minLength="15" maxLength="15"/>
+        </element>
+        <element name="Payment_Terms_Id">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="Booking_Type_Cd">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Consignment_Match_Cd">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="CubeGrp_Prem_REG_Cubes">
+          <datatype type="STRING" minLength="13" maxLength="22"/>
+        </element>
+        <element name="CubeGrp_Prem_OPU_Cubes">
+          <datatype type="STRING" minLength="13" maxLength="23" trailingSpaces="false"/>
+        </element>
+        <element name="CubeGrp_Prem_RPG_Cubes">
+          <datatype type="STRING" minLength="13" maxLength="23"/>
+        </element>
+        <element name="CubeGrp_Prem_CO_Cubes">
+          <datatype type="STRING" minLength="19" maxLength="19"/>
+        </element>
+        <element name="Number_Of_Orders_Booked_Or_Shipped_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Orders_Booked_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Orders_Booked_And_Shipped_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Booking_Premiums">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Shipped_Premiums">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Net_Revenue_Euro_Monthly_Fx">
+          <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+        </element>
+        <element name="Number_Of_Premium_Invoiced_Consignments">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Premium_Transported_Consignments">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Cons_Booked_Or_Shipped_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Cons_Booked_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Cons_Booked_And_Shipped_As_Premium">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_of_Invoicing_Customers">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/Premium_SSD/vp_Premium&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">3</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1563928200000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562172847925</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">true</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1563373001721</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562172847925</attribute>
+  </trigger>
+</metadata>

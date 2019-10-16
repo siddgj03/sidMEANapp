@@ -1,0 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RCardOrigDest" path="/shared/Publish/RatingDatamart/vp_RCardOrigDest" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Originating_Country" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Originating_Country_Area_Group" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Originating_Rating_Area" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Area_Group" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Rating_Area" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RCG_SEQ_ID" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RGP_ID" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RGP_VERSION_ID" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RCG_LIVE_IN" nullable="true">
+      <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/RCARDORIGDEST_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAG_SEQ_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RAR_ID_ORIGIN" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RGP_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RGP_VERSION_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RCG_LIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RCG_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAG_SEQ_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RAR_ID_DESTINATION" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ODC_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ODC_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ODC_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ODC_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ODC_UPDATE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ODC_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RZO_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OTA_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OTA_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EDW_LOAD_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    trim(RCARDORIGDEST_V01.COM_ID) Company_Code, 
+    trim(RCARDORIGDEST_V01.DIV_ID) Division_Code, 
+    trim(RCARDORIGDEST_V01.COU_ID_ORIG) Originating_Country, 
+    trim(RCARDORIGDEST_V01.CAG_SEQ_ID_ORIG) Originating_Country_Area_Group, 
+    trim(RCARDORIGDEST_V01.RAR_ID_ORIGIN) Originating_Rating_Area, 
+    trim(RCARDORIGDEST_V01.COU_ID_DEST) Destination_Country, 
+    trim(RCARDORIGDEST_V01.CAG_SEQ_ID_DEST) Destination_Country_Area_Group, 
+    trim(RCARDORIGDEST_V01.RAR_ID_DESTINATION) Destination_Rating_Area,
+	trim(RCARDORIGDEST_V01.RCG_SEQ_ID) RCG_SEQ_ID,
+	trim(RCARDORIGDEST_V01.RGP_ID) RGP_ID,
+	
+trim(RCARDORIGDEST_V01.RGP_VERSION_ID) RGP_VERSION_ID,
+	trim(RCARDORIGDEST_V01.RCG_LIVE_IN) RCG_LIVE_IN
+FROM      
+    /shared/Source/EDW/RatingDatamart/PRODRATING_P/RCARDORIGDEST_V01 RCARDORIGDEST_V01</attribute>
+  <attribute name="creationDate" type="LONG">1565006331993</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565961118564</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565006331993</attribute>
+</metadata>

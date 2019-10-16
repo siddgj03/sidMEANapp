@@ -1,0 +1,700 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_WeightAndPieceAdjustments" path="/shared/Publish/Control_And_Reconciliation/vp_WeightAndPieceAdjustments" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Run_Year_Week_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Error_Description" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Type_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TP_Applicable_Filter" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_(Euro)" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Real_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Cons" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Item_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Real_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_CNTRL_FCQC_REJECT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="FNC_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ERR_TX" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTEDENTRY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_CONTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_LATESTENTRY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COU_ID_ACC" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_INV" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COU_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ACTUAL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID_PTNR" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_PTNR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COU_ID_PTNR" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_DEPOT_CD_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OUP_COLL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_DEPOT_CD_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OUP_DEL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_DIVISION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_PRODUCT_CD" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TOP_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ETP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="OUP_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_COLL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="OUP_DELIVERY_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_ITEM_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_REVENUE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_A_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_R_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_REAL_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_PAY_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_PCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_DCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_COLL_POST_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="OUP_DEL_POST_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="OUP_NOTE_SRC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_WWTT_VALUE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WGT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIR_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ALG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="STT_ID_LATEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_COSTED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_O_DENSITY_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_D_DENSITY_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_APPLIC" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID_APPLIC" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COE_RATING_CALC_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RGP_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RGP_VERSION_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RCG_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RCT_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RZO_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INV_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="INR_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="PFT_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PTL_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PTS_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SOS_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_CSL_VL_CONV_QT">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_INVOICE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_INVCEBKNG_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OPT_ID_1" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_2" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_3" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_4" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_VAL_OF_GDS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CUY_ID_VAL_OF_GDS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNN_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="GAM_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_TAR_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DFD_SRKY_ID_1">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFD_SRKY_ID_2">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_OPSC_TGRS_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OC_TOT_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_GROSS_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_GROSS_MAX_VL">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_GROSS_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONTR_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_COSTED_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP1_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP2_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP3_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP4_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP5_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP6_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP7_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP8_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP9_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_OSTATGRP10_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_TR_SCAN_LGG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_TR_SCAN_QAR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_INVORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID_INVORIG" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_INVDEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID_INVDEST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_INVDIVISION_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_INVPRODUCT_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OPT_ID_INV1" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV2" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV3" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV4" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_ITOTL_ITEM_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_INV_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_ITOTL_ITEM_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="INV_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DPS_SPEED_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OUP_OVERRIDE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_REPL_ADJ_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_MATRL_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_SNDR" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_SNDR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COS_LOC_EVENT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="COS_SIGN_NM" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="ROD_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OUP_TP_APPLIC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PIECE_WGT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SALES_TERR_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUTOFF_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CUTOFF_DEFAULT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRN_LATESTRUN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_START_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_END_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ACTUALRUN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_NM" nullable="false">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="MRN_DS">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_OUTPUT_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPP_OUTPUT_VER_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID_QCFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RUN_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ACC_RECORD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/PROCESSERROR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="FNC_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ERR_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select &quot;CM_COSTINGRUN_V01&quot;.&quot;MRN_START_WK_NR&quot; as &quot;Run_Year_Week_Number&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;COU_ID_ACTUAL&quot; as &quot;Invoice_Country_Code&quot;, 
+&quot;PROCESSERROR_V01&quot;.&quot;ERR_DS&quot; AS &quot;Error_Description&quot;, 
+ &quot;CM_COSTINGRUN_V01&quot;.&quot;MRN_ID&quot; as &quot;Run_Number&quot;, 
+ &quot;CM_RUN_TYPE_V01&quot;.&quot;TAV_DS&quot; as &quot;Run_Type_Description&quot;,
+ (case DayOfWeek(CM_COSTINGRUN_V01.MRN_ACTUALRUN_DT) when 2 then &apos;Monday&apos; when 3 then &apos;Tuesday&apos; when 4 then &apos;Wednesday&apos; 
+when 5 then &apos;Thursday&apos; when 6 then &apos;Friday&apos; when 7 then &apos;Saturday&apos; when 1 then &apos;Sunday&apos; end) as &quot;Run_Day&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;RUN_TYPE_CD&quot; as &quot;Run_Type_Code&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_TP_APPLIC_IN&quot; as &quot;TP_Applicable_Filter&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_REVENUE_AM&quot; as &quot;Revenue_(Euro)&quot;, 
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_PAY_WT&quot; as &quot;Pay_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_REAL_WT&quot; as &quot;Real_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_CONS_QT&quot; as &quot;Number_of_Cons&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;CON_OPSC_TGRS_WT&quot; as &quot;Contractual_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_GROSS_WT&quot; as &quot;Gross_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_GROSS_MAX_VL&quot; as &quot;Gross_Volume&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;CON_OC_TOT_VL&quot; as &quot;Contractual_Volume&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_A_STAT_WT&quot; as&quot;Air_Stat_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_R_STAT_WT&quot; as &quot;Road_Stat_Weight&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_ITEM_VL&quot; as &quot;Item_Volume&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_ITEMS_QT&quot; as &quot;Real_Pieces&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_CONTR_ITEMS_QT&quot; as &quot;Contractual_Pieces&quot;,
+ &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_GROSS_ITEMS_QT&quot; as &quot;Gross_Pieces&quot;
+ FROM (((
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTEDENTRY_V01
+INNER JOIN 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01
+on &quot;CM_COSTEDENTRY_V01&quot;.&quot;MRN_ID&quot; = &quot;CM_COSTINGRUN_V01&quot;.&quot;MRN_ID&quot;) 
+INNER JOIN 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_CNTRL_FCQC_REJECT_V01
+on &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_SEQ_NR&quot; = &quot;CM_CNTRL_FCQC_REJECT_V01&quot;.&quot;OUP_SEQ_NR&quot; 
+and &quot;CM_COSTEDENTRY_V01&quot;.&quot;OUP_SRKY_ID&quot; = &quot;CM_CNTRL_FCQC_REJECT_V01&quot;.&quot;OUP_SRKY_ID&quot;) 
+INNER JOIN 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/PROCESSERROR_V01
+on &quot;CM_CNTRL_FCQC_REJECT_V01&quot;.&quot;FNC_ID&quot; = &quot;PROCESSERROR_V01&quot;.&quot;FNC_ID&quot; 
+and &quot;CM_CNTRL_FCQC_REJECT_V01&quot;.&quot;ERR_CD&quot; = &quot;PROCESSERROR_V01&quot;.&quot;ERR_CD&quot;) 
+LEFT OUTER JOIN 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RUN_TYPE_V01
+on &quot;CM_COSTEDENTRY_V01&quot;.&quot;RUN_TYPE_CD&quot; = &quot;CM_RUN_TYPE_V01&quot;.&quot;ACC_RECORD_TYPE_CD&quot; 
+and &apos;EN&apos; = &quot;CM_RUN_TYPE_V01&quot;.&quot;LNG_ID&quot;
+ where &quot;CM_COSTINGRUN_V01&quot;.&quot;MRN_LATESTRUN_IN&quot; = &apos;Y&apos; 
+and  &quot;CM_COSTEDENTRY_V01&quot;.&quot;RUN_TYPE_CD&quot; IN(&apos;G&apos;,&apos;1&apos;) 
+and &quot;CM_CNTRL_FCQC_REJECT_V01&quot;.&quot;FNC_ID&quot; = &apos;MHAAFV&apos;
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1566992220214</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">143926</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567069138601</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">143926</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566992220214</attribute>
+</metadata>

@@ -1,0 +1,309 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Purpose" path="/shared/Core/Networks/ROCS_SSD/RSP/vc_Purpose" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Mpt_Id" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Mpt_Short_Ds" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Mpt_Long_Ds" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MOV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MTT_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="MPT_ID_ACT" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCHDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCH_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ARRV_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_DEPT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SCH_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ACT_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_SCH">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_ACT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_AV_RETLOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_CANCEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_TUSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_PWSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_DRSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_VHSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DRSWAP_PLND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_CREATOR_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROC_OBJ_ID_S">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROC_OBJ_ID_A">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PASS_1_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PASS_2_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_END_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SPEC_INSTR_TX">
+        <datatype type="STRING" maxLength="4000"/>
+      </element>
+      <element name="MOV_ACTUAL_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTUAL_DUR_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="MOV_ALL_DEST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_DG_ALLOW_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MPT_ID_SCH">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DEV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_HSKP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_S_TNTOWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_S_OPROWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DEBRIEF_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_APPENDED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_SCH_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_ACT_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST_OL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DIV_RSN_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DRT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR_ORIG">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_OBJ_ID_SCHED">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PROP_DRIVRS_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_PROP">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCH_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_ACT_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_PRO_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	CAST(MPT_ID AS CHAR(4))        AS Mpt_Id,
+	CAST(MPT_SHORT_DS AS CHAR(4))  AS Mpt_Short_Ds,
+	CAST(MPT_LONG_DS AS CHAR(20))    AS Mpt_Long_Ds
+
+  FROM
+  (SELECT
+   &apos;NSRV&apos;                           AS MPT_ID,
+   &apos;NSRV&apos;                           AS MPT_SHORT_DS,
+   CAST(&apos;Non-Service&apos; AS CHAR(13))  AS MPT_LONG_DS
+   FROM /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01
+   UNION
+
+   SELECT
+   &apos;SERV&apos;                           AS MPT_ID,
+   &apos;SERV&apos;                           AS MPT_SHORT_DS,
+    CAST(&apos;Service&apos; AS CHAR(13))     AS MPT_LONG_DS
+    FROM /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01
+    UNION
+
+    SELECT
+    &apos;EMPT&apos;                          AS MPT_ID,
+    &apos;EMPT&apos;                          AS MPT_SHORT_DS,
+    CAST(&apos;Empty&apos; AS CHAR(13))       AS MPT_LONG_DS
+    FROM /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01
+    uNION
+
+    SELECT
+    &apos;RPOS&apos;                          AS MPT_ID,
+    &apos;RPOS&apos;                          AS MPT_SHORT_DS,
+    &apos;Repositioning&apos;                 AS MPT_LONG_DS
+    FROM /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01
+   ) PUR
+</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556623350098</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563807371576</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556623350098</attribute>
+</metadata>

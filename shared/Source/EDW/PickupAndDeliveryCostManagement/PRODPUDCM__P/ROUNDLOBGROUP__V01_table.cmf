@@ -1,0 +1,482 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="ROUNDLOBGROUP_V01" path="/shared/Source/EDW/PickupAndDeliveryCostManagement/PRODPUDCM_P/ROUNDLOBGROUP_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="BUL_CSYS_ID" nullable="false">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ID" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTIVE_DT" nullable="false">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_SEQ_NR" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LOB_ID" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PRG_ID" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PSG_ID" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_UPDT_TD" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_UPDT_USER_ID" nullable="false">
+      <datatype name="char" extendedName="char(8)" subType="DATASOURCE_TYPE" type="STRING" minLength="8" maxLength="8"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_SOFTLOCK_TS" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COLDEL_CD" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_PS_STOP_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_NG_STOP_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_CON_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_PCE_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(8,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_PS_STOP_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_NG_STOP_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_CON_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_PCE_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(8,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_COA_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_MISS_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_CO_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_NH_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_WA_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_CR_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_HO_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_NT_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_OTHER_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_CO_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_NH_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_WA_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_CR_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_HO_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_NT_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_OTHER_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_BASE_COST_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_BONUS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_PENALTIES_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_FUS_COST_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_ACTUAL_COST_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CUY_ID_COST" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_BONUS_CI_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_CHARGE_COST_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_STATUS_CD" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_APR_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_NACC_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_CAB_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_GUA_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_UTT_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COL_MPW_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_NACC_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_NAAT_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_NACC_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_DEL_C_NAAT_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_BONUS_XTR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(13,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1567587114699</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">------------.99</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567587114699</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567587114699</attribute>
+</metadata>

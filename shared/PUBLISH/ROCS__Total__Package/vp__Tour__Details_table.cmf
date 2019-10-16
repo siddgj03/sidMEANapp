@@ -1,0 +1,274 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Tour_Details" path="/shared/Publish/ROCS_Total_Package/vp_Tour_Details" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Tour_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tourstring" nullable="true">
+      <datatype type="STRING" maxLength="100"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Scheduled_Start_Date_Time_UTC" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Cost_Remark" nullable="true">
+      <datatype type="STRING" maxLength="500"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Planned_Extra_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Free_Of_Charge_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Sch_Dep_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Object_Indicator" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Location_Object_Id_Dest" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Location_Object_Id_Origin" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Location_Object_Id_Record" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Scheduled_Arrival_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Sch_Arr_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Start_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Location_Object_Id_CMBL" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Network_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Operator_Object_Id_Actual" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Cancel_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Reason_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Scheduled_Departure_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Operator_Object_Id_Scheduled" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Journey_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Billing_Object_Id" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_TourTP" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Tour_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Tour_Network_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Tour_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Reason_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Remarks_Tx">
+        <datatype type="STRING" maxLength="500"/>
+      </element>
+      <element name="Tour_Cancel_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Country_AP">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Operator_Object_Actual_Id">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Operator_Object_Scheduled_Id">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_App_Mov_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Location_Object_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_TourString_Tx">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="Tour_Foc_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Tour_Scheduled_Departure_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Tour_Planned_Extra_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Tour_Start_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Tour_Scheduled_Departure_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Tour_Scheduled_Arrival_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Tour_Scheduled_Arrival_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Location_Object_ID_Origin">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Destination">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Record">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_Billing_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NLS_USR_ID">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+Tour_ID  as  Tour_ID,
+Tour_TourString_Tx  as  Tourstring,
+Tour_Scheduled_Departure_LT  as  &quot;Tour_Scheduled_Start_Date_Time_UTC&quot;,
+Tour_Remarks_Tx  as  Tour_Cost_Remark,
+Tour_Planned_Extra_Indicator  as  Tour_Planned_Extra_Indicator,
+case when Tour_Foc_Indicator = &apos;Y&apos; then &apos;Yes&apos; else &apos;No&apos; end as Tour_Free_Of_Charge_Indicator
+,Tour_Scheduled_Departure_LT as Tour_Sch_Dep_Date_Time
+,Tour_Object_ID   as Journey_Object_Indicator
+,Location_Object_ID_Destination as Location_Object_Id_Dest
+,Location_Object_ID_Origin    as Location_Object_Id_Origin
+,Location_Object_ID_Record   as Location_Object_Id_Record
+,Tour_Scheduled_Arrival_Date as Journey_Scheduled_Arrival_Date
+,Tour_Scheduled_Arrival_LT as Tour_Sch_Arr_Date_Time
+,Tour_Start_Date as Journey_Start_Date
+,Location_Object_ID_CMBL as Location_Object_Id_CMBL
+,Tour_Network_ID as Tour_Network_Code
+,Operator_Object_Actual_Id as Operator_Object_Id_Actual
+,Tour_Cancel_Code as Journey_Cancel_Code
+,Tour_Reason_Code  as Journey_Reason_Code
+,Tour_Scheduled_Departure_Date as Journey_Scheduled_Departure_Date
+,Operator_Object_Scheduled_Id as Operator_Object_Id_Scheduled
+,Tour_Status_Code  as Journey_Status_Code
+ 
+,Tour_Billing_Object_ID AS Billing_Object_Id
+FROM
+
+/shared/Core/Networks/ROCSTotalPackage/vc_TourTP</attribute>
+  <attribute name="creationDate" type="LONG">1562663781739</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562663781739</attribute>
+</metadata>

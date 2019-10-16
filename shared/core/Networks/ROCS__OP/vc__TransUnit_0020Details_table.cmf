@@ -1,0 +1,361 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_TransUnit Details" path="/shared/Core/Networks/ROCS_OP/vc_TransUnit Details" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Transportation_unit_ID" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Transportation_unit_license_plate" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="16"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Transportation_unit_Type" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Discriminator_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MTU_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/BP_TRANSPORT_EQUIPMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="PEQ_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PEQ_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PEQ_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PEQ_BP_ASSET_ID">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PEQ_TNT_ASSET_ID">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PEQ_LIC_PLATE_NR">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="LDT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_BRANDING_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_TEL_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="PEQ_TEL_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="GPS_ID">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="PEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PEQ_DATA_Q_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_SERIAL_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="PEQ_CONSTRUCTN_YR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_INCAB_ID">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PEQ_IC_TYPE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_DG_PLATE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_LN">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="PEQ_HT">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="PEQ_WD">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="PEQ_MAX_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="PEQ_AIR_CON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_REFRIG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_REFRIG_TEMP_NR">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_DOORS_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_FIRST_USE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PEQ_LAST_USE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPM_OBJ_ID_OWN">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_ORIGINAL_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PEQ_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_LIC_PL_CRUN_NR">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="PEQ_EURNORM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_BRAND_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PEQ_MOTFUEL_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_ENDDBY_SUBC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_ADR_APPR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_LTA_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PEQ_MAX_VL">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="PEQ_TAIL_LIFT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/EQUIPMENT_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LDT_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LDT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="LDT_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LDT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LDT_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LDT_CATEG_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/TRANSUNIT_EQUIPMNT_USE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MTU_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MTU_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_DISC_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="MTU_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_STRT_LOAD_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_FIN_LOAD_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_STRT_UNLD_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_FIN_UNLD_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_CONFIRMED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_EMPTY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_TNTOWN_ACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PEQ_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LDT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_TSUNIT_SEAL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_TSUNIT_UNSL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MTU_PERC_FILLED_PC">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_DANG_GOODS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_REOPEN_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_OVR_INSTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_ALL_DEST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_TNTOWN_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_TC_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MTU_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_FINISHED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_NC_FRT_OB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_DG_OB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_HP_FRT_OB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_HV_FRT_OB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_DOCS_OB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_TOT_ITEMS_QT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_UNL_PRIO_UL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UNL_PRIO_LL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UNL_PRIO_UM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UNL_PRIO_LM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UNL_PRIO_UR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_UNL_PRIO_LR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MTU_PROVIDED_BY_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUP_OBJ_ID_RES_PRV">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTU_LOOSE_LOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select distinct T.Transportation_unit_ID Transportation_unit_ID , 
+T.PEQ_LIC_PLATE_NR Transportation_unit_license_plate
+ , T6.LDT_DS Transportation_unit_Type , T7.MTU_DISC_CD Discriminator_Code,T7.MTU_OBJ_ID
+ from (
+/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/TRANSUNIT_EQUIPMNT_USE_V01 T7 LEFT OUTER JOIN (
+select BP_TRANSPORT_EQUIPMENT_V01.PEQ_OBJ_ID PEQ_OBJ_ID , BP_TRANSPORT_EQUIPMENT_V01.PEQ_LIC_PLATE_NR PEQ_LIC_PLATE_NR ,
+ (case  when trim(both
+ from BP_TRANSPORT_EQUIPMENT_V01.PEQ_BP_ASSET_ID) &lt;&gt; &apos;&apos; then BP_TRANSPORT_EQUIPMENT_V01.PEQ_BP_ASSET_ID when trim(both
+ from BP_TRANSPORT_EQUIPMENT_V01.PEQ_TNT_ASSET_ID) &lt;&gt; &apos;&apos; then BP_TRANSPORT_EQUIPMENT_V01.PEQ_TNT_ASSET_ID when trim(both
+ from BP_TRANSPORT_EQUIPMENT_V01.PEQ_LIC_PLATE_NR) &lt;&gt; &apos;&apos; then BP_TRANSPORT_EQUIPMENT_V01.PEQ_LIC_PLATE_NR else NULL end ) Transportation_unit_ID 
+ from 
+/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/BP_TRANSPORT_EQUIPMENT_V01 BP_TRANSPORT_EQUIPMENT_V01) T 
+on T7.PEQ_OBJ_ID = T.PEQ_OBJ_ID) LEFT OUTER JOIN 
+/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/EQUIPMENT_TYPE_V01 T6 on T7.LDT_OBJ_ID = T6.LDT_OBJ_ID</attribute>
+  <attribute name="creationDate" type="LONG">1566404542107</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568961200410</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">e807pja</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566404542107</attribute>
+</metadata>

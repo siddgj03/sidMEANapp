@@ -1,0 +1,183 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Financial_Consignment" path="/shared/Publish/Greece_EETT_Fees_Reporting/vp_Financial_Consignment" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Financial_Consignment_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Terms_Of_Payment_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Invoice_Number" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Account_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_EETT_Category_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Net_Revenue_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Net_Revenue_Product820_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Net_Revenue_Upto20Kilos_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Net_Revenue_Over20Kilos_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_PayWeight_Kgs" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Consignment_Invoice_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Number_Of_Financial_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Greece_EETT_Fees_Reporting/vc_Financial_Consignment" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Financial_Consignment_Number">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Financial_Consignment_Account_Number">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Financial_Consignment_Division_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Financial_Consignment_Product_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Financial_Consignment_Terms_Of_Payment_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Financial_Consignment_Invoice_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Financial_Consignment_Invoice_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Financial_Consignment_Account_Group_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Financial_Consignment_EETT_Category_Code">
+        <datatype type="STRING" minLength="3" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="Financial_Consignment_Collection_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Financial_Consignment_Net_Revenue_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Financial_Consignment_Net_Revenue_Product820_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Financial_Consignment_Net_Revenue_Upto20Kilos_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Financial_Consignment_Net_Revenue_Over20Kilos_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Financial_Consignment_PayWeight_Kgs">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Financial_Consignment_Invoice_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Total_Number_Of_Financial_Consignments">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    *
+  from /shared/Core/Finance/Greece_EETT_Fees_Reporting/vc_Financial_Consignment</attribute>
+  <attribute name="creationDate" type="LONG">1566469041428</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170141</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566986157742</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170141</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566469041428</attribute>
+</metadata>

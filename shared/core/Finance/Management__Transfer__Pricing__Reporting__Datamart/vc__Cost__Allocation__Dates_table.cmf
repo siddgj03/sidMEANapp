@@ -1,0 +1,167 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Cost_Allocation_Dates" path="/shared/Core/Finance/Management_Transfer_Pricing_Reporting_Datamart/vc_Cost_Allocation_Dates" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Financial_Year_Nr" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Year_Week_Nr" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Year_Month_Nr" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Financial_Year_Quarter_Nr" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/MTPR/PRODCOSTMDLG_P/CALENDAR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DAY_NM" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_WEEK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_FIN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_QUARTER_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_FIN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_YEAR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YEAR_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_FIN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOM_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOY_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_THS_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_LST_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOWJAN1_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+	CALENDAR_V01.DTE_YEAR_NR_FIN AS &quot;Financial_Year_Nr&quot;,
+	CALENDAR_V01.DTE_YRWK_NR_FIN AS&quot;Financial_Year_Week_Nr&quot;,
+	CALENDAR_V01.DTE_YRMTH_NR_FIN AS &quot;Financial_Year_Month_Nr&quot;,
+	CALENDAR_V01.DTE_YRQTR_NR_FIN AS &quot;Financial_Year_Quarter_Nr&quot; 
+FROM  /shared/Source/EDW/MTPR/PRODCOSTMDLG_P/CALENDAR_V01 CALENDAR_V01
+WHERE CALENDAR_V01.COM_ID=&apos;WW&apos;
+GROUP BY 1,2,3,4;</attribute>
+  <attribute name="creationDate" type="LONG">1565775050936</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568890800811</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565775050936</attribute>
+</metadata>

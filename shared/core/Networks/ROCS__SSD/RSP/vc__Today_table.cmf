@@ -1,0 +1,83 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Today" path="/shared/Core/Networks/ROCS_SSD/RSP/vc_Today" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Today" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Date" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Date" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Operational_Date" nullable="true">
+      <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Operational_Date" nullable="true">
+      <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/services/databases/system/DUAL" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DUMMY">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	CAST(TODAY AS CHAR(10))                AS Today,
+	CAST(DEPARTURE_REPORTING_DATE AS CHAR(8)) AS Departure_Reporting_Date,
+	CAST(ARRIVAL_REPORTING_DATE AS CHAR(8)) AS Arrival_Reporting_Date,
+    DEPARTURE_REPORTING_DATE AS Departure_Operational_Date,
+    ARRIVAL_REPORTING_DATE AS Arrival_Operational_Date
+  FROM
+(SELECT
+	CURRENT_DATE                                        AS TODAY,
+	TRIM(FORMAT_DATE(CURRENT_DATE,&apos;yyyyMMdd&apos;))  AS DEPARTURE_REPORTING_DATE,
+	TRIM(FORMAT_DATE(CURRENT_DATE,&apos;yyyyMMdd&apos;))  AS ARRIVAL_REPORTING_DATE
+  ) TD</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556626635038</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1561110577692</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">a614hod</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556626635038</attribute>
+</metadata>

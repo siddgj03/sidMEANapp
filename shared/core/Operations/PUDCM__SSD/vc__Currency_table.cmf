@@ -1,0 +1,270 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Currency" path="/shared/Core/Operations/PUDCM_SSD/vc_Currency" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Cuy_Id_Cognos" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Exp_Dt" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Exr_Rate_Am" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cuy_Long_Ds" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/CALENDAR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DAY_NM" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_WEEK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_PLR" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_QUARTER_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_PLR" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_YEAR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YEAR_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_PLR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOM_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOY_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_THS_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_LST_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOWJAN1_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EGP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EXR_ADD_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_END_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/COGNOSCURRENCY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUY_ID_COGNOS">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CUY_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/CURRENCY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_NON_USE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+  CUY_ID_COGNOS	 AS Cuy_Id_Cognos,
+  EXP_DT AS Exp_Dt,
+  EXR_RATE_AM AS Exr_Rate_Am,
+  CUY_LONG_DS AS Cuy_Long_Ds
+FROM(SELECT
+    CGU.CUY_ID_COGNOS
+    ,CAL.DTE_DT AS EXP_DT
+    ,EXR.EXR_RATE_AM
+    ,CUR.TAV_DS AS CUY_LONG_DS
+    FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/CALENDAR_V01 CAL
+    INNER JOIN (SELECT
+                er1.COM_ID
+                ,er1.EGP_ID
+                ,er1.CUY_ID
+                ,er1.EXR_ADD_DT AS EXP_START_DT
+                ,CASE WHEN er2.EXR_ADD_DT IS NULL THEN er1.EXP_END_DT
+                ELSE er2.EXR_ADD_DT - 1
+                END AS EXP_END_DT
+                ,er1.EXR_RATE_AM
+                FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01 er1
+                LEFT OUTER JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01 er2
+                  ON ( er1.EGP_ID = er2.EGP_ID
+                  AND er1.CUY_ID = er2.CUY_ID
+                  AND er1.EXP_END_DT = er2.EXP_END_DT
+                  AND er2.EXR_ADD_DT = (SELECT MIN(EXR_ADD_DT)
+                                        FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01 er3
+                                        WHERE er1.EGP_ID = er3.EGP_ID
+                                              AND er1.CUY_ID = er3.CUY_ID
+                                              AND er1.EXP_END_DT = er3.EXP_END_DT
+                                              AND er1.EXR_ADD_DT &lt; er3.EXR_ADD_DT))
+                  ) EXR
+                  ON CAL.DTE_DT BETWEEN EXR.EXP_START_DT AND EXR.EXP_END_DT
+INNER JOIN  /shared/Source/EDW/PUDCM/PRODPUDCM_P/COGNOSCURRENCY_V01 CGU --TNT Currency to Cognos Currency translation
+  ON EXR.CUY_ID = CGU.CUY_ID
+INNER  JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/CURRENCY_V01 CUR
+  ON EXR.CUY_ID = CUR.TAV_VALUE_ID
+WHERE
+  EXR.EGP_ID = &apos;MO&apos; -- Monthly rates
+  AND CUR.LNG_ID =&apos;EN&apos; -- English
+  AND CAL.DTE_DT &gt;= &apos;2005-01-01&apos;
+  AND CGU.CUY_ID IN (	&apos;AED&apos;,&apos;ARS&apos;,&apos;AUD&apos;,&apos;BGN&apos;,&apos;BHD&apos;,&apos;BRL&apos;,&apos;CAD&apos;,&apos;CHF&apos;,&apos;CLP&apos;,
+                      &apos;CZK&apos;,&apos;DKK&apos;,&apos;EEK&apos;,&apos;EGP&apos;,&apos;EUR&apos;,&apos;HUF&apos;,&apos;GBP&apos;,&apos;IDR&apos;,&apos;ILS&apos;,
+                      &apos;INR&apos;,&apos;JOD&apos;,&apos;JPY&apos;,&apos;KRW&apos;,&apos;KWD&apos;,&apos;LTL&apos;,&apos;LVL&apos;,&apos;MYR&apos;,&apos;NOK&apos;,
+                      &apos;PHP&apos;,&apos;PLN&apos;,&apos;RON&apos;,&apos;RUB&apos;,&apos;SAR&apos;,&apos;SEK&apos;,&apos;SGD&apos;,&apos;SIT&apos;,&apos;SKK&apos;,
+                      &apos;THB&apos;,&apos;TRY&apos;,&apos;USD&apos;,&apos;VND&apos;,&apos;ZAR&apos;) -- Currencies in PUDCM
+) AS DIM_CURRENCY
+</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/Cache_DB/TDVDEV_CACHE/TDVDEVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556862116597</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556862116597</attribute>
+</metadata>

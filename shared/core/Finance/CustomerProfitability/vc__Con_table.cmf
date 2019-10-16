@@ -1,0 +1,361 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Con" path="/shared/Core/Finance/CustomerProfitability/vc_Con" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CON_ID" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_ORIG" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_CREATE_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_CREATE_TM" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_ID" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_WHOUSE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_DG_TRANMODE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DUTIABLE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_COLL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CON_COMM_DELIV_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CND_NOTE_SRC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_OPSA_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OPSC_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OC_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_OC_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_VAL_OF_GDS_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CHK_WT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CHK_VL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DESP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_CTRL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ACT_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_ROUTNG_MTHD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PRESET_NET" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_NEUTRAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_AWKFREIGHT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_ACT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_CON" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_CUSTSERV" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID_ACTUAL" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PRD_ID_CONTR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CUY_ID_VAL_OF_GDS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_REV_DUE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_CLR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ACN_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_INS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CLRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_SELF_COLL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COD_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_COD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEPOTACTION_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_SLVL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_COD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_INS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DOMES_DATA_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ID_ALT">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="CON_CLNT_REF_TX">
+        <datatype type="STRING" maxLength="24"/>
+      </element>
+      <element name="CON_GOODS_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CON_PACK_DS">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="HAZ_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_UN_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_HAZ_DEGREE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_IN_ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ZON_ADJ_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="CON_MANUAL_RMS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ARCH_EXMPTD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PTYPE_WGT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_DFLT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CUST_DELIV_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_CUST_DEL_CT_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CON_CTMSDOC_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DMGED_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_VALUE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARE_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ARE_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_OPS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_OPS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_UKSF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_QTY_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DLP_PTNR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT1_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT2_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CIM_ID_PACS">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_ID_PACS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CIM_SCAN_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CIM_SCAN_LD">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_OS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="EDW_OS_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="EDW_UNSEND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	CON_V01.CON_ID,
+	CON_V01.BUL_ID_ORIG,
+	CON_V01.CON_CREATE_DT,
+	CON_V01.CON_CREATE_TM,
+	CON_V01.CON_SRKY_ID
+FROM /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CON_V01 CON_V01;</attribute>
+  <attribute name="creationDate" type="LONG">1565240626895</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565775651684</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565240626895</attribute>
+</metadata>

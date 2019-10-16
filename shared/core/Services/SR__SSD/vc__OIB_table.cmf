@@ -1,0 +1,618 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_OIB" path="/shared/Core/Services/SR_SSD/vc_OIB" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="OIB_Region_Cd" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Region_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Operating_Unit_Cd" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Operating_Unit_Name" nullable="true">
+      <datatype type="STRING" minLength="41" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Reporting_Group_Cd" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Reporting_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="41" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Country_Cd" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Country_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Depot_Cd" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Depot_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/BUSLOC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_OPTR_LIC_CD">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_LIC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_TNT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_1_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_2_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_3_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PBOX_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_TEL_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_FAX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_TELX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_VAT_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_CZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY1_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY2_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_MAX_DEL_ZON_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CONV_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="BUL_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_INACTIVE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_PROVINCE_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_SEARCH_TYPE_NR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DAYL_SAV_EX_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TIZ_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BTY_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/COUNTRYGROUPSET_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="WGZ_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="WGZ_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="SRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RMS_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RMS_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSBBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSBBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_REG_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_OPU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_TTT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/COUNTRY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_DIST_UOM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_LNG_UOM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_WT_UOM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CAP_UOM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PRV_RECD_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TEL_1_LN">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_TEL_2_LN">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_PCODE_LVL_CHK">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_VALID_ABORT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ACC_MAX_LN">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="COU_ACC_MIN_LN">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="DAY_ID_WEEKEND1">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_WEEKEND2">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_VATABLE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_REC_PAYS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_GRID_REF_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PCODESYSTEM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDA_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EDN_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ISO_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_MBAG_LIM_AM">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="2"/>
+      </element>
+      <element name="LNG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_REGION_LNG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PRV_VAT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_NAME_INCL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_BILL">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_NEXT_PRV_NR">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_NEXT_TOW_NR">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_GMT_SIGN_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_GMT_DIFF_TM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COU_INV_MAINT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TEL_NR_MAND_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TEL_LEN_CHECK">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_LST_SIGN_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_LST_DIFF_TM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COU_LST_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COU_LST_ST_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COU_GEN_PCD_MSK_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_PLACE_ALLOW_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PCODE_OVLAP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SUB_PRV_NR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_MIN_PCD_SRC_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="COU_TOWN_GEO_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TOWN_POPLTN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_REGION_HO_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PRV_LVL_CHK_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TOWN_CLEAN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PCD_OUT_TOW_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_POBOX_OVLAP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_POBOX_PCODE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PRV_LMF_M_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PRV_LMF_U_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SRCH_TOW_NM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SRCH_UNXACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SUDO_OVLAP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SUFF_OVLAP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_INTERFACE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SUDOSYSTEM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TOW_GRP_CLN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_RATING_LMF_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CONT_PERS_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CONT_TITLE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CONT_INIT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CONT_LNAME_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_CONT_FNAME_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_INTRNET_ACC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_INTERNET">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_OPS_DFLT">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_LMF_BUL_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_RATING_CNV_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_VAT_NO_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_TOWN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_NAME_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_PCODE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_FULL_TEL_NO_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_SUBSCRIBER_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_DEC">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TNG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_LAPSE_WEEKS_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_NEG_RESULTS_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_TPM_LCYCLE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_UNIVERSE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_ASSOC_PAR">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_UNION_PC">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="COU_RST_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+                     C1 as OIB_Region_Cd
+        ,          C2 as OIB_Region_Name
+        ,    C3 as OIB_Operating_Unit_Cd
+        ,  C4 as OIB_Operating_Unit_Name
+        ,   C5 as OIB_Reporting_Group_Cd
+        , C6 as OIB_Reporting_Group_Name
+        ,  C7 as OIB_Country_Cd 
+        ,         C8 as OIB_Country_Name 
+        ,             C10 as OIB_Depot_Cd
+        ,         C11 as OIB_Depot_Name
+from
+(
+  Select
+       CAST(C1  AS Char(10)) as c1
+      
+      ,CAST(C2  AS Char(30)) as c2
+      
+      ,CAST(case when C9 = &apos;Y&apos; AND C6 like &apos;*%&apos; THEN C3 || &apos;A&apos;
+          ELSE C3
+          END AS Char(11)) as c3
+      
+      ,CAST(case when C9 = &apos;Y&apos; AND C6 like &apos;*%&apos; AND C4 &lt;&gt; &apos; &apos; THEN C4 || &apos; ASSOCIATES&apos;
+            ELSE C4
+          END AS Char(41)) as c4
+      
+      ,CAST(case when C6 like &apos;*%&apos;  THEN &apos; &apos;
+            when C9 = &apos;Y&apos; AND C5 &lt;&gt; &apos; &apos; THEN C5 || &apos;A&apos;
+            ELSE C5
+          END  as Char(11)) as c5
+      
+      ,CAST(case when C6 like &apos;*%&apos; THEN &apos; &apos;
+            when C9 = &apos;Y&apos; AND C6 &lt;&gt; &apos; &apos; THEN C6 || &apos; ASSOCIATES&apos;
+            ELSE C6
+          END  as Char(41)) as c6
+      
+      ,CAST(C7  as Char(3)) as c7
+      
+      ,CAST(C8 as Char(30)) as c8
+      
+      ,CAST(C10 as Char(5)) as c10
+      
+      ,CAST(C11 as Char(30)) as c11
+      
+
+    from
+
+    (select
+      COALESCE(T1.DVH_REG_ID,&apos; &apos;)  as  C1,
+      COALESCE(T1.DVH_REG_NM,&apos; &apos;)  as  C2,
+      COALESCE(T1.DVH_OPU_ID,&apos; &apos;)  as  C3,
+      COALESCE(T1.DVH_OPU_NM,&apos; &apos;)  as  C4,
+      COALESCE(T1.DVH_TTT_ID,&apos; &apos;)  as  C5,
+      COALESCE(T1.DVH_TTT_NM,&apos; &apos;)  as  C6,
+      T1.COU_ID                    as  C7,
+      T1.COU_NM                    as  C8,
+      T1.COU_ASSOC_IN              as  C9,
+      T2.BUL_ID                    as  C10,
+      T2.BUL_NM                    as  C11
+
+      from /shared/Source/EDW/SR/PRODSR_P/COUNTRYGROUPSET_V01 t1
+      Inner Join   /shared/Source/EDW/SR/PRODSR_P/BUSLOC_V01 t2
+      on t1.cou_id = t2.cou_id
+
+      inner join /shared/Source/EDW/SR/PRODSR_P/COUNTRY_V01 t3
+      on t1.cou_id = t3.cou_id
+
+      where t1.com_id = &apos;WW&apos;
+--      and t2.BUL_INACTIVE_IN &lt;&gt; &apos;Y&apos;
+      and t3.COU_NON_USE_IN &lt;&gt; &apos;Y&apos;
+    )  as OIB ) a
+    Group by  1,2,3,4,5,6,7,8,9,10
+ --   Order by  C1, C2, C3, C4, C5, C6, C7, C8, C10, C11
+</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/defaultCacheDataSource/ciscache/cstracking</attribute>
+  <attribute name="creationDate" type="LONG">1556611558432</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563797813452</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556611558432</attribute>
+</metadata>

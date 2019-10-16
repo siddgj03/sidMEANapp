@@ -1,0 +1,387 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_ConsignmentMeasures" path="/shared/Publish/Control_And_Reconciliation/vp_ConsignmentMeasures" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Consignment_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Created_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Created_Time" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Identifier" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sequence_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Code" nullable="true">
+      <datatype type="STRING" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Costed_Con_Status" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Costed_For_Transfer_Pricing_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Partially_Costed_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CIT_Source_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Allocation_Status" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Status" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="18" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Latest_Entry_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TP_Applicable_Filter" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Cons" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Real_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Item_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Real_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contractual_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Pieces" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Control_And_Reconciliation/vc_ConsignmentMeasures" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Consignment_Number">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Consignment_Created_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Consignment_Created_Time">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Consignment_Identifier">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Run_Number">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Sequence_Number">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Run_Type_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Division_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Product_Code">
+        <datatype type="STRING" maxLength="8" trailingSpaces="false"/>
+      </element>
+      <element name="Costed_Con_Status">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Consignment_Type_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Costed_For_Transfer_Pricing_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Customer_Account_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Partially_Costed_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CIT_Source_Code">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cost_Allocation_Status">
+        <datatype type="STRING" minLength="6" maxLength="8" trailingSpaces="false"/>
+      </element>
+      <element name="Consignment_Status">
+        <datatype type="STRING" minLength="7" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="Invoice_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Origin_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Destination_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Latest_Entry_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TP_Applicable_Filter">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Number_of_Cons">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Revenue_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Pay_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Real_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Contractual_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Item_Volume">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Contractual_Volume">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Gross_Volume">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Air_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Road_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Real_Pieces">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Contractual_Pieces">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Gross_Pieces">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    *
+   FROM /shared/Core/Finance/Control_And_Reconciliation/vc_ConsignmentMeasures</attribute>
+  <attribute name="creationDate" type="LONG">1564049880061</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">143926</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564727156270</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">143926</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564049880061</attribute>
+</metadata>

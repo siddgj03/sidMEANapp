@@ -1,0 +1,227 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_AllDestinationCountries" path="/shared/Core/Finance/APR_SSD/vc_AllDestinationCountries" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Destination_Geozone" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Description" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/APR/PRODAPR_P/COUNTRYGROUPSET_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="WGZ_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="WGZ_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="SRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RMS_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RMS_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSBBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSBBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_REG_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_OPU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_TTT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    COUNTRYGROUPSET_V01.WGZ_GRP_DS Destination_Geozone, 
+    COUNTRYGROUPSET_V01.COU_ID Destination_Country_Code, 
+    COUNTRYGROUPSET_V01.COU_NM Destination_Country_Description
+FROM      
+    /shared/Source/EDW/APR/PRODAPR_P/COUNTRYGROUPSET_V01 COUNTRYGROUPSET_V01
+WHERE
+    COUNTRYGROUPSET_V01.COM_ID = &apos;WW&apos;
+GROUP BY 
+    COUNTRYGROUPSET_V01.WGZ_GRP_DS, 
+    COUNTRYGROUPSET_V01.COU_ID, 
+    COUNTRYGROUPSET_V01.COU_NM</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="creationDate" type="LONG">1556259525225</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBABMAQwBPAFUATgBUAFIAWQBHAFIATwBVAFAAUwBFAFQAXwBWADAAMQYCABMA
+QwBPAFUATgBUAFIAWQBHAFIATwBVAFAAUwBFAFQAXwBWADAAMQML/////wMKAAJAngMM/////wsR
+AAYABgBzAGgAYQByAGUAZAAGAFMAbwB1AHIAYwBlAAMARQBEAFcAAwBBAFAAUgAJAFAAUgBPAEQA
+QQBQAFIAXwBQABMAQwBPAFUATgBUAFIAWQBHAFIATwBVAFAAUwBFAFQAXwBWADAAMf//AwUAAAAA
+CAIQMQYB//8BAgEBBgABAwABBAABBQADBwAAAAAICBBiBgcAAQA9AQUACAMQQQYBAAYAQwBPAE0A
+XwBJAEQGAgAABgP//wYE//8DCv////8IDBAbBgIABABjAGgAYQByBgMABwBjAGgAYQByACgAMgAp
+AysAAAAPAxIAAAABBAUAAAAAAAAAAgQEAAAAAAAAAAIBEwH//wMLAAAAAP//CAQQQwYCAAAKDhAb
+BgIABABDAEgAQQBSAxIAAAABATsABAUAAAAAAAAAAgQEAAAAAAAAAAIBEwH//xAAAAACV1f/////
+BwkAAAABAAAAAAkKAAAAAxBBBgEACgBXAEcAWgBfAEcAUgBQAF8ARABTBgIAEwBEAGUAcwB0AGkA
+bgBhAHQAaQBvAG4AXwBHAGUAbwB6AG8AbgBlBgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBj
+AGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgAMwAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAAeARMB
+//8DCwAAAAD//xBBBgEABgBDAE8AVQBfAEkARAYCABgARABlAHMAdABpAG4AYQB0AGkAbwBuAF8A
+QwBvAHUAbgB0AHIAeQBfAEMAbwBkAGUGA///BgT//wMK/////wgMEBsGAgAEAGMAaABhAHIGAwAH
+AGMAaABhAHIAKAAzACkDKwAAAA8DEgAAAAEEBQAAAAAAAAADBAQAAAAAAAAAAwETAf//AwsAAAAA
+//8QQQYBAAYAQwBPAFUAXwBOAE0GAgAfAEQAZQBzAHQAaQBuAGEAdABpAG8AbgBfAEMAbwB1AG4A
+dAByAHkAXwBEAGUAcwBjAHIAaQBwAHQAaQBvAG4GA///BgT//wMK/////wgMEBsGAgAHAHYAYQBy
+AGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAAzADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAAB4B
+EwH//wMLAAAAAP////8JBgAAAAEQggMKAAAAHgMLAAAAHgMMAAAAyAMNAAAAyP//CAMQcQMBAAAA
+CwMCAAAAMgkDAAACJhB0AwYAAAAA//8QcgYEABMARABlAHMAdABpAG4AYQB0AGkAbwBuAF8ARwBl
+AG8AegBvAG4AZf//EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYMAAgARwBy
+AG8AdQBwACAAQgB5//8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAH//xByBgQAGABEAGUAcwB0AGkA
+bgBhAHQAaQBvAG4AXwBDAG8AdQBuAHQAcgB5AF8AQwBvAGQAZf//EHMDBQAAAAD//xB1AQcB//8Q
+eAYL/////xB3Awr///////8QeQYMAAgARwByAG8AdQBwACAAQgB5//8Qdv//EHb//xB2//8Qdv//
+EHQDBgAAAAL//xByBgQAHwBEAGUAcwB0AGkAbgBhAHQAaQBvAG4AXwBDAG8AdQBuAHQAcgB5AF8A
+RABlAHMAYwByAGkAcAB0AGkAbwBu//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv//////
+/xB5BgwACABHAHIAbwB1AHAAIABCAHn//xB2//8Qdv//EHb//xB2//8QdAYJABoAQwBPAFUATgBU
+AFIAWQBHAFIATwBVAFAAUwBFAFQAXwBWADAAMQAuAEMATwBNAF8ASQBE//8QcgYE/////xBzAwUA
+AAAA//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8QdgYIACEAQwBPAFUATgBUAFIA
+WQBHAFIATwBVAFAAUwBFAFQAXwBWADAAMQAuAEMATwBNAF8ASQBEACAAPQAgACcAVwBXACf//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv///////w==</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556259525225</attribute>
+</metadata>

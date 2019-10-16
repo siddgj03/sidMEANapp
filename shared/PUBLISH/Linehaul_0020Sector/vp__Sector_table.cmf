@@ -1,0 +1,273 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Sector" path="/shared/Publish/Linehaul Sector/vp_Sector" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Sector_Id" nullable="true">
+      <datatype type="STRING" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Cost_Driver_Code" nullable="true">
+      <datatype type="STRING" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Mode_of_Transport" nullable="true">
+      <datatype type="STRING" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Type_Id" nullable="true">
+      <datatype type="STRING" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Network_Type" nullable="true">
+      <datatype type="STRING" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Flight" nullable="true">
+      <datatype type="STRING" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_SEQ_NR" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MRN_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Cost_Item_Code" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LIC_OWNER_CD" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LIC_DRIVER_CD" nullable="true">
+      <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LH_Sector_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LIC_RATE_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="SEC_DEP_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_SEC_ORIG" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_SEC_DEST" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Air_Statistical_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sector_Road_Statistical_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Consignments_on_a_Sector" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/LinehaulSector/PRODCOSTMDLG_P/CM_LH_SECTOR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="SEC_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_SRKY_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LIC_OWNER_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LIC_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+      <element name="LIC_DRIVER_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LIC_GROSS_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="LIC_A_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="LIC_R_STAT_AM">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="LIC_NETW_TY" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LIC_NETW_MD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LIC_BB_LOCN_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LIC_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID_SEC_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_SEC_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="SEC_DEP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SEC_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LIC_DEPT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="LIC_FLIGHT_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LIC_CUTOFF_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LIC_CUTOFF_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="LIC_ARRIVAL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LIC_ARRIVAL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="LIC_RATE_AM">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="2"/>
+      </element>
+      <element name="LIC_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="LIC_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="LIC_COST_EXCL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT  distinct
+ trim(CM_LH_SECTOR_V01.SEC_NR) as Sector_Id ,
+(coalesce(trim(CM_LH_SECTOR_V01.LIC_DRIVER_CD),&apos;&apos;)) Sector_Cost_Driver_Code,
+(coalesce(trim(CM_LH_SECTOR_V01.LIC_NETW_MD), &apos;&apos;)) Sector_Mode_of_Transport , 
+(coalesce(trim(CM_LH_SECTOR_V01.LIC_TYPE_CD), &apos;&apos;)) Sector_Type_Id , 
+(coalesce(trim(CM_LH_SECTOR_V01.LIC_NETW_TY), &apos;&apos;)) Sector_Network_Type ,
+(coalesce(trim(CM_LH_SECTOR_V01.LIC_FLIGHT_CD), &apos;&apos;)) Sector_Flight,
+ CM_LH_SECTOR_V01.OUP_SEQ_NR,
+ CM_LH_SECTOR_V01.MRN_ID,
+ CM_LH_SECTOR_V01.OUP_SRKY_ID,
+ CM_LH_SECTOR_V01.CTM_SRKY_ID as Sector_Cost_Item_Code ,
+ trim(CM_LH_SECTOR_V01.LIC_OWNER_CD)as LIC_OWNER_CD  ,
+trim(CM_LH_SECTOR_V01.LIC_DRIVER_CD) as LIC_DRIVER_CD,
+ CM_LH_SECTOR_V01.LIC_COST_AM as LH_Sector_Cost_Amount ,
+ CM_LH_SECTOR_V01.LIC_RATE_AM  ,
+ CM_LH_SECTOR_V01.SEC_DEP_DT  ,
+ trim(CM_LH_SECTOR_V01.BUL_ID_SEC_ORIG)as BUL_ID_SEC_ORIG ,
+ trim(CM_LH_SECTOR_V01.BUL_ID_SEC_DEST) as BUL_ID_SEC_DEST ,
+ CM_LH_SECTOR_V01.LIC_GROSS_WT  as  Sector_Gross_Weight,
+ CM_LH_SECTOR_V01.LIC_A_STAT_WT  as  Sector_Air_Statistical_Weight,
+ CM_LH_SECTOR_V01.LIC_R_STAT_AM  as  Sector_Road_Statistical_Weight,
+ CM_LH_SECTOR_V01.LIC_CONS_QT  as  Number_of_Consignments_on_a_Sector
+ from /shared/Source/EDW/LinehaulSector/PRODCOSTMDLG_P/CM_LH_SECTOR_V01 	
+</attribute>
+  <attribute name="creationDate" type="LONG">1564648977248</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1569217219071</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564648977248</attribute>
+</metadata>

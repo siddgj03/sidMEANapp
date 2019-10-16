@@ -1,0 +1,234 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_PostQCFlowFile" path="/shared/Publish/Cost_Calculation/vc_PostQCFlowFile" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Run_Number_QC" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Description_QC" nullable="true">
+      <datatype type="STRING" maxLength="255"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoicing_Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Reference_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Reference_Code_QC" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cons_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OutlookSoft_Reporting_Group" nullable="true">
+      <datatype type="STRING" maxLength="45" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Selected_For_Cost_Calculation_Flag" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="International_Domestic" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sorting_Mode" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Net_Revenue_Amount_Euro_QC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Consignments_QC" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Pieces_QC" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Volume_QC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pay_Weight_QC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Weight_QC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Gross_Pieces_QC" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Weight_QC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Cost_Calculation/vc_PostQCFlowFile" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Run_Number_QC">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Run_Description_QC">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="Invoicing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Country_Code_QC">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Depot_Code_QC">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Country_Code_QC">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Depot_Code_QC">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Reference_Code_QC">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Reference_Code_QC">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="Cons_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OutlookSoft_Reporting_Group">
+        <datatype type="STRING" maxLength="45" trailingSpaces="false"/>
+      </element>
+      <element name="Selected_For_Cost_Calculation_Flag">
+        <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="International_Domestic">
+        <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      </element>
+      <element name="Sorting_Mode">
+        <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      </element>
+      <element name="Net_Revenue_Amount_Euro_QC">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Number_of_Consignments_QC">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Number_Of_Pieces_QC">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Actual_Volume_QC">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Pay_Weight_QC">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Actual_Weight_QC">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Number_of_Gross_Pieces_QC">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Gross_Weight_QC">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    *
+from
+/shared/Core/Finance/Cost_Calculation/vc_PostQCFlowFile</attribute>
+  <attribute name="creationDate" type="LONG">1565336306542</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565774191472</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565336306542</attribute>
+</metadata>

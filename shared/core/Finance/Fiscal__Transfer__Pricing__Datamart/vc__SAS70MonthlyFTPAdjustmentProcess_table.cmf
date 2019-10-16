@@ -1,0 +1,340 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_SAS70MonthlyFTPAdjustmentProcess" path="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_SAS70MonthlyFTPAdjustmentProcess" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="MRQ_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Month" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Posted_By" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Posted_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Status" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="11" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Type" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="18" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Months_Difference" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reason" nullable="true">
+      <datatype type="STRING" maxLength="255"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Record_Count" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FTP_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT GRANT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRN_LATESTRUN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_START_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_END_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ACTUALRUN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_NM" nullable="false">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="MRN_DS">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_OUTPUT_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPP_OUTPUT_VER_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID_QCFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRQ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="RET_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRQ_REASON_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_HIDDEN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MAG_ID_CURRENT">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MAG_ID_ACTING">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MRQ_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTV_TABLE_NM" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TSV_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CAN_REAS_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_CAN_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_CANCELLED_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ADJ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CRIT_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="SAQ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SAS70_RPT12_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ADJ_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ADJ_FILE_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ADJ_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ADJ_RECORD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ADJ_TOTAL_RECORDS_CT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ADJ_TOTAL_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">/*select 
+       D2.Year3  as  &quot;Year&quot;,
+       D2.Month4  as  &quot;Month&quot;,
+       coalesce(D2.Posted_By,D3.Posted_By)  as  &quot;Posted_By&quot;,
+       coalesce(D2.Request_ID,D3.Request_ID)  as  &quot;Request_ID&quot;,
+       coalesce(D2.Posted_Date,D3.Posted_Date)  as  &quot;Posted_Date&quot;,
+       coalesce(D2.Status,D3.Status)  as  Status,
+       coalesce(D2.&quot;Type&quot;,D3.&quot;Type&quot;)  as  &quot;Type&quot;,
+       coalesce(D2.Record_Count,D3.Record_Count)  as  &quot;Record_Count&quot;,
+       coalesce(D2.FTP_Amount,D3.FTP_Amount)  as  &quot;FTP_Amount&quot;,
+       D3.Reviewer_1_Ranking  as  &quot;Reviewer_1_Ranking&quot;,
+       D3.MRD_ID_2  as  MRD_ID_2,
+       D3.Reviewer_2_Ranking  as  &quot;Reviewer_2_Ranking&quot;,
+       D3.Reviewer_1  as  &quot;Reviewer_1&quot;,
+       D3.Reviewer_2  as  &quot;Reviewer_2&quot;,
+       D2.TNT_Months_Difference  as  &quot;TNT_Months_Difference&quot;,
+       coalesce(D2.Reason,D3.Reason)  as  Reason,
+       D3.Decision_ID  as  &quot;Decision_ID&quot;
+ from 
+        	/shared/Core/Finance/FTP/vs_SAS70MonthlyFTPAdjustmentProcessD303		 D3
+        full outer join 			/shared/Core/Finance/FTP/vs_SAS70MonthlyFTPAdjustmentProcessD2 D2
+        on (((D3.sc = D2.sc) and (D3.sc2 = D2.sc2)) and (D3.sc17 = D2.sc14))*/
+
+
+
+
+
+
+
+
+
+ select 
+T3.MRQ_ID,
+T1.TNT_YR &quot;Year&quot; , T1.TNT_MTH &quot;Month&quot; , 
+REP12C_CM_SAS70_RPT12_V01.ADJ_USER_ID Posted_By , 
+REP12C_CM_SAS70_RPT12_V01.ADJ_FILE_ID Request_ID , 
+T3.MRQ_DT Posted_Date , 
+(case  when REP12C_CM_SAS70_RPT12_V01.ADJ_STATUS_CD = &apos;N&apos; then &apos;New Applied&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_STATUS_CD = &apos;O&apos; then &apos;Old Applied&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_STATUS_CD = &apos;P&apos; then &apos;New Pending&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_STATUS_CD = &apos;R&apos; then &apos;Rejected&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_STATUS_CD = &apos;C&apos; then &apos;Cancelled&apos; else NULL end ) Status , 
+(case  when REP12C_CM_SAS70_RPT12_V01.ADJ_RECORD_TYPE_CD = &apos;M&apos; then &apos;Manual Adjustment&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_RECORD_TYPE_CD = &apos;S&apos; then &apos;Summary Adjustment&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_RECORD_TYPE_CD = &apos;U&apos; then &apos;U/O&apos; when REP12C_CM_SAS70_RPT12_V01.ADJ_RECORD_TYPE_CD = &apos;C&apos; then &apos;CSA&apos; else NULL end ) &quot;Type&quot; , 
+ T1.MTHS_DIFF TNT_Months_Difference , 
+ T3.MRQ_REASON_TX Reason  , 
+ REP12C_CM_SAS70_RPT12_V01.ADJ_TOTAL_RECORDS_CT Record_Count , 
+ REP12C_CM_SAS70_RPT12_V01.ADJ_TOTAL_AM FTP_Amount 
+ from (((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SAS70_RPT12_V01 REP12C_CM_SAS70_RPT12_V01 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01 T3 
+on REP12C_CM_SAS70_RPT12_V01.ADJ_FILE_ID = T3.MRQ_ID) 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 T6 
+on REP12C_CM_SAS70_RPT12_V01.MRN_ID = T6.MRN_ID) 
+INNER JOIN (
+select distinct cast(TNTCALDAYSDIFF_V01.TNT_YR || TNTCALDAYSDIFF_V01.TNT_WK as integer) TNT_YRWK_NR ,
+ TNTCALDAYSDIFF_V01.TNT_MTH TNT_MTH , 
+ TNTCALDAYSDIFF_V01.TNT_YR TNT_YR , 
+ TNTCALDAYSDIFF_V01.MTHS_DIFF MTHS_DIFF 
+ from /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01 TNTCALDAYSDIFF_V01) T1 
+on T1.TNT_YRWK_NR = T6.MRN_START_WK_NR)</attribute>
+  <attribute name="creationDate" type="LONG">1565616650504</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565616656183</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565616650504</attribute>
+</metadata>

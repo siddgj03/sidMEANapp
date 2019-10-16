@@ -1,0 +1,794 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="CUSTLOCTN_V01" path="/shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTN_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CUS_ID" nullable="false">
+      <datatype name="decimal" extendedName="decimal(10,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ID" nullable="false">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EDW_LOAD_TD" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_DELETE_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_UPDT_TD" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_UPDT_USER_ID" nullable="false">
+      <datatype name="char" extendedName="char(8)" subType="DATASOURCE_TYPE" type="STRING" minLength="8" maxLength="8"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SOFTLOCK_TS" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_COMPANY_NM" nullable="true">
+      <datatype name="varchar" extendedName="varchar(80)" subType="DATASOURCE_TYPE" type="STRING" maxLength="80"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_HOUSE_NR" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FLAT_NR" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_STREET_NM" nullable="false">
+      <datatype name="char" extendedName="char(30)" subType="DATASOURCE_TYPE" type="STRING" minLength="30" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ADDR_LINE_1_TX" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ADDR_LINE_2_TX" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ADDR_LINE_3_TX" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TOWN_NM" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_STD_TOWN_NM" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PRV_ID" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_POSTAL_CD" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ADDR_ERR_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PBOX_TYP_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PBOX_NR" nullable="false">
+      <datatype name="char" extendedName="char(15)" subType="DATASOURCE_TYPE" type="STRING" minLength="15" maxLength="15"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PBOX_TOWN_NM" nullable="true">
+      <datatype name="varchar" extendedName="varchar(40)" subType="DATASOURCE_TYPE" type="STRING" maxLength="40"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PBOX_POSTAL_CD" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID_PBOX" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SECTION_X_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SECTION_Y_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_STREET_X_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_STREET_Y_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SEC_RESULT_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_STR_RESULT_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SUDO_POSTAL_CD" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PRIVATE_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PREF_DAY_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(1,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_DFLT_COLL_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_DFLT_DELIV_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LNG_ID" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_INTL_TEL_CD" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TEL_1_NR" nullable="false">
+      <datatype name="char" extendedName="char(10)" subType="DATASOURCE_TYPE" type="STRING" minLength="10" maxLength="10"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TEL_2_NR" nullable="false">
+      <datatype name="char" extendedName="char(20)" subType="DATASOURCE_TYPE" type="STRING" minLength="20" maxLength="20"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_INTL_FAX_CD" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FAX_1_NR" nullable="false">
+      <datatype name="char" extendedName="char(10)" subType="DATASOURCE_TYPE" type="STRING" minLength="10" maxLength="10"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FAX_2_NR" nullable="false">
+      <datatype name="char" extendedName="char(20)" subType="DATASOURCE_TYPE" type="STRING" minLength="20" maxLength="20"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_VAT_NR" nullable="false">
+      <datatype name="char" extendedName="char(20)" subType="DATASOURCE_TYPE" type="STRING" minLength="20" maxLength="20"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MON_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MON_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MON_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MON_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TUE_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TUE_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TUE_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_TUE_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_WED_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_WED_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_WED_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_WED_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_THU_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_THU_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_THU_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_THU_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FRI_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FRI_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FRI_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_FRI_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SAT_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SAT_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SAT_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SAT_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SUN_AM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SUN_AM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SUN_PM_OPEN_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SUN_PM_CLSE_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_POSTAL_CD_SCH" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_PB_PSTL_CD_SCH" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_COORD_LONG_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(10,7)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="10" maxFractionalDigits="7"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_COORD_LAT_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,7)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="7"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID_CUS" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_VAT_2_NR" nullable="false">
+      <datatype name="char" extendedName="char(20)" subType="DATASOURCE_TYPE" type="STRING" minLength="20" maxLength="20"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_ADDL_LOC_NM" nullable="true">
+      <datatype name="varchar" extendedName="varchar(32)" subType="DATASOURCE_TYPE" type="STRING" maxLength="32"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_COMPANY_NM_CR" nullable="false">
+      <datatype name="char" extendedName="char(20)" subType="DATASOURCE_TYPE" type="STRING" minLength="20" maxLength="20"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_GEO_ACC_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_SHUF_POSTAL_CD" nullable="false">
+      <datatype name="char" extendedName="char(9)" subType="DATASOURCE_TYPE" type="STRING" minLength="9" maxLength="9"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_IC_CD" nullable="false">
+      <datatype name="char" extendedName="char(10)" subType="DATASOURCE_TYPE" type="STRING" minLength="10" maxLength="10"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_IDSTRCT_CD" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_IPROV_CD" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_IMUNICIP_CD" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID_TEL" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID_FAX" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MAIL_PREF_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_MAIN_LOC_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_THAI_BRANCH_ID" nullable="true">
+      <datatype name="decimal" extendedName="decimal(6,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_HEAD_OFFICE_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_DUNS_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_UID_NR" nullable="false">
+      <datatype name="char" extendedName="char(15)" subType="DATASOURCE_TYPE" type="STRING" minLength="15" maxLength="15"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CLO_VAT_SUFFIX_CD" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:57:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:58:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:59:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:60:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:61:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:62:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:63:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:64:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:65:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:66:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:67:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:68:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:69:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:70:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:71:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:72:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:73:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:74:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:75:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:76:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:77:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:78:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:79:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:80:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:81:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:82:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:83:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:84:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:85:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:86:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:87:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:88:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:89:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:90:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:91:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:92:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:93:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:94:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:95:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1563791645591</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">X(2)</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568733117752</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563791645591</attribute>
+</metadata>

@@ -1,0 +1,283 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_DivAccPrdCubeOVR" path="/shared/Core/Finance/RatingDatamart/vc_DivAccPrdCubeOVR" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Code" nullable="true">
+      <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Group_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSL_IMPERIAL_IN" nullable="true">
+      <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSL_VL_CONV_QT" nullable="true">
+      <datatype type="STRING" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Code" nullable="true">
+      <datatype type="STRING" maxLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cube_Conversion_Factor" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_Start_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_End_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_Review_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_Update_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cube_Conversion_Factor_Desc" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Name" nullable="true">
+      <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVACCPRDCUBEOVR_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="APC_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="APC_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_END_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_REVIEW_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_REFERENCED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="APC_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="APC_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="APC_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_UPDATE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="APC_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="APC_END_DT_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="APC_END_DT_UPDT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CSL_IMPERIAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CSL_VL_CONV_QT" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVCUBEOVERRIDE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CSL_IMPERIAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CSL_VL_CONV_QT" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CSL_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSL_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CSL_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CSL_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CSL_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CSL_UPDATE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CSL_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVISION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DIV_OPEN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_ID_DEFAULT">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DIV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_REACT_NR">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_TRAD_ENTITY_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NCS_EXTRT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_REC_SRCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    trim(DIVACCPRDCUBEOVR_V02.COM_ID) Company_Code, 
+    trim(DIVACCPRDCUBEOVR_V02.COU_ID) Country_Code, 
+    trim(DIVACCPRDCUBEOVR_V02.ACC_ID) Account_Code, 
+    trim(DIVACCPRDCUBEOVR_V02.ACG_ID) Account_Group_Code, 
+    trim(DIVACCPRDCUBEOVR_V02.CSL_IMPERIAL_IN)CSL_IMPERIAL_IN, 
+    trim(DIVACCPRDCUBEOVR_V02.CSL_VL_CONV_QT)CSL_VL_CONV_QT, 
+    trim(DIVACCPRDCUBEOVR_V02.DIV_ID) Division_Code, 
+    trim(DIVACCPRDCUBEOVR_V02.PRD_ID) Product_Code, 
+    CAST(DIVACCPRDCUBEOVR_V02.CSL_VL_CONV_QT AS FLOAT) / 1000  Cube_Conversion_Factor, 
+    DIVACCPRDCUBEOVR_V02.APC_START_DT Customer_Cube_Conversion_Factor_Start_Date, 
+    DIVACCPRDCUBEOVR_V02.APC_END_DT Customer_Cube_Conversion_Factor_End_Date, 
+    DIVACCPRDCUBEOVR_V02.APC_REVIEW_DT Customer_Cube_Conversion_Factor_Review_Date, 
+    DIVACCPRDCUBEOVR_V02.APC_UPDATE_DT Customer_Cube_Conversion_Factor_Update_Date, 
+    trim(DIVCUBEOVERRIDE_V01.CSL_DS) Cube_Conversion_Factor_Desc ,
+	trim(DIVISION_V01.DIV_NM) Division_Name
+FROM      
+    /shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVCUBEOVERRIDE_V01 DIVCUBEOVERRIDE_V01 INNER JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVACCPRDCUBEOVR_V02 DIVACCPRDCUBEOVR_V02
+    ON ((DIVACCPRDCUBEOVR_V02.COM_ID = DIVCUBEOVERRIDE_V01.COM_ID AND 
+        DIVACCPRDCUBEOVR_V02.DIV_ID = DIVCUBEOVERRIDE_V01.DIV_ID) AND 
+        DIVACCPRDCUBEOVR_V02.CSL_IMPERIAL_IN = DIVCUBEOVERRIDE_V01.CSL_IMPERIAL_IN) AND 
+        DIVACCPRDCUBEOVR_V02.CSL_VL_CONV_QT = DIVCUBEOVERRIDE_V01.CSL_VL_CONV_QT INNER JOIN
+	/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVISION_V01 DIVISION_V01  ON
+		DIVACCPRDCUBEOVR_V02.COM_ID = DIVISION_V01.COM_ID AND 
+		DIVACCPRDCUBEOVR_V02.DIV_ID = DIVISION_V01.DIV_ID</attribute>
+  <attribute name="creationDate" type="LONG">1564382703934</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565959997869</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564382703934</attribute>
+</metadata>

@@ -1,0 +1,155 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_ReconControl" path="/shared/Core/Finance/Control_And_Reconciliation/vc_ReconControl" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Year_Week_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Row_Frequency_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Allocation_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Allocation_Status_Description" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="11" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="JCL_Run_Day_Nr" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Percentage_Of_Consignments" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="16" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Amount_Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RECON_CNTRL_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_CNTRL_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_RUN_YRWK_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_FREQUENCY_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_CTRL_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_CONS_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="JCL_RUN_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="EDW_CONS_PC">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="EDW_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="EDW_GROSS_WT">
+        <datatype type="DECIMAL" maxDigits="16" maxFractionalDigits="3"/>
+      </element>
+      <element name="EDW_REVENUE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+
+CM_RECON_CNTRL_V01.OUP_CNTRL_GROUP_CD  as Invoice_Country_Code, 
+CM_RECON_CNTRL_V01.OUP_RUN_YRWK_NR	as Run_Year_Week_Number,
+CM_RECON_CNTRL_V01.OUP_FREQUENCY_CD as Row_Frequency_Code,
+CM_RECON_CNTRL_V01.RUN_TYPE_CD as Run_Type_Code,
+CM_RECON_CNTRL_V01.OUP_CTRL_STATUS_CD   as Cost_Allocation_Status_Code,
+case CM_RECON_CNTRL_V01.OUP_CTRL_STATUS_CD  
+when &apos;R&apos; then &apos;Rejected&apos;
+when &apos;E&apos; then &apos;Excluded&apos;
+when &apos;C&apos; then &apos;Costed&apos;
+when &apos;T&apos; then &apos;Costed TP&apos;
+when &apos;G&apos; then &apos;Grand Total&apos;
+end  as Cost_Allocation_Status_Description,
+CM_RECON_CNTRL_V01.OUP_CONS_STATUS_CD as Consignment_Status_Code,  
+CM_RECON_CNTRL_V01.JCL_RUN_DAY_NR as JCL_Run_Day_Nr, 
+CM_RECON_CNTRL_V01.EDW_CONS_PC as Percentage_Of_Consignments, 
+CM_RECON_CNTRL_V01.EDW_CONS_QT as Number_Of_Consignments,
+CM_RECON_CNTRL_V01.EDW_GROSS_WT  as Gross_Weight,
+CM_RECON_CNTRL_V01.EDW_REVENUE_AM as Revenue_Amount_Euro
+From
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RECON_CNTRL_V01 CM_RECON_CNTRL_V01
+</attribute>
+  <attribute name="creationDate" type="LONG">1563775557398</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564050869609</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563775557398</attribute>
+</metadata>

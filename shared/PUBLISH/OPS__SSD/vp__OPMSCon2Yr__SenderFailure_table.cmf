@@ -1,0 +1,171 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_OPMSCon2Yr_SenderFailure" path="/shared/Publish/OPS_SSD/vp_OPMSCon2Yr_SenderFailure" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Daily_Con_Sender_Failure_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Daily_Con_Sender_Failure_Label" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_2Yr_SenderFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Daily_Con_Sender_Failure_Ind">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Sender_Failure_Lab">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/FIles/Source_CSV/FIXED-SenderFailure.csv" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily Con Sender Failure Indicator">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Daily Con Sender Failure Label">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    cast(FIXED_SenderFailure_csv.&quot;Daily Con Sender Failure Indicator&quot; as char(2)) Daily_Con_Sender_Failure_Indicator, 
+    cast(FIXED_SenderFailure_csv.&quot;Daily Con Sender Failure Label&quot; as varchar(50)) Daily_Con_Sender_Failure_Label
+FROM      
+    /shared/Source/Files/Source_CSV/&quot;FIXED-SenderFailure.csv&quot; FIXED_SenderFailure_csv</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_2Yr_SenderFailure</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557835790425</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20167</attribute>
+  <attribute name="creatorUserName" type="STRING">o362wtv</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565700847953</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20167</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557835790425</attribute>
+  <trigger>
+    <security>
+      <owner user="x423xjm" domain="tntadtest"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/OPS_SSD/vp_OPMSCon2Yr_SenderFailure" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Daily_Con_Sender_Failure_Indicator">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="Daily_Con_Sender_Failure_Label">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/OPS_SSD/vp_OPMSCon2Yr_SenderFailure&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1565699472000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1565699528742</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565699528742</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565699528742</attribute>
+  </trigger>
+</metadata>

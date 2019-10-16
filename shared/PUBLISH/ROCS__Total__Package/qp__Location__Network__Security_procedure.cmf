@@ -1,0 +1,68 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="qp_Location_Network_Security" path="/shared/Publish/ROCS_Total_Package/qp_Location_Network_Security" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="USERID" direction="OUT" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="4096"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE EXECUTE"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE EXECUTE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE EXECUTE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE EXECUTE"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE EXECUTE"/>
+  </security>
+  <dependency target="/lib/util/GetProperty" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="property" direction="IN">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="PropertyName" type="STRING" maxLength="255"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="PropertyValue" type="STRING" maxLength="4096"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="Script" type="STRING">PROCEDURE qp_Location_Network_Security(
+    OUT USERID varchar(4096) 
+    )
+    BEGIN DECLARE userid VARCHAR(255);
+CALL getProperty(&apos;CURRENT_USER_NAME&apos;,USERID);  
+    END
+
+
+
+ /*
+        OPEN result FOR 
+            SELECT 
+                *, userid
+            FROM      
+                /shared/Publish/OPS/vp_CountryDest vp_CountryDest
+                                    WHERE LXT_NM LIKE &apos;MALTA&apos;; --WHERE LXT_NM LIKE userid;
+    END */</attribute>
+  <attribute name="creationDate" type="LONG">1565017002463</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565336612398</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="native_only" type="STRING">false</attribute>
+  <attribute name="references" type="MAP">
+    <item>
+      <key type="STRING">6/5</key>
+      <value type="STRING_ARRAY">
+        <item>lib</item>
+        <item>util</item>
+        <item>GetProperty</item>
+      </value>
+    </item>
+  </attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565017002463</attribute>
+</metadata>

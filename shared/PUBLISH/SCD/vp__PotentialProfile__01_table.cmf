@@ -1,0 +1,320 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_PotentialProfile_01" path="/shared/Publish/SCD/vp_PotentialProfile_01" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Identifier" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Profile_Sequence_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Potential_Profile_Id" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Line_of_Business" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Group" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Direction" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cancelled_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_DIRECTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CS_PRODUCT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="SMP_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PTP_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SMP_EFFECT_TO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SMP_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SMP_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="SMP_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SMP_PRODUCT_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SMP_TIMED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_SPS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_LABEL_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="SMP_INVERSE_LBL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_EXPRESS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_PREMIUM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERPROFILE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="TRP_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="TRP_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TRP_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TRP_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TRP_DIRECTION_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_FREQ_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_VALUE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="TRP_VALUE_UNITS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_REVENUE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TYR_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="WEK_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="TRS_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PTP_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SMP_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TRP_TOT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="UOM_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TRP_ACTIVE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OFF_ID">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="TRP_MANUAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_CREATED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TRP_CREATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TRP_CANCEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TRP_POTENTIAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/LINE_OF_BUSINESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOB_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOB_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="LOB_NM_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOB_NM_EFFECTTO_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/PRODGROUP_NAME_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRG_NM_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRG_NM_EFFECTTO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRG_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PRG_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PRG_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PRG_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PRG_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T1.&quot;CUS_ID&quot; as Customer_Identifier,
+T1.&quot;TRP_SEQ_NR&quot; as Profile_Sequence_Number,
+T1.TRP_SEQ_NR AS Potential_Profile_Id,
+T2.LOB_NM AS Line_of_Business,
+T3.PRG_NM AS Product_Group,
+T4.SMP_PRODUCT_NM AS Product,
+T5.TAV_DS AS Direction,
+T1.TRP_CANCEL_IN AS Cancelled_Indicator
+from /shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERPROFILE_V01 T1 LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/LINE_OF_BUSINESS_V01 T2 
+on T1.&quot;LOB_ID&quot; = T2.&quot;LOB_ID&quot; and &apos;Y&apos; = T2.&quot;LOB_ACTIVE_IN&quot; and &apos;EN&apos; = T2.&quot;LNG_ID&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/PRODGROUP_NAME_V01 T3 
+on T1.&quot;LOB_ID&quot; = T3.&quot;LOB_ID&quot; and T1.&quot;PRG_ID&quot; = T3.&quot;PRG_ID&quot; and &apos;EN&apos; = T3.&quot;LNG_ID&quot; and &apos;Y&apos; = T3.&quot;PRG_ACTIVE_IN&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CS_PRODUCT_V01 T4 
+on T1.&quot;PTP_ID&quot; = T4.&quot;PTP_ID&quot; and T1.&quot;SMP_ID&quot; = T4.&quot;SMP_ID&quot; and &apos;Y&apos; = T4.&quot;SMP_ACTIVE_IN&quot; 
+and CURRENT_DATE between T4.&quot;SMP_EFFECT_DT&quot; and T4.&quot;SMP_EFFECT_TO_DT&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_DIRECTION_V01 T5 
+on T1.&quot;TRP_DIRECTION_CD&quot; = T5.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T5.&quot;LNG_ID&quot; </attribute>
+  <attribute name="creationDate" type="LONG">1563195684521</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563195684521</attribute>
+</metadata>

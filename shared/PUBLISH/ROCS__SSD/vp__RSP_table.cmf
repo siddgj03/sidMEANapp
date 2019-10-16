@@ -1,0 +1,2102 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RSP" path="/shared/Publish/ROCS_SSD/vp_RSP" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Hour_Arr" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Quarter_Arr" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Hour_Dep" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Quarter_Dep" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Type" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Network" nullable="true">
+      <datatype type="STRING" minLength="27" maxLength="29"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Truck_Types" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="30"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Delays" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="64"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Controllable_Or_Non_Controllable_Orig" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Cancelled_Scheduled_Operated" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="40"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Cancellation_Reason" nullable="true">
+      <datatype type="STRING" minLength="39" maxLength="71"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Delays" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="64"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Controllable_Or_Non_Controllable_Dest" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Destination_Location" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="40"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Origin_Location" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="40"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Destination_Geographical_Country" nullable="true">
+      <datatype type="STRING" minLength="32" maxLength="44"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Origin_Geographical_Country" nullable="true">
+      <datatype type="STRING" minLength="32" maxLength="44"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Country" nullable="true">
+      <datatype type="STRING" minLength="36" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Operator" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="51"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Purpose" nullable="true">
+      <datatype type="STRING" minLength="16" maxLength="20"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Year" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Quarter" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Month" nullable="true">
+      <datatype type="STRING" minLength="9"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Week" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Year" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Quarter" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Month" nullable="true">
+      <datatype type="STRING" minLength="9"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Week" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Day_Of_Week_Dep" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Year" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Quarter" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Month" nullable="true">
+      <datatype type="STRING" minLength="9"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Week" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Day_Of_Week_Arr" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Year" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Quarter" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Month" nullable="true">
+      <datatype type="STRING" minLength="9"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Week" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="12"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Or_Extra" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="37"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="New_Departure_Reason" nullable="true">
+      <datatype type="STRING" minLength="40" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Reporting_Day" nullable="true">
+      <datatype type="STRING" minLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Day" nullable="true">
+      <datatype type="STRING" minLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Nwk_Id" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Available_For_Returnload" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="16" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements_Masterplanned" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements_New_Departure" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Movements_New_Departure" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements_Cancelled" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Movements_Cancelled" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements_Scheduled_Operated" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Empty_Movements" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Total_KMs_Empty_Movements" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Total_KMs_Non_Empty_Movements" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Empty_Movements" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_No_Data_Received" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Delay" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_On_Time" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_Late" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Late_Plus_No_Data" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Data_Received_Departures" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Scheduled_Loaded_Departures_Operated_On_Time" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Actual_Loaded_Departures_Operated_On_Time" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrivals_No_Data_Received" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrivals_Actual_Operated" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Delay" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrivals_Actual_Operated_On_Time" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrivals_Actual_Operated_Late" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrivals_Late_Plus_No_Data" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Data_Received_Arrivals" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Scheduled_Loaded_Arrivals_Operated_On_Time" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Actual_Loaded_Arrivals_Operated_On_Time" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Duration" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Duration" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Estimated_Duration" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Cost_Management_Location" nullable="true">
+      <datatype type="STRING" minLength="40" maxLength="40"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Day" nullable="true">
+      <datatype type="STRING" minLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Day" nullable="true">
+      <datatype type="STRING" minLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Delay_nb" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_On_Time_nb" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_Late_nb" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Late_Plus_No_Data_nb" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Scheduled_Loaded_Departures_Operated_On_Time_nb" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Actual_Loaded_Departures_Operated_On_Time_nb" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departure_Delay_zt" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Scheduled_Loaded_Departures_Operated_On_Time_zt" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Percent_Actual_Loaded_Departures_Operated_On_Time_zt" nullable="true">
+      <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_On_Time_zt" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Actual_Operated_Late_zt" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Departures_Late_Plus_No_Data_zt" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Masterplanned_Or_New_Reason" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="16" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Number_Of_Movements_Scheduled_Operated_Non_Service" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_CancelledOperated" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Cancel_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Cancel_Indicator_Short_Ds">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Cancel_Indicator_Long_Ds">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Cancel_Reason_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Cancel_Reason_Short_Ds">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Cancel_Reason_Long_Ds">
+        <datatype type="STRING" minLength="71" maxLength="71"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_CmlLocation" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Bul_Csys_Id">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Bul_Csys_Id_Cml">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Bul_Id_Short_Ds">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Id_Short_Ds_Cml">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Id_Long_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Bul_Id_Long_Ds_Cml">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="Cou_Iso_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Cml">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Short_Ds">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Short_Ds_Cml">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Cou_Iso_Id_Long_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Cou_Iso_Id_Long_Ds_Cml">
+        <datatype type="STRING" minLength="32" maxLength="32"/>
+      </element>
+      <element name="Loc_Obj_Id_Cmbl">
+        <datatype type="STRING" minLength="5" maxLength="5" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_DelayDest" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dly_Id_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Dly_Dest_Short_Ds">
+        <datatype type="STRING" minLength="64" maxLength="64"/>
+      </element>
+      <element name="Dly_Dest_Long_Ds">
+        <datatype type="STRING" minLength="64" maxLength="64"/>
+      </element>
+      <element name="Dly_Dest_Contr_In">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Dly_Dest_Contr_Ds">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_DelayOrig" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dly_Id_Orig">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Dly_Orig_Short_Ds">
+        <datatype type="STRING" minLength="64" maxLength="64"/>
+      </element>
+      <element name="Dly_Orig_Long_Ds">
+        <datatype type="STRING" minLength="64" maxLength="64"/>
+      </element>
+      <element name="Dly_Orig_Contr_In">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Dly_Orig_Contr_Ds">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="row_nr">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Hour" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Hour">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Hour_Description">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Quarterhour">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Hour_Quarter">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Hour_Quarterhour_Description">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Hour_Quarterhour_Short">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Hour_Short">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Schdep_Tm_H_Q">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="Scharr_Tm_H_Q">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Location" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Bul_Csys_Id_Dest">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="Bul_Csys_Id_Orig">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="Bul_Id_Short_Ds_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Id_Short_Ds_Orig">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Id_Long_Ds_Dest">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="Bul_Id_Long_Ds_Orig">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="Cou_Iso_Id_Dest">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Orig">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Short_Ds_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Cou_Iso_Id_Short_Ds_Orig">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Cou_Iso_Id_Long_Ds_Dest">
+        <datatype type="STRING" minLength="32" maxLength="32"/>
+      </element>
+      <element name="Cou_Iso_Id_Long_Ds_Orig">
+        <datatype type="STRING" minLength="32" maxLength="32"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Movement" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Departure_Reporting_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+      <element name="Arrival_Reporting_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+      <element name="Bul_Csys_Id_Orig">
+        <datatype type="STRING" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="Bul_Csys_Id_Dest">
+        <datatype type="STRING" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="Ms_Id">
+        <datatype type="STRING" minLength="1" maxLength="37" trailingSpaces="false"/>
+      </element>
+      <element name="Dly_Id_Orig">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Dly_Id_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Cancel_Reason_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Reason_Id">
+        <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      </element>
+      <element name="Opr_Id">
+        <datatype type="STRING" minLength="18" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="Cfg_Id">
+        <datatype type="STRING" minLength="18" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="Nwk_Id">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Mpt_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mtt_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Mp_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Mov_Status_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_Av_Retload_In">
+        <datatype type="STRING" minLength="2" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="No_Of_Movements">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="No_Of_Movements_Mp">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Movements_Nd">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Movements_Cancelled">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Mvemnts_Sched_Operated">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="No_Of_Empty_Movements">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Empty_Distance_Scheduled">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Non_Empty_Distance_Scheduled">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Dep_No_Data_Received">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Dep_Actual_Operated">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Dep_Delay_Min">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Dep_Actual_Operated_On_Time">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Dep_Actual_Operated_Late">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="Arr_No_Data_Received">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arr_Actual_Operated">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arr_Delay_Min">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Arr_Actual_Operated_On_Time">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arr_Actual_Operated_Late">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="Act_Duration_Min">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Sch_Duration_Min">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Est_Duration_Min">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Schdep_Tm_H_Q">
+        <datatype type="STRING" minLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Scharr_Tm_H_Q">
+        <datatype type="STRING" minLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Mov_Actual_Di">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Mov_Sch_Di">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Loc_Obj_Id_Cmbl">
+        <datatype type="STRING" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="Departure_Operational_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+      <element name="Arrival_Operational_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+      <element name="Dep_Delay_Min_Nb">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Dep_Actual_Operated_On_Time_Nb">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Dep_Actual_Operated_Late_Nb">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="Dep_Delay_Min_Zt">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Dep_Actual_Operated_On_Time_Zt">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Dep_Actual_Operated_Late_Zt">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="Mp_New_Dp_Reason">
+        <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="No_Of_Mvemnts_Sched_Operated_S_Ns">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_MovementString" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Ms_Id">
+        <datatype type="STRING" minLength="37" maxLength="37"/>
+      </element>
+      <element name="Ms_Short_Ds">
+        <datatype type="STRING" minLength="14" maxLength="14"/>
+      </element>
+      <element name="Ms_Long_Ds">
+        <datatype type="STRING" minLength="80" maxLength="80"/>
+      </element>
+      <element name="Bul_Id_Orig">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Id_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Nm_Orig">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Bul_Nm_Dest">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Operator" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Opr_Id">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Opr_Short_Ds">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Opr_Long_Ds">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="Cou_Iso_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Short_Ds">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Long_Ds">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+      <element name="Opr_Id_Short">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Opr_Id_Long">
+        <datatype type="STRING" minLength="11" maxLength="51"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Purpose" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Mpt_Id">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Mpt_Short_Ds">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Mpt_Long_Ds">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_ReportingPeriod" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dte_Dt">
+        <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_Year_Nr_Cal">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Dte_Quarter_Nr_Cal">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Dte_Month_Nr_Cal">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Dte_Week_Nr_Cal">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="A_Year_Week">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="D_Year_Week">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Arrival_Reporting_Date">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Departure_Reporting_Date">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Dte_Day_Nr">
+        <datatype type="STRING" minLength="11" maxLength="11" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_Day_Nm">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Dte_Year_Nr_Cal_Ern">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Dte_Quarter_Nr_Cal_Ern">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Dte_Month_Nr_Cal_Ern">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Dte_Week_Nr_Cal_Ern">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="A_Year_Week_Ern">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="D_Year_Week_Ern">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Departure_Operational_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+      <element name="Arrival_Operational_Date">
+        <datatype type="STRING" maxLength="255" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_ScheduledExtra" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Mp_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Mp_Indicator_Short_Ds">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Mp_Indicator_Long_Ds">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Reason_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Reason_Short_Ds">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Reason_Long_Ds">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/vc_MovementType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Mtt_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mtt_Short_Ds">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mtt_Long_Ds">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/vc_Network" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Nwk_Id">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Nwk_Id_Short_Ds">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Nwk_Id_Long_Ds">
+        <datatype type="STRING" minLength="29" maxLength="29"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/vc_TruckType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Cfg_Id">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="Cfg_Id_Short_Ds">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Cfg_Id_Long_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_RSP" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Hour_Arr">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Quarter_Arr">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Dep">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Quarter_Dep">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Movement_Type">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Network">
+        <datatype type="STRING" maxLength="29"/>
+      </element>
+      <element name="Actual_Truck_Types">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Departure_Delays">
+        <datatype type="STRING" maxLength="64"/>
+      </element>
+      <element name="Controllable_Or_Non_Controll">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Cancelled_Scheduled_Operated">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Cancellation_Reason">
+        <datatype type="STRING" maxLength="71"/>
+      </element>
+      <element name="Arrival_Delays">
+        <datatype type="STRING" maxLength="64"/>
+      </element>
+      <element name="Controllable_Or_Non_Controll2">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Destination_Location">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Origin_Location">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Destination_Geographical_Cou">
+        <datatype type="STRING" maxLength="44"/>
+      </element>
+      <element name="Origin_Geographical_Country">
+        <datatype type="STRING" maxLength="44"/>
+      </element>
+      <element name="Country">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Operator">
+        <datatype type="STRING" maxLength="51"/>
+      </element>
+      <element name="Movement_Purpose">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Departure_Year">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Departure_Quarter">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="Departure_Month">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Departure_Week">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Arrival_Year">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Arrival_Quarter">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="Arrival_Month">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Arrival_Week">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Day_Of_Week_Dep">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="Departure_Reporting_Year">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Departure_Reporting_Quarter">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="Departure_Reporting_Month">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Departure_Reporting_Week">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Day_Of_Week_Arr">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="Arrival_Reporting_Year">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Arrival_Reporting_Quarter">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="Arrival_Reporting_Month">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Arrival_Reporting_Week">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Scheduled_Or_Extra">
+        <datatype type="STRING" maxLength="37"/>
+      </element>
+      <element name="New_Departure_Reason">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Departure_Reporting_Day">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Arrival_Reporting_Day">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Nwk_Id">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Available_For_Returnload">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Number_Of_Movements">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Number_Of_Movements_Masterpl">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Movements_New_Depa">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Percent_Movements_New_Depart">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Number_Of_Movements_Cancelle">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Percent_Movements_Cancelled">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Number_Of_Movements_Schedule">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Number_Of_Empty_Movements">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Total_KMs_Empty_Movements">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_KMs_Non_Empty_Movement">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Percent_Empty_Movements">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Departures_No_Data_Received">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Departures_Actual_Operated">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Departure_Delay">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Departures_Actual_Operated_O">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Departures_Actual_Operated_L">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Departures_Late_Plus_No_Data">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Percent_Data_Received_Depart">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Scheduled_Loaded_Dep">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Actual_Loaded_Depart">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Arrivals_No_Data_Received">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arrivals_Actual_Operated">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arrival_Delay">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Arrivals_Actual_Operated_On_">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Arrivals_Actual_Operated_Lat">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Arrivals_Late_Plus_No_Data">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Percent_Data_Received_Arriva">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Scheduled_Loaded_Arr">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Actual_Loaded_Arriva">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Actual_Duration">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Scheduled_Duration">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Estimated_Duration">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Actual_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Scheduled_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Cost_Management_Location">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="Departure_Day">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Arrival_Day">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Departure_Delay_nb">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Departures_Actual_Operated_O2">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Departures_Actual_Operated_L2">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Departures_Late_Plus_No_Data2">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Scheduled_Loaded_Dep2">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Actual_Loaded_Depart2">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Departure_Delay_zt">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Percent_Scheduled_Loaded_Dep3">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Percent_Actual_Loaded_Depart3">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+      </element>
+      <element name="Departures_Actual_Operated_O3">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Departures_Actual_Operated_L3">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Departures_Late_Plus_No_Data3">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Masterplanned_Or_New_Reason">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="Number_Of_Movements_Schedule2">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    --Dim_FixedHour_1.&quot;HOUR&quot; Hour_arr, 
+    ISNULL(Dim_FixedHour_1.HOUR_DESCRIPTION,&apos;Unknown Hour&apos;) &quot;Hour_Arr&quot;, 
+    --Dim_FixedHour_1.QUARTERHOUR Quarterhour_arr, 
+    --Dim_FixedHour_1.HOUR_QUARTER Hour_Quarter_arr, 
+    ISNULL(Dim_FixedHour_1.HOUR_QUARTERHOUR_DESCRIPTION,&apos;Unknown Time&apos;) &quot;Quarter_Arr&quot;, 
+    --Dim_FixedHour_1.HOUR_QUARTERHOUR_SORT Hour_Quarterhour_Short_arr, 
+    --Dim_FixedHour_1.HOUR_SHORT Hour_Short_arr, 
+    --Dim_FixedHour.&quot;HOUR&quot; Hour_Dep,                         
+    ISNULL(Dim_FixedHour.HOUR_DESCRIPTION,&apos;Unknown Hour&apos;)  &quot;Hour_Dep&quot;,     
+    --Dim_FixedHour.QUARTERHOUR Quarterhour_Dep, 
+    --Dim_FixedHour.HOUR_QUARTER Hour_Quarter_Dep,                                    
+    ISNULL(Dim_FixedHour.HOUR_QUARTERHOUR_DESCRIPTION,&apos;Unknown Time&apos;) &quot;Quarter_Dep&quot;,      
+    --Dim_FixedHour.HOUR_QUARTERHOUR_SORT Hour_Quarterhour_Short_Dep, 
+    --Dim_FixedHour.HOUR_SHORT Hour_Short_Dep, 
+    --Dim_ROCS_MovementType.Mtt_Short_Ds, 	
+    ISNULL(Dim_ROCS_MovementType.Mtt_Long_Ds,&apos;No data reported&apos;) &quot;Movement_Type&quot;, 
+    --Dim_ROCS_Network.Nwk_Id_Short_Ds, 
+   	ISNULL(Dim_ROCS_Network.Nwk_Id_Long_Ds,&apos;Network: reference data N/A&apos;) &quot;Network&quot;, 
+    --Dim_ROCS_TruckType.Cfg_Id_Short_Ds, 
+    ISNULL(Dim_ROCS_TruckType.Cfg_Id_Long_Ds,&apos;no data reported&apos;) &quot;Actual_Truck_Types&quot;, 
+    --Dim_DelayOrig.Dly_Orig_Short_Ds,       
+    ISNULL(Dim_DelayOrig.Dly_Orig_Long_Ds,&apos;dep.No Delays&apos;) &quot;Departure_Delays&quot;,          
+    --Dim_DelayOrig.Dly_Orig_Contr_In, 
+    Dim_DelayOrig.Dly_Orig_Contr_Ds &quot;Controllable_Or_Non_Controllable_Orig&quot;, 				 
+    --Dim_RSPCancelledOperated.Cancel_Indicator, 
+    --Dim_RSPCancelledOperated.Cancel_Indicator_Short_Ds,      
+    ISNULL(Dim_RSPCancelledOperated.Cancel_Indicator_Long_Ds,&apos;Cancelled / Operated: Reference data N/A&apos;) &quot;Cancelled_Scheduled_Operated&quot;,         
+    --Dim_RSPCancelledOperated.Cancel_Reason_Short_Ds, 
+    ISNULL(Dim_RSPCancelledOperated.Cancel_Reason_Long_Ds,&apos;Cancellation Reason: reference data N/A&apos;) &quot;Cancellation_Reason&quot;, /*
+    Dim_RSPCmlLocation.Bul_Csys_Id, 
+    Dim_RSPCmlLocation.Bul_Csys_Id_Cml, 
+    Dim_RSPCmlLocation.Bul_Id_Short_Ds, 
+    Dim_RSPCmlLocation.Bul_Id_Short_Ds_Cml, 
+    Dim_RSPCmlLocation.Bul_Id_Long_Ds,  
+    Dim_RSPCmlLocation.Bul_Id_Long_Ds_Cml &quot;Cost_Management_Location&quot;, 
+    Dim_RSPCmlLocation.Cou_Iso_Id Cou_Iso_Id_Loc, 
+    Dim_RSPCmlLocation.Cou_Iso_Id_Cml, 
+    Dim_RSPCmlLocation.Cou_Iso_Id_Short_Ds Cou_Iso_Id_Short_Ds_Loc, 
+    Dim_RSPCmlLocation.Cou_Iso_Id_Short_Ds_Cml, 
+    Dim_RSPCmlLocation.Cou_Iso_Id_Long_Ds Cou_Iso_Id_Long_Ds_Loc, 
+    Dim_RSPCmlLocation.Cou_Iso_Id_Long_Ds_Cml, 
+    Dim_RSPDelayDest.Dly_Dest_Short_Ds,          */
+    ISNULL(Dim_RSPDelayDest.Dly_Dest_Long_Ds,&apos;arr.No Delays&apos;) &quot;Arrival_Delays&quot;,             
+    --Dim_RSPDelayDest.Dly_Dest_Contr_In, 
+    Dim_RSPDelayDest.Dly_Dest_Contr_Ds &quot;Controllable_Or_Non_Controllable_Dest&quot;, 
+    --Dim_RSPLocation.Bul_Id_Short_Ds_Dest, 
+    --Dim_RSPLocation.Bul_Id_Short_Ds_Orig,  
+    ISNULL(Dim_RSPLocation.Bul_Id_Long_Ds_Dest,&apos;d.Location: Reference data N/A&apos;) &quot;Destination_Location&quot;,  
+    ISNULL(Dim_RSPLocation.Bul_Id_Long_Ds_Orig,&apos;o.Location: Reference data N/A&apos;) &quot;Origin_Location&quot;,    /*
+    Dim_RSPLocation.Cou_Iso_Id_Dest, 
+    Dim_RSPLocation.Cou_Iso_Id_Orig, 
+    Dim_RSPLocation.Cou_Iso_Id_Short_Ds_Dest, 
+    Dim_RSPLocation.Cou_Iso_Id_Short_Ds_Orig,  */
+    ISNULL(Dim_RSPLocation.Cou_Iso_Id_Long_Ds_Dest,&apos;d.Organisational country: Reference data N/A&apos;) &quot;Destination_Geographical_Country&quot;,  
+    ISNULL(Dim_RSPLocation.Cou_Iso_Id_Long_Ds_Orig,&apos;o.Organisational country: Reference data N/A&apos;) &quot;Origin_Geographical_Country&quot;,    /*
+    Dim_RSPMovementString.Ms_Short_Ds, 
+    Dim_RSPMovementString.Ms_Long_Ds, 
+    Dim_RSPMovementString.Bul_Id_Orig, 
+    Dim_RSPMovementString.Bul_Id_Dest, 
+    Dim_RSPMovementString.Bul_Nm_Orig, 
+    Dim_RSPMovementString.Bul_Nm_Dest, 
+    Dim_RSPOperator.Opr_Short_Ds, 
+    Dim_RSPOperator.Opr_Long_Ds, 
+    Dim_RSPOperator.Cou_Iso_Id Cou_Iso_Id_Opr, 
+    Dim_RSPOperator.Cou_Iso_Id_Short_Ds Cou_Iso_Id_Short_Ds_Opr, 	 */
+    ISNULL(Dim_RSPOperator.Cou_Iso_Id_Long_Ds,&apos;Operator country: Reference data N/A&apos;) &quot;Country&quot;,     
+    --Dim_RSPOperator.Opr_Id_Short, 
+    ISNULL(Dim_RSPOperator.Opr_Id_Long,&apos;Operator: Reference data N/A&apos;) &quot;Operator&quot;, 
+    --Dim_RSPPurpose.Mpt_Short_Ds,        
+    ISNULL(Dim_RSPPurpose.Mpt_Long_Ds,&apos;No data reported&apos;) &quot;Movement_Purpose&quot;,   
+    --Dim_RSPReportingPeriod.Dte_Dt &quot;Dte_Dt Departure by period&quot;,  
+    ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod.Dte_Year_Nr_Cal,&apos;Unknown Year&apos;) &quot;Departure_Year&quot;, 
+    ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod.Dte_Year_Nr_Cal || &apos; -Q&apos; || Dim_RSPReportingPeriod.Dte_Quarter_Nr_Cal,&apos;Unknown quarter&apos;) &quot;Departure_Quarter&quot;, 
+    ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod.Dte_Year_Nr_Cal || &apos; - &apos; || TO_CHAR(TO_DATE(Dim_RSPReportingPeriod.Dte_Month_Nr_Cal,&apos;MM&apos;),&apos;Mon&apos;),&apos;Unknown month&apos;) &quot;Departure_Month&quot;, 
+    --Dim_RSPReportingPeriod.Dte_Week_Nr_Cal &quot;Dte_Week_Nr_Cal Departure by period&quot;, 
+    --Dim_RSPReportingPeriod.A_Year_Week &quot;A_Year_Week Departure by period&quot;, 
+    ISNULL(Dim_RSPReportingPeriod.D_Year_Week,&apos;Unknown week&apos;) &quot;Departure_Week&quot;, 
+	/*Dim_RSPReportingPeriod.Dte_Day_Nr &quot;Dte_Day_Nr Departure by period&quot;, 
+	Dim_RSPReportingPeriod.Dte_Day_Nm &quot;Dte_Day_Nm Departure by period&quot;, 
+	Dim_RSPReportingPeriod.Dte_Year_Nr_Cal_Ern &quot;Dte_Year_Nr_Cal_Ern Departure by period&quot;, 
+	Dim_RSPReportingPeriod.Dte_Quarter_Nr_Cal_Ern &quot;Dte_Quarter_Nr_Cal_Ern Departure by period&quot;, 
+	Dim_RSPReportingPeriod.Dte_Month_Nr_Cal_Ern &quot;Dte_Month_Nr_Cal_Ern Departure by period&quot;, 
+	Dim_RSPReportingPeriod.Dte_Week_Nr_Cal_Ern &quot;Dte_Week_Nr_Cal_Ern Departure by period&quot;, 
+	Dim_RSPReportingPeriod.A_Year_Week_Ern &quot;A_Year_Week_Ern Departure by period&quot;, 
+	Dim_RSPReportingPeriod.D_Year_Week_Ern &quot;D_Year_Week_Ern Departure by period&quot;,  
+    Dim_RSPReportingPeriod2.Dte_Dt &quot;Dte_Dt Arrival by period&quot;,   */
+    ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod2.Dte_Year_Nr_Cal,&apos;Unknown Year&apos;) &quot;Arrival_Year&quot;, 
+    ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod2.Dte_Year_Nr_Cal || &apos; -Q&apos; || Dim_RSPReportingPeriod2.Dte_Quarter_Nr_Cal,&apos;Unknown quarter&apos;) &quot;Arrival_Quarter&quot;, 
+    ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod2.Dte_Year_Nr_Cal || &apos; - &apos; || TO_CHAR(TO_DATE(Dim_RSPReportingPeriod2.Dte_Month_Nr_Cal,&apos;MM&apos;),&apos;Mon&apos;),&apos;Unknown month&apos;) &quot;Arrival_Month&quot;, 
+    --Dim_RSPReportingPeriod2.Dte_Week_Nr_Cal &quot;Dte_Week_Nr_Cal Arrival by period&quot;, 
+    ISNULL(Dim_RSPReportingPeriod2.A_Year_Week,&apos;Unknown week&apos;) &quot;Arrival_Week&quot;, 
+    /*Dim_RSPReportingPeriod2.D_Year_Week &quot;D_Year_Week Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Day_Nr &quot;Dte_Day_Nr Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Day_Nm &quot;Dte_Day_Nm Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Year_Nr_Cal_Ern &quot;Dte_Year_Nr_Cal_Ern Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Quarter_Nr_Cal_Ern &quot;Dte_Quarter_Nr_Cal_Ern Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Month_Nr_Cal_Ern &quot;Dte_Month_Nr_Cal_Ern Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.Dte_Week_Nr_Cal_Ern &quot;Dte_Week_Nr_Cal_Ern Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.A_Year_Week_Ern &quot;A_Year_Week_Ern Arrival by period&quot;, 
+	Dim_RSPReportingPeriod2.D_Year_Week_Ern &quot;D_Year_Week_Ern Arrival by period&quot;,  
+    Dim_RSPReportingPeriod3.Dte_Dt &quot;Dte_Dt Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.Dte_Year_Nr_Cal &quot;Dte_Year_Nr_Cal Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.Dte_Quarter_Nr_Cal &quot;Dte_Quarter_Nr_Cal Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.Dte_Month_Nr_Cal &quot;Dte_Month_Nr_Cal Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.Dte_Week_Nr_Cal &quot;Dte_Week_Nr_Cal Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.A_Year_Week &quot;A_Year_Week Departure by Reporting period&quot;, 
+    Dim_RSPReportingPeriod3.D_Year_Week &quot;D_Year_Week Departure by Reporting period&quot;, 
+	Dim_RSPReportingPeriod3.Dte_Day_Nr &quot;Dte_Day_Nr Departure by Reporting period&quot;,     */
+	ISNULL(Dim_RSPReportingPeriod3.Dte_Day_Nm,&apos;Weekday: no data reported&apos;) &quot;Day_Of_Week_Dep&quot;,       
+	ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod3.Dte_Year_Nr_Cal_Ern,&apos;Unknown year&apos;) &quot;Departure_Reporting_Year&quot;,  
+	ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod3.Dte_Year_Nr_Cal_Ern || &apos; -Q&apos; || Dim_RSPReportingPeriod3.Dte_Quarter_Nr_Cal_Ern,&apos;Unknown quarter&apos;) &quot;Departure_Reporting_Quarter&quot;,         
+	ISNULL(&apos;d.&apos; || Dim_RSPReportingPeriod3.Dte_Year_Nr_Cal_Ern ||  &apos; - &apos; || TO_CHAR(TO_DATE(Dim_RSPReportingPeriod3.Dte_Month_Nr_Cal_Ern,&apos;MM&apos;),&apos;Mon&apos;),&apos;Unknown month&apos;) &quot;Departure_Reporting_Month&quot;,  /*
+	Dim_RSPReportingPeriod3.Dte_Week_Nr_Cal_Ern &quot;Dte_Week_Nr_Cal_Ern Departure by Reporting period&quot;, 
+	Dim_RSPReportingPeriod3.A_Year_Week_Ern &quot;A_Year_Week_Ern Departure by Reporting period&quot;, 	*/
+	ISNULL(Dim_RSPReportingPeriod3.D_Year_Week_Ern,&apos;Unknown Week&apos;) &quot;Departure_Reporting_Week&quot;,      /*
+    Dim_RSPReportingPeriod4.Dte_Dt &quot;Dte_Dt Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.Dte_Year_Nr_Cal &quot;Dte_Year_Nr_Cal Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.Dte_Quarter_Nr_Cal &quot;Dte_Quarter_Nr_Cal Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.Dte_Month_Nr_Cal &quot;Dte_Month_Nr_Cal Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.Dte_Week_Nr_Cal &quot;Dte_Week_Nr_Cal Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.A_Year_Week &quot;A_Year_Week Arrival by Reporting period&quot;, 
+    Dim_RSPReportingPeriod4.D_Year_Week &quot;D_Year_Week Arrival by Reporting period&quot;, 
+	Dim_RSPReportingPeriod4.Dte_Day_Nr &quot;Dte_Day_Nr Arrival by Reporting period&quot;,    */
+	ISNULL(Dim_RSPReportingPeriod4.Dte_Day_Nm,&apos;Weekday: no data reported&apos;) &quot;Day_Of_Week_Arr&quot;,      
+	ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod4.Dte_Year_Nr_Cal_Ern,&apos;Unknown year&apos;) &quot;Arrival_Reporting_Year&quot;, 
+	ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod4.Dte_Year_Nr_Cal_Ern || &apos; -Q&apos; || Dim_RSPReportingPeriod4.Dte_Quarter_Nr_Cal_Ern,&apos;Unknown quarter&apos;) &quot;Arrival_Reporting_Quarter&quot;, 
+	ISNULL(&apos;a.&apos; || Dim_RSPReportingPeriod4.Dte_Year_Nr_Cal_Ern || &apos; - &apos; || TO_CHAR(TO_DATE(Dim_RSPReportingPeriod4.Dte_Month_Nr_Cal_Ern,&apos;MM&apos;),&apos;Mon&apos;),&apos;Unknown month&apos;) &quot;Arrival_Reporting_Month&quot;, 
+	--Dim_RSPReportingPeriod4.Dte_Week_Nr_Cal_Ern &quot;Dte_Week_Nr_Cal_Ern Arrival by Reporting period&quot;,    
+	ISNULL(Dim_RSPReportingPeriod4.A_Year_Week_Ern,&apos;Unknown Week&apos;) &quot;Arrival_Reporting_Week&quot;,              /*
+	Dim_RSPReportingPeriod4.D_Year_Week_Ern &quot;D_Year_Week_Ern Arrival by Reporting period&quot;,  
+    Dim_RSPScheduledExtra.Mp_Indicator_Short_Ds, */
+    ISNULL(Dim_RSPScheduledExtra.Mp_Indicator_Long_Ds,&apos;Scheduled / Extra: Reference data N/A&apos;) &quot;Scheduled_Or_Extra&quot;,    
+    --Dim_RSPScheduledExtra.Reason_Short_Ds, 
+    ISNULL(Dim_RSPScheduledExtra.Reason_Long_Ds,&apos;New Departure Reason: reference data N/A&apos;) &quot;New_Departure_Reason&quot;,         /*
+    Dim_RSPToday.Today &quot;Today Arrival by period&quot;, 
+    Dim_RSPToday2.Today &quot;Today Departure by period&quot;, 
+    Dim_RSPToday3.Today &quot;Today Arrival by reporting period&quot;, 
+    Dim_RSPToday4.Today &quot;Today Departure by reporting period&quot;,  */
+    ISNULL(&apos;d.&apos; || TO_CHAR(TO_DATE(Fact_RSP_Movement.Departure_Reporting_Date,&apos;yyyyMMdd&apos;),&apos;yyyy/MM/dd - Dy&apos;),&apos;Unknown day&apos;) &quot;Departure_Reporting_Day&quot;,                   
+    ISNULL(&apos;a.&apos; || TO_CHAR(TO_DATE(Fact_RSP_Movement.Arrival_Reporting_Date,&apos;yyyyMMdd&apos;),&apos;yyyy/MM/dd - Dy&apos;),&apos;Unknown day&apos;) &quot;Arrival_Reporting_Day&quot;,          /*
+    Fact_RSP_Movement.Bul_Csys_Id_Orig, 
+    Fact_RSP_Movement.Bul_Csys_Id_Dest, 
+    Fact_RSP_Movement.Ms_Id, 
+    Fact_RSP_Movement.Dly_Id_Orig, 
+    Fact_RSP_Movement.Dly_Id_Dest,        
+    Fact_RSP_Movement.Cancel_Reason_Cd,     
+    Fact_RSP_Movement.Reason_Id,          
+    Fact_RSP_Movement.Opr_Id, 
+    Fact_RSP_Movement.Cfg_Id,*/ 
+    Fact_RSP_Movement.Nwk_Id, /*
+    Fact_RSP_Movement.Mpt_Id, 
+    Fact_RSP_Movement.Mtt_Id, 
+    Fact_RSP_Movement.Mp_Indicator, 
+    Fact_RSP_Movement.Mov_Status_Cd,          */
+    ISNULL(Fact_RSP_Movement.Mov_Av_Retload_In,&apos;No data reported&apos;) &quot;Available_For_Returnload&quot;,        
+    Fact_RSP_Movement.No_Of_Movements &quot;Number_Of_Movements&quot;, 			 
+    Fact_RSP_Movement.No_Of_Movements_Mp &quot;Number_Of_Movements_Masterplanned&quot;, 
+    Fact_RSP_Movement.No_Of_Movements_Nd &quot;Number_Of_Movements_New_Departure&quot;,  
+	CASE WHEN Fact_RSP_Movement.No_Of_Movements = 0 
+		THEN 0 
+		ELSE (Fact_RSP_Movement.No_Of_Movements_Nd / Fact_RSP_Movement.No_Of_Movements ) * 100 
+	END &quot;Percent_Movements_New_Departure&quot;,
+    Fact_RSP_Movement.No_Of_Movements_Cancelled &quot;Number_Of_Movements_Cancelled&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Movements = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.No_Of_Movements_Cancelled / Fact_RSP_Movement.No_Of_Movements ) * 100 
+	END &quot;Percent_Movements_Cancelled&quot;,
+    Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated &quot;Number_Of_Movements_Scheduled_Operated&quot;, 
+    Fact_RSP_Movement.No_Of_Empty_Movements &quot;Number_Of_Empty_Movements&quot;, 
+    Fact_RSP_Movement.Empty_Distance_Scheduled &quot;Total_KMs_Empty_Movements&quot;, 
+    Fact_RSP_Movement.Non_Empty_Distance_Scheduled &quot;Total_KMs_Non_Empty_Movements&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns = 0
+		THEN 0 
+		ELSE (Fact_RSP_Movement.No_Of_Empty_Movements / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns)*100
+	END &quot;Percent_Empty_Movements&quot;, 
+    Fact_RSP_Movement.Dep_No_Data_Received &quot;Departures_No_Data_Received&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated &quot;Departures_Actual_Operated&quot;, 
+    Fact_RSP_Movement.Dep_Delay_Min &quot;Departure_Delay&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_On_Time &quot;Departures_Actual_Operated_On_Time&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_Late &quot;Departures_Actual_Operated_Late&quot;,
+	(Fact_RSP_Movement.Dep_Actual_Operated_Late + Fact_RSP_Movement.Dep_No_Data_Received) &quot;Departures_Late_Plus_No_Data&quot;,
+	100 - CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated = 0 
+		THEN 0
+		ELSE (Fact_RSP_Movement.Dep_No_Data_Received / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated)*100 
+	END &quot;Percent_Data_Received_Departures&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Dep_Actual_Operated_On_Time / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns)*100
+	END &quot;Percent_Scheduled_Loaded_Departures_Operated_On_Time&quot;,
+	CASE WHEN Fact_RSP_Movement.Dep_Actual_Operated = 0
+		THEN 0
+	ELSE (Fact_RSP_Movement.Dep_Actual_Operated_On_Time / Fact_RSP_Movement.Dep_Actual_Operated)*100
+	END &quot;Percent_Actual_Loaded_Departures_Operated_On_Time&quot;, 
+    Fact_RSP_Movement.Arr_No_Data_Received &quot;Arrivals_No_Data_Received&quot;, 
+    Fact_RSP_Movement.Arr_Actual_Operated &quot;Arrivals_Actual_Operated&quot;, 
+    Fact_RSP_Movement.Arr_Delay_Min &quot;Arrival_Delay&quot;, 
+    Fact_RSP_Movement.Arr_Actual_Operated_On_Time &quot;Arrivals_Actual_Operated_On_Time&quot;, 
+    Fact_RSP_Movement.Arr_Actual_Operated_Late &quot;Arrivals_Actual_Operated_Late&quot;,
+	(Fact_RSP_Movement.Arr_Actual_Operated_Late + Fact_RSP_Movement.Arr_No_Data_Received) &quot;Arrivals_Late_Plus_No_Data&quot;,
+	100 - CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Arr_No_Data_Received / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated)*100
+	END &quot;Percent_Data_Received_Arrivals&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Arr_Actual_Operated_On_Time / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns)*100
+	END &quot;Percent_Scheduled_Loaded_Arrivals_Operated_On_Time&quot;,
+	CASE WHEN Fact_RSP_Movement.Arr_Actual_Operated = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Arr_Actual_Operated_On_Time / Fact_RSP_Movement.Arr_Actual_Operated)*100
+	END &quot;Percent_Actual_Loaded_Arrivals_Operated_On_Time&quot;, 
+    Fact_RSP_Movement.Act_Duration_Min &quot;Actual_Duration&quot;, 
+    Fact_RSP_Movement.Sch_Duration_Min &quot;Scheduled_Duration&quot;, 
+    Fact_RSP_Movement.Est_Duration_Min &quot;Estimated_Duration&quot;, 
+    --Fact_RSP_Movement.Schdep_Tm_H_Q, 
+    --Fact_RSP_Movement.Scharr_Tm_H_Q, 
+    Fact_RSP_Movement.Mov_Actual_Di &quot;Actual_Distance&quot;, 
+    Fact_RSP_Movement.Mov_Sch_Di &quot;Scheduled_Distance&quot;, 	   
+    --Fact_RSP_Movement.Loc_Obj_Id_Cmbl &quot;Cost_Management_Location&quot;,  
+	Dim_RSPCmlLocation.Bul_Id_Long_Ds_Cml &quot;Cost_Management_Location&quot;,
+    ISNULL(&apos;d.&apos; || TO_CHAR(TO_DATE(Fact_RSP_Movement.Departure_Operational_Date,&apos;yyyyMMdd&apos;),&apos;yyyy/MM/dd - Dy&apos;),&apos;Unknown day&apos;) &quot;Departure_Day&quot;, 
+    ISNULL(&apos;a.&apos; || TO_CHAR(TO_DATE(Fact_RSP_Movement.Arrival_Operational_Date,&apos;yyyyMMdd&apos;),&apos;yyyy/MM/dd - Dy&apos;),&apos;Unknown day&apos;) &quot;Arrival_Day&quot;,
+    Fact_RSP_Movement.Dep_Delay_Min_Nb &quot;Departure_Delay_nb&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Nb &quot;Departures_Actual_Operated_On_Time_nb&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_Late_Nb &quot;Departures_Actual_Operated_Late_nb&quot;,
+	CASE WHEN Fact_RSP_Movement.Dep_No_Data_Received = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Dep_Actual_Operated_Late_Nb / Fact_RSP_Movement.Dep_No_Data_Received)*100
+	END &quot;Departures_Late_Plus_No_Data_nb&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns = 0
+		THEN 0
+		ELSE ( Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Nb / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns )*100
+	END &quot;Percent_Scheduled_Loaded_Departures_Operated_On_Time_nb&quot;,
+	CASE WHEN Fact_RSP_Movement.Dep_Actual_Operated = 0
+		THEN 0
+		ELSE ( Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Nb / Fact_RSP_Movement.Dep_Actual_Operated )*100
+	END &quot;Percent_Actual_Loaded_Departures_Operated_On_Time_nb&quot;, 
+    Fact_RSP_Movement.Dep_Delay_Min_Zt &quot;Departure_Delay_zt&quot;,
+	CASE WHEN Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Zt / Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns)*100
+	END &quot;Percent_Scheduled_Loaded_Departures_Operated_On_Time_zt&quot;,
+	CASE WHEN Fact_RSP_Movement.Dep_Actual_Operated = 0
+		THEN 0
+		ELSE (Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Zt / Fact_RSP_Movement.Dep_Actual_Operated)*100
+	END &quot;Percent_Actual_Loaded_Departures_Operated_On_Time_zt&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_On_Time_Zt &quot;Departures_Actual_Operated_On_Time_zt&quot;, 
+    Fact_RSP_Movement.Dep_Actual_Operated_Late_Zt &quot;Departures_Actual_Operated_Late_zt&quot;,
+	( Fact_RSP_Movement.Dep_Actual_Operated_Late_Zt + Fact_RSP_Movement.Dep_No_Data_Received) &quot;Departures_Late_Plus_No_Data_zt&quot;,  
+    ISNULL(Fact_RSP_Movement.Mp_New_Dp_Reason,&apos;No data reported&apos;) &quot;Masterplanned_Or_New_Reason&quot;, 
+    Fact_RSP_Movement.No_Of_Mvemnts_Sched_Operated_S_Ns &quot;Number_Of_Movements_Scheduled_Operated_Non_Service&quot;   
+FROM      
+    /shared/Core/Networks/ROCS_SSD/RSP/vc_Movement Fact_RSP_Movement LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_CancelledOperated Dim_RSPCancelledOperated
+    ON Fact_RSP_Movement.Cancel_Reason_Cd = Dim_RSPCancelledOperated.Cancel_Reason_Cd LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_CmlLocation Dim_RSPCmlLocation
+    ON Fact_RSP_Movement.Loc_Obj_Id_Cmbl = Dim_RSPCmlLocation.Loc_Obj_Id_Cmbl LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_DelayDest Dim_RSPDelayDest
+    ON Fact_RSP_Movement.Dly_Id_Dest = Dim_RSPDelayDest.Dly_Id_Dest LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_DelayOrig Dim_DelayOrig
+    ON Fact_RSP_Movement.Dly_Id_Orig = Dim_DelayOrig.Dly_Id_Orig LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Location Dim_RSPLocation
+    ON Fact_RSP_Movement.Bul_Csys_Id_Orig = Dim_RSPLocation.Bul_Csys_Id_Orig AND 
+        Fact_RSP_Movement.Bul_Csys_Id_Dest = Dim_RSPLocation.Bul_Csys_Id_Dest LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_MovementString Dim_RSPMovementString
+    ON Fact_RSP_Movement.Ms_Id = Dim_RSPMovementString.Ms_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/vc_MovementType Dim_ROCS_MovementType
+    ON Fact_RSP_Movement.Mtt_Id = Dim_ROCS_MovementType.Mtt_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/vc_Network Dim_ROCS_Network
+    ON Fact_RSP_Movement.Nwk_Id = Dim_ROCS_Network.Nwk_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Operator Dim_RSPOperator
+    ON Fact_RSP_Movement.Opr_Id = Dim_RSPOperator.Opr_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Purpose Dim_RSPPurpose
+    ON Fact_RSP_Movement.Mpt_Id = Dim_RSPPurpose.Mpt_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_ReportingPeriod Dim_RSPReportingPeriod2
+    ON Fact_RSP_Movement.Arrival_Operational_Date = Dim_RSPReportingPeriod2.Arrival_Operational_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_ReportingPeriod Dim_RSPReportingPeriod
+    ON Fact_RSP_Movement.Departure_Operational_Date = Dim_RSPReportingPeriod.Departure_Operational_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_ReportingPeriod Dim_RSPReportingPeriod4
+    ON Fact_RSP_Movement.Arrival_Reporting_Date = Dim_RSPReportingPeriod4.Arrival_Reporting_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_ReportingPeriod Dim_RSPReportingPeriod3
+    ON Fact_RSP_Movement.Departure_Reporting_Date = Dim_RSPReportingPeriod3.Departure_Reporting_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_ScheduledExtra Dim_RSPScheduledExtra
+    ON Fact_RSP_Movement.Mp_Indicator = Dim_RSPScheduledExtra.Mp_Indicator AND 
+        Fact_RSP_Movement.Reason_Id = Dim_RSPScheduledExtra.Reason_Id LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/vc_TruckType Dim_ROCS_TruckType
+    ON Fact_RSP_Movement.Cfg_Id = Dim_ROCS_TruckType.Cfg_Id /*LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Today Dim_RSPToday
+    ON Fact_RSP_Movement.Arrival_Operational_Date = Dim_RSPToday.Arrival_Operational_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Today Dim_RSPToday2
+    ON Fact_RSP_Movement.Departure_Operational_Date = Dim_RSPToday2.Departure_Operational_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Today Dim_RSPToday3
+    ON Fact_RSP_Movement.Arrival_Reporting_Date = Dim_RSPToday3.Arrival_Reporting_Date LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Today Dim_RSPToday4
+    ON Fact_RSP_Movement.Departure_Reporting_Date = Dim_RSPToday4.Departure_Reporting_Date */LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Hour Dim_FixedHour
+    ON Fact_RSP_Movement.Schdep_Tm_H_Q = Dim_FixedHour.SCHDEP_TM_H_Q LEFT OUTER JOIN 
+        /shared/Core/Networks/ROCS_SSD/RSP/vc_Hour Dim_FixedHour_1
+    ON Fact_RSP_Movement.Scharr_Tm_H_Q = Dim_FixedHour_1.SCHARR_TM_H_Q</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_RSP</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557205542547</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567144164881</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING"/>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/ROCS_SSD/vp_RSP</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557205542547</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/ROCS_SSD/vp_RSP" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Hour_Arr">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Quarter_Arr">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Dep">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Quarter_Dep">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Movement_Type">
+          <datatype type="STRING" minLength="16" maxLength="60"/>
+        </element>
+        <element name="Network">
+          <datatype type="STRING" minLength="27" maxLength="29"/>
+        </element>
+        <element name="Actual_Truck_Types">
+          <datatype type="STRING" minLength="16" maxLength="30"/>
+        </element>
+        <element name="Departure_Delays">
+          <datatype type="STRING" minLength="13" maxLength="64"/>
+        </element>
+        <element name="Controllable_Or_Non_Controllable_Orig">
+          <datatype type="STRING" minLength="15" maxLength="15"/>
+        </element>
+        <element name="Cancelled_Scheduled_Operated">
+          <datatype type="STRING" minLength="20" maxLength="40"/>
+        </element>
+        <element name="Cancellation_Reason">
+          <datatype type="STRING" minLength="39" maxLength="71"/>
+        </element>
+        <element name="Arrival_Delays">
+          <datatype type="STRING" minLength="13" maxLength="64"/>
+        </element>
+        <element name="Controllable_Or_Non_Controllable_Dest">
+          <datatype type="STRING" minLength="15" maxLength="15"/>
+        </element>
+        <element name="Destination_Location">
+          <datatype type="STRING" minLength="30" maxLength="40"/>
+        </element>
+        <element name="Origin_Location">
+          <datatype type="STRING" minLength="30" maxLength="40"/>
+        </element>
+        <element name="Destination_Geographical_Country">
+          <datatype type="STRING" minLength="32" maxLength="44"/>
+        </element>
+        <element name="Origin_Geographical_Country">
+          <datatype type="STRING" minLength="32" maxLength="44"/>
+        </element>
+        <element name="Country">
+          <datatype type="STRING" minLength="36" maxLength="60"/>
+        </element>
+        <element name="Operator">
+          <datatype type="STRING" minLength="11" maxLength="51"/>
+        </element>
+        <element name="Movement_Purpose">
+          <datatype type="STRING" minLength="16" maxLength="20"/>
+        </element>
+        <element name="Departure_Year">
+          <datatype type="STRING" minLength="6" maxLength="12"/>
+        </element>
+        <element name="Departure_Quarter">
+          <datatype type="STRING" minLength="10" maxLength="15"/>
+        </element>
+        <element name="Departure_Month">
+          <datatype type="STRING" minLength="9"/>
+        </element>
+        <element name="Departure_Week">
+          <datatype type="STRING" minLength="9" maxLength="12"/>
+        </element>
+        <element name="Arrival_Year">
+          <datatype type="STRING" minLength="6" maxLength="12"/>
+        </element>
+        <element name="Arrival_Quarter">
+          <datatype type="STRING" minLength="10" maxLength="15"/>
+        </element>
+        <element name="Arrival_Month">
+          <datatype type="STRING" minLength="9"/>
+        </element>
+        <element name="Arrival_Week">
+          <datatype type="STRING" minLength="9" maxLength="12"/>
+        </element>
+        <element name="Day_Of_Week_Dep">
+          <datatype type="STRING" minLength="13" maxLength="25"/>
+        </element>
+        <element name="Departure_Reporting_Year">
+          <datatype type="STRING" minLength="6" maxLength="12"/>
+        </element>
+        <element name="Departure_Reporting_Quarter">
+          <datatype type="STRING" minLength="10" maxLength="15"/>
+        </element>
+        <element name="Departure_Reporting_Month">
+          <datatype type="STRING" minLength="9"/>
+        </element>
+        <element name="Departure_Reporting_Week">
+          <datatype type="STRING" minLength="9" maxLength="12"/>
+        </element>
+        <element name="Day_Of_Week_Arr">
+          <datatype type="STRING" minLength="13" maxLength="25"/>
+        </element>
+        <element name="Arrival_Reporting_Year">
+          <datatype type="STRING" minLength="6" maxLength="12"/>
+        </element>
+        <element name="Arrival_Reporting_Quarter">
+          <datatype type="STRING" minLength="10" maxLength="15"/>
+        </element>
+        <element name="Arrival_Reporting_Month">
+          <datatype type="STRING" minLength="9"/>
+        </element>
+        <element name="Arrival_Reporting_Week">
+          <datatype type="STRING" minLength="9" maxLength="12"/>
+        </element>
+        <element name="Scheduled_Or_Extra">
+          <datatype type="STRING" minLength="9" maxLength="37"/>
+        </element>
+        <element name="New_Departure_Reason">
+          <datatype type="STRING" minLength="40" maxLength="60"/>
+        </element>
+        <element name="Departure_Reporting_Day">
+          <datatype type="STRING" minLength="2"/>
+        </element>
+        <element name="Arrival_Reporting_Day">
+          <datatype type="STRING" minLength="2"/>
+        </element>
+        <element name="Nwk_Id">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="Available_For_Returnload">
+          <datatype type="STRING" minLength="2" maxLength="16" trailingSpaces="false"/>
+        </element>
+        <element name="Number_Of_Movements">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+        <element name="Number_Of_Movements_Masterplanned">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Movements_New_Departure">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Percent_Movements_New_Departure">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Number_Of_Movements_Cancelled">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Percent_Movements_Cancelled">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Number_Of_Movements_Scheduled_Operated">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Number_Of_Empty_Movements">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Total_KMs_Empty_Movements">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Total_KMs_Non_Empty_Movements">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Percent_Empty_Movements">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Departures_No_Data_Received">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Departures_Actual_Operated">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Departure_Delay">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Departures_Actual_Operated_On_Time">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Departures_Actual_Operated_Late">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+        <element name="Departures_Late_Plus_No_Data">
+          <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+        </element>
+        <element name="Percent_Data_Received_Departures">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Scheduled_Loaded_Departures_Operated_On_Time">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Actual_Loaded_Departures_Operated_On_Time">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Arrivals_No_Data_Received">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Arrivals_Actual_Operated">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Arrival_Delay">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Arrivals_Actual_Operated_On_Time">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Arrivals_Actual_Operated_Late">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+        <element name="Arrivals_Late_Plus_No_Data">
+          <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+        </element>
+        <element name="Percent_Data_Received_Arrivals">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Scheduled_Loaded_Arrivals_Operated_On_Time">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Actual_Loaded_Arrivals_Operated_On_Time">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Actual_Duration">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Scheduled_Duration">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Estimated_Duration">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Actual_Distance">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Scheduled_Distance">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Cost_Management_Location">
+          <datatype type="STRING" minLength="40" maxLength="40"/>
+        </element>
+        <element name="Departure_Day">
+          <datatype type="STRING" minLength="2"/>
+        </element>
+        <element name="Arrival_Day">
+          <datatype type="STRING" minLength="2"/>
+        </element>
+        <element name="Departure_Delay_nb">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Departures_Actual_Operated_On_Time_nb">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Departures_Actual_Operated_Late_nb">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+        <element name="Departures_Late_Plus_No_Data_nb">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Scheduled_Loaded_Departures_Operated_On_Time_nb">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Actual_Loaded_Departures_Operated_On_Time_nb">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Departure_Delay_zt">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Percent_Scheduled_Loaded_Departures_Operated_On_Time_zt">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Percent_Actual_Loaded_Departures_Operated_On_Time_zt">
+          <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="0"/>
+        </element>
+        <element name="Departures_Actual_Operated_On_Time_zt">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+        <element name="Departures_Actual_Operated_Late_zt">
+          <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+        </element>
+        <element name="Departures_Late_Plus_No_Data_zt">
+          <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+        </element>
+        <element name="Masterplanned_Or_New_Reason">
+          <datatype type="STRING" minLength="1" maxLength="16" trailingSpaces="false"/>
+        </element>
+        <element name="Number_Of_Movements_Scheduled_Operated_Non_Service">
+          <datatype type="INTEGER" minValue="0" maxValue="1"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/ROCS_SSD/vp_RSP&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1563872085000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1564032933711</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1564032933711</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564032933711</attribute>
+  </trigger>
+</metadata>

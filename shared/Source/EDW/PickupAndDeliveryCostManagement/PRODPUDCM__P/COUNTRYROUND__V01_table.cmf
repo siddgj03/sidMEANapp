@@ -1,0 +1,346 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="COUNTRYROUND_V01" path="/shared/Source/EDW/PickupAndDeliveryCostManagement/PRODPUDCM_P/COUNTRYROUND_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="COU_ISO_ID" nullable="false">
+      <datatype name="char" extendedName="char(2)" subType="DATASOURCE_TYPE" type="STRING" minLength="2" maxLength="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_CO_UPDT_TD" nullable="true">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_O_UPDT_USER_ID" nullable="false">
+      <datatype name="char" extendedName="char(8)" subType="DATASOURCE_TYPE" type="STRING" minLength="8" maxLength="8"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_CO_SOFTLOCK_TS" nullable="false">
+      <datatype name="timestamp" extendedName="timestamp" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_BRK_DUR_VIS_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_BRK_IN_CALC_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_O_PAST_DAYS_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(3,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_WRN_DI" nullable="true">
+      <datatype name="decimal" extendedName="decimal(6,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_DI" nullable="true">
+      <datatype name="decimal" extendedName="decimal(6,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_WRN_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(7,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_STP_WRN_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(3,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_STP_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(3,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_CON_WRN_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(4,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_RND_MAX_CON_QT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(4,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_INCL_TT_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_MILES_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_FUS_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_FSI_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POD_ID_EBO" nullable="true">
+      <datatype name="decimal" extendedName="decimal(10,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_LOB_LEVEL_CD" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_SRV_ISS_REQ_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ROUND_AC_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_BRK_TM_DFLT_NR" nullable="true">
+      <datatype name="decimal" extendedName="decimal(5,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_SUPVAL_GRP_CD" nullable="false">
+      <datatype name="char" extendedName="char(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_REG_STM_DST_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ADH_RND_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ADH_GEN_ID_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_AHDST_TMOPT_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_FUS_PERIOD_CD" nullable="false">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_EMISS_STD_V_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_WEIGHT_MAN_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_AREA_TM_WRN_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_MISS_PU_OPT_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_FUS_TO_SAP_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ROD_DET_SAP_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_START_DFLT_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_FINISH_DFLT_TM" nullable="true">
+      <datatype name="time" extendedName="time" subType="DATASOURCE_TYPE" type="TIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_USE_DFLT_TM_IN" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_EBO_EX_DET_CD" nullable="false">
+      <datatype name="char" extendedName="char(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1567587114695</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">X(1)</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567587114695</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567587114695</attribute>
+</metadata>

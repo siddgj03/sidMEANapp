@@ -1,0 +1,78 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Network" path="/shared/Core/Networks/ROCS_SSD/vc_Network" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Nwk_Id" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Nwk_Id_Short_Ds" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Nwk_Id_Long_Ds" nullable="true">
+      <datatype type="STRING" minLength="29" maxLength="29"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/NETWORKTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_ACTIVE_IN">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	distinct trim(CAST(TAV_VALUE_ID as CHAR(3)))     AS Nwk_Id,
+	CAST(NW.TAV_VALUE_ID AS CHAR(3))        AS Nwk_Id_Short_Ds,
+	CAST(NW.TAV_DS  AS CHAR(29))                   AS Nwk_Id_Long_Ds
+
+  FROM /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKTYPE_V01  NW
+  WHERE trim(CAST(TAV_VALUE_ID as CHAR(3))) IN (&apos;ATD&apos;, &apos;ARN&apos;, &apos;BED&apos;, &apos;BGD&apos;, &apos;CHD&apos;, &apos;CZD&apos;, &apos;DED&apos;, &apos;DKD&apos;, &apos;EED&apos;, &apos;ERN&apos;, &apos;ESD&apos;, &apos;FAS&apos;,  &apos;FID&apos;, &apos;FRD&apos;, &apos;FRT&apos;, &apos;GBD&apos;, &apos;GRD&apos;, &apos;HUD&apos;, &apos;ICS&apos;, &apos;IDE&apos;,&apos;IED&apos;, &apos;ITD&apos;,  &apos;LTD&apos;, &apos;LVD&apos;, &apos;MEN&apos;, &apos;MLK&apos;,  &apos;NLD&apos;, &apos;NOD&apos;, &apos;PLD&apos;, &apos;PTD&apos;, &apos;ROD&apos;, &apos;RUD&apos;,  &apos;SDS&apos;, &apos;SED&apos;, &apos;SID&apos;, &apos;SKD&apos;, &apos;SR1&apos;, &apos;SR2&apos;, &apos;TRD&apos;, &apos;UAE&apos;)
+  AND NW.LNG_ID = &apos;EN&apos;
+
+</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556620893186</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563806626737</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556620893186</attribute>
+</metadata>

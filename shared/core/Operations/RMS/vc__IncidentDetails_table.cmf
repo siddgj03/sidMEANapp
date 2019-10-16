@@ -1,0 +1,409 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_IncidentDetails" path="/shared/Core/Operations/RMS/vc_IncidentDetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="INE_OCCURRED_FR_TS" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_YEAR" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_QUARTER" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_MONTH" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_WEEK" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COM_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_NR" nullable="true">
+      <datatype type="STRING" maxLength="17"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="XCS_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_TYPE_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_SUBTYPE_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_TXT_TYPE_CD" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_ATTEMPT_IN" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_MAJ_SEC_IN" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_TX" nullable="true">
+      <datatype type="STRING" maxLength="1000"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INE_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="INE_TXT_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="INE_TXT_ADD_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="INE_TXT_UPDT_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_TXT_UPDTUSR_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="INE_TX">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RMS/PRODRMS_P/INCIDENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INE_NR">
+        <datatype type="STRING" maxLength="17"/>
+      </element>
+      <element name="INE_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="INE_UPDT_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_UPDT_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="INE_ADD_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_ADD_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="INE_BUS_TYPE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="INE_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="INE_TYPE_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INE_SUBTYPE_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INE_OCCURRED_FR_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_OCCURRED_TO_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_TPG_PREM_OC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_ID_PREMISES">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INE_LOCATION_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INE_ATTEMPT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SG_P_IN_LOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SG_D_IN_LOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_VEH_ALARM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_VEH_AL_ACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_INSECURE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SLAM_LOCKS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_KEYS_IN_VEH_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_PADLOCKS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_VEH_PL_REM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_BURGLAR_AL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_BURG_AL_ACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_PANIC_AL_L_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_PANIC_ACT_L_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_PANIC_AL_VH_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_PANIC_V_ACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_VEH_MCREW_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_FIREARM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_OTH_WEAPON_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SC_VICTIM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_ACC_CNTRL_L_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SUS_VH_TPG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SUS_VH_NTPG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_S_NOVH_TPG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_S_NOVH_NTPG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_MOTIVE_IMM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_MOTIVE_FUT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_SG_REPORTED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_FIRE_ALARM_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_FIRE_AL_ACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_WATER_SP_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_WAT_SP_ACT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_FFE_AT_LOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_FFE_USED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_CPMPL_REG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_HNDLE_TPG_P_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_CCTV_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="XCS_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="INE_MAJ_SEC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+INCIDENT_V01.INE_OCCURRED_FR_TS,
+{fn YEAR(INCIDENT_V01.INE_OCCURRED_FR_TS)} AS INE_YEAR,
+ 
+{fn QUARTER(INCIDENT_V01.INE_OCCURRED_FR_TS)} AS INE_QUARTER,
+{fn MONTH(INCIDENT_V01.INE_OCCURRED_FR_TS)} AS INE_MONTH,
+{fn WEEK(INCIDENT_V01.INE_OCCURRED_FR_TS)} AS INE_WEEK,
+INCIDENT_V01.COM_ID,
+INCIDENT_V01.INE_NR,
+INCIDENT_V01.INE_ID,
+INCIDENT_V01.XCS_ID,
+INCIDENT_V01.INE_TYPE_CD,
+INCIDENT_V01.INE_SUBTYPE_CD,
+T1.INE_TXT_TYPE_CD,
+INCIDENT_V01.INE_ATTEMPT_IN,
+INCIDENT_V01.INE_MAJ_SEC_IN,
+(
+case	 
+	when	 NOT T1.&quot;INE_TX&quot; is null then T1.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T2.&quot;INE_TX&quot; is null then T2.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T3.&quot;INE_TX&quot; is null then T3.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T4.&quot;INE_TX&quot; is null then T4.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T5.&quot;INE_TX&quot; is null then T5.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T6.&quot;INE_TX&quot; is null then T6.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T7.&quot;INE_TX&quot; is null then T7.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T8.&quot;INE_TX&quot; is null then T8.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T9.&quot;INE_TX&quot; is null then T9.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) || (
+case	 
+	when	 NOT T10.&quot;INE_TX&quot; is null then T10.&quot;INE_TX&quot; 
+else	&apos;&apos; 
+end	) INE_TX
+
+
+FROM  
+
+((((((((( /shared/Source/EDW/RMS/PRODRMS_P/INCIDENT_V01 INCIDENT_V01 LEFT OUTER JOIN 
+     /shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T1 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T1.&quot;INE_ID&quot; 
+	and	1 = T1.&quot;INE_SEQ_NR&quot; 
+	and	&apos;ID&apos; = T1.&quot;INE_TXT_TYPE_CD&quot;) LEFT OUTER JOIN
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T2 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T2.&quot;INE_ID&quot; 
+	and	2 = T2.&quot;INE_SEQ_NR&quot; 
+	and	&apos;ID&apos; = T2.&quot;INE_TXT_TYPE_CD&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T3 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T3.&quot;INE_ID&quot; 
+	and	3 = T3.&quot;INE_SEQ_NR&quot; 
+	and	&apos;ID&apos; = T3.&quot;INE_TXT_TYPE_CD&quot;) LEFT OUTER JOIN
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T4 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T4.&quot;INE_ID&quot; 
+	and	4 = T4.&quot;INE_SEQ_NR&quot; 
+	and	&apos;ID&apos; = T4.&quot;INE_TXT_TYPE_CD&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T5 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T5.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T5.&quot;INE_TXT_TYPE_CD&quot; 
+	and	5 = T5.&quot;INE_SEQ_NR&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T6 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T6.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T6.&quot;INE_TXT_TYPE_CD&quot; 
+	and	6 = T6.&quot;INE_SEQ_NR&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T7 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T7.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T7.&quot;INE_TXT_TYPE_CD&quot; 
+	and	7 = T7.&quot;INE_SEQ_NR&quot;) LEFT OUTER JOIN
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01  T8 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T8.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T8.&quot;INE_TXT_TYPE_CD&quot; 
+	and	8 = T8.&quot;INE_SEQ_NR&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01 T9 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T9.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T9.&quot;INE_TXT_TYPE_CD&quot; 
+	and	9 = T9.&quot;INE_SEQ_NR&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/RMS/PRODRMS_P/INCIDENTDESC_V01 T10 
+	on	INCIDENT_V01.&quot;INE_ID&quot; = T10.&quot;INE_ID&quot; 
+	and	&apos;ID&apos; = T10.&quot;INE_TXT_TYPE_CD&quot; 
+	and	10 = T10.&quot;INE_SEQ_NR&quot;</attribute>
+  <attribute name="creationDate" type="LONG">1564728425597</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170145</attribute>
+  <attribute name="creatorUserName" type="STRING">w256kvj</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566907070147</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170145</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">w256kvj</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564728425597</attribute>
+</metadata>

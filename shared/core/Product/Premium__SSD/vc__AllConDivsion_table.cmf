@@ -1,0 +1,307 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_AllConDivsion" path="/shared/Core/Product/Premium_SSD/vc_AllConDivsion" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Con_Product_Group" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="19" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Div_Id" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Div_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Product_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Product_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_DivProd_Id" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Seq_Nr" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/services/databases/system/DUAL" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DUMMY">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/DIVISION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DIV_OPEN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_ID_DEFAULT">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DIV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_REACT_NR">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_TRAD_ENTITY_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NCS_EXTRT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_REC_SRCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/PRDPRGPRD_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRG_FUNC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PPG_DEL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/PRODNAME_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LPR_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/PRODUCT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRD_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRD_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRD_DOM_INTL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_INCL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_HANDRATE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_LATST_COL_TM">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="PRD_MAX_VL">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_MAX_VL_PER_KG">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_MIN_VL_PER_KG">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_PRBIL_CHK_VL">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_PRBIL_CHK_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_MAX_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="6"/>
+      </element>
+      <element name="PRD_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CNV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PTP_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_NCS_EXTRT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_NCS_EXPRS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_PROD_FAMILY_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRD_REC_SRCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+          C1  As &quot;Con_Product_Group&quot;
+         ,C2   AS &quot;Con_Div_Id&quot;
+         ,C3   As &quot;Con_Div_Name&quot;
+         ,C4  AS &quot;Con_Product_Id&quot;
+         ,C5  AS &quot;Con_Product_Name&quot;
+         ,C6  AS  &quot;Con_DivProd_Id&quot;
+         ,C7  AS &quot;Con_Seq_Nr&quot;
+
+ FROM
+  (SELECT
+        (CASE when   T2.PRG_ID = &apos;YD&apos; then &apos;International - OPP&apos;
+        when   T2.PRG_ID = &apos;JU&apos; then &apos;Domestic&apos;
+                                else &apos;Others&apos; end)       as C1
+      , T1.div_id                   as C2
+      , T3.div_nm                   as C3
+      , T1.prd_id                   as C4
+      , T4.lpr_nm                   as C5
+      , T1.div_id || T1.prd_id      as C6
+      ,(CASE when   T2.PRG_ID = &apos;JU&apos; then &apos;1&apos;
+        when   T2.PRG_ID = &apos;YD&apos; then &apos;2&apos;
+                                else &apos;3&apos;
+             end)       as C7
+   FROM  /shared/Source/EDW/Premium/PRODPREMIUM_P/PRODUCT_V01  T1
+          left outer join
+  (Select prg_id, div_id, prd_id
+  From /shared/Source/EDW/Premium/PRODPREMIUM_P/PRDPRGPRD_V01
+  Where prg_id in (&apos;YD&apos;, &apos;JU&apos;)) T2
+   on T1.prd_id = T2.prd_id
+   and  T1.div_id = T2.div_id
+Left Outer Join  /shared/Source/EDW/Premium/PRODPREMIUM_P/DIVISION_V01  T3
+   on T1.Div_id = T3.Div_id
+Left Outer Join /shared/Source/EDW/Premium/PRODPREMIUM_P/PRODNAME_V01 T4
+   on T1.Div_id = T4.Div_id
+  and T1.Prd_Id = T4.Prd_id) AS DIVMAIN
+Group by 7,1,2,3,4,5,6
+
+UNION
+
+SELECT
+          C1  As &quot;Con_Product_Group&quot;
+         ,C2   AS &quot;Con_Div_Id&quot;
+         ,C3   As &quot;Con_Div_Name&quot;
+         ,C4  AS &quot;Con_Product_Id&quot;
+         ,C5  AS &quot;Con_Product_Name&quot;
+         ,C6  AS  &quot;Con_DivProd_Id&quot;
+         ,C7  AS &quot;Con_Seq_Nr&quot;
+ FROM
+  (SELECT
+        &apos;Incomplete&apos;      as C1
+      , T1.div_id               as C2
+      , T1.div_id       as C3
+      , &apos; &apos;                   as C4
+      , &apos; &apos;         as C5
+      , T1.div_id || &apos; &apos;      as C6
+      , &apos;4&apos;                   as C7
+   FROM   /shared/Source/EDW/Premium/PRODPREMIUM_P/DIVISION_V01 T1) AS DIVONLY
+Group by 7,1,2,3,4,5,6
+
+UNION
+
+SELECT
+          C1  As &quot;Con_Product_Group&quot;
+         ,C2   AS &quot;Con_Div_Id&quot;
+         ,C3   As &quot;Con_Div_Name&quot;
+         ,C4  AS &quot;Con_Product_Id&quot;
+         ,C5  AS &quot;Con_Product_Name&quot;
+         ,C6  AS  &quot;Con_DivProd_Id&quot;
+         ,C7  AS &quot;Con_Seq_Nr&quot;
+ FROM
+  (SELECT
+        &apos;Incomplete&apos;          as C1                                 
+      , &apos;NA&apos;                  as C2
+      , &apos;No Division&apos;         as C3
+      , &apos; &apos;                   as C4
+      , &apos; &apos;                   as C5
+      , &apos;NA &apos;                 as C6
+      , &apos;5&apos;                   as C7) AS NODIV
+Group by 7,1,2,3,4,5,6</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="creationDate" type="LONG">1558002335951</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20169</attribute>
+  <attribute name="creatorUserName" type="STRING">w101aqu</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20169</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1558002335951</attribute>
+</metadata>

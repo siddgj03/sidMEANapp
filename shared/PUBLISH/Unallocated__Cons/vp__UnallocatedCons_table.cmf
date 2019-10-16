@@ -1,0 +1,720 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_UnallocatedCons" path="/shared/Publish/Unallocated_Cons/vp_UnallocatedCons" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Unallocated_Consignment_Reporting_Year_Week" nullable="true">
+      <datatype type="STRING" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Legacy_Consignment_Number" nullable="true">
+      <datatype type="STRING" maxLength="15" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Allocated_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Allocated_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Booking_Key" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_1_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_1_Occurred_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_1_Occurred_Depot_Hub_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_1_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_1_Remarks" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_2_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_2_Occurred_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_2_Occurred_Depot_Hub_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_2_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_2_Remarks" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_3_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_3_Occurred_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_3_Occurred_Depot_Hub_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_3_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_3_Remarks" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_4_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_4_Occurred_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_4_Occurred_Depot_Hub_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_4_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_4_Remarks" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_OK_Status_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_OK_Status_Local_Event_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Con_Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Con_Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Terms_of_Payment" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Sender_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Matched_Receiver_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Create_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_5_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_5_Occurred_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Status_5_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_OK_Status_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Consignment_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Create_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Create_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Terms_of_Payment" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Sender_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Sender_City_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Receiver_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Previous_Allocated_Con_Receiver_City_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Consignment_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Create_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Create_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Terms_of_Payment" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Sender_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Sender_City_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Receiver_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Next_Allocated_Con_Receiver_City_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Allocation_Cause_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unallocated_Con_Create_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/Unallocated_Cons/vc_UnallocatedCons" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_YRWK_NR_KPN">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="CON_ID">
+        <datatype type="STRING" maxLength="15" trailingSpaces="false"/>
+      </element>
+      <element name="COU_ID_CAUSE">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_CAUSE">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_BOOKING_KEY_TX">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CST_ID_1">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OCC_1">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_HUB_IN_1">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COS_LOC_EVENT_DT_1">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COS_REMARKS_TX_1">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CST_ID_2">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OCC_2">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_HUB_IN_2">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COS_LOC_EVENT_DT_2">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COS_REMARKS_TX_2">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CST_ID_3">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OCC_3">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_HUB_IN_3">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COS_LOC_EVENT_DT_3">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COS_REMARKS_TX_3">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CST_ID_4">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OCC_4">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_HUB_IN_4">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COS_LOC_EVENT_DT_4">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COS_REMARKS_TX_4">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="COS_LOC_EVENT_DT_OK">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COS_LOC_EVENT_TM_OK">
+        <datatype type="TIME"/>
+      </element>
+      <element name="COU_ID_ORIG_MATCH">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG_MATCH">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID_DEST_MATCH">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_DEST_MATCH">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="PRD_ID_MATCH">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TOP_ID_MATCH">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPN_SEN_NM_MATCH">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CPN_REC_NM_MATCH">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Unallocated_Con_Create_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Unallocated_Status_5_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Unallocated_Status_5_Occurred_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Unallocated_Status_5_Local_Event_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Unallocated_OK_Status_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Previous_Allocated_Consignment_Number">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Previous_Allocated_Con_Create_Depot">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Previous_Allocated_Con_Create_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Previous_Allocated_Con_Origin_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Previous_Allocated_Con_Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Previous_Allocated_Con_Destination_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Previous_Allocated_Con_Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Previous_Allocated_Con_Product_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Previous_Allocated_Con_Terms_of_Payment">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Previous_Allocated_Con_Sender_Company_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Previous_Allocated_Con_Sender_City_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Previous_Allocated_Con_Receiver_Company_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Previous_Allocated_Con_Receiver_City_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Next_Allocated_Consignment_Number">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Next_Allocated_Con_Create_Depot">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Next_Allocated_Con_Create_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Next_Allocated_Con_Origin_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Next_Allocated_Con_Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Next_Allocated_Con_Destination_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Next_Allocated_Con_Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Next_Allocated_Con_Product_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Next_Allocated_Con_Terms_of_Payment">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Next_Allocated_Con_Sender_Company_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Next_Allocated_Con_Sender_City_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Next_Allocated_Con_Receiver_Company_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Next_Allocated_Con_Receiver_City_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Unallocated_Con_Allocation_Cause_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Unallocated_Con_Create_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_OCC_OK">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_UnallocatedCons.DTE_YRWK_NR_KPN Unallocated_Consignment_Reporting_Year_Week, 
+    vc_UnallocatedCons.CON_ID Unallocated_Legacy_Consignment_Number, 
+    vc_UnallocatedCons.BUL_ID_CAUSE Unallocated_Con_Allocated_Depot_Code, 
+    vc_UnallocatedCons.COU_ID_CAUSE Unallocated_Con_Allocated_Country_Code, 
+    vc_UnallocatedCons.CON_BOOKING_KEY_TX Unallocated_Con_Booking_Key, 
+    vc_UnallocatedCons.CST_ID_1 Unallocated_Status_1_Code, 
+    vc_UnallocatedCons.BUL_ID_OCC_1 Unallocated_Status_1_Occurred_Depot_Code, 
+    vc_UnallocatedCons.BUL_HUB_IN_1 Unallocated_Status_1_Occurred_Depot_Hub_Indicator, 
+    vc_UnallocatedCons.COS_LOC_EVENT_DT_1 Unallocated_Status_1_Local_Event_Date, 
+    vc_UnallocatedCons.COS_REMARKS_TX_1 Unallocated_Status_1_Remarks, 
+    vc_UnallocatedCons.CST_ID_2 Unallocated_Status_2_Code, 
+    vc_UnallocatedCons.BUL_ID_OCC_2 Unallocated_Status_2_Occurred_Depot_Code, 
+    vc_UnallocatedCons.BUL_HUB_IN_2 Unallocated_Status_2_Occurred_Depot_Hub_Indicator, 
+    vc_UnallocatedCons.COS_LOC_EVENT_DT_2 Unallocated_Status_2_Local_Event_Date, 
+    vc_UnallocatedCons.COS_REMARKS_TX_2 Unallocated_Status_2_Remarks, 
+    vc_UnallocatedCons.CST_ID_3 Unallocated_Status_3_Code, 
+    vc_UnallocatedCons.BUL_ID_OCC_3 Unallocated_Status_3_Occurred_Depot_Code, 
+    vc_UnallocatedCons.BUL_HUB_IN_3 Unallocated_Status_3_Occurred_Depot_Hub_Indicator, 
+    vc_UnallocatedCons.COS_LOC_EVENT_DT_3 Unallocated_Status_3_Local_Event_Date, 
+    vc_UnallocatedCons.COS_REMARKS_TX_3 Unallocated_Status_3_Remarks, 
+    vc_UnallocatedCons.CST_ID_4 Unallocated_Status_4_Code, 
+    vc_UnallocatedCons.BUL_ID_OCC_4 Unallocated_Status_4_Occurred_Depot_Code, 
+    vc_UnallocatedCons.BUL_HUB_IN_4 Unallocated_Status_4_Occurred_Depot_Hub_Indicator, 
+    vc_UnallocatedCons.COS_LOC_EVENT_DT_4 Unallocated_Status_4_Local_Event_Date, 
+    vc_UnallocatedCons.COS_REMARKS_TX_4 Unallocated_Status_4_Remarks, 
+    vc_UnallocatedCons.COS_LOC_EVENT_DT_OK Unallocated_OK_Status_Local_Event_Date, 
+    vc_UnallocatedCons.COS_LOC_EVENT_TM_OK Unallocated_OK_Status_Local_Event_Time, 
+    vc_UnallocatedCons.COU_ID_ORIG_MATCH Matched_Con_Origin_Country_Code, 
+    vc_UnallocatedCons.BUL_ID_CON_ORIG_MATCH Matched_Con_Origin_Depot_Code, 
+    vc_UnallocatedCons.COU_ID_DEST_MATCH Matched_Destination_Country_Code, 
+    vc_UnallocatedCons.BUL_ID_DEST_MATCH Matched_Destination_Depot_Code, 
+    vc_UnallocatedCons.PRD_ID_MATCH Matched_Product_Code, 
+    vc_UnallocatedCons.TOP_ID_MATCH Matched_Terms_of_Payment, 
+    vc_UnallocatedCons.CPN_SEN_NM_MATCH Matched_Sender_Company_Name, 
+    vc_UnallocatedCons.CPN_REC_NM_MATCH Matched_Receiver_Company_Name, 
+
+    vc_UnallocatedCons.Unallocated_Con_Create_Date, 
+    vc_UnallocatedCons.Unallocated_Status_5_Code, 
+    vc_UnallocatedCons.Unallocated_Status_5_Occurred_Depot_Code, 
+    vc_UnallocatedCons.Unallocated_Status_5_Local_Event_Date, 
+    vc_UnallocatedCons.Unallocated_OK_Status_Indicator, 
+    vc_UnallocatedCons.Previous_Allocated_Consignment_Number, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Create_Depot, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Create_Date, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Origin_Country_Code, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Origin_Depot_Code, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Destination_Country_Code, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Destination_Depot_Code, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Product_Code, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Terms_of_Payment, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Sender_Company_Name, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Sender_City_Name, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Receiver_Company_Name, 
+    vc_UnallocatedCons.Previous_Allocated_Con_Receiver_City_Name, 
+    vc_UnallocatedCons.Next_Allocated_Consignment_Number, 
+    vc_UnallocatedCons.Next_Allocated_Con_Create_Depot, 
+    vc_UnallocatedCons.Next_Allocated_Con_Create_Date, 
+    vc_UnallocatedCons.Next_Allocated_Con_Origin_Country_Code, 
+    vc_UnallocatedCons.Next_Allocated_Con_Origin_Depot_Code, 
+    vc_UnallocatedCons.Next_Allocated_Con_Destination_Country_Code, 
+    vc_UnallocatedCons.Next_Allocated_Con_Destination_Depot_Code, 
+    vc_UnallocatedCons.Next_Allocated_Con_Product_Code, 
+    vc_UnallocatedCons.Next_Allocated_Con_Terms_of_Payment, 
+    vc_UnallocatedCons.Next_Allocated_Con_Sender_Company_Name, 
+    vc_UnallocatedCons.Next_Allocated_Con_Sender_City_Name, 
+    vc_UnallocatedCons.Next_Allocated_Con_Receiver_Company_Name, 
+    vc_UnallocatedCons.Next_Allocated_Con_Receiver_City_Name, 
+    vc_UnallocatedCons.Unallocated_Con_Allocation_Cause_Code, 
+    vc_UnallocatedCons.Unallocated_Con_Create_Depot_Code
+FROM      
+    /shared/Core/Operations/Unallocated_Cons/vc_UnallocatedCons vc_UnallocatedCons</attribute>
+  <attribute name="creationDate" type="LONG">1564736700439</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">143926</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568199352461</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">143926</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564736700439</attribute>
+</metadata>

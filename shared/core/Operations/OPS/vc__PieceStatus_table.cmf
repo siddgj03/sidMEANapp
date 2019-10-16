@@ -1,0 +1,261 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_PieceStatus" path="/shared/Core/Operations/OPS/vc_PieceStatus" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Piece_Status_Local_Event_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Local_Event_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Capture_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Capture_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Remarks" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Round_Number" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Runsheet_Number" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Source_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Barcode_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Occurred_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Consignment_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Sequence_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Add_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Add_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Piece_Status_Local_Event_Date_Time" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="33" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/OPSSTATUS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CST_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CSV_VALID_FROM_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CSV_VALID_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CSV_LOCAL_OPS_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CSV_SHORT_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="COW_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/PIECESTATUS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="PCE_SEQ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="PCE_ADD_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCE_ADD_TM" nullable="false">
+        <datatype type="TIME"/>
+      </element>
+      <element name="PCS_GMT_EVENT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCS_GMT_EVENT_TM" nullable="false">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CST_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PCS_CAPTURE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCS_CAPTURE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="PCS_LOC_EVENT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCS_LOC_EVENT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="PCS_TRANSMIT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCS_REV_DUE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PCS_TRANSMIT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="PCS_ZON_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PCS_REMARKS_TX">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ROD_NR">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RSH_SHEET_NR">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="ARE_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PCS_SOURCE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PCS_IN_ERR_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PCS_BARCODE_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PCS_INITS_NM">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PCS_DRIVER_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OCC">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_RPT">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+PCS_LOC_EVENT_TM as &quot;Piece_Status_Local_Event_Time&quot;,
+PCS_LOC_EVENT_DT   as &quot;Piece_Status_Local_Event_Date&quot;,
+ 
+PCS_CAPTURE_DT as &quot;Piece_Status_Capture_Date&quot;,
+PCS_CAPTURE_TM as &quot;Piece_Status_Capture_Time&quot;,
+t1.CST_ID &quot;Piece_Status_Code&quot;,
+CSV_SHORT_DS &quot;Piece_Status_Description&quot;,
+PCS_REMARKS_TX &quot;Piece_Status_Remarks&quot;,
+ROD_NR &quot;Piece_Status_Round_Number&quot;,
+RSH_SHEET_NR &quot;Piece_Status_Runsheet_Number&quot;,
+PCS_SOURCE_CD &quot;Piece_Status_Source_Code&quot;,
+PCS_BARCODE_ID &quot;Piece_Status_Barcode_ID&quot;,
+BUL_ID_OCC &quot;Piece_Status_Occurred_Depot&quot;,
+CON_SRKY_ID &quot;Unique_Consignment_Number&quot;,
+PCE_SEQ_ID &quot;Piece_Sequence_Number&quot;,
+PCE_ADD_DT &quot;Piece_Add_Date&quot;,
+PCE_ADD_TM &quot;Piece_Add_Time&quot;,
+case when PCS_LOC_EVENT_TM is NULL then 
+PCS_LOC_EVENT_DT || &apos;00:00:00&apos;
+else
+PCS_LOC_EVENT_DT || &apos; &apos; || PCS_LOC_EVENT_TM end as &quot;Piece_Status_Local_Event_Date_Time&quot;
+ from /shared/Source/EDW/OPS/PRODOPS_P/PIECESTATUS_V01    t1
+ 
+Left Outer Join /shared/Source/EDW/OPS/PRODOPS_P/OPSSTATUS_V01  t2
+on t1.&quot;CST_ID&quot;  =  t2.&quot;CST_ID&quot; 
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1563193437389</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563777935281</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563193437389</attribute>
+</metadata>

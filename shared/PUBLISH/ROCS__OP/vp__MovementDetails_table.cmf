@@ -1,0 +1,701 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_MovementDetails" path="/shared/Publish/ROCS_OP/vp_MovementDetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Movement_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Network_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Scheduled_Departure_Date_Time_UTC" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Scheduled_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Actual_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_ACTDEP_TD" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_ACTARR_TD" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_SCHARR_TD" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Scheduled_Driver_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Actual_Driver_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Sequence_Nr" nullable="true">
+      <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Planned_Extra_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="JNY_OBJ_ID_ORIG" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_SCHDEP_OPR_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Departure_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROC_OBJ_ID_A" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_ACTDEP_OPR_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Estimated_Arrival_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_ESTARR_OPR_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_SCHARR_OPR_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Arrival_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_ACTARR_OPR_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Arrival_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MTT_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Purpose_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DLY_ID_DEST" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DLY_ID_ORIG" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_CANCEL_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CFG_OBJ_ID_SCH" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CFG_OBJ_ID_ACT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LOC_OBJ_ID_ORIG" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LOC_OBJ_ID_DEST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="JNY_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Departure_Delay_Duration" nullable="true">
+      <datatype type="INTERVAL_DAY" intervalMode="INTERVAL_DAY_TO_SECOND" intervalPrecision="6" fractionalSecondPrecision="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Arrival_Delay_Duration" nullable="true">
+      <datatype type="INTERVAL_DAY" intervalMode="INTERVAL_DAY_TO_SECOND" intervalPrecision="6" fractionalSecondPrecision="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/MOVEMENT_DERIVED_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MOV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOC_OBJ_ID_MST_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_ID_MST_ORIG_S" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_MST_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_ID_MST_DEST_S" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_SCHDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PREP_PW_END_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_END_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCHDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PLND_XTRA_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_FIN_LD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/MOVEMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MOV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MTT_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="MPT_ID_ACT" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCHDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCH_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ARRV_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_DEPT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SCH_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ACT_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_SCH">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_ACT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_AV_RETLOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_CANCEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_TUSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_PWSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_DRSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_VHSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DRSWAP_PLND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_CREATOR_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROC_OBJ_ID_S">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROC_OBJ_ID_A">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PASS_1_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PASS_2_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_END_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SPEC_INSTR_TX">
+        <datatype type="STRING" maxLength="4000"/>
+      </element>
+      <element name="MOV_ACTUAL_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTUAL_DUR_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="MOV_ALL_DEST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_DG_ALLOW_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MPT_ID_SCH">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DEV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_HSKP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_S_TNTOWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_S_OPROWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DEBRIEF_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_APPENDED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_SCH_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_ACT_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST_OL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DIV_RSN_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DRT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR_ORIG">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_OBJ_ID_SCHED">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PROP_DRIVRS_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_PROP">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCH_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_ACT_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_PRO_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    MO.MOV_ID Movement_ID, 
+    MD.NWK_ID Network_Code, 
+    MO.MOV_SCHDEP_TD Movement_Scheduled_Departure_Date_Time_UTC, 
+    MO.MOV_SCH_DI Movement_Scheduled_Distance, 
+    MO.MOV_ACTUAL_DI Movement_Actual_Distance, 
+    MO.MOV_ACTDEP_TD, 
+    MO.MOV_ACTARR_TD, 
+    MO.MOV_SCHARR_TD, 
+    MO.MOV_SCH_DRIVER_QT Movement_Scheduled_Driver_Quantity, 
+    MO.MOV_ACT_DRIVER_QT Movement_Actual_Driver_Quantity, 
+    MO.MOV_SEQ_NR Movement_Sequence_Nr, 
+    MD.MOV_PLND_XTRA_IN Movement_Planned_Extra_Indicator, 
+    MO.JNY_OBJ_ID_ORIG, 
+    MD.MOV_SCHDEP_LD Scheduled_Departure_Date_Time, 
+    MD.MOV_SCHDEP_OPR_DT, 
+    MD.MOV_ACTDEP_LD Actual_Departure_Date_Time, 
+    MO.ROC_OBJ_ID_A, 
+    MD.MOV_ACTDEP_OPR_DT, 
+    MD.MOV_ESTARR_LD Estimated_Arrival_Date_Time, 
+    MD.MOV_ESTARR_OPR_DT, 
+    MD.MOV_SCHARR_OPR_DT, 
+    MD.MOV_SCHARR_LD Scheduled_Arrival_Date_Time, 
+    MD.MOV_ACTARR_OPR_DT, 
+    MD.MOV_ACTARR_LD Actual_Arrival_Date_Time, 
+    MO.MTT_ID, 
+    MO.MOV_STATUS_CD Movement_Status_Code, 
+    MO.MPT_ID_ACT Movement_Purpose_Code, 
+    MO.DLY_ID_DEST, 
+    MO.DLY_ID_ORIG, 
+    MO.MOV_CANCEL_CD, 
+    MO.CFG_OBJ_ID_SCH, 
+    MO.CFG_OBJ_ID_ACT, 
+    MO.LOC_OBJ_ID_ORIG, 
+    MO.LOC_OBJ_ID_DEST, 
+    MD.JNY_OBJ_ID, 
+    CASE WHEN MO.MOV_ACTDEP_TD &gt; MO.MOV_SCHDEP_TD
+            THEN MO.MOV_ACTDEP_TD - MO.MOV_SCHDEP_TD
+        ELSE NULL
+        END Actual_Departure_Delay_Duration, 
+    CASE WHEN MO.MOV_ACTARR_TD &gt; MO.MOV_SCHARR_TD
+            THEN MO.MOV_ACTARR_TD - MO.MOV_SCHARR_TD
+        ELSE NULL
+        END Actual_Arrival_Delay_Duration, 
+    MO.MOV_OBJ_ID
+FROM      
+    /shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/MOVEMENT_V01 MO INNER JOIN 
+        /shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/MOVEMENT_DERIVED_V01 MD
+    ON MO.MOV_OBJ_ID = MD.MOV_OBJ_ID --INNER JOIN 
+        --/shared/Publish/ROCS_OP/vp_User vp_User
+   -- ON vp_User.NWK_ID = MD.NWK_ID AND 
+       -- (vp_User.LOC_OBJ_ID = MD.LOC_OBJ_ID_MST_ORIG OR 
+        --vp_User.LOC_OBJ_ID = MD.LOC_OBJ_ID_MST_DEST)
+WHERE
+    MO.MOV_SCHDEP_TD &gt; current_date - 42</attribute>
+  <attribute name="creationDate" type="LONG">1566371937463</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1569323735094</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566371937463</attribute>
+</metadata>

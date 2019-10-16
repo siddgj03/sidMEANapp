@@ -1,0 +1,275 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Planned_Movement_2" path="/shared/Core/Networks/ROCSTotalPackage/vc_Planned_Movement_2" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Movement_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Sequence_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Purpose_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Drivers_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Diver_Swap_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Depart_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Movement_Arr_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Route_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Mov_Dep_Day_Of_Week" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Mov_Arr_Day_Of_Week" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Planned_Movement_Destination_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Planned_Movement_Origin_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Planned_Movement_Day_Number" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Planned_Movement_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/MovementOnDay" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ZMD_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="EDW_LOAD_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMD_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_DELETE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ZMD_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMV_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="DAY_ID_MOV" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_PURPOSE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ZMD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ZMD_DRIVERS_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMD_DRIVER_SWAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_DPT_DY_OSET_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMD_DEPART_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ZMD_ARR_DY_OSET_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMD_ARRIVAL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROC_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMD_RTRN_HOME_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_TM_FIXED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/PlannedMovement" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ZMV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="EDW_LOAD_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMV_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMV_DELETE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZMV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ZMV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ZTR_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMV_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ZMV_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZMV_DGS_ALLOWED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select 
+            T.ZMV_OBJ_ID                as   Movement_ID,
+            T.ZMV_SEQ_NR                as   Movement_Sequence_Number, 
+           T9.Mov_Purpose_Code          as   Movement_Purpose_Code,
+           T9.Mov_Type_Code             as   Movement_Type_Code,
+           T9.Mov_Drivers_Quantity      as   Movement_Drivers_Quantity,
+           T9.Mov_Driver_Swap_Indicator as  Movement_Diver_Swap_Indicator,
+           T9.Mov_Dep_Time              as  Movement_Depart_Time,
+           T9.Mov_Arr_Time              as  Movement_Arr_Time,
+           T9.Route_Object_ID           as  Route_Object_ID,
+           T9.Mov_Dep_Day_Of_Week       as  Mov_Dep_Day_Of_Week,
+           T9.Mov_Arr_Day_Of_Week       as  Mov_Arr_Day_Of_Week ,
+           T.LOC_OBJ_ID_DEST as Planned_Movement_Destination_ID,
+
+		   T.LOC_OBJ_ID_ORIG as Planned_Movement_Origin_ID ,
+Planned_Movement_Day_Number,
+T.ZTR_OBJ_ID Planned_Movement_Object_ID
+     from /shared/Source/EDW/ROCSPackage/PRODROCS_P/PlannedMovement T,
+           
+         
+     
+(select 
+           MovementOnDay.ZMD_OBJ_ID  as  Mov_Object_ID,
+           MovementOnDay.EDW_LOAD_TD  as  EDW_Load_Date_Time,
+           MovementOnDay.ZMD_DELETED_IN  as  Movt_Deleted_Indicator,
+           MovementOnDay.ZMD_DELETE_TD  as  Mov_Delete_Date_Time,
+           MovementOnDay.ZMD_UPDT_TD  as  Mov_Update_Date_Time,
+           MovementOnDay.ZMD_UPDT_USER_ID  as  Mov_Update_User_ID,
+
+           MovementOnDay.ZMV_OBJ_ID  as  ZMV_Object_ID   ,
+           MovementOnDay.DAY_ID_MOV  as  Day_Movement_ID,
+           MovementOnDay.ZMD_PURPOSE_CD  as  Mov_Purpose_Code,
+           MovementOnDay.ZMD_TYPE_CD  as  Mov_Type_Code,
+           MovementOnDay.ZMD_DRIVERS_QT  as  Mov_Drivers_Quantity,
+           MovementOnDay.CFG_OBJ_ID  as  CFG_Object_ID,
+           MovementOnDay.ZMD_DRIVER_SWAP_IN  as  Mov_Driver_Swap_Indicator,
+           MovementOnDay.ZMD_DPT_DY_OSET_NR  as  Mov_Dep_Day_Offset_Number,
+           MovementOnDay.ZMD_DEPART_TM  as  Mov_Dep_Time,
+           MovementOnDay.ZMD_ARR_DY_OSET_NR  as  Mov_Arr_Day_Offset_Number,
+           MovementOnDay.ZMD_ARRIVAL_TM  as  Mov_Arr_Time,
+           MovementOnDay.ROC_OBJ_ID  as  Route_Object_ID,
+MovementOnDay.DAY_ID_MOV as Planned_Movement_Day_Number,
+case when ((cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_DPT_DY_OSET_NR) &gt; 7) then ((cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_DPT_DY_OSET_NR) - 7) else (cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_DPT_DY_OSET_NR) end   as  Mov_Dep_Day_Of_Week,
+case when ((cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_ARR_DY_OSET_NR) &gt; 7) then ((cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_ARR_DY_OSET_NR) - 7) else (cast(MovementOnDay.DAY_ID_MOV as integer) + MovementOnDay.ZMD_ARR_DY_OSET_NR) end   as  Mov_Arr_Day_Of_Week
+     from 
+            /shared/Source/EDW/ROCSPackage/PRODROCS_P/MovementOnDay  MovementOnDay
+) T9
+where 
+           (T.ZMV_OBJ_ID = T9.ZMV_Object_ID)</attribute>
+  <attribute name="creationDate" type="LONG">1563424405426</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563424405426</attribute>
+</metadata>

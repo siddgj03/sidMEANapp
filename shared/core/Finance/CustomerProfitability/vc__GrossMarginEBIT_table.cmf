@@ -1,0 +1,368 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_GrossMarginEBIT" path="/shared/Core/Finance/CustomerProfitability/vc_GrossMarginEBIT" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="OUP_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_COLL_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_COSTED_STAT_CD" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Other_Cost_Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Other_Cost_Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Margin_Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Margin_Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_CostTotal" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_TOTL_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_COSTED_STAT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_TOTL_REV_AM1">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_PUD_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_PUD_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Clearance_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Clearance_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Commercial_Linehaul_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Commercial_Linehaul_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Domestic_Linehaul_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Domestic_Linehaul_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Network_Linehaul_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Network_Linehaul_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Operations_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Operations_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Costs_to_Serve_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Costs_to_Serve_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Other_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Other_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Cost_Amount_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Cost_Amount_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_CSA_Rebate_Cost_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_CSA_Rebate_Cost_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Own_Costs_to_Serve_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Own_Costs_to_Serve_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Partner_Costs_to_Serve_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Partner_Costs_to_Serve_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Network_Costs_to_Serve_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Network_Costs_to_Serve_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Own_Other_Costs_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Own_Other_Costs_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Partner_Other_Costs_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Partner_Other_Costs_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_RevenueWeights&amp;Consignment" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Net_Revenue_Amount_Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Net_Revenue_Amount_Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Number_of_Consignments">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Number_of_Items">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Number_of_Items_ca">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Pay_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Real_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Air_Statistical_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Road_Statistical_Weight">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Volume">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Gross_Volume_ca">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="C__age_Discount">
+        <datatype type="DECIMAL" maxDigits="41" maxFractionalDigits="13"/>
+      </element>
+      <element name="Gross_Revenue_Amount__Euro">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Gross_Revenue_Amount__Local">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+      <element name="Discount_Amount__Euro_">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      </element>
+      <element name="Discount_Amount__Local">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="6"/>
+      </element>
+      <element name="PU_Stops_per_con">
+        <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      </element>
+      <element name="Del_Stops_per_con">
+        <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      </element>
+      <element name="OUP_PCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_DCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Del_Cons_per_Stop">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="PU_Cons_per_Stop">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="OUP_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_CostTotal.OUP_SRKY_ID, 
+    vc_CostTotal.OUP_COLL_DT, 
+    vc_CostTotal.OUP_COSTED_STAT_CD, 
+    vc_CostTotal.Total_Other_Cost_Euro, 
+    vc_CostTotal.Total_Other_Cost_Local, 
+    CASE WHEN vc_CostTotal.OUP_COSTED_STAT_CD &lt;&gt; &apos;&apos;
+            THEN vc_CostTotal.OUP_TOTL_REV_AM - vc_CostTotal.Total_Costs_to_Serve_Euro
+        ELSE 0
+        END Gross_Margin_Euro, 
+    CASE WHEN vc_CostTotal.OUP_COSTED_STAT_CD &lt;&gt; &apos;&apos;
+            THEN RevenueWeightcon.Net_Revenue_Amount_Local - vc_CostTotal.Total_Costs_to_Serve_Local
+        ELSE 0
+        END Gross_Margin_Local
+FROM      
+    /shared/Core/Finance/CustomerProfitability/vc_CostTotal vc_CostTotal INNER JOIN 
+        /shared/Core/Finance/CustomerProfitability/&quot;vc_RevenueWeights&amp;Consignment&quot; RevenueWeightcon
+    ON vc_CostTotal.OUP_SRKY_ID = RevenueWeightcon.OUP_SRKY_ID</attribute>
+  <attribute name="creationDate" type="LONG">1564742108958</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170137</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565698223331</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170137</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAMQUQYBAAwAdgBjAF8AQwBvAHMAdABUAG8AdABhAGwGAgAMAHYAYwBfAEMAbwBzAHQA
+VABvAHQAYQBsAwv/////AwoAArFtAwz/////CxEABQAGAHMAaABhAHIAZQBkAAQAQwBvAHIAZQAH
+AEYAaQBuAGEAbgBjAGUAFQBDAHUAcwB0AG8AbQBlAHIAUAByAG8AZgBpAHQAYQBiAGkAbABpAHQA
+eQAMAHYAYwBfAEMAbwBzAHQAVABvAHQAYQBs//8QUQYBAB0AdgBjAF8AUgBlAHYAZQBuAHUAZQBX
+AGUAaQBnAGgAdABzACYAQwBvAG4AcwBpAGcAbgBtAGUAbgB0BgIAEABSAGUAdgBlAG4AdQBlAFcA
+ZQBpAGcAaAB0AGMAbwBuAwv/////AwoAArFJAwz/////CxEABQAGAHMAaABhAHIAZQBkAAQAQwBv
+AHIAZQAHAEYAaQBuAGEAbgBjAGUAFQBDAHUAcwB0AG8AbQBlAHIAUAByAG8AZgBpAHQAYQBiAGkA
+bABpAHQAeQAdAHYAYwBfAFIAZQB2AGUAbgB1AGUAVwBlAGkAZwBoAHQAcwAmAEMAbwBuAHMAaQBn
+AG4AbQBlAG4AdP//EFMGCQAFAEkATgBOAEUAUgMNAAAAAAMOAAAAAQgPEGIGBwABAD0BBQAIAxBB
+BgEACwBPAFUAUABfAFMAUgBLAFkAXwBJAEQGAgAABgP//wYE//8DCv////8IDBAZAxIAAAABBAf/
+////gAAAAAQGAAAAAH///////wMLAAAAAP//CAQQQQYBAAsATwBVAFAAXwBTAFIASwBZAF8ASQBE
+BgIAAAYD//8GBP//Awr/////CAwQGQMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAH/
+//////8DBQAAAAEIAhAxBgH//wECAQEGAAEDAAEEAAEFAAMHAAAAAAcJAAAAAQAAAAIJCgAAAAcQ
+QQYBAAsATwBVAFAAXwBTAFIASwBZAF8ASQBEBgIAAAYD//8GBP//Awr/////CAwQGQMSAAAAAQQH
+/////4AAAAAEBgAAAAB///////8DCwAAAAD//xBBBgEACwBPAFUAUABfAEMATwBMAEwAXwBEAFQG
+AgAABgP//wYE//8DCv////8IDBAVAxIAAAAB//8DCwAAAAD//xBBBgEAEgBPAFUAUABfAEMATwBT
+AFQARQBEAF8AUwBUAEEAVABfAEMARAYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAA
+AAABBAQAAAAAAAAAAQETAf//AwsAAAAA//8QQQYBABUAVABvAHQAYQBsAF8ATwB0AGgAZQByAF8A
+QwBvAHMAdABfAEUAdQByAG8GAgAABgP//wYE//8DCv////8IDBAXAxIAAAABAw4AAAASAxAAAAAG
+//8DCwAAAAD//xBBBgEAFgBUAG8AdABhAGwAXwBPAHQAaABlAHIAXwBDAG8AcwB0AF8ATABvAGMA
+YQBsBgIAAAYD//8GBP//Awr/////CAwQFwMSAAAAAQMOAAAAFwMQAAAABv//AwsAAAAA//8QTAYC
+ABEARwByAG8AcwBzAF8ATQBhAHIAZwBpAG4AXwBFAHUAcgBvAE0QYgYHAAIAPAA+AQUACAMQQQYB
+ABIATwBVAFAAXwBDAE8AUwBUAEUARABfAFMAVABBAFQAXwBDAEQGAgAABgP//wYE//8DCv////8I
+DBAbAxIAAAABBAUAAAAAAAAAAQQEAAAAAAAAAAEBEwH//wMLAAAAAP//CAQQQwYCAAAKDhAbBgIA
+BABDAEgAQQBSAxIAAAABATsABAQAAAAAAAAAAQETAf//EAAAAAD/////AE4QQgYBAAEALQYCAAAB
+CQABEgAJDQAAAAIQQQYBAA8ATwBVAFAAXwBUAE8AVABMAF8AUgBFAFYAXwBBAE0GAgAABgP//wYE
+//8DCv////8IDBAXAxIAAAABAw4AAAASAxAAAAAG//8DCwAAAAD//xBBBgEAGQBUAG8AdABhAGwA
+XwBDAG8AcwB0AHMAXwB0AG8AXwBTAGUAcgB2AGUAXwBFAHUAcgBvBgIAAAYD//8GBP//Awr/////
+CAwQFwMSAAAAAQMOAAAAEgMQAAAABv//AwsAAAAA/////wBPEEMGAgAACg4QGQYCAAcASQBOAFQA
+RQBHAEUAUgMSAAAAAQQHAAAAAAAAAAAEBgAAAAAAAAAA//8LAAD/////EEwGAgASAEcAcgBvAHMA
+cwBfAE0AYQByAGcAaQBuAF8ATABvAGMAYQBsAE0QYgYHAAIAPAA+AQUACAMQQQYBABIATwBVAFAA
+XwBDAE8AUwBUAEUARABfAFMAVABBAFQAXwBDAEQGAgAABgP//wYE//8DCv////8IDBAbAxIAAAAB
+BAUAAAAAAAAAAQQEAAAAAAAAAAEBEwH//wMLAAAAAP//CAQQQwYCAAAKDhAbBgIABABDAEgAQQBS
+AxIAAAABATsABAQAAAAAAAAAAQETAf//EAAAAAD/////AE4QQgYBAAEALQYCAAABCQABEgAJDQAA
+AAIQQQYBABgATgBlAHQAXwBSAGUAdgBlAG4AdQBlAF8AQQBtAG8AdQBuAHQAXwBMAG8AYwBhAGwG
+AgAABgP//wYE//8DCv////8IDBAXAxIAAAABAw4AAAAXAxAAAAAG//8DCwAAAAH//xBBBgEAGgBU
+AG8AdABhAGwAXwBDAG8AcwB0AHMAXwB0AG8AXwBTAGUAcgB2AGUAXwBMAG8AYwBhAGwGAgAABgP/
+/wYE//8DCv////8IDBAXAxIAAAABAw4AAAAXAxAAAAAG//8DCwAAAAD/////AE8QQwYCAAAKDhAZ
+BgIABwBJAE4AVABFAEcARQBSAxIAAAABBAcAAAAAAAAAAAQGAAAAAAAAAAD//wsAAP///////wkG
+AAAAAxCCAwoAAAAeAwsAAAAeAwwAAADIAw0AAADI//8QggMKAAABGAMLAAAAHgMMAAAAyAMNAAAA
+yP//EIIDCv////8DC/////8DDP////8DDf///////wgDEHEDAQAAAAsDAgAAADIJAwAAAiYQdAMG
+AAAAAP//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0AwYAAAAB//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAL//xByBgT/////EHMD
+BQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dAMGAAAAA///EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0AwYAAAAE//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAX//xByBgQAEQBH
+AHIAbwBzAHMAXwBNAGEAcgBnAGkAbgBfAEUAdQByAG///xBz//8QdQEHAf//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAb//xByBgQAEgBHAHIAbwBzAHMA
+XwBNAGEAcgBnAGkAbgBfAEwAbwBjAGEAbP//EHP//xB1AQcB//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb///////8=</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564742108958</attribute>
+</metadata>

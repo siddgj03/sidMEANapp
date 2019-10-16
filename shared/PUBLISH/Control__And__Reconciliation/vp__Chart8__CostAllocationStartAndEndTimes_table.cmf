@@ -1,0 +1,378 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Chart8_CostAllocationStartAndEndTimes" path="/shared/Publish/Control_And_Reconciliation/vp_Chart8_CostAllocationStartAndEndTimes" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Run_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Category_label" nullable="true">
+      <datatype type="STRING" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Type_Cd" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day_Sort" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Start_Of_Run" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="End_Of_Run" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="SLA_Output_Available" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUS_MODULE_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUS_MODULE_NM">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="BUS_MODULE_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="PJP_SLR_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUS_CNTL_MOD_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUS_CNTL_TOTREF_NR" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRN_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRN_LATESTRUN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_START_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_END_WK_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ACTUALRUN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRN_NM" nullable="false">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="MRN_DS">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MRN_OUTPUT_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPP_OUTPUT_VER_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID_QCFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="JOB_NM" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JOB_JOB_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="JOB_SCHDULED_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="JOB_CONDITIONAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUS_MODULE_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="IA_INV_ACC_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="JCL_RUN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="JOB_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JCL_RUN_DAY_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RUN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JOB_NM" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JCL_START_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JCL_PROCESS_WK_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="JCL_PROCESS_YR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="JCL_END_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JCL_RUNTIME_CPU_NR">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="2"/>
+      </element>
+      <element name="JCL_RUNTIME_EPS_NR">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="2"/>
+      </element>
+      <element name="JCL_UPDATE_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select distinct 
+last26runs.Run_Number,
+SubQ8Main.Category_label,
+SubQ8Main.Run_Type_Cd,	
+SubQ8Main.Run_Day_Sort,
+sum(SubQ8Main.Duration_To_Start) Start_Of_Run,
+Sum(SubQ8Main.Duration_To_End) End_Of_Run,
+SUM(SubQ8Main.Duration_To_SLA) SLA_Output_Available
+ from
+(SELECT distinct Run_Ranking_Week_Details.Run_Number,Run_Type_Cd 
+FROM
+(select CM_COSTINGRUN_V01.MRN_ID Run_Number ,T3.RUN_TYPE_CD Run_Type_Cd, 
+RANK() over(partition by T3.RUN_TYPE_CD order by CM_COSTINGRUN_V01.MRN_ID desc) as Rank_Number
+ from /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01 T2 	 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01 T4 
+on T2.BUS_MODULE_ID = T4.BUS_MODULE_ID 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01 T3 
+on T4.JOB_NM = T3.JOB_NM
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 CM_COSTINGRUN_V01 
+on T3.JCL_RUN_ID = CM_COSTINGRUN_V01.MRN_ID	   
+INNER JOIN  
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01 TNTCALDAYSDIFF_V01
+ON CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; 
+and TNTCALDAYSDIFF_V01.TNT_YR || TNTCALDAYSDIFF_V01.TNT_WK = CM_COSTINGRUN_V01.MRN_START_WK_NR
+ where CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; and T2.BUS_CNTL_MOD_CD = &apos;D&apos; 
+and T3.JCL_RUN_DAY_NR in (3, 7)
+ group by CM_COSTINGRUN_V01.MRN_ID,
+CM_COSTINGRUN_V01.MRN_START_WK_NR , 
+CM_COSTINGRUN_V01.MRN_START_WK_NR  , 
+TNTCALDAYSDIFF_V01.TNT_WK  , 
+TNTCALDAYSDIFF_V01.TNT_YR,T3.RUN_TYPE_CD )   Run_Ranking_Week_Details
+where Rank_Number&lt;27)last26runs	  
+
+ 
+inner join 
+
+
+
+(SELECT 
+SubQ8.* FROM
+(SELECT 
+DISTINCT RunTypeDetails.Run_Day_Number__ET_,RunTypeDetails.Run_Type_Cd 
+FROM
+(select distinct 
+MAX(CM_COSTINGRUN_V01.MRN_ID)Report_Run_Number
+,T2.RUN_TYPE_CD Run_Type_Cd
+,T2.JCL_RUN_DAY_NR
+ from ((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01 T3 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01 T4 on T3.BUS_MODULE_ID = T4.BUS_MODULE_ID) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01 T2 on T4.JOB_NM = T2.JOB_NM) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 CM_COSTINGRUN_V01 on T2.JCL_RUN_ID = CM_COSTINGRUN_V01.MRN_ID
+ where CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; and T3.BUS_CNTL_MOD_CD = &apos;D&apos; 
+and ((T2.RUN_TYPE_CD = &apos;G&apos; and T2.JCL_RUN_DAY_NR in (7, 3)) or (T2.RUN_TYPE_CD = &apos;1&apos;))
+group  by T2.RUN_TYPE_CD  ,T2.JCL_RUN_DAY_NR) Latestrunnumbr
+inner join 			  
+(select distinct 
+min(T2.JCL_RUN_DAY_NR) Run_Day_Number_ET,
+CM_COSTINGRUN_V01.MRN_ID Run_Number,
+T2.RUN_TYPE_CD Run_Type_Cd 
+ from ((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01 T3 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01 T4 on T3.BUS_MODULE_ID = T4.BUS_MODULE_ID) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01 T2 on T4.JOB_NM = T2.JOB_NM) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 CM_COSTINGRUN_V01 on T2.JCL_RUN_ID = CM_COSTINGRUN_V01.MRN_ID
+ where CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; and T3.BUS_CNTL_MOD_CD = &apos;D&apos;  
+ and ((T2.RUN_TYPE_CD = &apos;G&apos; and T2.JCL_RUN_DAY_NR in (7, 3)) or (T2.RUN_TYPE_CD = &apos;1&apos;))
+group by  CM_COSTINGRUN_V01.MRN_ID,
+T2.RUN_TYPE_CD)latestrunday
+on 	   Latestrunnumbr.Report_Run_Number   =latestrunday.Run_Number
+and   Latestrunnumbr.Run_Type_Cd   =latestrunday.Run_Type_Cd
+inner join
+(select distinct 
+CM_COSTINGRUN_V01.MRN_ID Report_Run_Number ,
+T2.JCL_RUN_DAY_NR Run_Day_Number__ET_ ,
+T2.RUN_TYPE_CD as Run_Type_Cd 
+from ((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01 T3 
+INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01 T4 on T3.BUS_MODULE_ID = T4.BUS_MODULE_ID) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01 T2 on T4.JOB_NM = T2.JOB_NM) 
+LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 CM_COSTINGRUN_V01 on T2.JCL_RUN_ID = CM_COSTINGRUN_V01.MRN_ID
+where CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; and T3.BUS_CNTL_MOD_CD = &apos;D&apos; 
+and ((T2.RUN_TYPE_CD = &apos;G&apos; and T2.JCL_RUN_DAY_NR in (7, 3)) or (T2.RUN_TYPE_CD = &apos;1&apos;)))RunTypeDetails
+on 	  RunTypeDetails.Report_Run_Number  =Latestrunnumbr.Report_Run_Number
+and    RunTypeDetails.Run_Day_Number__ET_= latestrunday.Run_Day_Number_ET
+and  RunTypeDetails.Run_Type_Cd  =Latestrunnumbr.Run_Type_Cd    )LastRunDetails
+INNER JOIN
+(select distinct CM_COSTINGRUN_V01.MRN_ID Run_Number , 
+T2.JCL_RUN_DAY_NR Run_Day_Number ,
+T2.RUN_TYPE_CD Run_Type_Cd, 
+ (case  when T2.JCL_RUN_DAY_NR = &apos;3&apos; then 3 else 1 end ) Run_Day_Sort , 
+trim(both
+ from CM_COSTINGRUN_V01.MRN_ID) || (case  when substring (trim(both
+ from CM_COSTINGRUN_V01.MRN_ID),3,2) in (&apos;05&apos;, &apos;09&apos;, &apos;13&apos;, &apos;18&apos;, &apos;22&apos;, &apos;26&apos;, &apos;31&apos;, &apos;35&apos;, &apos;39&apos;, &apos;44&apos;, &apos;48&apos;, &apos;52&apos;) then &apos;*&apos; else &apos;&apos; end ) Category_Label ,
+/*
+cast((min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) - 
+cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) 
+as timestamp)) as interval day(4) to second(6)) 
+as Duration_To_Start,
+cast((max(T2.JCL_END_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD, T2.JCL_RUN_DAY_NR) - 
+cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD, T2.JCL_RUN_DAY_NR) as date) as timestamp)) as interval day(4) to second(9)) as Duration_To_End,
+
+cast(( (case  when T2.RUN_TYPE_CD = &apos;1&apos; then ( cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) + 
+cast( ( 1 ) as INTERVAL DAY(4) ) ) else ( ( cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) + 
+cast( ( 1 ) as INTERVAL DAY(4) ) ) + cast( ( 8 ) as INTERVAL HOUR(4) ) ) end )-cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) )as interval day(4) to second(9))  as Duration_To_SLA
+*/
+
+cast(cast(cast((min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) - 
+cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) 
+as timestamp)) as interval second(9)) as varchar(100))as integer)/60 
+as Duration_To_Start,
+cast(cast(cast((max(T2.JCL_END_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD, T2.JCL_RUN_DAY_NR) - 
+cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD, T2.JCL_RUN_DAY_NR) as date) as timestamp)) as interval second(9)) as varchar(100))as integer)/60 as Duration_To_End,
+
+cast(cast(cast(( (case  when T2.RUN_TYPE_CD = &apos;1&apos; then ( cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) + 
+cast( ( 1 ) as INTERVAL DAY(4) ) ) else ( ( cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) + 
+cast( ( 1 ) as INTERVAL DAY(4) ) ) + cast( ( 8 ) as INTERVAL HOUR(4) ) ) end )-cast(cast(min(T2.JCL_START_TD) over (partition by CM_COSTINGRUN_V01.MRN_ID,T2.RUN_TYPE_CD,  T2.JCL_RUN_DAY_NR) as date) as timestamp) )as interval second(9)) as varchar(100))as integer)/60   as Duration_To_SLA
+
+ from ((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUS_MODULE_V01 T3 
+ INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_PROFILE_V01 T4 
+ on T3.BUS_MODULE_ID = T4.BUS_MODULE_ID) 
+ LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_SCH_JOB_TIMES_V01 T2 
+ on T4.JOB_NM = T2.JOB_NM) 
+ LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTINGRUN_V01 CM_COSTINGRUN_V01 
+ on T2.JCL_RUN_ID = CM_COSTINGRUN_V01.MRN_ID
+ where CM_COSTINGRUN_V01.MRT_ID = &apos;A&apos; and T3.BUS_CNTL_MOD_CD = &apos;D&apos; 
+and ((T2.RUN_TYPE_CD = &apos;G&apos; and T2.JCL_RUN_DAY_NR in (7, 3)) or (T2.RUN_TYPE_CD = &apos;1&apos;))
+ 
+)SubQ8
+ON LastRunDetails.Run_Day_Number__ET_=SubQ8.Run_Day_Number
+and LastRunDetails.Run_Type_Cd=SubQ8.Run_Type_Cd )SubQ8Main
+ON SubQ8Main.Run_number= last26runs.Run_Number
+and 		 SubQ8Main.Run_Type_Cd= last26runs.Run_Type_Cd
+group by last26runs.Run_Number,
+SubQ8Main.Category_label,	
+SubQ8Main.Run_Day_Sort,
+SubQ8Main.Run_Type_Cd</attribute>
+  <attribute name="creationDate" type="LONG">1567484756223</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568612276826</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567484756223</attribute>
+</metadata>

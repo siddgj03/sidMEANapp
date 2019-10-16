@@ -1,0 +1,158 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Incidents" path="/shared/Publish/ROCS_Total_Package/vp_Incidents" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="INE_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INE_STATUS_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INY_ID" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="INY_DS" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TAV_DS" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MOV_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/services/databases/system/DUAL" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DUMMY">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/INCIDENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INE_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="INE_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INE_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="INE_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="INE_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="INE_ID">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="0"/>
+      </element>
+      <element name="INE_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INY_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="INE_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/NETWORKREASON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RSN_REASON_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RSN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RSN_RL_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RSN_RL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_UPDT_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RSN_RL_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select distinct Incident__INCIDENT_V01_.INE_OBJ_ID INE_OBJ_ID , Incident__INCIDENT_V01_.INE_ID INE_ID , Incident__INCIDENT_V01_.INE_STATUS_CD INE_STATUS_CD , Incident__INCIDENT_V01_.INY_ID INY_ID , T.RSN_RL_DS INY_DS , Dim_incident_status.TAV_DS TAV_DS,
+ 
+	Incident__INCIDENT_V01_.MOV_OBJ_ID from /shared/Source/EDW/ROCSPackage/PRODROCS_P/INCIDENT_V01 Incident__INCIDENT_V01_,
+/shared/Source/EDW/ROCSPackage/PRODROCS_P/NETWORKREASON_V01   T,
+
+ (
+select &apos;IOPEN&apos; TAV_VALUE_ID , 
+cast(&apos;Opened&apos; as char( 6 )) TAV_DS 
+  union  
+select &apos;ICLSD&apos; TAV_VALUE_ID ,
+ cast(&apos;Closed&apos; as char( 6 )) TAV_DS 
+ ) Dim_incident_status
+ where T.RSN_REASON_CD = Incident__INCIDENT_V01_.INY_ID 
+and Dim_incident_status.TAV_VALUE_ID = Incident__INCIDENT_V01_.INE_STATUS_CD 
+and upper (T.LNG_ID) = &apos;EN&apos;
+-- on T22.INE_OBJ_ID = T21.INE_OBJ_ID
+ 
+</attribute>
+  <attribute name="creationDate" type="LONG">1562923529951</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567593183216</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562923529951</attribute>
+</metadata>

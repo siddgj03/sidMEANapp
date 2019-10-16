@@ -1,0 +1,129 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Calendar" path="/shared/Publish/Control_And_Reconciliation/vp_Calendar" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="TNT_Month_MMM" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Month_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Quarter_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="YearWeek_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Year_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="YearMonth_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Report_Run_Day_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Control_And_Reconciliation/vc_Calendar" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TNT_Month_MMM">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="TNT_Month_Name">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="TNT_Quarter_Name">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="YearWeek_Number">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Year_Number">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YearMonth_Number">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Run_Day_Name">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Report_Run_Day_Number">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Run_Date">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+
+T1.TNT_Month_MMM  as  TNT_Month_MMM,
+T1.TNT_Month_Name  as  TNT_Month_Name,
+T1.TNT_Quarter_Name  as  TNT_Quarter_Name,
+T1.YearWeek_Number as YearWeek_Number,
+T1.Year_Number as Year_Number,
+T1.YearMonth_Number as YearMonth_Number,
+T1.Run_Day_Name  as Run_Day_Name,
+T1.Report_Run_Day_Number  as Report_Run_Day_Number,
+T1.Run_Date as Run_Date
+from 
+/shared/Core/Finance/Control_And_Reconciliation/vc_Calendar
+ T1
+</attribute>
+  <attribute name="creationDate" type="LONG">1563864112384</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564722719754</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563864112384</attribute>
+</metadata>

@@ -1,0 +1,333 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RatingChargeElement" path="/shared/Publish/SCD/vp_RatingChargeElement" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Consignment_Entry_Identifier" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Charge_Type_rce" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Handrate_Indicator_rce" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rating_Element_Code_rce" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rating_Element_Desc_rce" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rating_Element_Id_rce" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rating_Method_rce" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Surcharge_rce" nullable="true">
+      <datatype type="STRING" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Surcharge_Level_rce" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Surcharge_Group_Description_rce" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Sales/SCD/vc_ConEntryRateElem" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COE_RATE_ELEM_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_HANDRATE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_HANDRATE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_OVERRIDE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_CUSTOMER_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_COMPANY_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_NET_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CHT_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_RATE_ELEM_ID">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="COE_RATELM_CALC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SLV_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/RATINGELEMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/SURCHARGE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CHD_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CHD_VAT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CHD_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CHD_REFERENCED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_CANCEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_RESET_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_ATTACH_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CHD_INV_ATTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_HAZARD_ATTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_INT_DOM_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_TRANSPORT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_TRIGGER_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_PROD_BASE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_OUTAR_BASE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_OPTION_BASE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_BEFORE_DISC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_COD_ATTRACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_ADD_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CHD_ADD_TM" nullable="false">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CHD_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CHD_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CHD_UPDATE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CHD_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CHD_FINANCE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_SUR_ORDER_CD" nullable="false">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="CHD_TLANE_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_ALL_PRV_SUR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_RATCRD_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_VD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_OUTAR_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_BEL_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_OPT_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_CHTYPE_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_SURCH_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_MANUAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="IGR_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CHT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_INV_ATTR_LV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_ITS_SUPPRES_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_SRCE_ATTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CHD_OPSTAT_ATTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/SURCHGRP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CHD_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="GRP_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+	T1.&quot;COE_SRKY_ID&quot; as Consignment_Entry_Identifier,
+T1.CHT_ID	 AS Charge_Type_rce,
+T1.COE_HANDRATE_CD	 AS Handrate_Indicator_rce,
+T1.COE_RATE_ELEM_CD	 AS Rating_Element_Code_rce,
+TAV_DS	 AS Rating_Element_Desc_rce,
+COE_RATE_ELEM_ID	 AS Rating_Element_Id_rce,
+COE_RATELM_CALC_CD	 AS Rating_Method_rce,
+(case  when T1.&quot;COE_RATE_ELEM_CD&quot; = &apos;5&apos; then substring (T1.&quot;COE_RATE_ELEM_ID&quot;,1,3) else T1.&quot;CHD_ID&quot; end )  AS Surcharge_rce,
+SLV_ID	 AS Surcharge_Level_rce,
+ (case  when T5.&quot;GRP_DS&quot; is null then &apos;Other&apos; else T5.&quot;GRP_DS&quot; end )	 AS Surcharge_Group_Description_rce
+FROM /shared/Core/Sales/SCD/vc_ConEntryRateElem T1  LEFT OUTER JOIN
+/shared/Source/EDW/SCD/PRODSCD_P/RATINGELEMENT_V01 T4
+ON T4.&quot;TAV_VALUE_ID&quot; = T1.&quot;COE_RATE_ELEM_CD&quot; 
+		and T4.&quot;LNG_ID&quot; = &apos;EN&apos;LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/SURCHARGE_V01 T7 
+	on T1.&quot;COU_ID_INV&quot; = T7.&quot;COU_ID&quot; 
+		and (case  when T1.&quot;COE_RATE_ELEM_CD&quot; = &apos;5&apos; 
+				then substring(T1.&quot;COE_RATE_ELEM_ID&quot;,1,3) 
+			else T1.&quot;CHD_ID&quot; end ) = T7.&quot;CHD_ID&quot; LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/SURCHGRP_V01 T5 
+	on T7.&quot;COU_ID&quot; = T5.&quot;COU_ID_INV&quot; 
+		and T7.&quot;CHD_ID&quot; = T5.&quot;CHD_ID&quot;
+ </attribute>
+  <attribute name="creationDate" type="LONG">1563003963977</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565019862281</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563003963977</attribute>
+</metadata>

@@ -1,0 +1,562 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_LifecycleOriginDepots" path="/shared/Publish/OPS_SSD/vp_LifecycleOriginDepots" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="OriginBUCode" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginBULabel" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginBURegionCode" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginBURegionLabel" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginBURegionShortName" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupCode" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupLabel" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupShortName" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryCode" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryLabel" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginCountryShortName" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginAreaCode" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginAreaLabel" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginDepotCode" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginDepotLabel" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OriginDepotLongName" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_LifecycleOriginDepots" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OriginBUCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBULabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginBURegionCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBURegionLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginBURegionShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryGroupCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginCountryGroupLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginCountryGroupShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OriginCountryLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginCountryShortName">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="OriginAreaCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginAreaLabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginDepotCode">
+        <datatype type="STRING" maxLength="7"/>
+      </element>
+      <element name="OriginDepotLabel">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="OriginDepotLongName">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/BUSLOC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_OPTR_LIC_CD">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_LIC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_TNT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_1_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_2_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_3_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PBOX_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_TEL_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_FAX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_TELX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_VAT_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_CZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY1_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY2_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_MAX_DEL_ZON_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CONV_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="BUL_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_INACTIVE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_PROVINCE_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_SEARCH_TYPE_NR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DAYL_SAV_EX_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TIZ_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BTY_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/COUNTRYNAME_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LXT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="COU_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/OPPDEPOTREGION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="AREA_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COUNTRY_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COUNTRY_GRP_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="REGION_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="REGION_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUSINESS_UNIT_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="GEN_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OPS_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SQ_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="TELEPHONE_CD" nullable="false">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="ORG_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_LATE_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_LATE_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_OUT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_OUT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMB_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMB_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_POD_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    OPPDEPOTREGION_V01.BUSINESS_UNIT_CD OriginBUCode, 
+   &apos; o.&apos; || OPPDEPOTREGION_V01.BUSINESS_UNIT_CD OriginBULabel, 
+    OPPDEPOTREGION_V01.REGION_CD OriginBURegionCode, 
+    &apos; o.&apos; || OPPDEPOTREGION_V01.REGION_DS OriginBURegionLabel, 
+    &apos; o.&apos; || OPPDEPOTREGION_V01.REGION_CD OriginBURegionShortName, 
+    OPPDEPOTREGION_V01.COUNTRY_GRP_CD OriginCountryGroupCode, 
+    &apos; o.&apos; || OPPDEPOTREGION_V01.COUNTRY_GRP_DS OriginCountryGroupLabel, 
+    &apos; o.&apos; || OPPDEPOTREGION_V01.COUNTRY_GRP_CD OriginCountryGroupShortName, 
+    OPPDEPOTREGION_V01.COU_ID OriginCountryCode, 
+    &apos; o.&apos; || COUNTRYNAME_V01.LXT_NM OriginCountryLabel, 
+    &apos; o.&apos; || COUNTRYNAME_V01.COU_ID OriginCountryShortName, 
+    OPPDEPOTREGION_V01.AREA_CD OriginAreaCode, 
+    &apos; o.&apos; || OPPDEPOTREGION_V01.AREA_CD OriginAreaLabel, 
+    CASE 
+        WHEN OPPDEPOTREGION_V01.BUL_ID = &apos;&apos;
+            THEN &apos;Unknown&apos;
+        WHEN OPPDEPOTREGION_V01.BUL_ID IS NULL
+            THEN &apos;Unknown&apos;
+        ELSE OPPDEPOTREGION_V01.BUL_ID
+        END OriginDepotCode, 
+    &apos; o.&apos; || CASE WHEN OPPDEPOTREGION_V01.BUL_ID = &apos;&apos; THEN &apos;Unknown&apos; WHEN OPPDEPOTREGION_V01.BUL_ID IS NULL THEN &apos;Unknown&apos; ELSE TRIM(OPPDEPOTREGION_V01.BUL_ID) END OriginDepotLabel, 
+    &apos; o.&apos; || CASE WHEN BUSLOC_V01.BUL_NM = &apos;&apos; THEN &apos;Orig Depot Unknown&apos; WHEN BUSLOC_V01.BUL_NM IS NULL THEN &apos;Orig Depot Unknown&apos; ELSE BUSLOC_V01.BUL_NM END OriginDepotLongName 
+    --OPPDEPOTREGION_V01.BUSINESS_UNIT_CD || OPPDEPOTREGION_V01.REGION_CD || OPPDEPOTREGION_V01.COUNTRY_GRP_CD || OPPDEPOTREGION_V01.COU_ID UniqueCategoryForOriginCountryCode, 
+    --OPPDEPOTREGION_V01.BUSINESS_UNIT_CD || OPPDEPOTREGION_V01.REGION_CD || OPPDEPOTREGION_V01.COUNTRY_GRP_CD || OPPDEPOTREGION_V01.COU_ID || OPPDEPOTREGION_V01.AREA_CD UniqueCategoryForOriginAreaCode, 
+    --OPPDEPOTREGION_V01.BUSINESS_UNIT_CD || OPPDEPOTREGION_V01.REGION_CD UniqueCategoryForOriginBURegionCode, 
+    --OPPDEPOTREGION_V01.BUSINESS_UNIT_CD || OPPDEPOTREGION_V01.REGION_CD || OPPDEPOTREGION_V01.COUNTRY_GRP_CD UniqueCategoryForOriginCountryGroupCode, 
+    --OPPDEPOTREGION_V01.BUSINESS_UNIT_CD || OPPDEPOTREGION_V01.REGION_CD || OPPDEPOTREGION_V01.COUNTRY_GRP_CD || OPPDEPOTREGION_V01.COU_ID || OPPDEPOTREGION_V01.AREA_CD || CASE WHEN OPPDEPOTREGION_V01.BUL_ID = &apos;&apos; THEN &apos;Unknown&apos; WHEN OPPDEPOTREGION_V01.BUL_ID IS NULL THEN &apos;Unknown&apos; ELSE OPPDEPOTREGION_V01.BUL_ID END UniqueCategoryForOriginDepotCode
+FROM      
+    /shared/Source/EDW/OPS/PRODOPS_P/OPPDEPOTREGION_V01 OPPDEPOTREGION_V01 INNER JOIN 
+        /shared/Source/EDW/OPS/PRODOPS_P/BUSLOC_V01 BUSLOC_V01
+    ON OPPDEPOTREGION_V01.BUL_ID = BUSLOC_V01.BUL_ID AND 
+        OPPDEPOTREGION_V01.COM_ID = BUSLOC_V01.COM_ID INNER JOIN 
+        /shared/Source/EDW/OPS/PRODOPS_P/COUNTRYNAME_V01 COUNTRYNAME_V01
+    ON ((OPPDEPOTREGION_V01.COU_ID = COUNTRYNAME_V01.COU_ID AND 
+        OPPDEPOTREGION_V01.COM_ID = COUNTRYNAME_V01.COM_ID) AND 
+        COUNTRYNAME_V01.COU_NON_USE_IN IN (&apos;&apos;, &apos;N&apos;)) AND 
+        COUNTRYNAME_V01.LNG_ID = &apos;EN&apos;
+WHERE
+    (OPPDEPOTREGION_V01.BUSINESS_UNIT_CD &lt;&gt; &apos;OTHER&apos; AND 
+    OPPDEPOTREGION_V01.COU_ID &lt;&gt; &apos;ZX&apos;) AND 
+    OPPDEPOTREGION_V01.COM_ID = &apos;WW&apos;
+</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_LifecycleOriginDepots</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1556613884406</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565188303865</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556613884406</attribute>
+  <trigger>
+    <security>
+      <owner user="x423xjm" domain="tntadtest"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/OPS_SSD/vp_LifecycleOriginDepots" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="OriginBUCode">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="OriginBULabel">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginBURegionCode">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="OriginBURegionLabel">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginBURegionShortName">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginCountryGroupCode">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="OriginCountryGroupLabel">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginCountryGroupShortName">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginCountryCode">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="OriginCountryLabel">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginCountryShortName">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+        <element name="OriginAreaCode">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="OriginAreaLabel">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginDepotCode">
+          <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+        </element>
+        <element name="OriginDepotLabel">
+          <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+        </element>
+        <element name="OriginDepotLongName">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/OPS_SSD/vp_LifecycleOriginDepots&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1565184679000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1565185226776</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565185226776</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565185226776</attribute>
+  </trigger>
+</metadata>

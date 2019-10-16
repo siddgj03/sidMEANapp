@@ -1,0 +1,158 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="TRNSNT_EQ_USE_DERIVED_V01" path="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/TRNSNT_EQ_USE_DERIVED_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="MOV_OBJ_ID" nullable="false">
+      <datatype name="decimal" extendedName="decimal(18,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VHU_ID" nullable="true">
+      <datatype name="char" extendedName="char(30)" subType="DATASOURCE_TYPE" type="STRING" minLength="30" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VHU_STATUS_CD" nullable="true">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VHU_STATUS_DS" nullable="true">
+      <datatype name="varchar" extendedName="varchar(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VHU_LIC_PLATE_NR" nullable="true">
+      <datatype name="char" extendedName="char(16)" subType="DATASOURCE_TYPE" type="STRING" minLength="16" maxLength="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_ID1" nullable="true">
+      <datatype name="char" extendedName="char(30)" subType="DATASOURCE_TYPE" type="STRING" minLength="30" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_CD1" nullable="true">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_DS1" nullable="true">
+      <datatype name="varchar" extendedName="varchar(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_LIC_PLATE_NR1" nullable="true">
+      <datatype name="char" extendedName="char(16)" subType="DATASOURCE_TYPE" type="STRING" minLength="16" maxLength="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_ID2" nullable="true">
+      <datatype name="char" extendedName="char(30)" subType="DATASOURCE_TYPE" type="STRING" minLength="30" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_CD2" nullable="true">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_DS2" nullable="true">
+      <datatype name="varchar" extendedName="varchar(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_LIC_PLATE_NR2" nullable="true">
+      <datatype name="char" extendedName="char(16)" subType="DATASOURCE_TYPE" type="STRING" minLength="16" maxLength="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_ID3" nullable="true">
+      <datatype name="char" extendedName="char(30)" subType="DATASOURCE_TYPE" type="STRING" minLength="30" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_CD3" nullable="true">
+      <datatype name="char" extendedName="char(5)" subType="DATASOURCE_TYPE" type="STRING" minLength="5" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_STATUS_DS3" nullable="true">
+      <datatype name="varchar" extendedName="varchar(60)" subType="DATASOURCE_TYPE" type="STRING" maxLength="60"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TUU_LIC_PLATE_NR3" nullable="true">
+      <datatype name="char" extendedName="char(16)" subType="DATASOURCE_TYPE" type="STRING" minLength="16" maxLength="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1563863449944</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">X(16)</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566808553930</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563863449944</attribute>
+</metadata>

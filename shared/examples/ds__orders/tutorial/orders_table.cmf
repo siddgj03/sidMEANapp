@@ -1,0 +1,306 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="orders" path="/shared/examples/ds_orders/tutorial/orders" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="orderid" nullable="false">
+      <datatype name="int4" extendedName="int4" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="customerid" nullable="true">
+      <datatype name="int4" extendedName="int4" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="employeeid" nullable="true">
+      <datatype name="int4" extendedName="int4" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="orderdate" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="purchaseordernumber" nullable="true">
+      <datatype name="varchar" extendedName="varchar(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipname" nullable="true">
+      <datatype name="varchar" extendedName="varchar(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipaddress" nullable="true">
+      <datatype name="varchar" extendedName="varchar(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipcity" nullable="true">
+      <datatype name="varchar" extendedName="varchar(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipstateorprovince" nullable="true">
+      <datatype name="varchar" extendedName="varchar(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shippostalcode" nullable="true">
+      <datatype name="varchar" extendedName="varchar(20)" subType="DATASOURCE_TYPE" type="STRING" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipcountry" nullable="true">
+      <datatype name="varchar" extendedName="varchar(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipphonenumber" nullable="true">
+      <datatype name="varchar" extendedName="varchar(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shipdate" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="shippingmethodid" nullable="true">
+      <datatype name="int4" extendedName="int4" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="freightcharge" nullable="true">
+      <datatype name="numeric" extendedName="numeric(12,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="orders_pkey" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="orderid" sortOrder="ASCENDING"/>
+      <attribute name="indexSchema" type="STRING">tutorial</attribute>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/examples/ds_orders" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/examples/ds_orders/tutorial/orders_cache" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="customerid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="employeeid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="orderdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="purchaseordernumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipname">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipaddress">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="shipcity">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipstateorprovince">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shippostalcode">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="shipcountry">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="shipphonenumber">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="shipdate">
+        <datatype type="DATE"/>
+      </element>
+      <element name="shippingmethodid">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="freightcharge">
+        <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/examples/ds_orders/tutorial/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/examples/ds_orders</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/examples/ds_orders/tutorial/orders_cache</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="selectionState" type="INTEGER">2</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/examples/ds_orders/tutorial/orders" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="orderid" nullable="false">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="customerid">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="employeeid">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="orderdate">
+          <datatype type="DATE"/>
+        </element>
+        <element name="purchaseordernumber">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="shipname">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="shipaddress">
+          <datatype type="STRING" maxLength="255"/>
+        </element>
+        <element name="shipcity">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="shipstateorprovince">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="shippostalcode">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="shipcountry">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="shipphonenumber">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="shipdate">
+          <datatype type="DATE"/>
+        </element>
+        <element name="shippingmethodid">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="freightcharge">
+          <datatype type="DECIMAL" maxDigits="12" minFractionalDigits="2" maxFractionalDigits="2"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/examples/ds_orders/tutorial/orders&apos;,&apos;TABLE&apos;</value>
+      </item>
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1350595937000</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1350596449279</attribute>
+    <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+    <attribute name="creatorUserName" type="STRING">admin</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  </trigger>
+</metadata>

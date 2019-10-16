@@ -1,0 +1,569 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CustomerContacts" path="/shared/Publish/SCD/vp_CustomerContacts" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Identifier" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Sequence_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Title" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Initials" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_First_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Last_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Gender" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Language_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Telephone_Number_1" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Telephone_Number_2" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Job_Title_Description" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Role_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Role_Description" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Stream" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Stream_Desc" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Rank" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Email_Sequence_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Email_Address" nullable="true">
+      <datatype type="STRING" maxLength="129"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Email_Delete_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EMail_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Telephone_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Sales_Activity_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Email_Campaign_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Direct_Mail_Campaign_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_General_Information_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Operational_Information_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Communication_Block_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Email_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Email_Declined_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Delete_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contact_Update_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_CPF_ROLE_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CPF_ROLE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_DS" nullable="false">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CONTACTSTREAM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_NON_USE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="TAV_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CONTACTTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTT_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTT_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTT_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CTT_EFFECT_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CTT_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTT_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="STF_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTCONTACTTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CPF_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CTT_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CCT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CCT_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CCT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CCT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CCT_RANK_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CCT_AUTHORITY_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CCT_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTCONTACT_EMAIL_ADDR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CPF_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CPF_EMAIL_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CPF_E_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_EMAIL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPF_E_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CPF_E_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPF_EMAIL_ADDR_TX">
+        <datatype type="STRING" maxLength="129"/>
+      </element>
+      <element name="CPF_E_BLOCKED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_EMAIL_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERCONTACT_FV01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CPF_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="EDW_LOAD_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPF_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPF_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CPF_UPDT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CPF_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CPF_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPF_TITLE_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CPF_FORE_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CPF_INIT_NM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CPF_SUR_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CPF_GENDER_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CPF_INTL_TEL_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CPF_TEL_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CPF_TEL_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CPF_TEL_EXTN_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CPF_TEL_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_TEL_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_INTL_FAX_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CPF_FAX_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CPF_FAX_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CPF_FAX_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_FAX_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_INTL_MOB_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CPF_MOB_TEL_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CPF_MOBILE_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_MOB_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_MAIL_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_MAIL_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_SMS_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_SMS_PREF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_ROLE_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CPF_JOB_TITLE_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CPF_DEPT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CPF_FUNCTION_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CPF_DP_RESTRICT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_TX">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="CPF_TEL_NR_SEARCH">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CPF_LEVEL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CPF_BIRTH_DATE_TX">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COU_ISO_ID_TEL" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ISO_ID_FAX" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ISO_ID_MOB" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CPF_LOB_REST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_CONT_CYCL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_SALES_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_MRKT_BLOCK_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_NO_EMAIL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_EMAIL_DEC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_NO_EML_CAMP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_NO_DIR_MAIL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_NO_GEN_INFO_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CPF_NO_OPS_INFO_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	T1.&quot;CUS_ID&quot; as Customer_Identifier, 
+	T1.CPF_SEQ_NR as Contact_Sequence_Number,
+	T1.CPF_TITLE_CD as Contact_Title,
+	T1.CPF_INIT_NM as Contact_Initials,
+	T1.CPF_FORE_NM as Contact_First_Name,
+	T1.CPF_SUR_NM as Contact_Last_Name,
+	T1.CPF_GENDER_CD as Contact_Gender,
+	T1.LNG_ID as Contact_Language_Indicator,
+	T1.CPF_TEL_1_NR as Contact_Telephone_Number_1,
+	T1.CPF_TEL_2_NR as Contact_Telephone_Number_2,
+	T1.CPF_JOB_TITLE_NM as Job_Title_Description,
+	T1.CPF_ROLE_CD as Contact_Role_Code,
+	T2.TAV_DS as Contact_Role_Description,
+	T3.STF_ID as TNT_Stream,
+	T4.TAV_DS as TNT_Stream_Desc,
+	T5.CCT_RANK_CD as Contact_Rank,
+	T6.CPF_EMAIL_SEQ_NR as Email_Sequence_Number,
+	T6.CPF_EMAIL_ADDR_TX as Email_Address,
+	T6.CPF_E_DELETE_IN as Email_Delete_Indicator,
+	T6.CPF_E_BLOCKED_IN as EMail_Block_Indicator,
+	T1.CPF_TEL_BLOCK_IN as Telephone_Block_Indicator,
+	T1.CPF_SALES_BLOCK_IN as No_Sales_Activity_Communication_Block_Indicator,
+	T1.CPF_NO_EML_CAMP_IN as No_Email_Campaign_Communication_Block_Indicator,
+	T1.CPF_NO_DIR_MAIL_IN as No_Direct_Mail_Campaign_Communication_Block_Indicator,
+	T1.CPF_NO_GEN_INFO_IN as No_General_Information_Communication_Block_Indicator,
+	T1.CPF_NO_OPS_INFO_IN as No_Operational_Information_Communication_Block_Indicator,
+	 (case  when T1.&quot;CPF_SALES_BLOCK_IN&quot; = &apos;Y&apos; and T1.&quot;CPF_NO_EML_CAMP_IN&quot; = &apos;Y&apos; 
+		and T1.&quot;CPF_NO_DIR_MAIL_IN&quot; = &apos;Y&apos; and T1.&quot;CPF_NO_GEN_INFO_IN&quot; = &apos;Y&apos; and T1.&quot;CPF_NO_OPS_INFO_IN&quot; = &apos;Y&apos; 
+		then &apos;Y&apos; else &apos;N&apos; end ) as No_Communication_Block_Indicator,
+	T1.CPF_NO_EMAIL_IN as No_Email_Indicator,
+	T1.CPF_EMAIL_DEC_IN as Email_Declined_Indicator,
+	T1.CPF_DELETE_IN as Contact_Delete_Indicator,
+	T1.CPF_UPDT_DT as Contact_Update_Date  
+from ((((/shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERCONTACT_FV01 T1 LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/AV_CPF_ROLE_TYPE_V01 T2 
+on T1.&quot;CPF_ROLE_CD&quot; = T2.&quot;CPF_ROLE_CD&quot; and &apos;EN&apos; = T2.&quot;LNG_ID&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/CUSTCONTACTTYPE_V01 T5 
+on T1.&quot;CUS_ID&quot; = T5.&quot;CUS_ID&quot; 
+and T1.&quot;CPF_SEQ_NR&quot; = T5.&quot;CPF_SEQ_NR&quot; and &apos;Y&apos; &lt;&gt; T5.&quot;CCT_DELETE_IN&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/CONTACTTYPE_V01 T3 on T5.&quot;CTT_TYPE_CD&quot; = T3.&quot;CTT_TYPE_CD&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/CONTACTSTREAM_V01 T4 
+on T3.&quot;STF_ID&quot; = T4.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T4.&quot;LNG_ID&quot;) LEFT OUTER JOIN 
+/shared/Source/EDW/SCD/PRODSCD_P/CUSTCONTACT_EMAIL_ADDR_V01 T6 
+on T1.&quot;CUS_ID&quot; = T6.&quot;CUS_ID&quot; and T1.&quot;CPF_SEQ_NR&quot; = T6.&quot;CPF_SEQ_NR&quot; and &apos;Y&apos; &lt;&gt; T6.&quot;CPF_E_DELETE_IN&quot;</attribute>
+  <attribute name="creationDate" type="LONG">1563192150540</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563192150540</attribute>
+</metadata>

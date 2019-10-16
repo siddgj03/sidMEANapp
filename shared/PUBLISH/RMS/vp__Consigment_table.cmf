@@ -1,0 +1,103 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Consigment" path="/shared/Publish/RMS/vp_Consigment" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Consignment_Entry_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Destination_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Origin_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CON_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="COM_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="TOP_ID_OPS_ACT" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/RMS/vc_Consignment" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_ID_ORIG">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TOP_ID_OPS_ACT">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+vp_Consignment.CON_COLL_DT AS &quot;Collection_Date&quot;,	 
+vp_Consignment. BUL_ID_ORIG  AS &quot;Consignment_Entry_Depot&quot;  ,
+vp_Consignment.BUL_ID_DEST AS &quot;Destination_Depot&quot;  ,
+vp_Consignment.BUL_ID_CON_ORIG AS &quot;Origin_Depot&quot;,
+vp_Consignment.CON_SRKY_ID,
+vp_Consignment.COM_ID,
+vp_Consignment.TOP_ID_OPS_ACT
+
+FROM
+
+/shared/Core/RMS/vc_Consignment vp_Consignment
+</attribute>
+  <attribute name="creationDate" type="LONG">1568650155611</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">144540</attribute>
+  <attribute name="creatorUserName" type="STRING">x400fdt</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568810865304</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">144540</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x400fdt</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1568650155611</attribute>
+</metadata>

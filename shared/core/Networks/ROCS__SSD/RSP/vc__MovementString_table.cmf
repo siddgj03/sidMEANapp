@@ -1,0 +1,426 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_MovementString" path="/shared/Core/Networks/ROCS_SSD/RSP/vc_MovementString" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Ms_Id" nullable="true">
+      <datatype type="STRING" minLength="37" maxLength="37"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Ms_Short_Ds" nullable="true">
+      <datatype type="STRING" minLength="14" maxLength="14"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Ms_Long_Ds" nullable="true">
+      <datatype type="STRING" minLength="80" maxLength="80"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Bul_Id_Orig" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Bul_Id_Dest" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Bul_Nm_Orig" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Bul_Nm_Dest" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_EFFECT_TO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUL_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUL_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUL_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_DOM_LEGACY_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_BARCODE_CD">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="BUL_FIS_BARCODE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_SAP_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BUL_TNT_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BUL_HUB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_OPS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DEPOT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_AIRPORT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CLIENT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID_CT_STN">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_WKEND_DAY_1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY_2_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ADDR_LINE_1_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="BUL_ADDR_LINE_2_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="BUL_ADDR_LINE_3_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LPT_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PRV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_PBOX_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_PBOX_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="BUL_PBOX_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_TEL_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_TEL_2_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_FAX_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_FAX_2_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_SS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_SORT_CELL_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DAYL_SAV_EX_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TIZ_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_OPER_DAY_ST_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="BUL_DUP_DAYS_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="BUL_CSYS_ID_XBBK">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_IGNR_COUHOL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_SORT_LOC_TX" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_HOUSE_NR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_FLAT_NR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_STREET_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_SATELLITE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DFLT_PICKUP_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="BUL_CS_TEL_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_CS_TEL_2_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_UK_BARCODE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ADMIN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DOM_BARCODE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ASSOCIATE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CON_MAX_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="BUL_CON_MAX_PCE_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_BILL_CNTR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID_ODEPRO">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_CSYS_ID_COLPRO">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_CSYS_ID_DELPRO">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	CAST(MS_ID AS CHAR(37))                            AS Ms_Id,
+	CAST(MS_SHORT_DS AS CHAR(14))                     AS Ms_Short_Ds,
+	CAST(MS_LONG_DS AS CHAR(80))                        AS Ms_Long_Ds,
+	CAST(BUL_ID_ORIG AS CHAR(5))                     AS Bul_Id_Orig,
+	CAST(BUL_ID_DEST AS CHAR(5))                     AS Bul_Id_Dest,
+	CAST(BUL_NM_ORIG AS CHAR(30))                      AS Bul_Nm_Orig,
+	CAST(BUL_NM_DEST AS CHAR(30))                      AS Bul_Nm_Dest
+
+  FROM
+(
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01   DEST
+where ORIG.COU_ISO_ID IN (&apos;CZ&apos;) and DEST.COU_ISO_ID IN (&apos;CZ&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID  AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID  AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;SK&apos;) and DEST.COU_ISO_ID IN (&apos;SK&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID  AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID  AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;GR&apos;) and DEST.COU_ISO_ID IN (&apos;GR&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID  AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;PL&apos;) and DEST.COU_ISO_ID IN (&apos;PL&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;BG&apos;) and DEST.COU_ISO_ID IN (&apos;BG&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID  AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;HU&apos;) and DEST.COU_ISO_ID IN (&apos;HU&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;RO&apos;) and DEST.COU_ISO_ID IN (&apos;RO&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;SI&apos;) and DEST.COU_ISO_ID IN (&apos;SI&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+UNION
+
+SELECT DISTINCT
+TRIM(CAST(ORIG.BUL_CSYS_ID AS BIGINT))  || &apos;-&apos; ||    TRIM(CAST(DEST.BUL_CSYS_ID  AS BIGINT))  MS_ID ,      
+TRIM(ORIG.BUL_ID) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID)  AS MS_SHORT_DS  ,
+TRIM(ORIG.BUL_ID) || &apos; - &apos; || TRIM(ORIG.BUL_NM) || &apos; -&gt; &apos; || TRIM(DEST.BUL_ID) || &apos; - &apos; || TRIM(DEST.BUL_NM)            MS_LONG_DS                      ,
+    ORIG.BUL_ID                                                                                  										AS BUL_ID_ORIG,
+    	DEST.BUL_ID                                                                                  										AS BUL_ID_DEST,
+    	ORIG.BUL_NM                                                                                  										AS BUL_NM_ORIG,
+    	DEST.BUL_NM                                                                                  										AS BUL_NM_DEST
+FROM /shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 ORIG
+cross join
+/shared/Source/EDW/ROCS/PRODROCS_P/BUSINESSLOCATION_V01 DEST
+where ORIG.COU_ISO_ID IN (&apos;TR&apos;) and DEST.COU_ISO_ID IN (&apos;TR&apos;) 
+and ORIG.BUL_CSYS_ID &lt;&gt; DEST.BUL_CSYS_ID
+
+) DM_MOVEMENTS_STRING</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556614366876</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563807142128</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556614366876</attribute>
+</metadata>

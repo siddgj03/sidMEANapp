@@ -1,0 +1,506 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="CM_COSTEDENTRY_TOTLS_CP_V01" path="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTEDENTRY_TOTLS_CP_V01" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="OUP_SRKY_ID" nullable="false">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MRN_ID" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_COMLH_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_NETLH_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_COULH_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PUD_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OPS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_CLEARANCE_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_DIRECT_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INDIRECT_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OTHERS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_CSA_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_CONADJ_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_CONS_QT" nullable="true">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_ITEMS_QT" nullable="true">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_ITEM_VL" nullable="true">
+      <datatype name="decimal" extendedName="decimal(6,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_REV_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_A_STAT_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_R_STAT_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_REAL_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_PAY_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_COMPNY_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_HDRATE_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_CUST_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_NFR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_GROSS_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_GROSS_MAX_VL" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_GROSS_ITEMS_QT" nullable="true">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INV_ITM_QT" nullable="true">
+      <datatype name="integer" extendedName="integer" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INV_R_WT" nullable="true">
+      <datatype name="decimal" extendedName="decimal(9,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INV_VL" nullable="true">
+      <datatype name="decimal" extendedName="decimal(6,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_T_DIRC_RCHG_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PTNR_RCHG_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_NETW_EX_PL_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_NETW_PL_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PTNR_NRCHG_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OWN_DIRCT_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OWN_IDIRCT_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PTNR_IDIRCT_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_DIRECT_OTH_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_VAR_DIR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_VAR_DIR_OWN_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_VAR_DIR_PTR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_VAR_NETW_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_FIX_DIR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_FIX_DIR_OWN_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_FIX_DIR_PTR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_FIX_NETW_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INDIR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INDIR_OWN_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_INDIR_PTNR_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_FBK_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_OTHER_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_TOTL_CTS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OWN_CTS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PTNR_CTS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_NETW_CTS_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_OWN_OTHER_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PTNR_OTHER_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:57:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:58:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:59:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1565253790689</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="datatype_format" type="STRING">-------------.999999</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566455186748</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565253790689</attribute>
+</metadata>

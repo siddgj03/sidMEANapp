@@ -1,0 +1,153 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_MovementStatus" path="/shared/Publish/ROCS_OP/vp_MovementStatus" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="RSN_REASON_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RSN_RL_DS" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/NETWORKREASON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RSN_REASON_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RSN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RSN_RL_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RSN_RL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_UPDT_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RSN_RL_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    NETWORKREASON_V01.RSN_REASON_CD RSN_REASON_CD, 
+    NETWORKREASON_V01.RSN_RL_DS RSN_RL_DS
+FROM      
+    /shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/NETWORKREASON_V01 NETWORKREASON_V01
+WHERE
+    NETWORKREASON_V01.RSN_TYPE_CD = &apos;MOVST&apos; AND 
+    upper(NETWORKREASON_V01.LNG_ID) = &apos;EN&apos;</attribute>
+  <attribute name="creationDate" type="LONG">1566392669936</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568962052922</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">e807pja</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBABEATgBFAFQAVwBPAFIASwBSAEUAQQBTAE8ATgBfAFYAMAAxBgIAEQBOAEUA
+VABXAE8AUgBLAFIARQBBAFMATwBOAF8AVgAwADEDC/////8DCgAExCQDDP////8LEQAGAAYAcwBo
+AGEAcgBlAGQABgBTAG8AdQByAGMAZQADAEUARABXAA4AUgBPAEMAUwBQAGEAYwBrAGEAZwBlAF8A
+TwBQAAoAUABSAE8ARABSAE8AQwBTAF8AUAARAE4ARQBUAFcATwBSAEsAUgBFAEEAUwBPAE4AXwBW
+ADAAMf//AwUAAAAACAIQMQYB//8BAgEBBgEBAwABBAABBQADBwAAAAAICBBhAQUAAQYACAEQYgYH
+AAEAPQEFAAgDEEEGAQALAFIAUwBOAF8AVABZAFAARQBfAEMARAYCAAAGA///BgT//wMK/////wgM
+EBsGAgAEAGMAaABhAHIGAwAHAGMAaABhAHIAKAA1ACkDKwAAAA8DEgAAAAEEBQAAAAAAAAAFBAQA
+AAAAAAAABQETAf//AwsAAAAA//8IBBBDBgIAAAoOEBsGAgAEAEMASABBAFIDEgAAAAEBOwAEBQAA
+AAAAAAAFBAQAAAAAAAAABQETAf//EAAAAAVNT1ZTVP////8IAhBiBgcAAQA9AQUACAMQQgYBAAUA
+dQBwAHAAZQByBgIAAAEJAAESAAkNAAAAARBBBgEABgBMAE4ARwBfAEkARAYCAAAGA///BgT//wMK
+/////wgMEBsGAgAEAGMAaABhAHIGAwAHAGMAaABhAHIAKAAyACkDKwAAAA8DEgAAAAEEBQAAAAAA
+AAACBAQAAAAAAAAAAgETAf//AwsAAAAA/////wgEEEMGAgAACg4QGwYCAAQAQwBIAEEAUgMSAAAA
+AQE7AAQFAAAAAAAAAAIEBAAAAAAAAAACARMB//8QAAAAAkVO////////BwkAAAABAAAAAAkKAAAA
+AhBBBgEADQBSAFMATgBfAFIARQBBAFMATwBOAF8AQwBEBgIADQBSAFMATgBfAFIARQBBAFMATwBO
+AF8AQwBEBgP//wYE//8DCv////8IDBAbBgIABABjAGgAYQByBgMABwBjAGgAYQByACgANQApAysA
+AAAPAxIAAAABBAUAAAAAAAAABQQEAAAAAAAAAAUBEwH//wMLAAAAAP//EEEGAQAJAFIAUwBOAF8A
+UgBMAF8ARABTBgIACQBSAFMATgBfAFIATABfAEQAUwYD//8GBP//Awr/////CAwQGwYCAAcAdgBh
+AHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADYAMAApAysAAAAPAxIAAAABBAQAAAAAAAAA
+PAETAf//AwsAAAAA/////wkGAAAAARCCAwoAAAAeAwsAAAAeAwwAAADIAw0AAADI//8IAxBxAwEA
+AAALAwIAAAAyCQMAAAImEHQDBgAAAAD//xByBgQADQBSAFMATgBfAFIARQBBAFMATwBOAF8AQwBE
+//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0AwYAAAAB//8QcgYEAAkAUgBTAE4AXwBSAEwAXwBEAFP//xBzAwUAAAAA//8QdQEHAf//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQGCQAdAE4ARQBUAFcA
+TwBSAEsAUgBFAEEAUwBPAE4AXwBWADAAMQAuAFIAUwBOAF8AVABZAFAARQBfAEMARP//EHIGBP//
+//8QcwMFAAAAAP//EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHYGCAAnAE4ARQBU
+AFcATwBSAEsAUgBFAEEAUwBPAE4AXwBWADAAMQAuAFIAUwBOAF8AVABZAFAARQBfAEMARAAgAD0A
+IAAnAE0ATwBWAFMAVAAn//8Qdv//EHb//xB2//8QdAYJAB8AdQBwAHAAZQByACgATgBFAFQAVwBP
+AFIASwBSAEUAQQBTAE8ATgBfAFYAMAAxAC4ATABOAEcAXwBJAEQAKf//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHYGCAAmAHUAcABwAGUAcgAoAE4ARQBUAFcA
+TwBSAEsAUgBFAEEAUwBPAE4AXwBWADAAMQAuAEwATgBHAF8ASQBEACkAIAA9ACAAJwBFAE4AJ///
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2////////</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566392669936</attribute>
+</metadata>

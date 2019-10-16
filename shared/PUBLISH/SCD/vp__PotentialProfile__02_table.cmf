@@ -1,0 +1,282 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_PotentialProfile_02" path="/shared/Publish/SCD/vp_PotentialProfile_02" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Identifier" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Profile_Sequence_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Profile_Delete_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Competitor" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Local_Currency" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Euro" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Weekly_Revenue_Local_Currency" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Weekly_Revenue_Euro" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Currency" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quantity_Units" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Frequency" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_FREQ_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_VALUE_UNITS_CD_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CC_EXCHANGERATE_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="EGP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EXR_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CS_COMPETITOR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CMT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CMT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CMT_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CMT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CMT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CMT_NM">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERPROFILE_COMPETTR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="TRP_SEQ_NR" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_ISO_ID_CMT" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CMT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TPC_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TPC_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TPC_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TPC_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TPC_FREQ_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TPC_VALUE_UNITS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TPC_VALUE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="TPC_REVENUE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TPC_CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TPC_TOT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="TPC_UOM_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	T7.&quot;CUS_ID&quot; as Customer_Identifier,
+	T7.&quot;TRP_SEQ_NR&quot; as Profile_Sequence_Number,
+	T7.&quot;TPC_DELETE_IN&quot; as Profile_Delete_Indicator,
+	T6.CMT_NM AS Competitor,
+	T7.TPC_REVENUE_AM AS Revenue_Local_Currency,
+	(case  when T7.&quot;TPC_CUY_ID&quot; = &apos;EUR&apos; then T7.&quot;TPC_REVENUE_AM&quot; 
+	else CAST(T7.&quot;TPC_REVENUE_AM&quot; AS FLOAT) / T8.&quot;EXR_RATE_AM&quot; end ) AS Revenue_Euro, 
+	(case  when T7.&quot;TPC_FREQ_CD&quot; = &apos;1&apos; then T7.&quot;TPC_REVENUE_AM&quot; * 5 
+	when T7.&quot;TPC_FREQ_CD&quot; = &apos;2&apos; then T7.&quot;TPC_REVENUE_AM&quot; 
+	when T7.&quot;TPC_FREQ_CD&quot; = &apos;3&apos; then CAST((T7.&quot;TPC_REVENUE_AM&quot; * 12) AS FLOAT) / 52 
+	when T7.&quot;TPC_FREQ_CD&quot; = &apos;4&apos; then CAST((T7.&quot;TPC_REVENUE_AM&quot; * 4) AS FLOAT) / 52 
+	else CAST(T7.&quot;TPC_REVENUE_AM&quot; AS FLOAT) / 52 end ) AS Weekly_Revenue_Local_Currency,
+	CAST((case  when (T7.&quot;TPC_FREQ_CD&quot; = &apos;1&apos;) then (T7.&quot;TPC_REVENUE_AM&quot; * 5) 
+	when (T7.&quot;TPC_FREQ_CD&quot; = &apos;2&apos;) then T7.&quot;TPC_REVENUE_AM&quot; 
+	when (T7.&quot;TPC_FREQ_CD&quot; = &apos;3&apos;) then (CAST((T7.&quot;TPC_REVENUE_AM&quot; * 12) AS FLOAT) / 52) 
+	when (T7.&quot;TPC_FREQ_CD&quot; = &apos;4&apos;) then (CAST((T7.&quot;TPC_REVENUE_AM&quot; * 4) AS FLOAT) / 52) 
+	else (CAST(T7.&quot;TPC_REVENUE_AM&quot; AS FLOAT) / 52) end ) AS FLOAT) / T8.&quot;EXR_RATE_AM&quot; AS Weekly_Revenue_Euro,
+	T7.TPC_CUY_ID AS Currency,
+	T7.TPC_VALUE_QT AS Quantity,
+	T9.TAV_DS AS Quantity_Units,
+	T10.TAV_DS AS Frequency
+FROM /shared/Source/EDW/SCD/PRODSCD_P/CUSTOMERPROFILE_COMPETTR_V01 T7 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CS_COMPETITOR_V01 T6 
+on T7.&quot;COU_ISO_ID_CMT&quot; = T6.&quot;COU_ISO_ID&quot; and T7.&quot;CMT_ID&quot; = T6.&quot;CMT_ID&quot; and &apos;Y&apos; &lt;&gt; T6.&quot;CMT_DELETE_IN&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CC_EXCHANGERATE_V02 T8 
+on T7.&quot;TPC_CUY_ID&quot; = T8.&quot;CUY_ID&quot; and &apos;MO&apos; = T8.&quot;EGP_ID&quot; 
+and CURRENT_DATE between T8.&quot;EXR_START_DT&quot; and T8.&quot;EXR_END_DT&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_VALUE_UNITS_CD_V01 T9 
+on T7.&quot;TPC_VALUE_UNITS_CD&quot; = T9.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T9.&quot;LNG_ID&quot; 
+LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_TRP_FREQ_V01 T10 
+on T7.&quot;TPC_FREQ_CD&quot; = T10.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T10.&quot;LNG_ID&quot;</attribute>
+  <attribute name="creationDate" type="LONG">1563196982436</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563196982436</attribute>
+</metadata>

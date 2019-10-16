@@ -1,0 +1,270 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vs_SenderCountry010" path="/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_SenderCountry010" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Account_group_code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="18" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="11"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_country" nullable="true">
+      <datatype type="STRING" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vc_ParamsView" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="START_DATE">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="NA">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="END_DATE">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_CITKPIAccountDetails" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="acc_id">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="cou_id">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="acg_id">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="nam_nm">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_CITSourceDetails" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CND_NOTE_SRC_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CND_TYPE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CND_GROUP_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_SenderCountry005" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="con_coll_dt">
+        <datatype type="DATE"/>
+      </element>
+      <element name="cnd_note_src_cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Country_Id">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="acc_id_cpn">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="acg_id_cpn">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vs_SenderCountry010" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Account_group_code">
+        <datatype type="STRING" maxLength="18"/>
+      </element>
+      <element name="Account_number">
+        <datatype type="STRING" maxLength="11"/>
+      </element>
+      <element name="Account_country">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="Account_name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+(CASE   WHEN T6.cnd_note_src_cd is not NULL AND UPPER(CAST(SUBSTRING(T3.nam_nm,1,1) AS CHAR(1))) NOT IN (&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;, &apos;I&apos;, &apos;J&apos;, &apos;K&apos;, &apos;L&apos;, &apos;M&apos;, &apos;N&apos;, &apos;O&apos;, &apos;P&apos;, &apos;Q&apos;, &apos;R&apos;, &apos;S&apos;, &apos;T&apos;, &apos;U&apos;, &apos;V&apos;, &apos;W&apos;, &apos;X&apos;, &apos;Y&apos;, &apos;Z&apos;)
+        THEN &apos;Z-Misc&apos;
+        WHEN T6.cnd_note_src_cd is not NULL AND UPPER(CAST(SUBSTRING(T3.nam_nm,1,1) AS CHAR(1))) IN (&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;, &apos;I&apos;, &apos;J&apos;, &apos;K&apos;, &apos;L&apos;, &apos;M&apos;, &apos;N&apos;, &apos;O&apos;, &apos;P&apos;, &apos;Q&apos;, &apos;R&apos;, &apos;S&apos;, &apos;T&apos;, &apos;U&apos;, &apos;V&apos;, &apos;W&apos;, &apos;X&apos;, &apos;Y&apos;, &apos;Z&apos;)
+        THEN UPPER(CAST(SUBSTRING(T3.nam_nm,1,1) AS CHAR(1)))
+        WHEN T6.cnd_note_src_cd is NULL
+        THEN &apos;Z-Non CIT Accounts&apos;
+        ELSE &apos;Z-Unknown Accounts&apos; END)              AS Account_group_code
+,(CASE  WHEN T6.cnd_note_src_cd is NOT NULL and T3.acc_id is NOT NULL
+        THEN T3.acc_id
+        WHEN T6.cnd_note_src_cd is NOT NULL and T3.acc_id is NULL
+        THEN &apos;Unknown A/C&apos;
+        ELSE &apos;Non CIT A/C&apos; END)                     AS Account_number
+,T1.Country_Id                                AS Account_country
+,(CASE  WHEN T6.cnd_note_src_cd is NOT NULL and T3.acc_id is NOT NULL
+        THEN T3.nam_nm
+        WHEN T6.cnd_note_src_cd is NOT NULL and T3.acc_id is NULL
+        THEN &apos;Unknown Accounts&apos;
+        ELSE &apos;Non CIT Accounts&apos; END)                 AS Account_name
+FROM  /shared/Core/Operations/OPS_SSD/CITKPIWW/vs_SenderCountry005 T1
+                                                      LEFT OUTER JOIN
+      /shared/Core/Operations/OPS_SSD/CITKPIWW/vs_CITKPIAccountDetails T3
+      ON  T1.Country_Id = t3.cou_id
+      AND t1.acc_id_cpn = t3.acc_id
+      AND t1.acg_id_cpn = t3.acg_id
+                                                      LEFT OUTER JOIN
+      /shared/Core/Operations/OPS_SSD/CITKPIWW/vs_CITSourceDetails T6
+      ON   T1.cnd_note_src_cd = T6.cnd_note_src_cd
+
+WHERE T1.con_coll_dt between (SELECT PARSE_DATE(START_DATE, &apos;YYYYMMDD&apos;) AS STRT_DT FROM /shared/Core/Operations/OPS_SSD/CITKPIWW/vc_ParamsView) AND (SELECT PARSE_DATE(END_DATE, &apos;YYYYMMDD&apos;) AS STRT_DT FROM /shared/Core/Operations/OPS_SSD/CITKPIWW/vc_ParamsView)
+GROUP BY 1, 2, 3, 4</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vs_SenderCountry010</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1561635116412</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40107</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40107</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1561635116412</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_SenderCountry010" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Account_group_code">
+          <datatype type="STRING" minLength="1" maxLength="18" trailingSpaces="false"/>
+        </element>
+        <element name="Account_number">
+          <datatype type="STRING" minLength="9" maxLength="11"/>
+        </element>
+        <element name="Account_country">
+          <datatype type="STRING" maxLength="3"/>
+        </element>
+        <element name="Account_name">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/OPS_SSD/CITKPIWW/vs_SenderCountry010&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562233696000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562672398282</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562672398282</attribute>
+  </trigger>
+</metadata>

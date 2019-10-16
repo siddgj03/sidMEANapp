@@ -1,0 +1,120 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Invoice" path="/shared/Publish/Greece_EETT_Fees_Reporting/vp_Invoice" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Number" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Number_Range" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Account_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Invoice_Amount_Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Invoice_VAT_Amount_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NEI_Surcharge_Net_Revenue_Amount_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Greece_EETT_Fees_Reporting/vc_Invoice" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Invoice_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Invoice_date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Invoice_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Invoice_Number_Range">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Invoice_Account_Number">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Invoice_Account_Group_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Invoice_Currency_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Total_Invoice_Amount_Local">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="Total_Invoice_VAT_Amount_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="NEI_Surcharge_Net_Revenue_Amount_EUR">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    *
+ from /shared/Core/Finance/Greece_EETT_Fees_Reporting/vc_Invoice</attribute>
+  <attribute name="creationDate" type="LONG">1566468939606</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170141</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566562979288</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170141</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">t174rqq</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566468939606</attribute>
+</metadata>

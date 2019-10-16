@@ -1,0 +1,496 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RunInfo_FCQCHistory" path="/shared/Publish/Control_And_Reconciliation/vp_RunInfo_FCQCHistory" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Run_Id" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day_Indicator_RunInfo" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day_Name" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Month_End_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Indicator" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rule_Indicator" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Run_Day_Indicator" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Revenue_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Revenue_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Consigments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Revenue_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Revenue_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Air_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Road_Stat_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Gross_Items" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Gross_Items" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Gross_Items" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Gross_Items" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Pickup_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Pickup_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Pickup_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Pickup_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Delivery_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Delivery_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Delivery_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Delivery_Stops" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Input_Records" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Output_Records" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Error_Records" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Rejected_Records" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Control_And_Reconciliation/vc_RunInfo_FCQCHistory" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Run_Id">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Run_Day_Indicator_RunInfo">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Run_Day_Name">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Month_End_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Run_Indicator">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Rule_Indicator">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Run_Day_Indicator">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="Total_Input_Consignments">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Input_Revenue_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Input_Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Rejected_Consignments">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Rejected_Revenue_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Rejected_Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Error_Consigments">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Error_Revenue_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Error_Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Output_Consignments">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Output_Revenue_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Output_Gross_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Output_Air_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Rejected_Air_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Error_Air_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Input_Air_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Output_Road_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Rejected_Road_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Error_Road_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Input_Road_Stat_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Rejected_Pay_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Error_Pay_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Input_Pay_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Output_Gross_Items">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Rejected_Gross_Items">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Error_Gross_Items">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Input_Gross_Items">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Output_Pickup_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Rejected_Pickup_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Error_Pickup_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Input_Pickup_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Output_Delivery_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Rejected_Delivery_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Error_Delivery_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Input_Delivery_Stops">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Input_Records">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Output_Records">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Error_Records">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Total_Rejected_Records">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T1.Run_Id as Run_Id,
+T1.Run_Day_Indicator_RunInfo as Run_Day_Indicator_RunInfo,
+T1.Run_Day_Name	 as Run_Day_Name,
+T1.Month_End_Indicator as Month_End_Indicator,
+T1.Run_Indicator as Run_Indicator,
+T1.Rule_Indicator as Rule_Indicator,
+T1.Run_Day_Indicator as Run_Day_Indicator,
+T1.Total_Input_Consignments as Total_Input_Consignments,
+T1.Total_Input_Revenue_Amount as Total_Input_Revenue_Amount,
+T1.Total_Input_Gross_Weight as Total_Input_Gross_Weight,
+T1.Total_Rejected_Consignments as Total_Rejected_Consignments,
+T1.Total_Rejected_Revenue_Amount as Total_Rejected_Revenue_Amount,
+T1.Total_Rejected_Gross_Weight as Total_Rejected_Gross_Weight,
+T1.Total_Error_Consigments as Total_Error_Consigments,
+T1.Total_Error_Revenue_Amount as Total_Error_Revenue_Amount,
+T1.Total_Error_Gross_Weight as Total_Error_Gross_Weight,
+T1.Total_Output_Consignments as Total_Output_Consignments,
+T1.Total_Output_Revenue_Amount as Total_Output_Revenue_Amount,
+T1.Total_Output_Gross_Weight as Total_Output_Gross_Weight,
+T1.Total_Output_Air_Stat_Weight as Total_Output_Air_Stat_Weight,
+T1.Total_Rejected_Air_Stat_Weight as Total_Rejected_Air_Stat_Weight,
+T1.Total_Error_Air_Stat_Weight as Total_Error_Air_Stat_Weight,
+T1.Total_Input_Air_Stat_Weight as Total_Input_Air_Stat_Weight,
+T1.Total_Output_Road_Stat_Weight as Total_Output_Road_Stat_Weight,
+T1.Total_Rejected_Road_Stat_Weight as Total_Rejected_Road_Stat_Weight,
+T1.Total_Error_Road_Stat_Weight as Total_Error_Road_Stat_Weight,
+T1.Total_Input_Road_Stat_Weight as Total_Input_Road_Stat_Weight,
+T1.Total_Rejected_Pay_Weight as Total_Rejected_Pay_Weight,
+T1.Total_Error_Pay_Weight as Total_Error_Pay_Weight,
+T1.Total_Input_Pay_Weight as Total_Input_Pay_Weight,
+T1.Total_Output_Gross_Items as Total_Output_Gross_Items,
+T1.Total_Rejected_Gross_Items as Total_Rejected_Gross_Items,
+T1.Total_Error_Gross_Items as Total_Error_Gross_Items,
+T1.Total_Input_Gross_Items as Total_Input_Gross_Items,
+T1.Total_Output_Pickup_Stops as Total_Output_Pickup_Stops,
+T1.Total_Rejected_Pickup_Stops as Total_Rejected_Pickup_Stops,
+T1.Total_Error_Pickup_Stops as Total_Error_Pickup_Stops,
+T1.Total_Input_Pickup_Stops as Total_Input_Pickup_Stops,
+T1.Total_Output_Delivery_Stops as Total_Output_Delivery_Stops,
+T1.Total_Rejected_Delivery_Stops as Total_Rejected_Delivery_Stops,
+T1.Total_Error_Delivery_Stops as Total_Error_Delivery_Stops,
+T1.Total_Input_Delivery_Stops as Total_Input_Delivery_Stops,
+T1.Total_Input_Records as Total_Input_Records,
+T1.Total_Output_Records as Total_Output_Records,
+T1.Total_Error_Records as Total_Error_Records,
+T1.Total_Rejected_Records as Total_Rejected_Records
+FROM
+/shared/Core/Finance/Control_And_Reconciliation/vc_RunInfo_FCQCHistory T1</attribute>
+  <attribute name="creationDate" type="LONG">1563868303277</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563869399603</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563868303277</attribute>
+</metadata>

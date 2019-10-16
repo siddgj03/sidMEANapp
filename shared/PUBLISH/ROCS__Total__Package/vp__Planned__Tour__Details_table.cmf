@@ -1,0 +1,109 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Planned_Tour_Details" path="/shared/Publish/ROCS_Total_Package/vp_Planned_Tour_Details" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Planned_Tour_Start_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_Day_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_Status_Desription" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_Tour_End_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Planned_Tour" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Planned_Tour_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Planned_Network_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Planned_Tour_Status_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Planned_Tour_Status_Desription">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Planned_Tour_Start_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Planned_Tour_End_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Planned_Tour_Day_Number">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="Planned_Tour_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+Planned_Tour_Start_Date  as Planned_Tour_Start_Date,
+Planned_Tour_Day_Number   as Planned_Tour_Day_Number ,
+Planned_Tour_Object_ID   as Planned_Tour_Object_ID,
+Planned_Tour_Status_Code   as Planned_Tour_Status_Code ,
+ Planned_Tour_ID,
+Planned_Tour_Status_Desription   as Planned_Tour_Status_Desription,
+Planned_Tour_End_Date      as Planned_Tour_End_Date
+ fROM
+/shared/Core/Networks/ROCSTotalPackage/vc_Planned_Tour</attribute>
+  <attribute name="creationDate" type="LONG">1562837707182</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562837707182</attribute>
+</metadata>

@@ -1,0 +1,134 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_DelayOrig" path="/shared/Core/Networks/ROCS_SSD/RSP/vc_DelayOrig" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Dly_Id_Orig" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Dly_Orig_Short_Ds" nullable="true">
+      <datatype type="STRING" minLength="64" maxLength="64"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Dly_Orig_Long_Ds" nullable="true">
+      <datatype type="STRING" minLength="64" maxLength="64"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Dly_Orig_Contr_In" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Dly_Orig_Contr_Ds" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="row_nr" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/NETWORKREASON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RSN_REASON_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RSN_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RSN_RL_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RSN_RL_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_UPDT_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RSN_RL_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RSN_RL_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT * FROM(SELECT
+	CAST(DLY_ID_ORIG AS CHAR(5))               AS Dly_Id_Orig,
+	CAST(DLY_ORIG_SHORT_DS AS CHAR(64))          AS Dly_Orig_Short_Ds,
+	CAST(DLY_ORIG_LONG_DS AS CHAR(64))            AS Dly_Orig_Long_Ds,
+	CAST(DLY_ORIG_CONTR_IN AS CHAR(1))               AS Dly_Orig_Contr_In,
+	CAST(DLY_ORIG_CONTR_DS  AS CHAR(15))              AS Dly_Orig_Contr_Ds 
+	,ROW_NUMBER() over(partition by DLY_ID_ORIG,DLY_ORIG_CONTR_IN,DLY_ORIG_CONTR_DS order by DLY_ORIG_SHORT_DS,DLY_ORIG_LONG_DS )    as row_nr
+
+  FROM
+  (SELECT
+     RN.RSN_REASON_CD           AS DLY_ID_ORIG,
+     RN.RSN_RL_DS           AS DLY_ORIG_SHORT_DS,
+     CASE WHEN RN.RSN_TYPE_CD = &apos;DPDLY&apos; THEN 
+         &apos;dep.&apos; ||TRIM(RN.RSN_RL_DS)  
+     ELSE
+        &apos;arr.&apos; ||TRIM(RN.RSN_RL_DS)  
+     END AS DLY_ORIG_LONG_DS,
+
+        CASE WHEN TRIM(RN.RSN_REASON_CD) IN (&apos;DDR&apos; , &apos;DDT&apos; , &apos;DLA&apos; , &apos;DPP&apos; , &apos;DTB&apos; , &apos;DVT&apos; ) THEN
+	&apos;Y&apos;
+	ELSE 
+	&apos;N&apos; 
+	END AS DLY_ORIG_CONTR_IN,
+
+      CASE WHEN TRIM(RN.RSN_REASON_CD) IN (&apos;DDR&apos; , &apos;DDT&apos; , &apos;DLA&apos; , &apos;DPP&apos; , &apos;DTB&apos; , &apos;DVT&apos; ) THEN
+	&apos;Controlable&apos;
+	ELSE 
+	&apos;Non-controlable&apos; 
+	END AS DLY_ORIG_CONTR_DS
+
+
+    FROM /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKREASON_V01   RN
+    WHERE RN.LNG_ID = &apos;EN&apos;
+  --  AND RN.RSN_TYPE_CD = &apos;DPDLY&apos;
+  ) D_O
+)AS A WHERE ROW_NR=1</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556612598304</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563806809461</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556612598304</attribute>
+</metadata>

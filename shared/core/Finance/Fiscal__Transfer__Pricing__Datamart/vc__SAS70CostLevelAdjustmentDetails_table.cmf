@@ -1,0 +1,465 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_SAS70CostLevelAdjustmentDetails" path="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_SAS70CostLevelAdjustmentDetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Adjustment_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Adjustment_Month" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Code" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_Name" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_User_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Request_User_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Adjustment_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="UOT_Type_ID" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="UOR_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Months_Diff" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT GRANT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_Dates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MAX_MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MAX_YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MIN_MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MIN_YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTELEMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_TAB_VER_FR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTM_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTM_TAB_VER_TO_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_ID" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="INT_DRIVER_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_COST_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_ALLOC_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_COU_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_DEP_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_HUB_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_ACC_LEVEL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_SRKY_ID_RELTD">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_INB_OUT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_COST_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_CP_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_CP_CAL_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_SRKY_ID_GRPLVL">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_ODEP_DDEP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_OHUB_DDEP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_OEBODP_OHUB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_DEBODP_DHUB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_FAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CMV_MARGIN_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="GCX_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CTM_MTP_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_FTP_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_LH_SEX_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_LH_HUB_PDRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_CM_UPTS_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTM_CM_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTM_NM" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CTM_DEFINITION_TX" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTSPLIT_ADJMNT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="UOR_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="UOT_TYPE_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CIL_LOC_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ACS_ACT_COSTS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="ACS_REQ_COSTS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="ACS_REQ_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MRQ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="RET_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MRQ_REASON_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_HIDDEN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ENV_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MAG_ID_CURRENT">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MAG_ID_ACTING">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="MRQ_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MRQ_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MCF_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTV_TABLE_NM" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TSV_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CAN_REAS_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="MRQ_CAN_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MRQ_CANCELLED_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ADJ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRQ_CRIT_EXPIRY_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CPP_PERIOD_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="SAQ_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_WF_USR_PROFILE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="USR_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="USR_DISPLAY_NM">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="USR_MOB_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="USR_EMAIL_ADDR_TX">
+        <datatype type="STRING" maxLength="129"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RECOVERY_ADJMNT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="UOR_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="UOT_TYPE_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ADJ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="UOR_ACT_COSTS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="KWK_MONTH_NR" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="KYR_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="UOR_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="UOR_ADJ_FACTOR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="12"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select T1.KYR_ID Adjustment_Year ,
+ T1.KWK_MONTH_NR Adjustment_Month ,
+ T1.CTM_SRKY_ID Cost_Item_Code ,
+ T2.CTM_NM Cost_Item_Name ,
+ T3.CTM_COST_GROUP_CD Cost_Group_Code ,
+ T4.TAV_DS Cost_Group_Name ,
+ T5.MRQ_ID Request_ID ,
+ T5.MRQ_DT Request_Date ,
+ T5.MRQ_USER_ID Request_User_ID ,
+ T6.USR_DISPLAY_NM Request_User_Name ,
+ T7.CIL_LOC_CD Adjustment_Country_Code ,
+ SUM(T7.ACS_ACT_COSTS_AM) Cost_Amount ,
+ T1.UOT_TYPE_ID UOT_Type_ID ,
+ T1.UOR_STATUS_CD UOR_Status_Code ,
+ T8.MIN_MTHS_DIFF Months_Diff 
+ from (((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTELEMENT_V01 T3 
+ LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01 T4 on T3.CTM_COST_GROUP_CD = T4.TAV_VALUE_ID and &apos;N&apos; = T4.TAV_NON_USE_IN) 
+ LEFT OUTER JOIN (((/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_RECOVERY_ADJMNT_V01 T1 
+ INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTSPLIT_ADJMNT_V01 T7 on T1.UOR_ID = T7.UOR_ID and T7.UOT_TYPE_ID = &apos;F&apos;) 
+ INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_REQUESTS_V01 T5 on T5.ADJ_ID = T1.UOR_ID and T1.UOT_TYPE_ID = &apos;F&apos;) 
+ INNER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_OLM_WF_USR_PROFILE_V01 T6 on T5.MRQ_USER_ID = T6.USR_USER_ID) on T3.CTM_SRKY_ID = T1.CTM_SRKY_ID and T3.CTM_LATESTVERSN_IN = &apos;Y&apos;) 
+ LEFT OUTER JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01 T2 on T1.CTM_SRKY_ID = T2.CTM_SRKY_ID) 
+ LEFT OUTER JOIN /shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_Dates  T8 on T1.KWK_MONTH_NR = T8.TNT_MTH and T1.KYR_ID = T8.TNT_YR
+GROUP BY 
+T1.KYR_ID  ,
+ T1.KWK_MONTH_NR  ,
+ T1.CTM_SRKY_ID  ,
+ T2.CTM_NM  ,
+ T3.CTM_COST_GROUP_CD  ,
+ T4.TAV_DS  ,
+ T5.MRQ_ID  ,
+ T5.MRQ_DT  ,
+ T5.MRQ_USER_ID  ,
+ T6.USR_DISPLAY_NM  ,
+ T7.CIL_LOC_CD  ,
+ T1.UOT_TYPE_ID  ,
+ T1.UOR_STATUS_CD  ,
+ T8.MIN_MTHS_DIFF </attribute>
+  <attribute name="creationDate" type="LONG">1565616356347</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565616369904</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565616356347</attribute>
+</metadata>

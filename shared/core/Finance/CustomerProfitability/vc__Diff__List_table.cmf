@@ -1,0 +1,239 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Diff_List" path="/shared/Core/Finance/CustomerProfitability/vc_Diff_List" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="c2" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EU_Zone" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Time_Definite_Delivery" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PUD_Handling_Weightband" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_1" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_3" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_5" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_7" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_9" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DFD_SRKY_ID_2" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DFR_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DFD_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_TAB_VER_FR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DFD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="DFD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="DFD_TAB_VER_TO_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DFD_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_NM" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DFD_STATUS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_VAL_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DFD_DEFAULT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_LIST_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DFD_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFD_DIFFCD_LIST_TX" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="DFD_DIFF_1F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_2F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_3F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_4F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_5F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_6F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_7F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_8F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_9F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_10F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_11F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_12F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_13F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_14F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_15F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_16F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_17F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_18F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_19F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DFD_DIFF_20F1_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    CM_DIFF_CODE_V01.DFD_VAL_DS c2, 
+    CM_DIFF_CODE_V01_1.DFD_VAL_DS EU_Zone, 
+    CM_DIFF_CODE_V01_2.DFD_VAL_DS Time_Definite_Delivery, 
+    CM_DIFF_CODE_V01_3.DFD_VAL_DS PUD_Handling_Weightband, 
+    CM_DIFF_CODE_V01_4.DFD_VAL_DS OPS_Status_Group_1, 
+    CM_DIFF_CODE_V01_5.DFD_VAL_DS OPS_Status_Group_3, 
+    CM_DIFF_CODE_V01_6.DFD_VAL_DS OPS_Status_Group_5, 
+    CM_DIFF_CODE_V01_7.DFD_VAL_DS OPS_Status_Group_7, 
+    CM_DIFF_CODE_V01_8.DFD_VAL_DS OPS_Status_Group_9, 
+    CM_DIFF_LIST_V01.DFD_SRKY_ID DFD_SRKY_ID_2
+FROM      
+    /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_LIST_V01 CM_DIFF_LIST_V01 LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_1F1_CD = CM_DIFF_CODE_V01.DFD_ID AND 
+        &apos;CO&apos; = CM_DIFF_CODE_V01.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_1
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_4F1_CD = CM_DIFF_CODE_V01_1.DFD_ID AND 
+        &apos;EU&apos; = CM_DIFF_CODE_V01_1.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_1.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_2
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_7F1_CD = CM_DIFF_CODE_V01_2.DFD_ID AND 
+        &apos;TD&apos; = CM_DIFF_CODE_V01_2.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_2.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_3
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_8F1_CD = CM_DIFF_CODE_V01_3.DFD_ID AND 
+        &apos;WB&apos; = CM_DIFF_CODE_V01_3.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_3.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_4
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_10F1_CD = CM_DIFF_CODE_V01_4.DFD_ID AND 
+        &apos;S1&apos; = CM_DIFF_CODE_V01_4.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_4.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_5
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_11F1_CD = CM_DIFF_CODE_V01_5.DFD_ID AND 
+        &apos;S3&apos; = CM_DIFF_CODE_V01_5.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_5.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_6
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_12F1_CD = CM_DIFF_CODE_V01_6.DFD_ID AND 
+        &apos;S5&apos; = CM_DIFF_CODE_V01_6.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_6.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_7
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_13F1_CD = CM_DIFF_CODE_V01_7.DFD_ID AND 
+        &apos;S7&apos; = CM_DIFF_CODE_V01_7.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_7.DFD_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_DIFF_CODE_V01 CM_DIFF_CODE_V01_8
+    ON (CM_DIFF_LIST_V01.DFD_DIFF_14F1_CD = CM_DIFF_CODE_V01_8.DFD_ID AND 
+        &apos;S9&apos; = CM_DIFF_CODE_V01_8.DFR_ID) AND 
+        &apos;Y&apos; = CM_DIFF_CODE_V01_8.DFD_LATESTVERSN_IN</attribute>
+  <attribute name="creationDate" type="LONG">1563881015199</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565777102698</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563881015199</attribute>
+</metadata>

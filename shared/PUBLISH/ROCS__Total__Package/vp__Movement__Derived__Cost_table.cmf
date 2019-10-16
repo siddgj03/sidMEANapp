@@ -1,0 +1,77 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Movement_Derived_Cost" path="/shared/Publish/ROCS_Total_Package/vp_Movement_Derived_Cost" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Actual_Reporting_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Reporting_Currency" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Reporting_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Mov_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_CostlineDerivedCost" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCD_Act_Cost_Amount">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCD_Country_ID_Reporting">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TCD_Sch_Cost_Amount">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="Mov_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+distinct T.TCD_Act_Cost_Amount &quot;Actual_Reporting_Cost_Amount&quot; ,
+ T.TCD_Country_ID_Reporting &quot;Actual_Reporting_Currency&quot;  ,
+T.TCD_Sch_Cost_Amount Scheduled_Reporting_Cost_Amount  ,
+T.Mov_Object_ID
+ from  /shared/Core/Networks/ROCSTotalPackage/vc_CostlineDerivedCost T
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1565264847826</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565948463025</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565264847826</attribute>
+</metadata>

@@ -1,0 +1,269 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_CSADetails" path="/shared/Core/Finance/Control_And_Reconciliation/vc_CSADetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CSA_Adjustment_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Cost_Item_Code" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Value_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Adjustment_Type" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_From_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_To_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Start_Week" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Start_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_End_Week" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_End_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Applicable_for_FTP_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Applicable_for_MTP_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Applicable_for_CP_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_High_Low_Value_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Allocation_Group" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Name" nullable="true">
+      <datatype type="STRING" minLength="50" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Reason" nullable="true">
+      <datatype type="STRING" maxLength="255"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Replacement_CSA_Adjustment_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CTM_Cost_Item_Code" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Cost_Item_Description" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_CM_UPTS_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTM_CM_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTM_NM" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CTM_DEFINITION_TX" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_CSA_REBATE_ADJMNT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ADJ_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CTM_SRKY_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ARB_VALUE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ARB_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_BAND_FR_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="ARB_BAND_TO_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="WEK_ID_START" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="KYR_ID_START" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="WEK_ID_END" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="KYR_ID_END" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ARB_FTP_APPL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_MTP_APPL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_CP_APPL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_HI_LO_VAL_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ALG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ARB_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="ARB_RATIONALE_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="ADJ_ID_REPLACING">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ARB_KEY_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARB_UPDT_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ARB_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="COU_ID_COST_OWNER" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+       CM_CSA_REBATE_ADJMNT_V01.ADJ_ID  as  CSA_Adjustment_ID,
+       CM_CSA_REBATE_ADJMNT_V01.CTM_SRKY_ID  as  CSA_Cost_Item_Code,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_VALUE_AM  as  CSA_Value_Amount,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_TYPE_CD  as  CSA_Adjustment_Type,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_BAND_FR_WT  as  CSA_From_Weight,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_BAND_TO_WT  as  CSA_To_Weight,
+       CM_CSA_REBATE_ADJMNT_V01.WEK_ID_START  as  CSA_Start_Week,
+       CM_CSA_REBATE_ADJMNT_V01.KYR_ID_START  as  CSA_Start_Year,
+       CM_CSA_REBATE_ADJMNT_V01.WEK_ID_END  as  CSA_End_Week,
+       CM_CSA_REBATE_ADJMNT_V01.KYR_ID_END  as  CSA_End_Year,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_FTP_APPL_IN  as  CSA_Applicable_for_FTP_Indicator,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_MTP_APPL_IN  as  CSA_Applicable_for_MTP_Indicator,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_CP_APPL_IN  as  CSA_Applicable_for_CP_Indicator,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_HI_LO_VAL_CD  as  CSA_High_Low_Value_Code,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_STATUS_CD  as  CSA_Status_Code,
+       CM_CSA_REBATE_ADJMNT_V01.ALG_ID  as  CSA_Allocation_Group,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_NM  as  CSA_Name,
+       CM_CSA_REBATE_ADJMNT_V01.ARB_RATIONALE_TX  as  CSA_Reason,
+       CM_CSA_REBATE_ADJMNT_V01.ADJ_ID_REPLACING  as  Replacement_CSA_Adjustment_ID,
+       CM_COSTITEM_V01.CTM_SRKY_ID  as  CTM_Cost_Item_Code,
+       CM_COSTITEM_V01.CTM_NM  as  CSA_Cost_Item_Description
+
+FROM
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_CSA_REBATE_ADJMNT_V01   CM_CSA_REBATE_ADJMNT_V01
+JOIN /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01   CM_COSTITEM_V01
+ON CM_CSA_REBATE_ADJMNT_V01.CTM_SRKY_ID =  CM_COSTITEM_V01.CTM_SRKY_ID
+</attribute>
+  <attribute name="creationDate" type="LONG">1564657690836</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">143926</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564657774462</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">143926</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564657690836</attribute>
+</metadata>

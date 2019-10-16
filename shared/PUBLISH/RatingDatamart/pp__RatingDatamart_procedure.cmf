@@ -1,0 +1,813 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="pp_RatingDatamart" path="/shared/Publish/RatingDatamart/pp_RatingDatamart" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
+  <annotation>Row Level Security Filter Policy
+
+Inputs:
+	Alias		The SQL alias to be used for the table to which this policy has been assigned
+	Result		The SQL predicate to be added to the consuming SQLs WHERE clause
+</annotation>
+  <parameters>
+    <parameter name="alias" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="255"/>
+    </parameter>
+    <parameter name="resource" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ EXECUTE"/>
+    <privilege group="all" domain="composite" privileges="READ EXECUTE"/>
+    <privilege group="all" domain="dynamic" privileges="READ EXECUTE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE EXECUTE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE EXECUTE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE EXECUTE"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE EXECUTE"/>
+  </security>
+  <dependency target="/lib/users/TestUserIdentity" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="type" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="name" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="domain" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype type="BOOLEAN"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="RbsFilterPolicy" type="STRING">&lt;ns1:FilterPolicy xmlns:ns1=&quot;http://www.compositesw.com/services/system/util/security&quot;&gt;&lt;ns1:name&gt;pp_RatingDatamart&lt;/ns1:name&gt;&lt;ns1:folder&gt;/shared/Publish/RatingDatamart&lt;/ns1:folder&gt;&lt;ns1:enabled&gt;true&lt;/ns1:enabled&gt;&lt;ns1:form&gt;RULE&lt;/ns1:form&gt;&lt;ns1:defaultRule&gt;&lt;ns1:filter&gt;NONE&lt;/ns1:filter&gt;&lt;/ns1:defaultRule&gt;&lt;ns1:memberRuleList&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.fr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;FR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.de&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;DE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.nl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;NL&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.hk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;HK&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.th&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;TH&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.tw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;TW&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.pt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;PT&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.au&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;AU&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.benelux&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID IN (&amp;apos;BE&amp;apos; , &amp;apos;LU&amp;apos; , &amp;apos;NL&amp;apos; )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.be&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;BE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.lu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;LU&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.us&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;US&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.tr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;TR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.gb&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;GB&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.at&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;AT&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.lv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;LV&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.lt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;LT&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.it&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;IT&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.il&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;IL&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.pl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;PL&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ru&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;RU&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ch&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CH&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.es&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;ES&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ee&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;EE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.sk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SK&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.no&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;NO&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.se&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.dk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;DK&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.neur&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;AT&amp;apos; , &amp;apos;BE&amp;apos; , &amp;apos;CH&amp;apos; , &amp;apos;CZ&amp;apos; , &amp;apos;DE&amp;apos; , &amp;apos;DK&amp;apos; , &amp;apos;EE&amp;apos; , &amp;apos;FI&amp;apos; , &amp;apos;HU&amp;apos; , &amp;apos;LT&amp;apos; , &amp;apos;LU&amp;apos; , &amp;apos;LV&amp;apos; , &amp;apos;MD&amp;apos; , &amp;apos;NL&amp;apos; , &amp;apos;PL&amp;apos; , &amp;apos;RO&amp;apos; , &amp;apos;RU&amp;apos; , &amp;apos;SE&amp;apos; , &amp;apos;SJ&amp;apos; , &amp;apos;SK&amp;apos; , &amp;apos;GB&amp;apos; , &amp;apos;IE&amp;apos; , &amp;apos;NO&amp;apos; , &amp;apos;UA&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ae&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;AE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.sa&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SA&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.bh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;BH&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.kw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;KW&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.eg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;EG&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.za&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;ZA&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.in&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;IN&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.fi&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;FI&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.bg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;BG&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.cz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CZ&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.cl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CL&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ar&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;AR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.br&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;BR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.hu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;HU&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.fj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;FJ&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.nz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;NZ&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ro&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;RO&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ca&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CA&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.gr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;GR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.sg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SG&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.vn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;VN&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.id&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;ID&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.jp&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;JP&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.cn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CN&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.kr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;KR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.cy&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;CY&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.my&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;MY&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ph&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;PH&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.americas&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and  COU_ID  in   (  &amp;apos;AR&amp;apos; , &amp;apos;BR&amp;apos; , &amp;apos;CA&amp;apos; , &amp;apos;CL&amp;apos; , &amp;apos;US&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.jo&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;JO&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.si&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SI&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ke&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;KE&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.sr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;SR&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.aspac&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;AU&amp;apos; , &amp;apos;CN&amp;apos; , &amp;apos;HK&amp;apos; , &amp;apos;ID&amp;apos; , &amp;apos;IN&amp;apos; , &amp;apos;JP&amp;apos; , &amp;apos;KH&amp;apos; , &amp;apos;KR&amp;apos; , &amp;apos;MY&amp;apos; , &amp;apos;PH&amp;apos; , &amp;apos;SG&amp;apos; , &amp;apos;TH&amp;apos; , &amp;apos;TW&amp;apos; , &amp;apos;VN&amp;apos; , &amp;apos;FJ&amp;apos; , &amp;apos;NZ&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.kh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;KH&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.semea&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;BG&amp;apos; , &amp;apos;CY&amp;apos; , &amp;apos;ES&amp;apos; , &amp;apos;FR&amp;apos; , &amp;apos;GR&amp;apos; , &amp;apos;IL&amp;apos; , &amp;apos;IT&amp;apos; , &amp;apos;PT&amp;apos; , &amp;apos;SL&amp;apos; , &amp;apos;TR&amp;apos; , &amp;apos;BH&amp;apos; , &amp;apos;JO&amp;apos; , &amp;apos;KW&amp;apos; , &amp;apos;SA&amp;apos; , &amp;apos;AE&amp;apos; , &amp;apos;EG&amp;apos; , &amp;apos;KE&amp;apos; , &amp;apos;NA&amp;apos; , &amp;apos;ZA&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.grtrchina&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID in  (  &amp;apos;CN&amp;apos; , &amp;apos;HK&amp;apos; , &amp;apos;TW&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.nordic&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;DK&amp;apos; , &amp;apos;FI&amp;apos; , &amp;apos;NO&amp;apos; , &amp;apos;SE&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.co.ua&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID=&amp;apos;WW&amp;apos; and COU_ID=&amp;apos;UA&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.ibu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID in  (&amp;apos;PT&amp;apos; , &amp;apos;CA&amp;apos; , &amp;apos;SK&amp;apos; , &amp;apos;AR&amp;apos; , &amp;apos;AT&amp;apos; , &amp;apos;BG&amp;apos; , &amp;apos;BR&amp;apos; , &amp;apos;CH&amp;apos; , &amp;apos;CL&amp;apos; , &amp;apos;CZ&amp;apos; , &amp;apos;DK&amp;apos; , &amp;apos;EE&amp;apos; , &amp;apos;ES&amp;apos; , &amp;apos;FI&amp;apos; , &amp;apos;GR&amp;apos; , &amp;apos;HU&amp;apos; , &amp;apos;IL&amp;apos; , &amp;apos;LV&amp;apos; , &amp;apos;LT&amp;apos; , &amp;apos;NO&amp;apos; , &amp;apos;PL&amp;apos; , &amp;apos;RU&amp;apos; , &amp;apos;RO&amp;apos; , &amp;apos;SE&amp;apos; , &amp;apos;TR&amp;apos; , &amp;apos;US&amp;apos; , &amp;apos;ZA&amp;apos; , &amp;apos;CY&amp;apos; , &amp;apos;SG&amp;apos; , &amp;apos;EG&amp;apos; , &amp;apos;PH&amp;apos; , &amp;apos;NA&amp;apos; , &amp;apos;BH&amp;apos; , &amp;apos;KW&amp;apos; , &amp;apos;MY&amp;apos; , &amp;apos;ID&amp;apos; , &amp;apos;IN&amp;apos; , &amp;apos;AE&amp;apos; , &amp;apos;SA&amp;apos; , &amp;apos;TH&amp;apos; , &amp;apos;ZW&amp;apos; , &amp;apos;JP&amp;apos; , &amp;apos;KR&amp;apos; , &amp;apos;VN&amp;apos; , &amp;apos;SI&amp;apos; , &amp;apos;UA&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.imea&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;BH&amp;apos; , &amp;apos;EG&amp;apos; , &amp;apos;IN&amp;apos; , &amp;apos;KW&amp;apos; , &amp;apos;NA&amp;apos; , &amp;apos;SA&amp;apos; , &amp;apos;ZA&amp;apos; , &amp;apos;AE&amp;apos; , &amp;apos;ZW&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.auou&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;AU&amp;apos; , &amp;apos;FJ&amp;apos; , &amp;apos;NZ&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.amea&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID = &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;AR&amp;apos; , &amp;apos;BR&amp;apos; , &amp;apos;CA&amp;apos; , &amp;apos;CL&amp;apos; , &amp;apos;US&amp;apos; , &amp;apos;BH&amp;apos; , &amp;apos;EG&amp;apos; , &amp;apos;JO&amp;apos; , &amp;apos;KW&amp;apos; , &amp;apos;SA&amp;apos; , &amp;apos;ZA&amp;apos; , &amp;apos;AE&amp;apos; , &amp;apos;NA&amp;apos; , &amp;apos;BT&amp;apos; , &amp;apos;KE&amp;apos; , &amp;apos;SR&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.nam&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;CA&amp;apos; , &amp;apos;US&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.sse&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID in  (  &amp;apos;AR&amp;apos; , &amp;apos;CL&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.ukiou&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;GB&amp;apos; , &amp;apos;IE&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;creator&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;ALL&lt;/ns1:filter&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.asia&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;JP&amp;apos; , &amp;apos;SG&amp;apos; , &amp;apos;MY&amp;apos; , &amp;apos;TH&amp;apos; , &amp;apos;PH&amp;apos; , &amp;apos;ID&amp;apos; , &amp;apos;VN&amp;apos; , &amp;apos;KR&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.bu.americas&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COU_ID  in  (  &amp;apos;AR&amp;apos; , &amp;apos;BR&amp;apos; , &amp;apos;CA&amp;apos; , &amp;apos;CL&amp;apos; , &amp;apos;US&amp;apos; , &amp;apos;SR&amp;apos;  )  and  COM_ID  =  &amp;apos;WW&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.sam&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;AR&amp;apos; , &amp;apos;BR&amp;apos; , &amp;apos;CL&amp;apos; , &amp;apos;SR&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.rg.mea&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID in  (  &amp;apos;BH&amp;apos; , &amp;apos;EG&amp;apos; , &amp;apos;JO&amp;apos; , &amp;apos;KW&amp;apos; , &amp;apos;SA&amp;apos; , &amp;apos;ZA&amp;apos; , &amp;apos;AE&amp;apos; , &amp;apos;NA&amp;apos; , &amp;apos;KE&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.bu.weur&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;BE&amp;apos; , &amp;apos;LU&amp;apos; , &amp;apos;NL&amp;apos; , &amp;apos;FR&amp;apos; , &amp;apos;DE&amp;apos; , &amp;apos;IT&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.ou.usca&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;US&amp;apos; , &amp;apos;CA&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;corp.bu.nasia&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;COM_ID  =  &amp;apos;WW&amp;apos;  and  COU_ID  in  (  &amp;apos;CN&amp;apos; , &amp;apos;HK&amp;apos; , &amp;apos;TW&amp;apos;  )&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;/ns1:memberRuleList&gt;&lt;ns1:assignmentList&gt;&lt;/ns1:assignmentList&gt;&lt;/ns1:FilterPolicy&gt;</attribute>
+  <attribute name="Script" type="STRING">PROCEDURE &quot;pp_RatingDatamart&quot; (IN alias VARCHAR, IN resource VARCHAR(16384), OUT result VARCHAR(16384))
+BEGIN
+	DECLARE temp VARCHAR;
+	DECLARE test BOOLEAN;
+	SET result = &apos;&apos;;
+	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.fr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET result = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;FR&apos;&apos;))&apos;;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.de&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;DE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.nl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;NL&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.hk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;HK&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.th&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;TH&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.tw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;TW&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.pt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;PT&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.au&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;AU&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.benelux&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;BE&apos;&apos;, &apos;&apos;LU&apos;&apos;, &apos;&apos;NL&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.be&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;BE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.lu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;LU&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.us&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;US&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.tr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;TR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.gb&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;GB&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.at&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;AT&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.lv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;LV&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.lt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;LT&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.it&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;IT&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.il&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;IL&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.pl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;PL&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ru&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;RU&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ch&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CH&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.es&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;ES&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ee&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;EE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.sk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SK&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.no&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;NO&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.se&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.dk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;DK&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.neur&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AT&apos;&apos;, &apos;&apos;BE&apos;&apos;, &apos;&apos;CH&apos;&apos;, &apos;&apos;CZ&apos;&apos;, &apos;&apos;DE&apos;&apos;, &apos;&apos;DK&apos;&apos;, &apos;&apos;EE&apos;&apos;, &apos;&apos;FI&apos;&apos;, &apos;&apos;HU&apos;&apos;, &apos;&apos;LT&apos;&apos;, &apos;&apos;LU&apos;&apos;, &apos;&apos;LV&apos;&apos;, &apos;&apos;MD&apos;&apos;, &apos;&apos;NL&apos;&apos;, &apos;&apos;PL&apos;&apos;, &apos;&apos;RO&apos;&apos;, &apos;&apos;RU&apos;&apos;, &apos;&apos;SE&apos;&apos;, &apos;&apos;SJ&apos;&apos;, &apos;&apos;SK&apos;&apos;, &apos;&apos;GB&apos;&apos;, &apos;&apos;IE&apos;&apos;, &apos;&apos;NO&apos;&apos;, &apos;&apos;UA&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ae&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;AE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.sa&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SA&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.bh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;BH&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.kw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;KW&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.eg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;EG&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.za&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;ZA&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.in&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;IN&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.fi&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;FI&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.bg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;BG&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.cz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CZ&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.cl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CL&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ar&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;AR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.br&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;BR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.hu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;HU&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.fj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;FJ&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.nz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;NZ&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ro&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;RO&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ca&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CA&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.gr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;GR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.sg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SG&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.vn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;VN&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.id&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;ID&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.jp&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;JP&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.cn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CN&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.kr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;KR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.cy&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;CY&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.my&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;MY&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ph&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;PH&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.americas&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AR&apos;&apos;, &apos;&apos;BR&apos;&apos;, &apos;&apos;CA&apos;&apos;, &apos;&apos;CL&apos;&apos;, &apos;&apos;US&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.jo&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;JO&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.si&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SI&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ke&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;KE&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.sr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;SR&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.aspac&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AU&apos;&apos;, &apos;&apos;CN&apos;&apos;, &apos;&apos;HK&apos;&apos;, &apos;&apos;ID&apos;&apos;, &apos;&apos;IN&apos;&apos;, &apos;&apos;JP&apos;&apos;, &apos;&apos;KH&apos;&apos;, &apos;&apos;KR&apos;&apos;, &apos;&apos;MY&apos;&apos;, &apos;&apos;PH&apos;&apos;, &apos;&apos;SG&apos;&apos;, &apos;&apos;TH&apos;&apos;, &apos;&apos;TW&apos;&apos;, &apos;&apos;VN&apos;&apos;, &apos;&apos;FJ&apos;&apos;, &apos;&apos;NZ&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.kh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;KH&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.semea&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;BG&apos;&apos;, &apos;&apos;CY&apos;&apos;, &apos;&apos;ES&apos;&apos;, &apos;&apos;FR&apos;&apos;, &apos;&apos;GR&apos;&apos;, &apos;&apos;IL&apos;&apos;, &apos;&apos;IT&apos;&apos;, &apos;&apos;PT&apos;&apos;, &apos;&apos;SL&apos;&apos;, &apos;&apos;TR&apos;&apos;, &apos;&apos;BH&apos;&apos;, &apos;&apos;JO&apos;&apos;, &apos;&apos;KW&apos;&apos;, &apos;&apos;SA&apos;&apos;, &apos;&apos;AE&apos;&apos;, &apos;&apos;EG&apos;&apos;, &apos;&apos;KE&apos;&apos;, &apos;&apos;NA&apos;&apos;, &apos;&apos;ZA&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.grtrchina&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;CN&apos;&apos;, &apos;&apos;HK&apos;&apos;, &apos;&apos;TW&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.nordic&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;DK&apos;&apos;, &apos;&apos;FI&apos;&apos;, &apos;&apos;NO&apos;&apos;, &apos;&apos;SE&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.co.ua&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID = &apos;&apos;UA&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.ibu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;PT&apos;&apos;, &apos;&apos;CA&apos;&apos;, &apos;&apos;SK&apos;&apos;, &apos;&apos;AR&apos;&apos;, &apos;&apos;AT&apos;&apos;, &apos;&apos;BG&apos;&apos;, &apos;&apos;BR&apos;&apos;, &apos;&apos;CH&apos;&apos;, &apos;&apos;CL&apos;&apos;, &apos;&apos;CZ&apos;&apos;, &apos;&apos;DK&apos;&apos;, &apos;&apos;EE&apos;&apos;, &apos;&apos;ES&apos;&apos;, &apos;&apos;FI&apos;&apos;, &apos;&apos;GR&apos;&apos;, &apos;&apos;HU&apos;&apos;, &apos;&apos;IL&apos;&apos;, &apos;&apos;LV&apos;&apos;, &apos;&apos;LT&apos;&apos;, &apos;&apos;NO&apos;&apos;, &apos;&apos;PL&apos;&apos;, &apos;&apos;RU&apos;&apos;, &apos;&apos;RO&apos;&apos;, &apos;&apos;SE&apos;&apos;, &apos;&apos;TR&apos;&apos;, &apos;&apos;US&apos;&apos;, &apos;&apos;ZA&apos;&apos;, &apos;&apos;CY&apos;&apos;, &apos;&apos;SG&apos;&apos;, &apos;&apos;EG&apos;&apos;, &apos;&apos;PH&apos;&apos;, &apos;&apos;NA&apos;&apos;, &apos;&apos;BH&apos;&apos;, &apos;&apos;KW&apos;&apos;, &apos;&apos;MY&apos;&apos;, &apos;&apos;ID&apos;&apos;, &apos;&apos;IN&apos;&apos;, &apos;&apos;AE&apos;&apos;, &apos;&apos;SA&apos;&apos;, &apos;&apos;TH&apos;&apos;, &apos;&apos;ZW&apos;&apos;, &apos;&apos;JP&apos;&apos;, &apos;&apos;KR&apos;&apos;, &apos;&apos;VN&apos;&apos;, &apos;&apos;SI&apos;&apos;, &apos;&apos;UA&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.imea&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;BH&apos;&apos;, &apos;&apos;EG&apos;&apos;, &apos;&apos;IN&apos;&apos;, &apos;&apos;KW&apos;&apos;, &apos;&apos;NA&apos;&apos;, &apos;&apos;SA&apos;&apos;, &apos;&apos;ZA&apos;&apos;, &apos;&apos;AE&apos;&apos;, &apos;&apos;ZW&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.auou&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AU&apos;&apos;, &apos;&apos;FJ&apos;&apos;, &apos;&apos;NZ&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.amea&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AR&apos;&apos;, &apos;&apos;BR&apos;&apos;, &apos;&apos;CA&apos;&apos;, &apos;&apos;CL&apos;&apos;, &apos;&apos;US&apos;&apos;, &apos;&apos;BH&apos;&apos;, &apos;&apos;EG&apos;&apos;, &apos;&apos;JO&apos;&apos;, &apos;&apos;KW&apos;&apos;, &apos;&apos;SA&apos;&apos;, &apos;&apos;ZA&apos;&apos;, &apos;&apos;AE&apos;&apos;, &apos;&apos;NA&apos;&apos;, &apos;&apos;BT&apos;&apos;, &apos;&apos;KE&apos;&apos;, &apos;&apos;SR&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.nam&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;CA&apos;&apos;, &apos;&apos;US&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.sse&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AR&apos;&apos;, &apos;&apos;CL&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.ukiou&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;GB&apos;&apos;, &apos;&apos;IE&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;creator&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;TRUE&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.asia&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;JP&apos;&apos;, &apos;&apos;SG&apos;&apos;, &apos;&apos;MY&apos;&apos;, &apos;&apos;TH&apos;&apos;, &apos;&apos;PH&apos;&apos;, &apos;&apos;ID&apos;&apos;, &apos;&apos;VN&apos;&apos;, &apos;&apos;KR&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.bu.americas&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COU_ID IN (&apos;&apos;AR&apos;&apos;, &apos;&apos;BR&apos;&apos;, &apos;&apos;CA&apos;&apos;, &apos;&apos;CL&apos;&apos;, &apos;&apos;US&apos;&apos;, &apos;&apos;SR&apos;&apos;) AND &apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos;))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.sam&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;AR&apos;&apos;, &apos;&apos;BR&apos;&apos;, &apos;&apos;CL&apos;&apos;, &apos;&apos;SR&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.rg.mea&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;BH&apos;&apos;, &apos;&apos;EG&apos;&apos;, &apos;&apos;JO&apos;&apos;, &apos;&apos;KW&apos;&apos;, &apos;&apos;SA&apos;&apos;, &apos;&apos;ZA&apos;&apos;, &apos;&apos;AE&apos;&apos;, &apos;&apos;NA&apos;&apos;, &apos;&apos;KE&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.bu.weur&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;BE&apos;&apos;, &apos;&apos;LU&apos;&apos;, &apos;&apos;NL&apos;&apos;, &apos;&apos;FR&apos;&apos;, &apos;&apos;DE&apos;&apos;, &apos;&apos;IT&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.ou.usca&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;US&apos;&apos;, &apos;&apos;CA&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;corp.bu.nasia&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;((&apos; || alias || &apos;.COM_ID = &apos;&apos;WW&apos;&apos; AND &apos; || alias || &apos;.COU_ID IN (&apos;&apos;CN&apos;&apos;, &apos;&apos;HK&apos;&apos;, &apos;&apos;TW&apos;&apos;)))&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	IF ( result = &apos;&apos;) THEN
+		SET result = &apos;FALSE&apos;;
+	END IF;
+END
+</attribute>
+  <attribute name="creationDate" type="LONG">1567513701221</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="disallowUIEditing" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568787330397</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="procedureGenerator" type="STRING">RbsFilterPolicy</attribute>
+  <attribute name="references" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567513701221</attribute>
+</metadata>

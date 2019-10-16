@@ -1,0 +1,406 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_ServiceCriteria" path="/shared/Core/Operations/BusinessPartnerDatamart/vc_ServiceCriteria" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Service_Type_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Service_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Service_Criteria_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rate_Card_ID" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Monday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tuesday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Wednesday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Thursday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Friday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Saturday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sunday_Dep_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dangerous_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Criteria_Valid_From" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Criteria_Valid_To" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Criteria_Valid_From_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Criteria_Valid_To_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Empty_Return_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Whole_Tour_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Monday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tuesday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Wednesday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Thursday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Friday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Saturday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sunday_Arr_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Service_Criteria_Update_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Service_Criteria_Update_User_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Return_Home_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="All_Intermodal_Costs_Included_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fuel_Surcharge_Used_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planned_or_Extra_Indicator" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BP_CODEDESCRIPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_SYS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_CAT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/SVC_CRITERIA_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="SVC_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="SVC_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="SVC_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SVC_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SVC_MONDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_TUESDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_WEDNESDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_THURSDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_FRIDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_SATURDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_SUNDAY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_VALID_FR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SVC_VALID_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SVC_EMPTY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_ALL_MVTS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="SVC_FROM_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SVC_TO_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SVC_DANGEROUS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RKD_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="SVC_ALL_COSTS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_FSURCH_USED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_FSURCH_IDX_PC">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="SVC_FSURCH_VAL_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="4"/>
+      </element>
+      <element name="DAY_ID_ARR_MON">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_TUE">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_WED">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_THU">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_FRI">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_SAT">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAY_ID_ARR_SUN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_HOME_RETURN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SVC_PLD_EXT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="FSI_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PSY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T1.PSY_OBJ_ID Service_Type_Object_ID,
+T1.PSE_OBJ_ID Service_Object_ID,
+T1.BUP_OBJ_ID Business_Partner_Object_ID,
+T1.SVC_OBJ_ID Service_Criteria_Object_ID,
+T1.RKD_ID Rate_Card_ID,
+T1.SVC_MONDAY_IN Monday_Dep_Indicator,
+T1.SVC_TUESDAY_IN Tuesday_Dep_Indicator,
+T1.SVC_WEDNESDAY_IN Wednesday_Dep_Indicator,
+T1.SVC_THURSDAY_IN Thursday_Dep_Indicator,
+T1.SVC_FRIDAY_IN Friday_Dep_Indicator,
+T1.SVC_SATURDAY_IN Saturday_Dep_Indicator,
+T1.SVC_SUNDAY_IN Sunday_Dep_Indicator,
+T1.SVC_DANGEROUS_IN Dangerous_Indicator,
+T1.SVC_VALID_FR_DT Criteria_Valid_From,
+T1.SVC_VALID_TO_DT Criteria_Valid_To,
+CAST(T1.SVC_FROM_TD AS TIME) Criteria_Valid_From_Time,
+CAST(T1.SVC_TO_TD AS TIME) Criteria_Valid_To_Time,
+T1.SVC_EMPTY_IN Empty_Return_Indicator,
+T1.SVC_ALL_MVTS_IN Whole_Tour_Indicator,
+T1.DAY_ID_ARR_MON Monday_Arr_Indicator,
+T1.DAY_ID_ARR_TUE Tuesday_Arr_Indicator,
+T1.DAY_ID_ARR_WED Wednesday_Arr_Indicator,
+T1.DAY_ID_ARR_THU Thursday_Arr_Indicator,
+T1.DAY_ID_ARR_FRI Friday_Arr_Indicator,
+T1.DAY_ID_ARR_SAT Saturday_Arr_Indicator,
+T1.DAY_ID_ARR_SUN Sunday_Arr_Indicator,
+T1.SVC_UPDT_TD Service_Criteria_Update_Date_Time,
+T1.SVC_UPDT_USER_ID Service_Criteria_Update_User_ID,
+T1.SVC_HOME_RETURN_IN Return_Home_Indicator,
+T1.SVC_ALL_COSTS_IN All_Intermodal_Costs_Included_Indicator,
+T1.SVC_FSURCH_USED_IN Fuel_Surcharge_Used_Indicator,
+T2.AVO_DS Planned_or_Extra_Indicator
+FROM /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/SVC_CRITERIA_V01 T1
+INNER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BP_CODEDESCRIPTION_V01 T2 ON T1.SVC_PLD_EXT_OBJ_ID = T2.AVO_OBJ_ID
+</attribute>
+  <attribute name="creationDate" type="LONG">1566151794511</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170137</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567590922541</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170137</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">n091fhm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566151794511</attribute>
+</metadata>

@@ -1,0 +1,890 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vs_SRTran01" path="/shared/Core/Services/SR_SSD/vs_SRTran01" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CLN_NR" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DIV_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PRG_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CTR_ID" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_CO" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_OIB" nullable="true">
+      <datatype type="STRING" maxLength="5"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CAK_ID" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CAE_CORP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CAK_ACTION_GRP_CD" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_CON_ORIG" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_DEST" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPT_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_ID_OIB_CT" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="n228dpo" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="n228dpo" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/Tran1SR" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CLN_NR">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="DIV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRG_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTR_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_CO">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_OIB">
+        <datatype type="STRING" maxLength="5"/>
+      </element>
+      <element name="CAK_ID">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="CAE_CORP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="CAK_ACTION_GRP_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OPT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID_OIB_CT">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="CO_COST_AM">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="OIB_COST_AM">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/CONOPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OPT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COP_OPS_PREM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COP_CS_PREM_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/CON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_ID" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_WHOUSE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_DG_TRANMODE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DUTIABLE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_COLL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CON_COMM_DELIV_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CND_NOTE_SRC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_OPSA_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OPSC_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OC_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_OC_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_VAL_OF_GDS_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CHK_WT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CHK_VL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DESP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_CTRL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ACT_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_ROUTNG_MTHD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PRESET_NET" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_NEUTRAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_AWKFREIGHT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_ACT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_CON" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_CUSTSERV" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID_ACTUAL" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PRD_ID_CONTR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CUY_ID_VAL_OF_GDS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_REV_DUE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_CLR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ACN_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_INS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CLRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_SELF_COLL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COD_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_COD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEPOTACTION_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_SLVL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_COD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_INS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DOMES_DATA_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ID_ALT">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="CON_CLNT_REF_TX">
+        <datatype type="STRING" maxLength="24"/>
+      </element>
+      <element name="CON_GOODS_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CON_PACK_DS">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="HAZ_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_UN_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_HAZ_DEGREE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_IN_ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ZON_ADJ_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="CON_MANUAL_RMS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ARCH_EXMPTD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PTYPE_WGT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_DFLT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CUST_DELIV_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_CUST_DEL_CT_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CON_CTMSDOC_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DMGED_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_VALUE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARE_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ARE_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_OPS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_OPS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_UKSF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_QTY_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DLP_PTNR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT1_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT2_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CIM_ID_PACS">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_ID_PACS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CIM_SCAN_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CIM_SCAN_LD">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_OS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="EDW_OS_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="EDW_UNSEND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_CNCLD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/PRDPRGPRDOPP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PPG_DEL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/SRACTIONTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CAK_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CAK_ACTION_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAK_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CAK_IN_USE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/SRACTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CLN_NR" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CAK_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CAE_SEQ_NR" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAY_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CAE_CORP_COST_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_LOCAL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CAE_OPEN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAE_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CAE_CLOSE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAE_CLOSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="BUL_ID_OIB">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CAE_REMARKS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/SRCASE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CLN_NR" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CON_ID" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CSB_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CSU_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTH_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CCT_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CDE_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTR_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLN_CALLER_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CLN_CALLER_TL_NR_1" nullable="false">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="CLN_CALLER_TL_NR_2" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CLN_OPEN_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CLN_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLN_CLOSE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CLN_CLOSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="OWNER_ID_CO">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUL_ID_CO">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CLN_REMARKS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLN_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SR/PRODSR_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+    CLN_NR
+  , DIV_ID
+  , PRG_ID
+  , CTR_ID
+  , BUL_ID_CO
+  , BUL_ID_OIB
+  , CAK_ID
+  , sum(CAE_CORP_COST_AM) as CAE_CORP_COST_AM
+  , CAK_ACTION_GRP_CD
+  , BUL_ID_CON_ORIG
+  , BUL_ID_DEST
+ 
+	,OPT_ID
+  --, CAE_SEQ_NR
+  , SUM(CASE BUL_ID_OIB_RANK WHEN 1 THEN 1 ELSE 0 END) AS BUL_ID_OIB_CT
+  , SUM(CASE WHEN ((BUL_ID_OIB = &apos; &apos;) OR (BUL_ID_OIB IS NULL)) THEN CAE_CORP_COST_AM ELSE 0 END) AS CO_COST_AM
+  , SUM(CASE WHEN ((BUL_ID_OIB &lt;&gt; &apos; &apos;) AND (BUL_ID_OIB IS NOT NULL)) THEN CAE_CORP_COST_AM ELSE 0 END) AS OIB_COST_AM
+FROM (SELECT
+          T1.CLN_NR
+        , T5.DIV_ID
+        , T5.PRG_ID
+        , T1.CTR_ID
+        , T1.BUL_ID_CO
+        , COALESCE(T2.BUL_ID_OIB,&apos;&apos;) BUL_ID_OIB
+        , case when (T2.BUL_ID=&apos;&apos; or T2.BUL_ID is null) then  &apos;&apos; else T2.CAK_ID end as CAK_ID
+        , COALESCE(T2.CAE_CORP_COST_AM,0) CAE_CORP_COST_AM
+        , T3.CAK_ACTION_GRP_CD
+        , T4.BUL_ID_CON_ORIG
+        , T4.BUL_ID_DEST
+  
+		,t7.opt_id
+        --, T2.CAE_SEQ_NR
+        -- , COALESCE(T2.CAE_CORP_COST_AM,0) AS CAE_CORP_COST_AM_CO_OIB
+        , CASE WHEN ((T2.BUL_ID_OIB &lt;&gt; &apos; &apos;) AND (T2.BUL_ID_OIB IS NOT NULL))  THEN SUM(1) OVER (PARTITION BY T1.CLN_NR, T2.BUL_ID_OIB ORDER BY T1.CLN_NR, T2.BUL_ID_OIB ROWS UNBOUNDED PRECEDING) ELSE 0 END AS BUL_ID_OIB_RANK
+      FROM /shared/Source/EDW/SR/PRODSR_P/SRCASE_V01 T1
+        LEFT OUTER JOIN /shared/Source/EDW/SR/PRODSR_P/SRACTION_V01   T2  --124350420
+          ON (T1.CLN_NR = T2.CLN_NR)
+        LEFT OUTER JOIN /shared/Source/EDW/SR/PRODSR_P/SRACTIONTYPE_V01 T3
+          ON (T2.CAK_ID = T3.CAK_ID)
+        LEFT OUTER JOIN /shared/Source/EDW/SR/PRODSR_P/CON_V01 T4
+          ON (T1.CON_SRKY_ID = T4.CON_SRKY_ID)
+        LEFT OUTER JOIN /shared/Source/EDW/SR/PRODSR_P/PRDPRGPRDOPP_V01 T5
+          ON (T4.DIV_ID = T5.DIV_ID
+          AND T4.PRD_ID_ACTUAL = T5.PRD_ID)
+   
+		LEFT OUTER JOIN  /shared/Source/EDW/SR/PRODSR_P/CONOPTION_V01	T7 
+		   on   T4.con_srky_id = t7.con_srky_id
+      		and   t7.opt_id = &apos;AU&apos;
+Where (T1.cln_close_dt &gt;= (SELECT  cast(min(t1.dte_dt) as Char(10)) as FROMDATE
+
+     FROM   /shared/Source/EDW/SR/PRODSR_P/TNTCALDAYSDIFF_V01 T1
+
+    WHERE   T1.mths_diff = 6
+   )   
+                 AND T1.cln_close_dt &lt;= (SELECT    cast(max(t2.dte_dt) as Char(10)) AS TODATE
+
+     FROM   
+            /shared/Source/EDW/SR/PRODSR_P/TNTCALDAYSDIFF_V01 T2
+
+    WHERE    T2.wks_diff = 1 ))
+           or (T1.cln_close_dt is NULL)
+ ) dt	  
+--and T1.CON_SRKY_ID&lt;&gt;0  
+
+GROUP BY 1, 2, 3, 4, 5, 6, 7, 9, 10, 11,12   </attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/Tran1SR</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1563799496234</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90103</attribute>
+  <attribute name="creatorUserName" type="STRING">n228dpo</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564062697799</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563799496234</attribute>
+  <trigger>
+    <security>
+      <owner user="n228dpo" domain="tntadtest"/>
+      <privilege user="n228dpo" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Services/SR_SSD/vs_SRTran01" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="CLN_NR">
+          <datatype type="STRING" minLength="8" maxLength="8"/>
+        </element>
+        <element name="DIV_ID">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="PRG_ID">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="CTR_ID">
+          <datatype type="STRING" minLength="1" maxLength="1"/>
+        </element>
+        <element name="BUL_ID_CO">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="BUL_ID_OIB">
+          <datatype type="STRING" maxLength="5"/>
+        </element>
+        <element name="CAK_ID">
+          <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+        </element>
+        <element name="CAE_CORP_COST_AM">
+          <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+        </element>
+        <element name="CAK_ACTION_GRP_CD">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="BUL_ID_CON_ORIG">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="BUL_ID_DEST">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="OPT_ID">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="BUL_ID_OIB_CT">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="CO_COST_AM">
+          <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+        </element>
+        <element name="OIB_COST_AM">
+          <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Services/SR_SSD/vs_SRTran01&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1563801611000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1563980566443</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90103</attribute>
+    <attribute name="creatorUserName" type="STRING">n228dpo</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1564047889892</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90103</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563980566443</attribute>
+  </trigger>
+</metadata>

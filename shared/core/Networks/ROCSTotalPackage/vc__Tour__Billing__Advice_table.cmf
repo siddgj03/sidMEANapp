@@ -1,0 +1,124 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Tour_Billing_Advice" path="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Billing_Advice" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="BAE_ID" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="18"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BAE_ISSUE_TD" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BAE_OBJ_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BAE_STATUS_CD" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/BILLINGADVICE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BAE_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BAE_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BAE_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_DELETED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OPR_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BAE_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_FIN_WK">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="BAE_VERSION_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="BAE_ID">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="BAE_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BAE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BAE_ISSUE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_SUBMITTED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_OPEN_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BAE_TNT_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    BAE_ID ,
+BAE_ISSUE_TD ,
+BAE_OBJ_ID ,
+BAE_STATUS_CD	
+
+FROM  /shared/Source/EDW/ROCSPackage/PRODROCS_P/BILLINGADVICE_V01 
+/*left outer join 
+       T8
+        on (T8.RSN_REASON_CD = T.BAE_STATUS_CD) */
+where  BAE_DELETED_IN &lt;&gt; &apos;Y&apos;
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1562239285913</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562239285913</attribute>
+</metadata>

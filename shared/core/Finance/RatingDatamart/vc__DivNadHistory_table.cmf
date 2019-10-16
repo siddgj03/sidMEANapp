@@ -1,0 +1,381 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_DivNadHistory" path="/shared/Core/Finance/RatingDatamart/vc_DivNadHistory" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Sales_Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Branch_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Territory_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Branch_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Country_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sales_Division_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Employee_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Group_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Code" nullable="true">
+      <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/BUSLOC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_OPTR_LIC_CD">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_LIC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_TNT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_1_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_2_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_3_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PBOX_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_TEL_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_FAX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_TELX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_VAT_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_CZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY1_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY2_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_MAX_DEL_ZON_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CONV_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="BUL_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_INACTIVE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_PROVINCE_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_SEARCH_TYPE_NR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DAYL_SAV_EX_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TIZ_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BTY_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/COUNTRYGROUPSET_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="WGZ_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="WGZ_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="SRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="RMS_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RMS_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSRBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSRBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CSBBU_GRP_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CSBBU_GRP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_REG_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_REG_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_OPU_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_OPU_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DVH_TTT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DVH_TTT_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVISION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DIV_OPEN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_ID_DEFAULT">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DIV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_REACT_NR">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_TRAD_ENTITY_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_NCS_EXTRT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_REC_SRCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVNADHISTORY_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NAD_ID" nullable="false">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="SCH_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="STE_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="REG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="SAR_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EMP_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    trim(DIVNADHISTORY_V02.COU_ID) Sales_Country_Code, 
+    trim(DIVNADHISTORY_V02.COM_ID) Company_Code, 
+    trim(DIVNADHISTORY_V02.DIV_ID) Sales_Division_Code, 
+    trim(DIVNADHISTORY_V02.BUL_ID) Sales_Branch_Code, 
+    trim(DIVNADHISTORY_V02.STE_ID) Sales_Territory_Code, 
+    trim(BUSLOC_V01.BUL_NM) Sales_Branch_Name, 
+    trim(COUNTRYGROUPSET_V01.COU_NM) Sales_Country_Name, 
+    trim(DIVISION_V01.DIV_NM) Sales_Division_Name,
+	trim(DIVNADHISTORY_V02.EMP_ID) Employee_Code ,
+	trim(DIVNADHISTORY_V02.ACG_ID) Account_Group_Code,
+	trim(DIVNADHISTORY_V02.ACC_ID) Account_Code
+FROM      
+    /shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVNADHISTORY_V02 DIVNADHISTORY_V02 LEFT JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/COUNTRYGROUPSET_V01 COUNTRYGROUPSET_V01
+    ON DIVNADHISTORY_V02.COM_ID = COUNTRYGROUPSET_V01.COM_ID AND 
+        DIVNADHISTORY_V02.COU_ID = COUNTRYGROUPSET_V01.COU_ID LEFT JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/BUSLOC_V01 BUSLOC_V01
+    ON (DIVNADHISTORY_V02.BUL_ID = BUSLOC_V01.BUL_ID AND 
+        DIVNADHISTORY_V02.COM_ID = BUSLOC_V01.COM_ID) AND 
+        DIVNADHISTORY_V02.COU_ID = BUSLOC_V01.COU_ID LEFT JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVISION_V01 DIVISION_V01
+    ON DIVNADHISTORY_V02.COM_ID = DIVISION_V01.COM_ID AND 
+        DIVNADHISTORY_V02.DIV_ID = DIVISION_V01.DIV_ID</attribute>
+  <attribute name="creationDate" type="LONG">1563540691298</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566826827975</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563540691298</attribute>
+</metadata>

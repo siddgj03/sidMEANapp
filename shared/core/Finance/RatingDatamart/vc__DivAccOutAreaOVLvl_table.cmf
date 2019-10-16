@@ -1,0 +1,224 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_DivAccOutAreaOVLvl" path="/shared/Core/Finance/RatingDatamart/vc_DivAccOutAreaOVLvl" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AOL_SEQ_ID" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Outer_Area" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Outer_Area_Start_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Outer_Area_End_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Outer_Area_Review_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Outer_Area_Update_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Outer_Area_Desc" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Code" nullable="true">
+      <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Group_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVACCOUTAREAOVLVL_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OTA_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DAO_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DAO_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_END_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="DAO_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="DAO_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="DAO_REFERENCED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAO_END_DT_UPDT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_END_DT_UPDT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="AOL_SEQ_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DAO_REVIEW_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DAO_PAY_SIDE_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/RatingDatamart/PRODRATING_P/OUTERAREA_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OTA_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="OTA_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OTA_PREVNT_DISC_DT" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OTA_DISC_STOP_DT" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OTA_ADD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OTA_ADD_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="OTA_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OTA_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OTA_UPDATE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="OTA_UPDATE_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OTA_REFERENCED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OTA_ATR_BIL_COU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    trim(DIVACCOUTAREAOVLVL_V02.COM_ID) Company_Code, 
+    trim(DIVACCOUTAREAOVLVL_V02.COU_ID) Country_Code, 
+    trim(DIVACCOUTAREAOVLVL_V02.DIV_ID) Division_Code, 
+    trim(DIVACCOUTAREAOVLVL_V02.AOL_SEQ_ID) AOL_SEQ_ID, 
+    trim(DIVACCOUTAREAOVLVL_V02.OTA_ID) Outer_Area, 
+    DIVACCOUTAREAOVLVL_V02.DAO_START_DT Customer_Outer_Area_Start_Date, 
+    DIVACCOUTAREAOVLVL_V02.DAO_END_DT Customer_Outer_Area_End_Date, 
+    DIVACCOUTAREAOVLVL_V02.DAO_REVIEW_DT Customer_Outer_Area_Review_Date, 
+    DIVACCOUTAREAOVLVL_V02.DAO_UPDATE_DT Customer_Outer_Area_Update_Date, 
+    trim(OUTERAREA_V01.OTA_DS) Outer_Area_Desc,
+	trim(DIVACCOUTAREAOVLVL_V02.ACC_ID)  Account_Code,
+	trim(DIVACCOUTAREAOVLVL_V02.ACG_ID) Account_Group_Code
+FROM      
+    /shared/Source/EDW/RatingDatamart/PRODRATING_P/DIVACCOUTAREAOVLVL_V02 DIVACCOUTAREAOVLVL_V02 LEFT OUTER JOIN 
+        /shared/Source/EDW/RatingDatamart/PRODRATING_P/OUTERAREA_V01 OUTERAREA_V01
+    ON (DIVACCOUTAREAOVLVL_V02.COM_ID = OUTERAREA_V01.COM_ID AND 
+        DIVACCOUTAREAOVLVL_V02.DIV_ID = OUTERAREA_V01.DIV_ID) AND 
+        DIVACCOUTAREAOVLVL_V02.OTA_ID = OUTERAREA_V01.OTA_ID</attribute>
+  <attribute name="creationDate" type="LONG">1564637322511</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565959968301</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564637322511</attribute>
+</metadata>

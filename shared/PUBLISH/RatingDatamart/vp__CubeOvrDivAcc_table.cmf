@@ -1,0 +1,145 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CubeOvrDivAcc" path="/shared/Publish/RatingDatamart/vp_CubeOvrDivAcc" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Company_Code" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Group_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Code" nullable="true">
+      <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Name" nullable="true">
+      <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cube_Conversion_Factor" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_Start_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_End_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Cube_Conversion_Factor_Review_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSL_VL_CONV_QT" nullable="true">
+      <datatype type="STRING" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSL_IMPERIAL_IN" nullable="true">
+      <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/RatingDatamart/vc_CubeOvrDivAcc" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Company_Code">
+        <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      </element>
+      <element name="Account_Group_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Account_Code">
+        <datatype type="STRING" maxLength="9" trailingSpaces="false"/>
+      </element>
+      <element name="Division_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Division_Name">
+        <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="Cube_Conversion_Factor">
+        <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      </element>
+      <element name="Customer_Cube_Conversion_Factor_Start_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Customer_Cube_Conversion_Factor_End_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Customer_Cube_Conversion_Factor_Review_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CSL_VL_CONV_QT">
+        <datatype type="STRING" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="CSL_IMPERIAL_IN">
+        <datatype type="STRING" maxLength="1" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+   vc_CubeOvrDivAcc.*
+FROM      
+    /shared/Core/Finance/RatingDatamart/vc_CubeOvrDivAcc  vc_CubeOvrDivAcc</attribute>
+  <attribute name="creationDate" type="LONG">1564062445068</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566996924496</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564062445068</attribute>
+</metadata>

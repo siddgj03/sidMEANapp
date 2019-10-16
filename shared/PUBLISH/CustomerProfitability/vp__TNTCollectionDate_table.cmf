@@ -1,0 +1,254 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_TNTCollectionDate" path="/shared/Publish/CustomerProfitability/vp_TNTCollectionDate" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Collection_Day" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Day_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Week" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Month_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Quarter" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Quarter_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Year" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Year__Week" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Year__Month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Year__Quarter" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DTE_DT" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Calendar" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DAY_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DAY_NM">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_WEEK_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_FIN">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_FIN">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_FIN">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_Calendar.DTE_DAY_NR Collection_Day, 
+    vc_Calendar.DTE_DAY_NM Collection_Day_Name, 
+    vc_Calendar.DTE_WEEK_NR_FIN Collection_Week, 
+    vc_Calendar.DTE_MONTH_NR_FIN Collection_Month, 
+    vc_Calendar.DTE_MONTH_NM_FIN Collection_Month_Name, 
+    vc_Calendar.DTE_QUARTER_NR_FIN Collection_Quarter, 
+    vc_Calendar.DTE_QUARTER_NM_FIN Collection_Quarter_Name, 
+    vc_Calendar.DTE_YEAR_NR_FIN Collection_Year, 
+    vc_Calendar.DTE_YRWK_NR_FIN Collection_Year__Week, 
+    vc_Calendar.DTE_YRMTH_NR_FIN Collection_Year__Month, 
+    vc_Calendar.DTE_YRQTR_NR_FIN Collection_Year__Quarter, 
+    vc_Calendar.DTE_DT
+FROM      
+    /shared/Core/Finance/CustomerProfitability/vc_Calendar vc_Calendar</attribute>
+  <attribute name="creationDate" type="LONG">1562997284905</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565072510920</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBAAsAdgBjAF8AQwBhAGwAZQBuAGQAYQByBgIACwB2AGMAXwBDAGEAbABlAG4A
+ZABhAHIDC/////8DCv////8DDP////8LEQAFAAYAcwBoAGEAcgBlAGQABABDAG8AcgBlAAcARgBp
+AG4AYQBuAGMAZQAVAEMAdQBzAHQAbwBtAGUAcgBQAHIAbwBmAGkAdABhAGIAaQBsAGkAdAB5AAsA
+dgBjAF8AQwBhAGwAZQBuAGQAYQBy//8DBQAAAAAIAhAxBgH//wECAQEGAAEDAAEEAAEFAAMHAAAA
+AAcJAAAAAQAAAAAJCgAAAAwQQQYBAAoARABUAEUAXwBEAEEAWQBfAE4AUgYCAA4AQwBvAGwAbABl
+AGMAdABpAG8AbgBfAEQAYQB5BgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAA
+AH///////wMLAAAAAP//EEEGAQAKAEQAVABFAF8ARABBAFkAXwBOAE0GAgATAEMAbwBsAGwAZQBj
+AHQAaQBvAG4AXwBEAGEAeQBfAE4AYQBtAGUGA///BgT//wMK/////wgMEBsDEgAAAAEEBAAAAAAA
+AAANARMB//8DCwAAAAD//xBBBgEADwBEAFQARQBfAFcARQBFAEsAXwBOAFIAXwBGAEkATgYCAA8A
+QwBvAGwAbABlAGMAdABpAG8AbgBfAFcAZQBlAGsGA///BgT//wMK/////wgMEBkDEgAAAAEEB///
+//+AAAAABAYAAAAAf///////AwsAAAAA//8QQQYBABAARABUAEUAXwBNAE8ATgBUAEgAXwBOAFIA
+XwBGAEkATgYCABAAQwBvAGwAbABlAGMAdABpAG8AbgBfAE0AbwBuAHQAaAYD//8GBP//Awr/////
+CAwQGQMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//xBBBgEAEABEAFQARQBfAE0A
+TwBOAFQASABfAE4ATQBfAEYASQBOBgIAFQBDAG8AbABsAGUAYwB0AGkAbwBuAF8ATQBvAG4AdABo
+AF8ATgBhAG0AZQYD//8GBP//Awr/////CAwQGwMSAAAAAQQEAAAAAAAAAA0BEwH//wMLAAAAAP//
+EEEGAQASAEQAVABFAF8AUQBVAEEAUgBUAEUAUgBfAE4AUgBfAEYASQBOBgIAEgBDAG8AbABsAGUA
+YwB0AGkAbwBuAF8AUQB1AGEAcgB0AGUAcgYD//8GBP//Awr/////CAwQGQMSAAAAAQQH/////4AA
+AAAEBgAAAAB///////8DCwAAAAD//xBBBgEAEgBEAFQARQBfAFEAVQBBAFIAVABFAFIAXwBOAE0A
+XwBGAEkATgYCABcAQwBvAGwAbABlAGMAdABpAG8AbgBfAFEAdQBhAHIAdABlAHIAXwBOAGEAbQBl
+BgP//wYE//8DCv////8IDBAbAxIAAAABBAQAAAAAAAAADQETAf//AwsAAAAA//8QQQYBAA8ARABU
+AEUAXwBZAEUAQQBSAF8ATgBSAF8ARgBJAE4GAgAPAEMAbwBsAGwAZQBjAHQAaQBvAG4AXwBZAGUA
+YQByBgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH///////wMLAAAAAP//
+EEEGAQAPAEQAVABFAF8AWQBSAFcASwBfAE4AUgBfAEYASQBOBgIAFQBDAG8AbABsAGUAYwB0AGkA
+bwBuAF8AWQBlAGEAcgBfAF8AVwBlAGUAawYD//8GBP//Awr/////CAwQGQMSAAAAAQQH/////4AA
+AAAEBgAAAAB///////8DCwAAAAD//xBBBgEAEABEAFQARQBfAFkAUgBNAFQASABfAE4AUgBfAEYA
+SQBOBgIAFgBDAG8AbABsAGUAYwB0AGkAbwBuAF8AWQBlAGEAcgBfAF8ATQBvAG4AdABoBgP//wYE
+//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH///////wMLAAAAAP//EEEGAQAQAEQA
+VABFAF8AWQBSAFEAVABSAF8ATgBSAF8ARgBJAE4GAgAYAEMAbwBsAGwAZQBjAHQAaQBvAG4AXwBZ
+AGUAYQByAF8AXwBRAHUAYQByAHQAZQByBgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAA
+AAQGAAAAAH///////wMLAAAAAP//EEEGAQAGAEQAVABFAF8ARABUBgIAAAYD//8GBP//Awr/////
+CAwQFQMSAAAAAf//AwsAAAAA/////wkGAAAAARCCAwoAAAAeAwsAAAAeAwwAAADIAw0AAADI//8I
+AxBxAwEAAAALAwIAAAAyCQMAAAImEHQDBgAAAAD//xByBgQADgBDAG8AbABsAGUAYwB0AGkAbwBu
+AF8ARABhAHn//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHQDBgAAAAH//xByBgQAEwBDAG8AbABsAGUAYwB0AGkAbwBuAF8ARABhAHkA
+XwBOAGEAbQBl//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0AwYAAAAC//8QcgYEAA8AQwBvAGwAbABlAGMAdABpAG8AbgBfAFcAZQBl
+AGv//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHQDBgAAAAP//xByBgQAEABDAG8AbABsAGUAYwB0AGkAbwBuAF8ATQBvAG4AdABo//8Q
+cwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0AwYAAAAE//8QcgYEABUAQwBvAGwAbABlAGMAdABpAG8AbgBfAE0AbwBuAHQAaABfAE4AYQBt
+AGX//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHQDBgAAAAX//xByBgQAEgBDAG8AbABsAGUAYwB0AGkAbwBuAF8AUQB1AGEAcgB0AGUA
+cv//EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdAMGAAAABv//EHIGBAAXAEMAbwBsAGwAZQBjAHQAaQBvAG4AXwBRAHUAYQByAHQAZQBy
+AF8ATgBhAG0AZf//EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdAMGAAAAB///EHIGBAAPAEMAbwBsAGwAZQBjAHQAaQBvAG4AXwBZAGUA
+YQBy//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0AwYAAAAI//8QcgYEABUAQwBvAGwAbABlAGMAdABpAG8AbgBfAFkAZQBhAHIAXwBf
+AFcAZQBlAGv//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHQDBgAAAAn//xByBgQAFgBDAG8AbABsAGUAYwB0AGkAbwBuAF8AWQBlAGEA
+cgBfAF8ATQBvAG4AdABo//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0AwYAAAAK//8QcgYEABgAQwBvAGwAbABlAGMAdABpAG8AbgBf
+AFkAZQBhAHIAXwBfAFEAdQBhAHIAdABlAHL//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAv//xByBgT/////EHMDBQAAAAD/
+/xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv///////w==</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562997284905</attribute>
+</metadata>

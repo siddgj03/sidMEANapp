@@ -1,0 +1,121 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="CIT-KPI-FEXP-OriginDepots.csv" path="/shared/Source/FIles/Source_CSV/CIT-KPI-FEXP-OriginDepots.csv" type="TABLE" subtype="DELIMITED_FILE" changeToken="0" tableType="NONE">
+  <columns>
+    <column name="Origin BU Code" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin BU Label" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin BU Region Code" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin BU Region Label" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin BU Region Short Name" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Group Code" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Group Label" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Group Short Name" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Code" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Label" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin Country Short Name" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="charset" type="STRING">iso-8859-1</attribute>
+  <attribute name="creationDate" type="LONG">1557315127867</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="delimiter" type="STRING">¬</attribute>
+  <attribute name="eol" type="STRING">
+</attribute>
+  <attribute name="hasHeaders" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="path" type="STRING">/CIT-KPI-FEXP-OriginDepots.csv</attribute>
+  <attribute name="qualifier" type="STRING">&quot;</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557315127867</attribute>
+  <attribute name="startRow" type="INTEGER">1</attribute>
+</metadata>

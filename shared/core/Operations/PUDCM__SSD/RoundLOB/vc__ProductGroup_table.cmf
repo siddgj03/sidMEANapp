@@ -1,0 +1,345 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_ProductGroup" path="/shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_ProductGroup" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Lob_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Lob_Nm" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Prg_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Prg_Nm" nullable="true">
+      <datatype type="STRING" minLength="14" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Psg_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Psg_Nm" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/LINE_OF_BUSINESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOB_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOB_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="LOB_NM_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOB_NM_EFFECTTO_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/PRODUCT_GROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRG_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PRG_NM_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRG_NM_EFFECTTO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/PROD_SUB_GROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PSG_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_NM" nullable="false">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PSG_NM_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PSG_NM_EFFECTTO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDLOBGROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_ACTIVE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ROD_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RLB_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RLB_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RLB_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RLB_COLDEL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RLB_COL_PS_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_NG_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_CON_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_PCE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="RLB_DEL_PS_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NG_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CON_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_PCE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="RLB_COL_COA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_MISS_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NH_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_WA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_HO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_OTHER_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_CO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NH_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_WA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_CR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_HO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_OTHER_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_BASE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_BONUS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_PENALTIES_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_FUS_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_ACTUAL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_COST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RLB_BONUS_CI_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_CHARGE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RLB_COL_APR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_CAB_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_GUA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_UTT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_MPW_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NAAT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NAAT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_BONUS_XTR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT
+	RLB.LOB_ID		AS Lob_Id,
+	CASE WHEN RLB.LOB_ID = &apos;N&apos; 
+             THEN &apos;Not-applicable&apos; 
+             ELSE LB.LOB_NM END AS Lob_Nm,	
+	RLB.PRG_ID	 	AS Prg_Id,
+	CASE WHEN RLB.PRG_ID = &apos;A&apos; 
+             THEN &apos;Not-applicable&apos; 
+             ELSE PG.PRG_NM END AS Prg_Nm,	
+	RLB.PSG_ID	 	AS Psg_Id,
+	CASE WHEN RLB.PSG_ID = &apos;9&apos; 
+             THEN &apos;Not-applicable&apos; 
+             ELSE PSG.PSG_NM END AS Psg_Nm
+ FROM 
+        /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDLOBGROUP_V01 RLB
+        LEFT JOIN (SELECT * FROM  /shared/Source/EDW/PUDCM/PRODPUDCM_P/LINE_OF_BUSINESS_V01 WHERE LNG_ID = &apos;EN&apos; ) LB
+        ON  RLB.LOB_ID  =  LB.LOB_ID
+        LEFT JOIN (SELECT * FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/PRODUCT_GROUP_V01 WHERE LNG_ID = &apos;EN&apos; )PG
+        ON RLB.LOB_ID =  PG.LOB_ID  
+        AND RLB.PRG_ID  =  PG.PRG_ID
+        LEFT JOIN (SELECT * FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/PROD_SUB_GROUP_V01  WHERE LNG_ID = &apos;EN&apos;) PSG
+        ON RLB.LOB_ID =  PSG.LOB_ID
+        AND RLB.PRG_ID  =  PSG.PRG_ID
+        AND RLB.PSG_ID =  PSG.PSG_ID</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="creationDate" type="LONG">1556866062813</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556866062813</attribute>
+</metadata>

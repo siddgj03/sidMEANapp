@@ -1,0 +1,585 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RoundKpi" path="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_RoundKpi" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="cachekey" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Year_" nullable="true">
+      <datatype name="text" extendedName="text" subType="DATASOURCE_TYPE" type="CLOB" maxLength="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quarter" nullable="true">
+      <datatype name="text" extendedName="text" subType="DATASOURCE_TYPE" type="CLOB" maxLength="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Month_" nullable="true">
+      <datatype name="text" extendedName="text" subType="DATASOURCE_TYPE" type="CLOB" maxLength="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Week" nullable="true">
+      <datatype name="text" extendedName="text" subType="DATASOURCE_TYPE" type="CLOB" maxLength="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Day_" nullable="true">
+      <datatype name="text" extendedName="text" subType="DATASOURCE_TYPE" type="CLOB" maxLength="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_GRP_ID" nullable="true">
+      <datatype name="varchar" extendedName="varchar(33)" subType="DATASOURCE_TYPE" type="STRING" maxLength="33"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="REGION_CD" nullable="true">
+      <datatype name="varchar" extendedName="varchar(43)" subType="DATASOURCE_TYPE" type="STRING" maxLength="43"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID" nullable="true">
+      <datatype name="varchar" extendedName="varchar(35)" subType="DATASOURCE_TYPE" type="STRING" maxLength="35"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID" nullable="true">
+      <datatype name="varchar" extendedName="varchar(38)" subType="DATASOURCE_TYPE" type="STRING" maxLength="38"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_LOC" nullable="true">
+      <datatype name="varchar" extendedName="varchar(22)" subType="DATASOURCE_TYPE" type="STRING" maxLength="22"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RTY_NORMAL_IN" nullable="true">
+      <datatype name="varchar" extendedName="varchar(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RTY_ID" nullable="true">
+      <datatype name="varchar" extendedName="varchar(35)" subType="DATASOURCE_TYPE" type="STRING" maxLength="35"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_rounds_Own_drivers" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_rounds_Subcontractor_d" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_rounds" nullable="true">
+      <datatype name="decimal" extendedName="decimal(33,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="33" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_pickup_positive_stops" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_pickup_negative_stops" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_delivery_positive_stop" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_delivery_negative_stop" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Stops" nullable="true">
+      <datatype name="decimal" extendedName="decimal(14,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="14" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Stops_Target" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_pickup_connotes" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_delivery_connotes" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_connotes" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Connotes_Target" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_connotes_Own_drivers" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_connotes_Subcontractor" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Connotes_Variance" nullable="true">
+      <datatype name="decimal" extendedName="decimal(33,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="33" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_pickup_pieces" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_delivery_pieces" nullable="true">
+      <datatype name="decimal" extendedName="decimal(11,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_pieces" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="On_road_time" nullable="true">
+      <datatype name="decimal" extendedName="decimal(20,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="20" maxFractionalDigits="0"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_time" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Distance" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Budget_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Budget_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Own_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(22,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Sub_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(22,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(23,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Own_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,16)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Sub_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,16)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,15)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="15"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Standard_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(22,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Standard_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,16)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Non_Standard_Costs_Lo" nullable="true">
+      <datatype name="decimal" extendedName="decimal(22,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Non_Standard_Costs_Eu" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,16)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Other_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Other_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Communication_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Communication_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planning_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Planning_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Equipment_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Equipment_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Labour_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Labour_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Weeks_Difference" nullable="true">
+      <datatype name="decimal" extendedName="decimal(32,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pickup_Weight_Kg" nullable="true">
+      <datatype name="decimal" extendedName="decimal(14,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Delivery_Weight_Kg" nullable="true">
+      <datatype name="decimal" extendedName="decimal(14,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dock_time_AM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dock_time_PM" nullable="true">
+      <datatype name="decimal" extendedName="decimal(18,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Stem_distance_from_depot" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Stem_distance_to_depot" nullable="true">
+      <datatype name="decimal" extendedName="decimal(12,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Weight_Kg" nullable="true">
+      <datatype name="decimal" extendedName="decimal(15,3)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Total_Costs_Local" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Total_Costs_Euro" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Total_Costs_Variance_" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Total_Costs_Variance_2" nullable="true">
+      <datatype name="decimal" extendedName="decimal(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Round_on_Day_Indicator" nullable="true">
+      <datatype name="date" extendedName="date" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:57:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:58:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:59:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:60:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:61:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:62:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:63:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:64:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:65:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:66:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:67:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:68:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:69:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1562671812756</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1562671812756</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562671812756</attribute>
+</metadata>

@@ -1,0 +1,665 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Differentiators" path="/shared/Publish/CustomerProfitability/vp_Differentiators" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>Comments saved during Model Generation 2019/07/23 17:53:22
+--and 
+-- vc_Diff_Value.DFR_ID =&apos;NS&apos; and 
+-- vc_Diff_Value.DFV_LATESTVERSN_IN =&apos;Y&apos;
+</annotation>
+  <columns>
+    <column name="DFD_SRKY_ID_1" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DFD_SRKY_ID_2" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WSL_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Speed" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="International_Domestic" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Palletised_Indicator" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Terms_of_Payment" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Weightband" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_2" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_4" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_6" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_8" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_10" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DFD_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DFV_VALUE_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Network_Service_Level_Description" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Baggable_Conveyable_NonConveyable" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EU_Zone" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Time_Definite_Delivery" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PUD_Handling_Weightband" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_1" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_3" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_5" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_7" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPS_Status_Group_9" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DFD_SRKY_ID_21" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Costed&amp;Groupset" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INV_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_INVOICE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="WGT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OUP_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Customer_Account_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OUP_LATESTENTRY_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_ACC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_INV">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DIV_INVDIVISION_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_RATING_CALC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RCT_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RZO_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="PFT_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ACC_ID_APPLIC">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ID_APPLIC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DFD_SRKY_ID_1">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFD_SRKY_ID_2">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WSL_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV1">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV2">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV3">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV4">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOB_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_INVPRODUCT_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CM_STR_LVL1_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL1_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL5_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL5_ID">
+        <datatype type="STRING" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="Invoicing_Region">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="COU_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ACTUAL">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="OUP_COSTED_STAT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_COSTED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="STT_ID_LATEST">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Billing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Billing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Destination_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Origin_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Partner_Country">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Cubic_Conversion_Factor">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Direction_of_Trade">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Entry_Type">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Invoice_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Mode_of_Transport">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SDS_Currency">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Value_of_Goods_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Terms_of_Payment_cd">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Tariff_Type">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_NOTE_SRC_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_PCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="OUP_DCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONTYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_DIFF_CODE" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Product_Speed">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="International_Domestic">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Palletised_Indicator">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Terms_of_Payment">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Con_Weightband">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_2">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_4">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_6">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_8">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_10">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DFD_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Diff_List" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="c2">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="EU_Zone">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Time_Definite_Delivery">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PUD_Handling_Weightband">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_1">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_3">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_5">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_7">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OPS_Status_Group_9">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DFD_SRKY_ID_2">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Diff_Value" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DFV_VALUE_CD">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Network_Service_Level_Description">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="DFR_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DFV_LATESTVERSN_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_Costed_Groupset.DFD_SRKY_ID_1, 
+    vc_Costed_Groupset.DFD_SRKY_ID_2, 
+    vc_Costed_Groupset.WSL_ID, 
+    vc_DIFF_CODE.Product_Speed, 
+    vc_DIFF_CODE.International_Domestic, 
+    vc_DIFF_CODE.Palletised_Indicator, 
+    vc_DIFF_CODE.Terms_of_Payment, 
+    vc_DIFF_CODE.Con_Weightband, 
+    vc_DIFF_CODE.OPS_Status_Group_2, 
+    vc_DIFF_CODE.OPS_Status_Group_4, 
+    vc_DIFF_CODE.OPS_Status_Group_6, 
+    vc_DIFF_CODE.OPS_Status_Group_8, 
+    vc_DIFF_CODE.OPS_Status_Group_10, 
+    vc_DIFF_CODE.DFD_SRKY_ID, 
+    vc_Diff_Value.DFV_VALUE_CD, 
+    vc_Diff_Value.Network_Service_Level_Description, 
+    vc_Diff_List.c2 Baggable_Conveyable_NonConveyable, 
+    vc_Diff_List.EU_Zone, 
+    vc_Diff_List.Time_Definite_Delivery, 
+    vc_Diff_List.PUD_Handling_Weightband, 
+    vc_Diff_List.OPS_Status_Group_1, 
+    vc_Diff_List.OPS_Status_Group_3, 
+    vc_Diff_List.OPS_Status_Group_5, 
+    vc_Diff_List.OPS_Status_Group_7, 
+    vc_Diff_List.OPS_Status_Group_9, 
+    vc_Diff_List.DFD_SRKY_ID_2 DFD_SRKY_ID_21
+FROM      
+    /shared/Core/Finance/CustomerProfitability/&quot;vc_Costed&amp;Groupset&quot; vc_Costed_Groupset LEFT OUTER JOIN 
+        /shared/Core/Finance/CustomerProfitability/vc_DIFF_CODE vc_DIFF_CODE
+    ON vc_Costed_Groupset.DFD_SRKY_ID_1 = vc_DIFF_CODE.DFD_SRKY_ID LEFT OUTER JOIN 
+        /shared/Core/Finance/CustomerProfitability/vc_Diff_Value vc_Diff_Value
+    ON (vc_Costed_Groupset.WSL_ID = vc_Diff_Value.DFV_VALUE_CD AND 
+        &apos;NS&apos; = vc_Diff_Value.DFR_ID) AND 
+        &apos;Y&apos; = vc_Diff_Value.DFV_LATESTVERSN_IN LEFT OUTER JOIN 
+        /shared/Core/Finance/CustomerProfitability/vc_Diff_List vc_Diff_List
+    ON vc_Costed_Groupset.DFD_SRKY_ID_2 = vc_Diff_List.DFD_SRKY_ID_2</attribute>
+  <attribute name="creationDate" type="LONG">1563881337047</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565777070076</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAcQUQYBABIAdgBjAF8AQwBvAHMAdABlAGQAJgBHAHIAbwB1AHAAcwBlAHQGAgASAHYA
+YwBfAEMAbwBzAHQAZQBkAF8ARwByAG8AdQBwAHMAZQB0Awv/////Awr/////Awz/////CxEABQAG
+AHMAaABhAHIAZQBkAAQAQwBvAHIAZQAHAEYAaQBuAGEAbgBjAGUAFQBDAHUAcwB0AG8AbQBlAHIA
+UAByAG8AZgBpAHQAYQBiAGkAbABpAHQAeQASAHYAYwBfAEMAbwBzAHQAZQBkACYARwByAG8AdQBw
+AHMAZQB0//8QUQYBAAwAdgBjAF8ARABpAGYAZgBfAEwAaQBzAHQGAgAMAHYAYwBfAEQAaQBmAGYA
+XwBMAGkAcwB0Awv/////Awr/////Awz/////CxEABQAGAHMAaABhAHIAZQBkAAQAQwBvAHIAZQAH
+AEYAaQBuAGEAbgBjAGUAFQBDAHUAcwB0AG8AbQBlAHIAUAByAG8AZgBpAHQAYQBiAGkAbABpAHQA
+eQAMAHYAYwBfAEQAaQBmAGYAXwBMAGkAcwB0//8QUQYBAAwAdgBjAF8ARABJAEYARgBfAEMATwBE
+AEUGAgAMAHYAYwBfAEQASQBGAEYAXwBDAE8ARABFAwv/////Awr/////Awz/////CxEABQAGAHMA
+aABhAHIAZQBkAAQAQwBvAHIAZQAHAEYAaQBuAGEAbgBjAGUAFQBDAHUAcwB0AG8AbQBlAHIAUABy
+AG8AZgBpAHQAYQBiAGkAbABpAHQAeQAMAHYAYwBfAEQASQBGAEYAXwBDAE8ARABF//8QUQYBAA0A
+dgBjAF8ARABpAGYAZgBfAFYAYQBsAHUAZQYCAA0AdgBjAF8ARABpAGYAZgBfAFYAYQBsAHUAZQML
+/////wMK/////wMM/////wsRAAUABgBzAGgAYQByAGUAZAAEAEMAbwByAGUABwBGAGkAbgBhAG4A
+YwBlABUAQwB1AHMAdABvAG0AZQByAFAAcgBvAGYAaQB0AGEAYgBpAGwAaQB0AHkADQB2AGMAXwBE
+AGkAZgBmAF8AVgBhAGwAdQBl//8QUwYJAAoATABFAEYAVAAgAE8AVQBUAEUAUgMNAAAAAAMOAAAA
+AggPEGIGBwABAD0BBQAIAxBBBgEADQBEAEYARABfAFMAUgBLAFkAXwBJAEQAXwAxBgIAAAYD//8G
+BP//Awr/////CAwQGQMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//wgEEEEGAQAL
+AEQARgBEAF8AUwBSAEsAWQBfAEkARAYCAAAGA///BgT//wMK/////wgMEBkDEgAAAAEEB/////+A
+AAAABAYAAAAAf///////AwsAAAAC////////EFMGCQAKAEwARQBGAFQAIABPAFUAVABFAFIDDQAA
+AAQDDgAAAAMIDxBhAQUAAQYACAEQYQEFAAEGAAgBEGIGBwABAD0BBQAIAxBBBgEABgBXAFMATABf
+AEkARAYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAADBAQAAAAAAAAAAwETAf//
+AwsAAAAA//8IBBBBBgEADABEAEYAVgBfAFYAQQBMAFUARQBfAEMARAYCAAAGA///BgT//wMK////
+/wgMEBsDEgAAAAEEBQAAAAAAAAAKBAQAAAAAAAAACgETAf//AwsAAAAD/////wgCEGIGBwABAD0B
+BQAIAxBDBgIAAAoOEBsGAgAEAEMASABBAFIDEgAAAAEBOwAEBQAAAAAAAAACBAQAAAAAAAAAAgET
+Af//EAAAAAJOU///CAQQQQYBAAYARABGAFIAXwBJAEQGAgAABgP//wYE//8DCv////8IDBAbAxIA
+AAABBAUAAAAAAAAAAgQEAAAAAAAAAAIBEwH//wMLAAAAA////////wgCEGIGBwABAD0BBQAIAxBD
+BgIAAAoOEBsGAgAEAEMASABBAFIDEgAAAAEBOwAEBQAAAAAAAAABBAQAAAAAAAAAAQETAf//EAAA
+AAFZ//8IBBBBBgEAEgBEAEYAVgBfAEwAQQBUAEUAUwBUAFYARQBSAFMATgBfAEkATgYCAAAGA///
+BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAABBAQAAAAAAAAAAQETAf//AwsAAAAD////////
+//8QUwYJAAoATABFAEYAVAAgAE8AVQBUAEUAUgMNAAAABQMOAAAAAQgPEGIGBwABAD0BBQAIAxBB
+BgEADQBEAEYARABfAFMAUgBLAFkAXwBJAEQAXwAyBgIAAAYD//8GBP//Awr/////CAwQGQMSAAAA
+AQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//wgEEEEGAQANAEQARgBEAF8AUwBSAEsAWQBf
+AEkARABfADIGAgAABgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH//////
+/wMLAAAAAf///////wMFAAAAAwgCEDEGAf//AQIBAQYAAQMAAQQAAQUAAwcAAAAABwkAAAABAAAA
+BgkKAAAAGhBBBgEADQBEAEYARABfAFMAUgBLAFkAXwBJAEQAXwAxBgIAAAYD//8GBP//Awr/////
+CAwQGQMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//xBBBgEADQBEAEYARABfAFMA
+UgBLAFkAXwBJAEQAXwAyBgIAAAYD//8GBP//Awr/////CAwQGQMSAAAAAQQH/////4AAAAAEBgAA
+AAB///////8DCwAAAAD//xBBBgEABgBXAFMATABfAEkARAYCAAAGA///BgT//wMK/////wgMEBsD
+EgAAAAEEBQAAAAAAAAADBAQAAAAAAAAAAwETAf//AwsAAAAA//8QQQYBAA0AUAByAG8AZAB1AGMA
+dABfAFMAcABlAGUAZAYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAAeBAQAAAAA
+AAAAHgETAf//AwsAAAAC//8QQQYBABYASQBuAHQAZQByAG4AYQB0AGkAbwBuAGEAbABfAEQAbwBt
+AGUAcwB0AGkAYwYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAAeBAQAAAAAAAAA
+HgETAf//AwsAAAAC//8QQQYBABQAUABhAGwAbABlAHQAaQBzAGUAZABfAEkAbgBkAGkAYwBhAHQA
+bwByBgIAAAYD//8GBP//Awr/////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8D
+CwAAAAL//xBBBgEAEABUAGUAcgBtAHMAXwBvAGYAXwBQAGEAeQBtAGUAbgB0BgIAAAYD//8GBP//
+Awr/////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAL//xBBBgEADgBD
+AG8AbgBfAFcAZQBpAGcAaAB0AGIAYQBuAGQGAgAABgP//wYE//8DCv////8IDBAbAxIAAAABBAUA
+AAAAAAAAHgQEAAAAAAAAAB4BEwH//wMLAAAAAv//EEEGAQASAE8AUABTAF8AUwB0AGEAdAB1AHMA
+XwBHAHIAbwB1AHAAXwAyBgIAAAYD//8GBP//Awr/////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAA
+AAAAAAAeARMB//8DCwAAAAL//xBBBgEAEgBPAFAAUwBfAFMAdABhAHQAdQBzAF8ARwByAG8AdQBw
+AF8ANAYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAAeBAQAAAAAAAAAHgETAf//
+AwsAAAAC//8QQQYBABIATwBQAFMAXwBTAHQAYQB0AHUAcwBfAEcAcgBvAHUAcABfADYGAgAABgP/
+/wYE//8DCv////8IDBAbAxIAAAABBAUAAAAAAAAAHgQEAAAAAAAAAB4BEwH//wMLAAAAAv//EEEG
+AQASAE8AUABTAF8AUwB0AGEAdAB1AHMAXwBHAHIAbwB1AHAAXwA4BgIAAAYD//8GBP//Awr/////
+CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAL//xBBBgEAEwBPAFAAUwBf
+AFMAdABhAHQAdQBzAF8ARwByAG8AdQBwAF8AMQAwBgIAAAYD//8GBP//Awr/////CAwQGwMSAAAA
+AQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAL//xBBBgEACwBEAEYARABfAFMAUgBLAFkA
+XwBJAEQGAgAABgP//wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH///////wML
+AAAAAv//EEEGAQAMAEQARgBWAF8AVgBBAEwAVQBFAF8AQwBEBgIAAAYD//8GBP//Awr/////CAwQ
+GwMSAAAAAQQFAAAAAAAAAAoEBAAAAAAAAAAKARMB//8DCwAAAAP//xBBBgEAIQBOAGUAdAB3AG8A
+cgBrAF8AUwBlAHIAdgBpAGMAZQBfAEwAZQB2AGUAbABfAEQAZQBzAGMAcgBpAHAAdABpAG8AbgYC
+AAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAAeBAQAAAAAAAAAHgETAf//AwsAAAAD
+//8QQQYBAAIAYwAyBgIAIQBCAGEAZwBnAGEAYgBsAGUAXwBDAG8AbgB2AGUAeQBhAGIAbABlAF8A
+TgBvAG4AQwBvAG4AdgBlAHkAYQBiAGwAZQYD//8GBP//Awr/////CAwQGwMSAAAAAQQFAAAAAAAA
+AB4EBAAAAAAAAAAeARMB//8DCwAAAAH//xBBBgEABwBFAFUAXwBaAG8AbgBlBgIAAAYD//8GBP//
+Awr/////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAH//xBBBgEAFgBU
+AGkAbQBlAF8ARABlAGYAaQBuAGkAdABlAF8ARABlAGwAaQB2AGUAcgB5BgIAAAYD//8GBP//Awr/
+////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAH//xBBBgEAFwBQAFUA
+RABfAEgAYQBuAGQAbABpAG4AZwBfAFcAZQBpAGcAaAB0AGIAYQBuAGQGAgAABgP//wYE//8DCv//
+//8IDBAbAxIAAAABBAUAAAAAAAAAHgQEAAAAAAAAAB4BEwH//wMLAAAAAf//EEEGAQASAE8AUABT
+AF8AUwB0AGEAdAB1AHMAXwBHAHIAbwB1AHAAXwAxBgIAAAYD//8GBP//Awr/////CAwQGwMSAAAA
+AQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAH//xBBBgEAEgBPAFAAUwBfAFMAdABhAHQA
+dQBzAF8ARwByAG8AdQBwAF8AMwYCAAAGA///BgT//wMK/////wgMEBsDEgAAAAEEBQAAAAAAAAAe
+BAQAAAAAAAAAHgETAf//AwsAAAAB//8QQQYBABIATwBQAFMAXwBTAHQAYQB0AHUAcwBfAEcAcgBv
+AHUAcABfADUGAgAABgP//wYE//8DCv////8IDBAbAxIAAAABBAUAAAAAAAAAHgQEAAAAAAAAAB4B
+EwH//wMLAAAAAf//EEEGAQASAE8AUABTAF8AUwB0AGEAdAB1AHMAXwBHAHIAbwB1AHAAXwA3BgIA
+AAYD//8GBP//Awr/////CAwQGwMSAAAAAQQFAAAAAAAAAB4EBAAAAAAAAAAeARMB//8DCwAAAAH/
+/xBBBgEAEgBPAFAAUwBfAFMAdABhAHQAdQBzAF8ARwByAG8AdQBwAF8AOQYCAAAGA///BgT//wMK
+/////wgMEBsDEgAAAAEEBQAAAAAAAAAeBAQAAAAAAAAAHgETAf//AwsAAAAB//8QQQYBAA0ARABG
+AEQAXwBTAFIASwBZAF8ASQBEAF8AMgYCAA4ARABGAEQAXwBTAFIASwBZAF8ASQBEAF8AMgAxBgP/
+/wYE//8DCv////8IDBAZAxIAAAABBAf/////gAAAAAQGAAAAAH///////wMLAAAAAf////8JBgAA
+AAcQggMKAAAAHgMLAAAAHgMMAAAAyAMNAAAAyP//EIIDCgAAAB4DCwAAARgDDAAAAMgDDQAAAMj/
+/xCCAwoAAAEYAwsAAAAeAwwAAADIAw0AAADI//8QggMKAAACEgMLAAAAHgMMAAAAyAMNAAAAyP//
+EIIDCv////8DC/////8DDP////8DDf///////xCCAwr/////Awv/////Awz/////Aw3///////8Q
+ggMK/////wML/////wMM/////wMN////////CAMQcQMBAAAACwMCAAAAMgkDAAACJhB0AwYAAAAA
+//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHQDBgAAAAH//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAAAv//EHIGBP////8QcwMFAAAA
+AP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYA
+AAAD//8QcgYE/////xBzAwUAAAAC//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHQDBgAAAAT//xByBgT/////EHMDBQAAAAL//xB1AQcB//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAABf//EHIGBP////8QcwMF
+AAAAAv//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+AwYAAAAG//8QcgYE/////xBzAwUAAAAC//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAf//xByBgT/////EHMDBQAAAAL//xB1AQcB//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAACP//EHIGBP////8Q
+cwMFAAAAAv//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0AwYAAAAJ//8QcgYE/////xBzAwUAAAAC//8QdQEHAf//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAr//xByBgT/////EHMDBQAAAAL//xB1AQcB//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAAC///EHIGBP//
+//8QcwMFAAAAAv//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0AwYAAAAM//8QcgYE/////xBzAwUAAAAC//8QdQEHAf//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAA3//xByBgT/////EHMDBQAAAAL//xB1AQcB
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAADv//EHIG
+BP////8QcwMFAAAAA///EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0AwYAAAAP//8QcgYE/////xBzAwUAAAAD//8QdQEHAf//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAABD//xByBgQAIQBCAGEAZwBnAGEAYgBs
+AGUAXwBDAG8AbgB2AGUAeQBhAGIAbABlAF8ATgBvAG4AQwBvAG4AdgBlAHkAYQBiAGwAZf//EHMD
+BQAAAAH//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dAMGAAAAEf//EHIGBP////8QcwMFAAAAAf//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0AwYAAAAS//8QcgYE/////xBzAwUAAAAB//8QdQEHAf//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAABP//xByBgT/////
+EHMDBQAAAAH//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdAMGAAAAFP//EHIGBP////8QcwMFAAAAAf//EHUBBwH//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAV//8QcgYE/////xBzAwUAAAAB//8QdQEHAf//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAABb//xByBgT/
+////EHMDBQAAAAH//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdAMGAAAAF///EHIGBP////8QcwMFAAAAAf//EHUBBwH//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAY//8QcgYE/////xBzAwUAAAAB//8QdQEH
+Af//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAABn//xBy
+BgQADgBEAEYARABfAFMAUgBLAFkAXwBJAEQAXwAyADH//xBzAwUAAAAB//8QdQEHAf//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+/////w==</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563881337047</attribute>
+</metadata>

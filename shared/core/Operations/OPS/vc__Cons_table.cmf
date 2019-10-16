@@ -1,0 +1,1072 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Cons" path="/shared/Core/Operations/OPS/vc_Cons" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Con_Clearance_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Committed_Deliv_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Create_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Create_Time" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Revised_Due_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Time" nullable="true">
+      <datatype type="TIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contr_Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Type_Weight_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Type_Weight_Label" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="16" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Bul_Id_Orig" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Number" nullable="true">
+      <datatype type="STRING" maxLength="15" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Depot_Code_PACS" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Terms_Of_Payment_Actual_Checked_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Terms_Of_Payment_Actual_Checked_Code_Calc" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Value_of_Goods_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Value_of_Goods_Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Gross_Weight_Kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Item_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Volume_m3" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contr_Gross_Weight_Kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contr_Item_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Contr_Volume_m3" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Road_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Trade_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Alternate_Con_Number" nullable="true">
+      <datatype type="STRING" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Awkward_Freight_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cash_On_Delivery_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cash_On_Delivery_Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Check_Volume_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Check_Weight_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Zone_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Clearance_Depot" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Create_Depot" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Source_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_UN_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Reference_Number" nullable="true">
+      <datatype type="STRING" maxLength="24"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Controlled_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Delivery_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Delivery_City_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Doc_Image_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customs_Trade_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Damaged_Con_Image_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Delivery_Zone_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Depot_Action_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dest_Depot_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Goods_Description" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hazardous_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hazardous_Degree_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Insurance_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Insurance_Amount_Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POD_Image_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Premium_Con_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Terms_Of_Payment_Contr_Declared_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Consignment_Key" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unknown_Shipper_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WWTT_Default_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WWTT_Value_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_On_Time_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Classification_1_On_Time_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Classification_2_On_Time_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Collection_Date_Time" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="33" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Date_Time" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="33" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_OS_Status_Depot_Code" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Packing_Description" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_OS_Status_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_BUL_ID" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_AREA_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_COU_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_COUNTRY_GRP_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_COUNTRY_GRP_DS" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_REGION_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_REGION_DS" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ORIG_BUSINESS_UNIT_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_BUL_ID" nullable="true">
+      <datatype type="STRING" maxLength="5" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_AREA_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_COU_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_COUNTRY_GRP_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_COUNTRY_GRP_DS" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_REGION_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_REGION_DS" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEST_BUSINESS_UNIT_CD" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/OPS_CTG/PRODOPS_P/CON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_ID" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_CREATE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_WHOUSE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CON_DG_TRANMODE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DUTIABLE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_COLL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CON_COMM_DELIV_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_MAX_DEL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CND_NOTE_SRC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CON_OPSA_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OPSC_TGRS_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OC_TOT_VL" nullable="false">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CON_OA_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_OC_TITEM_QT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CON_VAL_OF_GDS_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CHK_WT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CHK_VL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DESP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_CTRL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ACT_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEL_ZONE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_ROUTNG_MTHD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PRESET_NET" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_NEUTRAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_AWKFREIGHT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_ACT" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TOP_ID_OPS_CON" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_CUSTSERV" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID_ACTUAL" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PRD_ID_CONTR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CUY_ID_VAL_OF_GDS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_REV_DUE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_CLR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ACN_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_INS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_CLRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_SELF_COLL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_COD_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_COD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DEPOTACTION_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CUST_TRADE_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_COLL_SLVL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_COD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_INS" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_DOMES_DATA_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ID_ALT">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="CON_CLNT_REF_TX">
+        <datatype type="STRING" maxLength="24"/>
+      </element>
+      <element name="CON_GOODS_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CON_PACK_DS">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="HAZ_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_UN_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CON_HAZ_DEGREE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_IN_ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ZON_ADJ_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="CON_MANUAL_RMS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_ARCH_EXMPTD_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_PTYPE_WGT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_DFLT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CUST_DELIV_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_CUST_DEL_CT_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CON_CTMSDOC_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DMGED_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_WWTT_VALUE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ARE_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_COLL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ARE_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="WST_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WSL_ID_DELIV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_OPS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_OPS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMCON_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMPRD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_UKSF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_POD_QTY_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_DLP_PTNR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT1_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACSIMG_OT2_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_PACS_IMG_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CIM_ID_PACS">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_ID_PACS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CIM_SCAN_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CIM_SCAN_LD">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_ID_OS" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="EDW_OS_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="EDW_UNSEND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="EDW_CNCLD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS_CTG/PRODOPS_P/OPPDEPOTREGION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="AREA_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COUNTRY_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COUNTRY_GRP_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="REGION_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="REGION_DS" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUSINESS_UNIT_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="GEN_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OPS_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SQ_MAN_NM" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="TELEPHONE_CD" nullable="false">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="ORG_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_LATE_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_LATE_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="ORG_OUT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_OUT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMB_OT_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMB_FAIL_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="DST_POD_PC" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT   
+CON_CLRD_DT as &quot;Con_Clearance_Date&quot;,
+CON_COLL_DT  as &quot;Con_Collection_Date&quot;,
+CON_COLL_TM  as &quot;Con_Collection_Time&quot;,
+CON_COMM_DELIV_DT as  &quot;Con_Committed_Deliv_Date&quot;,
+CON_CREATE_DT as &quot;Con_Create_Date&quot;,
+CON_CREATE_TM as &quot;Con_Create_Time&quot;,
+CON_REV_DUE_DT as &quot;Con_Revised_Due_Date&quot;,
+CON_MAX_DEL_TM as &quot;Con_Original_Due_Time&quot;,
+CON_MAX_DEL_DT as &quot;Con_Original_Due_Date&quot;,
+DIV_ID as &quot;Division_Code&quot;,
+PRD_ID_ACTUAL as &quot;Actual_Product_Code&quot;,
+PRD_ID_CONTR as &quot;Contr_Product_Code&quot;,
+CON_PTYPE_WGT_CD as &quot;Product_Type_Weight_Code&quot;,
+case when 	CON_PTYPE_WGT_CD=&apos;D&apos; then &apos;Documents&apos; when CON_PTYPE_WGT_CD=&apos;P&apos; then &apos;Parcels &lt; 30 Kgs&apos;
+when CON_PTYPE_WGT_CD=&apos;F&apos; then &apos;Freight &gt; 30 Kgs&apos; else &apos;Undefined&apos; end as &quot;Product_Type_Weight_Label&quot;,
+trim(BUL_ID_CON_ORIG) &quot;Bul_Id_Orig&quot;,
+trim(CON_ID) as &quot;Con_Number&quot;,
+trim(BUL_ID_ORIG) &quot;Origin_Depot_Code&quot;,
+trim(BUL_ID_DEST) &quot;Destination_Depot_Code&quot;,
+trim(BUL_ID_PACS) &quot;Depot_Code_PACS&quot;,
+TOP_ID_OPS_ACT as &quot;Terms_Of_Payment_Actual_Checked_Code&quot;,
+case when TOP_ID_OPS_ACT  =  &apos;S&apos; then &apos;S&apos; else &apos;R&apos;end &quot;Terms_Of_Payment_Actual_Checked_Code_Calc&quot;,
+CON_VAL_OF_GDS_AM &quot;Value_of_Goods_Amount&quot;,
+CUY_ID_VAL_OF_GDS &quot;Value_of_Goods_Currency_Code&quot;,  
+CON_OPSA_TGRS_WT &quot;Actual_Gross_Weight_Kg&quot;,
+ 
+CON_OA_TITEM_QT &quot;Actual_Item_Quantity&quot;,
+CON_OA_TOT_VL &quot;Actual_Volume_m3&quot;, 
+CON_OPSC_TGRS_WT  &quot;Contr_Gross_Weight_Kg&quot;,
+CON_OC_TITEM_QT  &quot;Contr_Item_Quantity&quot;,
+CON_OC_TOT_VL  &quot;Contr_Volume_m3&quot;,
+CON_PRESET_NET &quot;Air_Road_Indicator&quot;,
+CON_ACT_TRADE_CD &quot;Actual_Trade_Status_Code&quot;,
+CON_ID_ALT	&quot;Alternate_Con_Number&quot;,
+CON_AWKFREIGHT_IN &quot;Awkward_Freight_Indicator&quot;,
+CON_COD_AM	&quot;Cash_On_Delivery_Amount&quot;,
+CUY_ID_COD &quot;Cash_On_Delivery_Currency_Code&quot;,
+CON_CHK_VL_IN &quot;Check_Volume_Indicator&quot;,
+CON_CHK_WT_IN &quot;Check_Weight_Indicator&quot;,
+CON_COLL_ZONE_CD &quot;Collection_Zone_Code&quot;,
+trim(BUL_ID_CLR) &quot;Con_Clearance_Depot&quot;,
+trim(BUL_ID_ORIG) &quot;Con_Create_Depot&quot;,
+CND_NOTE_SRC_CD &quot;Con_Source_Code&quot;,
+CON_UN_CD  &quot;Con_UN_Code&quot;,
+CON_CLNT_REF_TX	 &quot;Customer_Reference_Number&quot;,
+CON_CUST_CTRL_IN  &quot;Customs_Controlled_Indicator&quot;,
+CON_CUST_DELIV_CD &quot;Customs_Delivery_Code&quot;,
+CON_CUST_DEL_CT_NM &quot;Customs_Delivery_City_Name&quot;,
+CON_CTMSDOC_IMG_IN &quot;Customs_Doc_Image_Indicator&quot;,
+CON_CUST_TRADE_CD &quot;Customs_Trade_Status_Code&quot;,
+CON_DMGED_IMG_IN &quot;Damaged_Con_Image_Indicator&quot;,
+CON_DEL_ZONE_CD	 &quot;Delivery_Zone_Code&quot;,
+CON_DEPOTACTION_DT	&quot;Depot_Action_Date&quot;,
+trim(BUL_ID_DEST)	 &quot;Dest_Depot_Code&quot;,
+CON_GOODS_DS  &quot;Goods_Description&quot;,
+HAZ_CD	&quot;Hazardous_Code&quot;,
+CON_HAZ_DEGREE_CD &quot;Hazardous_Degree_Code&quot;,
+CON_INS_AM &quot;Insurance_Amount&quot;,
+CUY_ID_INS	&quot;Insurance_Amount_Currency_Code&quot;,
+CON_POD_IMG_IN &quot;POD_Image_Indicator&quot;,
+CON_OPS_PREMCON_IN	 &quot;Premium_Con_Indicator&quot;,
+TOP_ID_OPS_CON	&quot;Terms_Of_Payment_Contr_Declared_Code&quot;,
+CON_SRKY_ID	 &quot;Unique_Consignment_Key&quot;,
+CON_UKSF_IN	  &quot;Unknown_Shipper_Indicator&quot;,
+CON_WWTT_DFLT_IN  &quot;WWTT_Default_Indicator&quot;,
+CON_WWTT_VALUE_CD	&quot;WWTT_Value_Code&quot;,
+CIM_ID_PACS &quot;Con_PACS_Image_Number&quot;,
+EDW_PACS_IMG_IN &quot;Con_PACS_Image_Indicator&quot;,
+EDW_PACS_IMG_CD &quot;Con_PACS_Image_On_Time_Code&quot;,
+EDW_PACSIMG_OT1_IN &quot;Con_PACS_Image_Classification_1_On_Time_Indicator&quot;,
+EDW_PACSIMG_OT2_IN &quot;Con_PACS_Image_Classification_2_On_Time_Indicator&quot;,
+CIM_SCAN_LD &quot;Con_PACS_Image_Date&quot;,
+case when CON_COLL_TM is NULL then 
+CON_COLL_DT || &apos;00:00:00&apos;
+else
+CON_COLL_DT || &apos; &apos; || CON_COLL_TM end as &quot;Con_Collection_Date_Time&quot;,
+case when CON_MAX_DEL_TM is NULL then 
+CON_MAX_DEL_DT || &apos;00:00:00&apos;
+else
+CON_MAX_DEL_DT || &apos; &apos; || CON_MAX_DEL_TM end as &quot;Con_Original_Due_Date_Time&quot;,
+trim(BUL_ID_OS) &quot;Con_OS_Status_Depot_Code&quot; ,
+con_pack_ds &quot;Packing_Description&quot;,
+CIM_SCAN_LT &quot;Con_PACS_Image_Date_Time&quot; ,
+EDW_OS_LT &quot;Con_OS_Status_Date_Time&quot;  ,
+trim(t1.BUL_ID) &quot;ORIG_BUL_ID&quot;,
+--T2.BUL_NM &quot;BUL_NM&quot;,
+t1.AREA_CD &quot;ORIG_AREA_CD&quot;,
+t1.COU_ID &quot;ORIG_COU_ID&quot;,
+t1.COUNTRY_GRP_CD &quot;ORIG_COUNTRY_GRP_CD&quot;,
+t1.COUNTRY_GRP_DS &quot;ORIG_COUNTRY_GRP_DS&quot;,
+t1.REGION_CD &quot;ORIG_REGION_CD&quot;,
+t1.REGION_DS &quot;ORIG_REGION_DS&quot;,
+t1.BUSINESS_UNIT_CD  &quot;ORIG_BUSINESS_UNIT_CD&quot;,
+trim(t2.BUL_ID) &quot;DEST_BUL_ID&quot;,
+--T2.BUL_NM &quot;BUL_NM&quot;,
+t2.AREA_CD &quot;DEST_AREA_CD&quot;,
+t2.COU_ID &quot;DEST_COU_ID&quot;,
+t2.COUNTRY_GRP_CD &quot;DEST_COUNTRY_GRP_CD&quot;,
+t2.COUNTRY_GRP_DS &quot;DEST_COUNTRY_GRP_DS&quot;,
+t2.REGION_CD &quot;DEST_REGION_CD&quot;,
+t2.REGION_DS &quot;DEST_REGION_DS&quot;,
+t2.BUSINESS_UNIT_CD  &quot;DEST_BUSINESS_UNIT_CD&quot;
+
+from /shared/Source/EDW/OPS_CTG/PRODOPS_P/CON_V01 con
+INNER JOIN  /shared/Source/EDW/OPS_CTG/PRODOPS_P/OPPDEPOTREGION_V01 t1
+ON  con.bul_id_con_orig=t1.bul_id     
+INNER JOIN  /shared/Source/EDW/OPS_CTG/PRODOPS_P/OPPDEPOTREGION_V01 t2
+ON  con.bul_id_dest=t2.bul_id
+
+
+
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1563191616255</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1570199760875</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">w256kvj</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING"/>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Core/Operations/OPS/vc_Cons</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563191616255</attribute>
+</metadata>

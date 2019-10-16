@@ -1,0 +1,2304 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="pp_GLPlusInterfaceErrorReporting" path="/shared/Core/SpecialServices/GLPlusInterfaceErrorReporting/pp_GLPlusInterfaceErrorReporting" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
+  <annotation>Row Level Security Filter Policy
+
+Inputs:
+	Alias		The SQL alias to be used for the table to which this policy has been assigned
+	Result		The SQL predicate to be added to the consuming SQLs WHERE clause
+</annotation>
+  <parameters>
+    <parameter name="alias" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="255"/>
+    </parameter>
+    <parameter name="resource" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ EXECUTE"/>
+    <privilege group="all" domain="composite" privileges="READ EXECUTE"/>
+    <privilege group="all" domain="dynamic" privileges="READ EXECUTE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE EXECUTE"/>
+  </security>
+  <dependency target="/lib/users/TestUserIdentity" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="type" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="name" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="domain" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype type="BOOLEAN"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="RbsFilterPolicy" type="STRING">&lt;ns1:FilterPolicy xmlns:ns1=&quot;http://www.compositesw.com/services/system/util/security&quot;&gt;&lt;ns1:name&gt;pp_GLPlusInterfaceErrorReporting&lt;/ns1:name&gt;&lt;ns1:folder&gt;/shared/Core/SpecialServices/GLPlusInterfaceErrorReporting&lt;/ns1:folder&gt;&lt;ns1:enabled&gt;true&lt;/ns1:enabled&gt;&lt;ns1:form&gt;RULE&lt;/ns1:form&gt;&lt;ns1:defaultRule&gt;&lt;ns1:filter&gt;ALL&lt;/ns1:filter&gt;&lt;/ns1:defaultRule&gt;&lt;ns1:memberRuleList&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ad&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ae&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.af&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ag&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ai&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.al&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.am&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.an&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ao&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ar&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.as&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.at&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.au&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.aw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.az&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%AZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ba&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bb&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BB%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bd&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.be&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bi&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BJ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bo&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bq&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BQ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.br&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bs&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.by&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.bz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%BZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ca&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cd&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ch&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ci&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ck&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.co&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cx&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CX%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cy&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.cz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%CZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.de&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.dj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DJ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.dk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.dm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.do&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.dz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%DZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ec&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%EC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ee&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%EE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.eg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%EG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.eh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%EH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.er&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ER%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.es&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ES%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.et&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ET%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fi&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FJ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fo&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.fr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%FR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ga&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gb&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GB%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gd&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ge&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gi&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gp&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GP%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gq&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GQ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gs&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.gy&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%GY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.hk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.hm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.hn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.hr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ht&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.hu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%HU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.id&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ID%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ie&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.il&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.im&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.in&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.io&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.iq&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IQ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ir&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.is&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.it&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%IT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.je&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%JE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.jm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%JM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.jo&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%JO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.jp&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%JP%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ke&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ki&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.km&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kp&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KP%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ky&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.kz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%KZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.la&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lb&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LB%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.li&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ls&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.lv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ly&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%LY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ma&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.md&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.me&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ME%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ml&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ML%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mo&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mp&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MP%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mq&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MQ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ms&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mx&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MX%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.my&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.mz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%MZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.na&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ne&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ng&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ni&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.no&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.np&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NP%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.nz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%NZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.om&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%OM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pa&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pe&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ph&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ps&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pt&lt;/ns1:name&gt;&lt;ns1:type&gt;USER&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.pw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.py&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%PY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.qa&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%QA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.re&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%RE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ro&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%RO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.rs&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%RS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ru&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%RU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.rw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%RW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sa&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sb&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SB%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sd&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.se&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sh&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.si&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SJ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.so&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ss&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.st&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ST%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sx&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SX%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sy&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.sz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%SZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.td&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TD%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.th&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TH%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tj&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TJ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tl&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TL%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.to&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TO%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tr&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TR%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tv&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TV%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.tz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%TZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ua&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%UA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ug&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%UG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.um&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%UM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.us&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%US%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.uy&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%UY%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.uz&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%UZ%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.va&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.vc&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VC%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ve&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.vg&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VG%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.vi&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VI%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.vn&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VN%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.vu&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%VU%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.wf&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%WF%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ws&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%WS%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.ye&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%YE%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.yk&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%YK%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.yt&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%YT%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.za&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ZA%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.zm&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ZM%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;ns1:memberRule&gt;&lt;ns1:member&gt;&lt;ns1:domain&gt;composite&lt;/ns1:domain&gt;&lt;ns1:name&gt;geo.cou.zw&lt;/ns1:name&gt;&lt;ns1:type&gt;GROUP&lt;/ns1:type&gt;&lt;/ns1:member&gt;&lt;ns1:filter&gt;PREDICATE&lt;/ns1:filter&gt;&lt;ns1:data&gt;country_filter like &amp;apos;%ZW%&amp;apos;&lt;/ns1:data&gt;&lt;/ns1:memberRule&gt;&lt;/ns1:memberRuleList&gt;&lt;ns1:assignmentList&gt;&lt;/ns1:assignmentList&gt;&lt;/ns1:FilterPolicy&gt;</attribute>
+  <attribute name="Script" type="STRING">PROCEDURE &quot;pp_GLPlusInterfaceErrorReporting&quot; (IN alias VARCHAR, IN resource VARCHAR(16384), OUT result VARCHAR(16384))
+BEGIN
+	DECLARE temp VARCHAR;
+	DECLARE test BOOLEAN;
+	SET result = &apos;&apos;;
+	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ad&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET result = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AD%&apos;&apos;)&apos;;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ae&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.af&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ag&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ai&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.al&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.am&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.an&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ao&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ar&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.as&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.at&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.au&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.aw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.az&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%AZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ba&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bb&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BB%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bd&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.be&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bi&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BJ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bo&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bq&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BQ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.br&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bs&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.by&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.bz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%BZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ca&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cd&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ch&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ci&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ck&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.co&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cx&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CX%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cy&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.cz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%CZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.de&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.dj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DJ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.dk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.dm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.do&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.dz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%DZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ec&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%EC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ee&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%EE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.eg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%EG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.eh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%EH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.er&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ER%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.es&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ES%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.et&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ET%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fi&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FJ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fo&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.fr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%FR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ga&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gb&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GB%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gd&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ge&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gi&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gp&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GP%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gq&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GQ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gs&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.gy&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%GY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.hk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.hm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.hn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.hr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ht&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.hu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%HU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.id&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ID%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ie&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.il&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.im&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.in&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.io&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.iq&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IQ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ir&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.is&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.it&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%IT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.je&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%JE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.jm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%JM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.jo&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%JO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.jp&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%JP%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ke&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ki&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.km&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kp&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KP%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ky&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.kz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%KZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.la&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lb&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LB%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.li&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ls&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.lv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ly&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%LY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ma&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.md&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.me&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ME%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ml&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ML%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.mo&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mp&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MP%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mq&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MQ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.ms&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mx&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MX%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.my&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.mz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%MZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.na&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ne&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ng&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ni&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.no&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.np&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NP%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.nz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%NZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.om&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%OM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pa&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pe&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ph&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ps&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;USER&apos;,&apos;geo.cou.pt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.pw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.py&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%PY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.qa&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%QA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.re&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%RE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ro&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%RO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.rs&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%RS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ru&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%RU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.rw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%RW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sa&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sb&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SB%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sd&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.se&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sh&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.si&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SJ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.so&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ss&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.st&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ST%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sx&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SX%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sy&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.sz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%SZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.td&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TD%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.th&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TH%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tj&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TJ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tl&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TL%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.to&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TO%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tr&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TR%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tv&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TV%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.tz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%TZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ua&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%UA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ug&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%UG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.um&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%UM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.us&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%US%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.uy&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%UY%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.uz&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%UZ%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.va&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.vc&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VC%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ve&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.vg&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VG%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.vi&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VI%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.vn&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VN%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.vu&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%VU%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.wf&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%WF%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ws&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%WS%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.ye&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%YE%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.yk&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%YK%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.yt&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%YT%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.za&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ZA%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.zm&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ZM%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	CALL /lib/users/TestUserIdentity(&apos;GROUP&apos;,&apos;geo.cou.zw&apos;,&apos;composite&apos;,test);
+	IF(test) THEN 
+		SET temp = &apos;(&apos; || alias || &apos;.country_filter LIKE &apos;&apos;%ZW%&apos;&apos;)&apos;;
+		IF (result = &apos;&apos;) THEN
+			SET result = temp;
+		ELSE
+			SET result = result || &apos; OR &apos; || temp;
+		END IF;
+	END IF;
+ 	IF ( result = &apos;&apos;) THEN
+		SET result = &apos;TRUE&apos;;
+	END IF;
+END
+</attribute>
+  <attribute name="creationDate" type="LONG">1568973769865</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="disallowUIEditing" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1569245808555</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="procedureGenerator" type="STRING">RbsFilterPolicy</attribute>
+  <attribute name="references" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1568973769865</attribute>
+</metadata>

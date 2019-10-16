@@ -1,0 +1,856 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_RoundKPI_Joined" path="/shared/Core/Operations/PUDCM_SSD/RoundKPI/vc_RoundKPI_Joined" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="ROD_ACTIVE_DT" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID" nullable="true">
+      <datatype type="STRING" maxLength="40" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LABOUR_A_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="LABOUR_A_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EQUIPMENT_A_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PLANNING_A_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OTHER_A_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EQUIPMENT_A_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PLANNING_A_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OTHER_A_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COST_B_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COST_T_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COMMUNICATION_A_AM_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COST_B_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COST_T_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_T_QT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ISO_ID" nullable="true">
+      <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STOP_T_QT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COMMUNICATION_A_AM_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_LOC" nullable="true">
+      <datatype type="STRING" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ID" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_KEY" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="25" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RTY_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TTY_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WEEKS_DIFF" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_ROUNDS_OWN" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_ROUNDS_SUB" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_POS_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_NEG_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_POS_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_NEG_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_CONS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_CONS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_TOT_CONS_OWN" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_TOT_CONS_SUB" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_PCS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_PCS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ONROAD_TM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="20" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TOTAL_TM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DISTANCE" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_OWN_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_OWN_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_SUB_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_SUB_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_STD_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_STD_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_NSTD_LOC" nullable="true">
+      <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTUAL_COST_AM_NSTD_EUR" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DOCK_TM_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DOCK_TM_PM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STEM_DISTANCE_FROM_DEPOT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STEM_DISTANCE_TO_DEPOT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PICKUP_WT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DELIVERY_WT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/RoundKPI/vc_RoundBucketKPI" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ROD_ACTIVE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_CSYS_ID">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LABOUR_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="LABOUR_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="EQUIPMENT_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="EQUIPMENT_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="PLANNING_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="PLANNING_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="OTHER_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="OTHER_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_B_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_B_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_T_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_T_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_T_QT">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      </element>
+      <element name="STOP_T_QT">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMMUNICATION_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMMUNICATION_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COU_LOC">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/RoundKPI/vc_RoundKPI" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID">
+        <datatype type="STRING" maxLength="40" trailingSpaces="false"/>
+      </element>
+      <element name="ROD_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_KEY">
+        <datatype type="STRING" minLength="1" maxLength="25" trailingSpaces="false"/>
+      </element>
+      <element name="ROD_ACTIVE_DT">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RTY_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TTY_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="WEEKS_DIFF">
+        <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="NR_ROUNDS_OWN">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="NR_ROUNDS_SUB">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="NR_PICKUP_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_TOT_CONS_OWN">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_TOT_CONS_SUB">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="ONROAD_TM">
+        <datatype type="DECIMAL" maxDigits="20" maxFractionalDigits="0"/>
+      </element>
+      <element name="TOTAL_TM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DISTANCE">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_OWN_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_OWN_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_SUB_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_SUB_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_STD_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_STD_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_NSTD_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_NSTD_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="DOCK_TM_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DOCK_TM_PM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="STEM_DISTANCE_FROM_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="STEM_DISTANCE_TO_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="PICKUP_WT">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+      <element name="DELIVERY_WT">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_LOC">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_RoundKpi_joined" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ROD_ACTIVE_DT">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BUL_CSYS_ID">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LABOUR_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="LABOUR_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="EQUIPMENT_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="PLANNING_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="OTHER_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="EQUIPMENT_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="PLANNING_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="OTHER_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_B_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_T_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMMUNICATION_A_AM_EUR">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_B_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COST_T_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="CON_T_QT">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COU_ISO_ID">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="STOP_T_QT">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COMMUNICATION_A_AM_LOC">
+        <datatype type="DECIMAL" maxDigits="32" maxFractionalDigits="2"/>
+      </element>
+      <element name="COU_LOC">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="ROD_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_KEY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="RTY_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TTY_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="WEEKS_DIFF">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="NR_ROUNDS_OWN">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="NR_ROUNDS_SUB">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="NR_PICKUP_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_TOT_CONS_OWN">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_TOT_CONS_SUB">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="ONROAD_TM">
+        <datatype type="DECIMAL" maxDigits="20" maxFractionalDigits="0"/>
+      </element>
+      <element name="TOTAL_TM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DISTANCE">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_OWN_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_OWN_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_SUB_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_SUB_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_STD_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_STD_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_NSTD_LOC">
+        <datatype type="DECIMAL" maxDigits="22" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM_NSTD_EUR">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="DOCK_TM_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DOCK_TM_PM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="STEM_DISTANCE_FROM_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="STEM_DISTANCE_TO_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="PICKUP_WT">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+      <element name="DELIVERY_WT">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select 
+cast(coalesce(a.ROD_ACTIVE_DT,b.ROD_ACTIVE_DT)as char(10)) as ROD_ACTIVE_DT
+,cast(coalesce(a.BUL_CSYS_ID,b.BUL_CSYS_ID)as varchar(40)) as BUL_CSYS_ID
+,LABOUR_A_AM_LOC
+,LABOUR_A_AM_EUR
+,EQUIPMENT_A_AM_LOC
+,PLANNING_A_AM_LOC
+,OTHER_A_AM_LOC
+,EQUIPMENT_A_AM_EUR
+,PLANNING_A_AM_EUR
+,OTHER_A_AM_EUR
+,COST_B_AM_EUR
+,COST_T_AM_EUR
+,COMMUNICATION_A_AM_EUR
+,COST_B_AM_LOC
+,COST_T_AM_LOC
+,CON_T_QT
+,coalesce(a.COU_ISO_ID,b.COU_ISO_ID)  as COU_ISO_ID
+,STOP_T_QT
+,COMMUNICATION_A_AM_LOC
+,coalesce(a.COU_LOC,b.COU_LOC) as COU_LOC
+,ROD_ID
+,ROD_KEY
+,RTY_ID
+,TTY_ID
+,WEEKS_DIFF
+,NR_ROUNDS_OWN
+,NR_ROUNDS_SUB
+,NR_PICKUP_POS_STOPS
+,NR_PICKUP_NEG_STOPS
+,NR_DELIVERY_POS_STOPS
+,NR_DELIVERY_NEG_STOPS
+,NR_PICKUP_CONS
+,NR_DELIVERY_CONS
+,NR_TOT_CONS_OWN
+,NR_TOT_CONS_SUB
+,NR_PICKUP_PCS
+,NR_DELIVERY_PCS
+,ONROAD_TM
+,TOTAL_TM
+,DISTANCE
+,ROD_ACTUAL_COST_AM_OWN_LOC
+,ROD_ACTUAL_COST_AM_OWN_EUR
+,ROD_ACTUAL_COST_AM_SUB_LOC
+,ROD_ACTUAL_COST_AM_SUB_EUR
+,ROD_ACTUAL_COST_AM_STD_LOC
+,ROD_ACTUAL_COST_AM_STD_EUR
+,ROD_ACTUAL_COST_AM_NSTD_LOC
+,ROD_ACTUAL_COST_AM_NSTD_EUR
+,DOCK_TM_AM
+,DOCK_TM_PM
+,STEM_DISTANCE_FROM_DEPOT
+,STEM_DISTANCE_TO_DEPOT
+,PICKUP_WT
+,DELIVERY_WT
+
+  from /shared/Core/Operations/PUDCM_SSD/RoundKPI/vc_RoundKPI a
+full outer join /shared/Core/Operations/PUDCM_SSD/RoundKPI/vc_RoundBucketKPI   b
+   on  a.ROD_ACTIVE_DT=b.ROD_ACTIVE_DT
+and a.COU_ISO_ID=b.COU_ISO_ID
+and a.bul_csys_id= b.bul_csys_id
+</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_RoundKpi_joined</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557309032991</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565169292178</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557309032991</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/PUDCM_SSD/Round-Kpi/vc_RoundKpi_joined&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562669401000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562671488439</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565169292178</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562671488439</attribute>
+  </trigger>
+</metadata>

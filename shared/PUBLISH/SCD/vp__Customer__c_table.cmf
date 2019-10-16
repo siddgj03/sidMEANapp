@@ -1,0 +1,530 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Customer_c" path="/shared/Publish/SCD/vp_Customer_c" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Identifier" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Nad_Identifier" nullable="true">
+      <datatype type="STRING" minLength="12" maxLength="12"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Delete_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Nad_Delete_Level" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_1" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_2" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_3" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="City" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Post_code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Type" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Province_Or_State_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Province_Or_State_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Telephone_Number_1" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Telephone_Number_2" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fax_Number_1" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fax_Number_2" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Debtor_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NAD_Assign_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VAT_Number" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Top_Level_Account" nullable="true">
+      <datatype type="STRING" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Company_Or_Private_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Remarks" nullable="true">
+      <datatype type="STRING" maxLength="69"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Common_Customer_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Common_Customer_Name" nullable="true">
+      <datatype type="STRING" maxLength="92"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Grouping_Code" nullable="true">
+      <datatype type="STRING" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Core_Segment_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="International_Account_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Profile_Type" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rating_Category" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VAT_Exempt_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Lifecycle_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Grouping_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Publish/SCD/vp_Customer_c01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="LAC_LEGACY_COU_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LAC_LEGACY_ACG_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LAC_LEGACY_NAD_CD">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="CUS_DATA_TYPE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAC_ID">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="LAC_DELETE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Common_Customer_Number">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="Common_Customer_Name">
+        <datatype type="STRING" maxLength="92"/>
+      </element>
+      <element name="Lifecycle_Status_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/SCD/vp_Customer_c02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Nad_Identifier">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Account_Number">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Customer_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Customer_Delete_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Nad_Delete_Level">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Address_Line_1">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Address_Line_2">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Address_Line_3">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="City">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Post_code">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Address_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Address_Type">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Province_Or_State_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Province_Or_State_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Telephone_Number_1">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Telephone_Number_2">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Fax_Number_1">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Fax_Number_2">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Account_Debtor_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NAD_Assign_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="VAT_Number">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Top_Level_Account">
+        <datatype type="STRING" maxLength="9"/>
+      </element>
+      <element name="Company_Or_Private_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Remarks">
+        <datatype type="STRING" maxLength="69"/>
+      </element>
+      <element name="VAT_Exempt_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/SCD/vp_Customer_c03" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ACC_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ACC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ACC_SEGMNTN_GRP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ACC_SEGMNTATION_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/SCD/vp_Customer_c04" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NAD_ID_MAIN">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="ACC_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Division_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Division_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Account_Grouping_Code">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="Customer_Core_Segment_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="International_Account_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Account_Grouping_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Profile_Type">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Rating_Policy">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+T12.CUS_ID as Customer_Number,
+T2.DIV_ID as Division_Identifier, 
+T2.Nad_Identifier,
+T2.Country_Code, 
+T2.Country_Name,
+T2.Account_Number,
+T2.Customer_Name,
+T2.Customer_Delete_Indicator,
+T2.Nad_Delete_Level,
+T2.Address_Line_1,
+T2.Address_Line_2,
+T2.Address_Line_3,
+T2.City,
+T2.Post_code,
+T2.Address_Country_Code,
+T2.Address_Type,
+T2.Province_Or_State_Name,
+T2.Province_Or_State_Code ,
+T2.Telephone_Number_1,
+T2.Telephone_Number_2,
+T2.Fax_Number_1,
+T2.Fax_Number_2,
+T2.Account_Debtor_Code,
+T2.NAD_Assign_Date,
+T2.VAT_Number,
+T2.Top_Level_Account,
+T2.Company_Or_Private_Code,
+T2.Remarks,
+T12.Common_Customer_Number,
+T12.Common_Customer_Name,
+T6.Division_Code,
+T6.Division_Name,
+T6.Account_Grouping_Code,
+T6.Customer_Core_Segment_Description,
+T6.International_Account_Indicator,
+T6.Profile_Type,
+T6.Rating_Policy AS Rating_Category,
+T2.VAT_Exempt_Indicator,
+T12.Lifecycle_Status_Code,
+T6.Account_Grouping_Description
+FROM /shared/Publish/SCD/vp_Customer_c01 T12
+LEFT OUTER JOIN /shared/Publish/SCD/vp_Customer_c02 T2
+ON T2.COU_ID = T12.LAC_LEGACY_COU_CD 
+and T2.ACG_ID = T12.LAC_LEGACY_ACG_CD 
+and T2.Nad_Identifier = T12.LAC_LEGACY_NAD_CD 
+and &apos;Y&apos; &lt;&gt; T12.LAC_DELETE_IN 
+and &apos;CUS&apos; = T12.CUS_DATA_TYPE_CD
+LEFT OUTER JOIN /shared/Publish/SCD/vp_Customer_c04 T6
+ON T2.COU_ID = T6.COU_ID 
+and T2.DIV_ID = T6.DIV_ID 
+and T2.COM_ID = T6.COM_ID 
+and T2.ACG_ID = T6.ACG_ID 
+and T2.Nad_Identifier = T6.NAD_ID_MAIN
+LEFT OUTER JOIN /shared/Publish/SCD/vp_Customer_c03 T14
+ON T6.COU_ID = T14.COU_ID 
+and T6.ACC_ID = T14.ACC_ID 
+and T6.ACG_ID = T14.ACG_ID 
+and CURRENT_DATE between T14.ACC_START_DT and T14.ACC_END_DT and &apos;A&apos; = T14.ACC_SEGMNTN_GRP_CD</attribute>
+  <attribute name="creationDate" type="LONG">1563257194513</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563257194513</attribute>
+</metadata>

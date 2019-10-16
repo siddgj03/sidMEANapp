@@ -1,0 +1,365 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CITKpiCouRep" path="/shared/Publish/OPS_SSD/vp_CITKpiCouRep" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="RelativeTimeCategory" nullable="true">
+      <datatype type="STRING" minLength="25" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryCode" nullable="true">
+      <datatype type="STRING" minLength="25" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CITIndicator" nullable="true">
+      <datatype type="STRING" minLength="25" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DomIntlCode" nullable="true">
+      <datatype type="STRING" minLength="25" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NbrOfCons" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NbrOfAccounts" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBUCode" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBULabel" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBURegionCode" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBURegionLabel" nullable="true">
+      <datatype type="STRING" minLength="33" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBURegionShortName" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupCode" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupLabel" nullable="true">
+      <datatype type="STRING" minLength="33" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroupShortName" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryLabel" nullable="true">
+      <datatype type="STRING" minLength="33" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryShortName" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DomIntDescription" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="FocusWeek" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DteYrwkNKpn" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="RelarelativeTimeLabel" nullable="true">
+      <datatype type="STRING" minLength="17" maxLength="17"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CITAccount" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_DomIntlCode" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_Indicator" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_OrigExrRoll" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_OriginDepots" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_RelativeTime" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Relative_Time_Category AS RelativeTimeCategory,
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Origin_country_Code AS OriginCountryCode,
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.CIT_Indicator AS CITIndicator,
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.DomOrInt_Code AS DomIntlCode,
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Nbr_Of_Cons AS NbrOfCons,
+	Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Nbr_Of_Accounts AS NbrOfAccounts,
+    Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_BU_Code AS OriginBUCode,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_BU_Label AS OriginBULabel,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_BU_Region_Code AS OriginBURegionCode,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_BU_Region_Label AS OriginBURegionLabel,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_BU_Region_Short_Name AS OriginBURegionShortName,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Group_Code AS OriginCountryGroupCode,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Group_Label AS OriginCountryGroupLabel,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Group_Short_Name AS OriginCountryGroupShortName,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Label AS OriginCountryLabel,
+	Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Short_Name AS OriginCountryShortName,
+	Dim_CouRep_DomIntlCode.DomIntDescription,
+	Dim_CIT_Relative_time.Foucs_Week AS FocusWeek,
+	Dim_CIT_Relative_time.Dte_Yrwk_N_Kpn AS DteYrwkNKpn,
+	Dim_CIT_Relative_time.Rela_relative_Time_Label AS RelarelativeTimeLabel,
+	Dim_CouRep_Indicator.CITAccount
+FROM      
+    /shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_OrigExrRoll Dim_CIT_FACT_COU_ORIG_EXR_ROLL LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_RelativeTime Dim_CIT_Relative_time
+    ON Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Relative_Time_Category = Dim_CIT_Relative_time.Relative_Time_Category LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_OriginDepots Dim_CIT_KPI_Cou_Rep_OriginDepots
+    ON Dim_CIT_FACT_COU_ORIG_EXR_ROLL.Origin_country_Code = Dim_CIT_KPI_Cou_Rep_OriginDepots.Origin_Country_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_Indicator Dim_CouRep_Indicator
+    ON Dim_CIT_FACT_COU_ORIG_EXR_ROLL.CIT_Indicator = Dim_CouRep_Indicator.&quot;CIT_ID&quot; LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/CITKPICouRep/vc_DomIntlCode Dim_CouRep_DomIntlCode
+    ON Dim_CIT_FACT_COU_ORIG_EXR_ROLL.DomOrInt_Code = Dim_CouRep_DomIntlCode.&quot;DomIntlCode&quot;
+
+
+</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Cache_DB/TDVDEV_CACHE/TDVDEVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Cache_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Cache_DB/TDVDEV_CACHE/TDVDEVDBA/vp_CITKPICouRep</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557922524141</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">32</attribute>
+  <attribute name="impactMessage" type="STRING">Invalid column name &apos;DomIntDescription&apos;.  On line 18, column 2.  [parser-2900650]</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563789343805</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING">/shared/Publish/OPS_SSD/CITKPICouRep</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/OPS_SSD/vp_CITKpiCouRep</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557922524141</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/OPS_SSD/vp_CITKpiCouRep" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="RelativeTimeCategory">
+          <datatype type="STRING" minLength="25" maxLength="25"/>
+        </element>
+        <element name="OriginCountryCode">
+          <datatype type="STRING" minLength="25" maxLength="25"/>
+        </element>
+        <element name="CITIndicator">
+          <datatype type="STRING" minLength="25" maxLength="25"/>
+        </element>
+        <element name="DomIntlCode">
+          <datatype type="STRING" minLength="25" maxLength="25"/>
+        </element>
+        <element name="NbrOfCons">
+          <datatype type="STRING" minLength="11" maxLength="11" trailingSpaces="false"/>
+        </element>
+        <element name="NbrOfAccounts">
+          <datatype type="STRING" minLength="11" maxLength="11" trailingSpaces="false"/>
+        </element>
+        <element name="OriginBUCode">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="OriginBULabel">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginBURegionCode">
+          <datatype type="STRING" minLength="15" maxLength="15"/>
+        </element>
+        <element name="OriginBURegionLabel">
+          <datatype type="STRING" minLength="33" maxLength="33"/>
+        </element>
+        <element name="OriginBURegionShortName">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginCountryGroupCode">
+          <datatype type="STRING" minLength="20" maxLength="20"/>
+        </element>
+        <element name="OriginCountryGroupLabel">
+          <datatype type="STRING" minLength="33" maxLength="33"/>
+        </element>
+        <element name="OriginCountryGroupShortName">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginCountryLabel">
+          <datatype type="STRING" minLength="33" maxLength="33"/>
+        </element>
+        <element name="OriginCountryShortName">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+        <element name="DomIntDescription">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="FocusWeek">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+        <element name="DteYrwkNKpn">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+        <element name="RelarelativeTimeLabel">
+          <datatype type="STRING" minLength="17" maxLength="17"/>
+        </element>
+        <element name="CITAccount">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/OPS_SSD/vp_CITKpiCouRep&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1557926311000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1557928266381</attribute>
+    <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+    <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+    <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562323158713</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557928266381</attribute>
+  </trigger>
+</metadata>

@@ -1,0 +1,134 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_MarketParent" path="/shared/Publish/CustomerProfitability/vp_MarketParent" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="IMP_Code" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="IMP_Description" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DMU_Code" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DMU_Description" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ID" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COM_ID" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ACG_ID" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NAD_ID" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/BUSINFNADSET_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NAD_ID" nullable="false">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="IMP_ID">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="IMP_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BG_ID">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="BG_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DMU_ID">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="DMU_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SIC_ID">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="SIC_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SECOND_SIC_ID">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="SECOND_SIC_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    BUSINFNADSET_V01.IMP_ID IMP_Code, 
+    BUSINFNADSET_V01.IMP_DS IMP_Description, 
+    BUSINFNADSET_V01.DMU_ID DMU_Code, 
+    BUSINFNADSET_V01.DMU_DS DMU_Description, 
+ BUSINFNADSET_V01.DMU_DS COU_ID,
+ BUSINFNADSET_V01.DMU_DS COM_ID,
+ BUSINFNADSET_V01.DMU_DS ACG_ID,
+ BUSINFNADSET_V01.DMU_DS NAD_ID
+FROM      
+    /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/BUSINFNADSET_V01 BUSINFNADSET_V01</attribute>
+  <attribute name="creationDate" type="LONG">1563798022480</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565779879301</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563798022480</attribute>
+</metadata>

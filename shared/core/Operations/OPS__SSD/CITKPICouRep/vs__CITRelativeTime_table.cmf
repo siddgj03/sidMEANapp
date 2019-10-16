@@ -1,0 +1,391 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vs_CITRelativeTime" path="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITRelativeTime" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="FOCUS_WEEK" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="RELATIVE_TIME_CATEGORY" nullable="true">
+      <datatype type="STRING" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DTE_YRWK_NR_KPN" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/lib/sources/cacheDataSource" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/lib/sources/cacheDataSource/view77825" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="FOCUS_WEEK">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+      X.FOCUS_WEEK AS FOCUS_WEEK,
+      X.RELATIVE_TIME_CATEGORY AS RELATIVE_TIME_CATEGORY,
+      X.DTE_YRWK_NR_KPN AS DTE_YRWK_NR_KPN
+  FROM
+  (
+      SELECT
+               (TNTYR)  ||  (TNTWK)    AS FOCUS_WEEK,
+                CAST(&apos;CURRENT WEEK&apos; AS varchar(25))     AS RELATIVE_TIME_CATEGORY,
+               (YR_LSTWK ) ||  (WK_LSTWK )   AS DTE_YRWK_NR_KPN
+      FROM
+           (SELECT DISTINCT
+             CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+             CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+             CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+             CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+           FROM
+               /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+               CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+          WHERE T1.WKS_DIFF = 1
+           AND  T2.WKS_DIFF = 0
+       ) DT
+      GROUP BY 1,2 ,3
+
+  UNION
+
+        SELECT
+            FOCUS_WEEK,
+            RELATIVE_TIME_CATEGORY,
+            All_Weeks_Lastyear.DTE_YRWK_NR_KPN
+        FROM
+          (
+           SELECT
+                    (TNTYR)  ||  (TNTWK)     AS  FOCUS_WEEK,
+                     CAST(&apos;CURRENT WEEK LAST YEAR&apos; AS varchar(25))  AS  RELATIVE_TIME_CATEGORY,
+                    (YR_LSTWK ) ||  (WK_LSTWK )    AS DTE_YRWK_NR_KPN
+            FROM
+                 (SELECT  DISTINCT
+                   CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+                   CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+                   CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+                   CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+                   FROM
+                   /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+                   CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+                 WHERE     T1.YRS_DIFF = (Case When T2.TNT_WK = &apos;01&apos; Then 2
+                                               Else 1
+                                          END )
+                     AND   T2.WKS_DIFF = 0
+               ) DT
+               GROUP BY 1,2 ,3) All_Weeks_Lastyear
+             inner join /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T3
+             ON   T3.WKS_DIFF =1
+             cross join /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T4
+           Where
+              EXISTS
+             ( SELECT
+                   CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+                 FROM
+                     /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+                     CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+                 WHERE T1.WKS_DIFF = 1
+                   AND  T2.WKS_DIFF = 0
+					AND  SUBSTRING(All_Weeks_Lastyear.dte_yrwk_nr_kpn,5,6) = (CAST (T1.TNT_WK AS CHAR(2)))
+             )
+          Group by 1,2,3
+
+  UNION
+
+          SELECT
+              FOCUS_WEEK,
+              RELATIVE_TIME_CATEGORY,
+              All_Weeks_Lastyear.DTE_YRWK_NR_KPN
+          FROM
+           (
+           SELECT
+                     (TNTYR)  ||  (TNTWK)      AS FOCUS_WEEK,
+                       &apos;CURRENT MONTH LAST YEAR&apos;   AS RELATIVE_TIME_CATEGORY,
+                     (YR_LSTWK ) ||  (WK_LSTWK )     AS DTE_YRWK_NR_KPN
+
+           FROM
+               (
+                SELECT  DISTINCT
+                 CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+                 CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+                 CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+                 CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+               FROM
+               /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+               CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+               WHERE   T1.YRS_DIFF = (Case When T2.TNT_MTH = &apos;01&apos; Then 2
+                                           Else 1
+                                      END )
+                 AND   T2.WKS_DIFF = 0
+             ) DT
+           GROUP BY 1,2 ,3) All_Weeks_Lastyear
+           INNER JOIN  /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T3
+           ON    T3.WKS_DIFF =1
+           CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T4
+
+           WHERE
+              EXISTS
+             ( SELECT
+                   CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+                 FROM
+                     /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+                     CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+                 WHERE T1.MTHS_DIFF = 1
+                   AND  T2.WKS_DIFF = 0
+					AND  SUBSTRING(All_Weeks_Lastyear.dte_yrwk_nr_kpn,5 , 6) = (CAST (T1.TNT_WK AS CHAR(2)))
+             )
+           GROUP BY 1,2,3
+
+  UNION
+
+         SELECT
+                  (TNTYR)  ||  (TNTWK)     AS FOCUS_WEEK,
+                   &apos;CURRENT MONTH&apos;     AS RELATIVE_TIME_CATEGORY,
+                  (YR_LSTWK ) ||  (WK_LSTWK )    AS DTE_YRWK_NR_KPN
+            FROM
+             (SELECT  DISTINCT
+               CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+               CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+               CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+               CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+             FROM
+                 /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+                 CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+               WHERE T1.MTHS_DIFF = 1
+                 AND  T2.WKS_DIFF = 0
+           ) DT
+          GROUP BY 1,2 ,3
+
+  UNION
+
+          SELECT
+                   (TNTYR)  ||  (TNTWK)    AS FOCUS_WEEK,
+                    &apos;YEAR TO DATE&apos;     AS RELATIVE_TIME_CATEGORY,
+                   (YR_LSTWK ) ||  (WK_LSTWK )   AS DTE_YRWK_NR_KPN
+
+
+             FROM
+             (SELECT DISTINCT
+             CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+             CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+             CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+             CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+
+             FROM
+               /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+               CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+             WHERE T1.WKS_DIFF &gt;= 1
+              AND      T1.YRS_DIFF = 0
+              AND      T2.WKS_DIFF = 0
+
+           ) DT
+           GROUP BY 1,2 ,3
+
+  UNION
+
+             SELECT
+                 FOCUS_WEEK,
+                 RELATIVE_TIME_CATEGORY,
+                 All_Weeks_Lastyear.DTE_YRWK_NR_KPN
+             FROM
+              (
+              SELECT
+                         (TNTYR)  ||  (TNTWK)      AS FOCUS_WEEK,
+                         &apos;YEAR TO DATE LAST YEAR&apos;    AS RELATIVE_TIME_CATEGORY,
+                         (YR_LSTWK ) ||  (WK_LSTWK )     AS DTE_YRWK_NR_KPN
+
+                 FROM
+                 (SELECT  DISTINCT
+                 CAST (T2.TNT_YR AS CHAR(4)) AS TNTYR,
+                 CAST (T2.TNT_WK AS CHAR(2)) AS TNTWK,
+                 CAST (T1.TNT_YR AS CHAR(4))  AS YR_LSTWK,
+                 CAST (T1.TNT_WK AS CHAR(2)) AS WK_LSTWK
+
+                 FROM
+                   /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T1
+                   CROSS JOIN /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T2
+                 WHERE T1.YRS_DIFF = 1
+                  AND  T2.WKS_DIFF = 0
+
+               ) DT
+                GROUP BY 1,2 ,3) All_Weeks_Lastyear
+              inner join /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T3
+              ON   T3.WKS_DIFF =1
+              cross join /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01 T4
+
+              Where All_Weeks_Lastyear.dte_yrwk_nr_kpn &lt;= (T4.TNT_YR || t3.TNT_WK)
+                 AND  t4.YRS_DIFF = 1
+
+
+                 AND  T3.WKS_DIFF =1
+
+              Group by 1,2,3
+  ) AS X</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/lib/sources/cacheDataSource</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/lib/sources/cacheDataSource/view77825</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">AUTOMATIC</attribute>
+  <attribute name="creationDate" type="LONG">1556790071246</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1570650163184</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556790071246</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITRelativeTime" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="FOCUS_WEEK">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+        <element name="RELATIVE_TIME_CATEGORY">
+          <datatype type="STRING" maxLength="25"/>
+        </element>
+        <element name="DTE_YRWK_NR_KPN">
+          <datatype type="STRING" minLength="6" maxLength="6"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITRelativeTime&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1557218029000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">false</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1557218040221</attribute>
+    <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+    <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+    <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1563784589502</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557218040221</attribute>
+  </trigger>
+</metadata>

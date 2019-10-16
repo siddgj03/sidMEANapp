@@ -1,0 +1,252 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Scheduled Departure Dates_M" path="/shared/Publish/ROCS_OP/vp_Scheduled Departure Dates_M" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Scheduled_Departure_Year" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Quarter" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Week_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Day_Number" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Day_Name" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scheduled_Departure_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/REP_CAL_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DTE_DAY_NM" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_WEEK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOM_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOY_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_THS_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_LST_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOWJAN1_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_QUARTER_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    T.DTE_YEAR_NR_KPN Scheduled_Departure_Year, 
+    T.DTE_QUARTER_NM_KPN Scheduled_Departure_Quarter, 
+    T.DTE_MONTH_NR_KPN Scheduled_Departure_Month, 
+    T.DTE_YRWK_NR_KPN Scheduled_Departure_Week_Number, 
+    T.DTE_DAY_NR Scheduled_Departure_Day_Number, 
+    T.DTE_DAY_NM Scheduled_Departure_Day_Name, 
+    T.DTE_DT Scheduled_Departure_Date
+FROM      
+    /shared/Source/EDW/ROCSPackage_OP/PRODROCS_P/REP_CAL_V02 T</attribute>
+  <attribute name="creationDate" type="LONG">1566372794386</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568962289250</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">e807pja</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBAAsAUgBFAFAAXwBDAEEATABfAFYAMAAyBgIAAQBUAwv/////AwoABL90Awz/
+////CxEABgAGAHMAaABhAHIAZQBkAAYAUwBvAHUAcgBjAGUAAwBFAEQAVwAOAFIATwBDAFMAUABh
+AGMAawBhAGcAZQBfAE8AUAAKAFAAUgBPAEQAUgBPAEMAUwBfAFAACwBSAEUAUABfAEMAQQBMAF8A
+VgAwADL//wMFAAAAAAgCEDEGAf//AQIBAQYBAQMAAQQAAQUAAwcAAAAABwkAAAABAAAAAAkKAAAA
+BxBBBgEADwBEAFQARQBfAFkARQBBAFIAXwBOAFIAXwBLAFAATgYCABgAUwBjAGgAZQBkAHUAbABl
+AGQAXwBEAGUAcABhAHIAdAB1AHIAZQBfAFkAZQBhAHIGA///BgT//wMK/////wgMEBkGAgAIAHMA
+bQBhAGwAbABpAG4AdAYDAAgAcwBtAGEAbABsAGkAbgB0AysAAAAPAxIAAAABBAf///////+AAAQG
+AAAAAAAAf////wMLAAAAAP//EEEGAQASAEQAVABFAF8AUQBVAEEAUgBUAEUAUgBfAE4ATQBfAEsA
+UABOBgIAGwBTAGMAaABlAGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUAcgBlAF8AUQB1AGEAcgB0
+AGUAcgYD//8GBP//Awr/////CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEA
+cgAoADEAMwApAysAAAAPAxIAAAABBAQAAAAAAAAADQETAf//AwsAAAAA//8QQQYBABAARABUAEUA
+XwBNAE8ATgBUAEgAXwBOAFIAXwBLAFAATgYCABkAUwBjAGgAZQBkAHUAbABlAGQAXwBEAGUAcABh
+AHIAdAB1AHIAZQBfAE0AbwBuAHQAaAYD//8GBP//Awr/////CAwQGQYCAAcAaQBuAHQAZQBnAGUA
+cgYDAAcAaQBuAHQAZQBnAGUAcgMrAAAADwMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAA
+AAD//xBBBgEADwBEAFQARQBfAFkAUgBXAEsAXwBOAFIAXwBLAFAATgYCAB8AUwBjAGgAZQBkAHUA
+bABlAGQAXwBEAGUAcABhAHIAdAB1AHIAZQBfAFcAZQBlAGsAXwBOAHUAbQBiAGUAcgYD//8GBP//
+Awr/////CAwQGQYCAAcAaQBuAHQAZQBnAGUAcgYDAAcAaQBuAHQAZQBnAGUAcgMrAAAADwMSAAAA
+AQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//xBBBgEACgBEAFQARQBfAEQAQQBZAF8ATgBS
+BgIAHgBTAGMAaABlAGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUAcgBlAF8ARABhAHkAXwBOAHUA
+bQBiAGUAcgYD//8GBP//Awr/////CAwQGQYCAAcAaQBuAHQAZQBnAGUAcgYDAAcAaQBuAHQAZQBn
+AGUAcgMrAAAADwMSAAAAAQQH/////4AAAAAEBgAAAAB///////8DCwAAAAD//xBBBgEACgBEAFQA
+RQBfAEQAQQBZAF8ATgBNBgIAHABTAGMAaABlAGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUAcgBl
+AF8ARABhAHkAXwBOAGEAbQBlBgP//wYE//8DCv////8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMA
+CwB2AGEAcgBjAGgAYQByACgAMQAzACkDKwAAAA8DEgAAAAEEBAAAAAAAAAANARMB//8DCwAAAAD/
+/xBBBgEABgBEAFQARQBfAEQAVAYCABgAUwBjAGgAZQBkAHUAbABlAGQAXwBEAGUAcABhAHIAdAB1
+AHIAZQBfAEQAYQB0AGUGA///BgT//wMK/////wgMEBUGAgAEAGQAYQB0AGUGAwAEAGQAYQB0AGUD
+KwAAAA8DEgAAAAH//wMLAAAAAP////8JBgAAAAEQggMKAAAAHgMLAAAAHgMMAAAAyAMNAAAAyP//
+CAMQcQMBAAAACwMCAAAAMgkDAAACJhB0AwYAAAAA//8QcgYEABgAUwBjAGgAZQBkAHUAbABlAGQA
+XwBEAGUAcABhAHIAdAB1AHIAZQBfAFkAZQBhAHL//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAH//xByBgQAGwBTAGMAaABl
+AGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUAcgBlAF8AUQB1AGEAcgB0AGUAcv//EHMDBQAAAAD/
+/xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAA
+Av//EHIGBAAZAFMAYwBoAGUAZAB1AGwAZQBkAF8ARABlAHAAYQByAHQAdQByAGUAXwBNAG8AbgB0
+AGj//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHQDBgAAAAP//xByBgQAHwBTAGMAaABlAGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUA
+cgBlAF8AVwBlAGUAawBfAE4AdQBtAGIAZQBy//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAE//8QcgYEAB4AUwBjAGgAZQBk
+AHUAbABlAGQAXwBEAGUAcABhAHIAdAB1AHIAZQBfAEQAYQB5AF8ATgB1AG0AYgBlAHL//xBzAwUA
+AAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQD
+BgAAAAX//xByBgQAHABTAGMAaABlAGQAdQBsAGUAZABfAEQAZQBwAGEAcgB0AHUAcgBlAF8ARABh
+AHkAXwBOAGEAbQBl//8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0AwYAAAAG//8QcgYEABgAUwBjAGgAZQBkAHUAbABlAGQAXwBEAGUA
+cABhAHIAdAB1AHIAZQBfAEQAYQB0AGX//xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2////////</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566372794386</attribute>
+</metadata>

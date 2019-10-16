@@ -1,0 +1,159 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Actual_Vendor" path="/shared/Publish/ROCS_Total_Package/vp_Actual_Vendor" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Actual_Vendor_Network" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Name" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Address" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Postal_Code" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Town" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Country" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_VAT_ID" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Vendor_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Country" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Country_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Actual_Vendor_Country">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_TourActualOperatorBPMNetwork" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Business_Partner_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Actual_Vendor_Network">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Vendor_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_SAP_Vendor" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Actual_Vendor_ID">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="Actual_Vendor_Name">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Actual_Vendor_Address">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Actual_Vendor_Postal_Code">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Actual_Vendor_Town">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Actual_Vendor_VAT_ID">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Vendor_Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Vendor_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+ T.Actual_Vendor_Network  as  Actual_Vendor_Network,
+       T6.Actual_Vendor_ID  as  Actual_Vendor_ID,
+       T6.Actual_Vendor_Name  as  Actual_Vendor_Name,
+       T6.Actual_Vendor_Address  as  Actual_Vendor_Address,
+       T6.Actual_Vendor_Postal_Code  as  Actual_Vendor_Postal_Code,
+       T6.Actual_Vendor_Town  as  Actual_Vendor_Town,
+       T7.Actual_Vendor_Country  as  Actual_Vendor_Country,
+       T6.Actual_Vendor_VAT_ID  as  Actual_Vendor_VAT_ID ,
+T6.Vendor_Object_ID as Actual_Vendor_Object_ID
+ from 
+       /shared/Core/Networks/ROCSTotalPackage/vc_TourActualOperatorBPMNetwork T
+        left outer join 
+       (  /shared/Core/Networks/ROCSTotalPackage/vc_Country
+  T7
+      		join /shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_SAP_Vendor T6
+
+           
+            on (T7.Country_ID = T6.Vendor_Country_Code)
+       )
+        on (T6.Vendor_Object_ID = T.Vendor_Object_ID) 
+</attribute>
+  <attribute name="creationDate" type="LONG">1562740513566</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567146451653</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562740513566</attribute>
+</metadata>

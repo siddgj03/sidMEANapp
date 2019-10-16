@@ -1,0 +1,702 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_AllTransaction" path="/shared/Core/Product/Premium_SSD/vc_AllTransaction" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>Transaction View For Premium</annotation>
+  <columns>
+    <column name="BA_Country_Cd" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Yr_Wk" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BA_Key" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Match_Cd" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Booking_Type_Cd" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_TB_Premium" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="14"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_VA_Premium" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Ord_DivProd_Id" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_TB_Premium" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="14"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_VA_Premium" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_DivProd_Id" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Key" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Payment_Terms_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Trade_Direction_Id" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Ord_Bkd_Or_Ship_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Ord_Bkd_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Ord_Bkd_And_Ship_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Booking_Premiums" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Shipped_Premiums" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Net_Rev_Mthly_Fx" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Prem_Inv_Cons" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Prem_Trans_Cons" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_OrdCon_Bkd_Or_Ship_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_OrdCon_Bkd_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_OrdCon_Bkd_And_Ship_As_Prem" nullable="true">
+      <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/BUSLOC_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_OPTR_LIC_CD">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="BUL_LIC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BUL_TNT_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_1_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_2_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_ADDR_3_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_PBOX_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_PBOX_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BUL_TEL_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_FAX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_TELX_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_VAT_ID">
+        <datatype type="STRING" minLength="16" maxLength="16"/>
+      </element>
+      <element name="BUL_CZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DZON_DEACT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY1_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_WKEND_DAY2_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_MAX_DEL_ZON_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CONV_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="BUL_ASSOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_INACTIVE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_PROVINCE_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="BUL_SEARCH_TYPE_NR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_DAYL_SAV_EX_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TIZ_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BTY_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/CALENDAR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="DTE_DAY_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DAY_NM" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_WEEK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_WEEK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_MONTH_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_MONTH_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_QUARTER_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_QUARTER_NM_KPN" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_QUARTER_NM_CAL" nullable="false">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="DTE_YEAR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="DTE_YEAR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRWK_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRMTH_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_KPN" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_YRQTR_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOM_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOY_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_THS_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_LYR_LST_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DTE_DOWJAN1_NR_CAL" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/COUNTRYEXCHANGERATE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTY_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EGP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EXP_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/CSPREMIUMOPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="GPE_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="GPE_DOM_INTL_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OPT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/ORDERCONOPTKPI_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ORD_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ODE_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CON_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="COE_LOAD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_NET_REV_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TOP_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIR_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="ACG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ODE_PREMIUMCON_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ODE_PREMIUM_PRD_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_ID_ORD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID_ORD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ORD_ADD_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ORD_ORDNR_RANGE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OPT_ID_ORD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DPO_PREMIUM_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_ID_CON" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_ID_CON" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OPT_ID_CON">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_CS_PREMCON_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_CS_PREMPRD_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DERIVED_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="COP_CS_PREM_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ORD_RECORD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CON_RECORD_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/Premium/PRODPREMIUM_P/VALUEADDEDOPTION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DIV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">Select  
+           BA_Country_Cd  as &quot;BA_Country_Cd&quot;
+
+          ,Collection_Dt  as &quot;Collection_Yr_Wk&quot; 
+
+          ,Booking_Agent  as &quot;BA_Key&quot;
+          
+          ,Con_Match  as &quot;Consignment_Match_Cd&quot;
+          
+          ,Booking_Type  as &quot;Booking_Type_Cd&quot;
+
+          ,Ord_TB_Prem  as &quot;Ord_TB_Premium&quot;
+
+          ,Ord_VA_Prem  as &quot;Ord_VA_Premium&quot;
+
+          ,Ord_Division  as &quot;Ord_DivProd_Id&quot;
+
+          ,Con_TB_Prem  as &quot;Con_TB_Premium&quot;
+
+          ,Con_VA_Prem  as &quot;Con_VA_Premium&quot;
+
+          ,Con_Division  as &quot;Con_DivProd_Id&quot;
+
+          ,Inv_Cust  as &quot;Account_Key&quot;
+
+          ,Terms_Of_Pay  as &quot;Payment_Terms_Id&quot;
+     
+          ,Dir_Of_Trade as &quot;Trade_Direction_Id&quot;
+    
+          ,Order_Bkd_or_Ship_as_Prem as &quot;No_Of_Ord_Bkd_Or_Ship_As_Prem&quot;
+   
+          ,Order_Bkd_as_Prem as &quot;No_Of_Ord_Bkd_As_Prem&quot;
+       
+          ,Order_Bkd_and_Ship_as_Prem  as &quot;No_Of_Ord_Bkd_And_Ship_As_Prem&quot;
+          
+          ,No_Of_Booking_Premiums as &quot;No_Of_Booking_Premiums&quot;
+  
+          ,No_Of_Shipped_Premiums as &quot;No_Of_Shipped_Premiums&quot;
+      
+          ,Mthly_Net_Revenue as &quot;Net_Rev_Mthly_Fx&quot;
+          
+          ,Prem_Inv_Cons   as &quot;No_Of_Prem_Inv_Cons&quot;
+          
+          ,Prem_Trans_Cons  as &quot;No_Of_Prem_Trans_Cons&quot;
+      
+          ,OrderCon_Bkd_or_Ship_as_Prem as &quot;No_Of_OrdCon_Bkd_Or_Ship_As_Prem&quot;
+   
+          ,OrderCon_Bkd_as_Prem as &quot;No_Of_OrdCon_Bkd_As_Prem&quot;
+       
+          ,OrderCon_Bkd_and_Ship_as_Prem as &quot;No_Of_OrdCon_Bkd_And_Ship_As_Prem&quot;
+         
+From
+
+(Select PremTran.*
+  ,(Row_Number () Over (Partition by Ord_Srky_Id  Order by Ode_Seq_Nr, Ord_Division))     as Order_Row_Nr
+  ,(Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division))     as OrderDet_Row_Nr
+  ,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1 Then Net_Rev_Mthly_Fx
+         Else 0
+     End )                    as Mthly_Net_Revenue
+  ,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1  Then  No_of_Prem_Inv_Cons
+         Else 0
+     End)                     as Prem_Inv_Cons
+  ,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1  Then  No_of_Prem_Trans_Cons
+         Else 0
+     End)                     as Prem_Trans_Cons
+ ,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1  and  No_Of_Ord_Bkd_or_Ship_as_Prem = 1 Then 1
+         Else 0
+     End)                     as OrderCon_Bkd_or_Ship_as_Prem
+,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1  and  No_Of_Ord_Bkd_as_Prem = 1 Then 1
+         Else 0
+     End)                     as OrderCon_Bkd_as_Prem
+,(Case When (Row_Number () Over (Partition by Ord_Srky_Id, Ode_Seq_Nr  Order by Ord_Division)) = 1  and  No_Of_Ord_Bkd_Ship_as_Prem = 1 Then 1
+         Else 0
+     End)                     as OrderCon_Bkd_and_Ship_as_Prem
+  ,(Case When (MAX((Case When No_Of_Ord_Bkd_or_Ship_as_Prem = 1 Then 1 Else 0 End)) Over (Partition by ORD_SRKY_ID)) = 1  AND  (Row_Number () Over (Partition by Ord_Srky_Id  Order by Ode_Seq_Nr, Ord_Division)) = 1  Then 1
+         Else 0
+    End)                      as Order_Bkd_or_Ship_as_Prem
+  ,(Case When (MAX((Case When No_Of_Ord_Bkd_as_Prem = 1 Then 1 Else 0 End)) Over (Partition by ORD_SRKY_ID)) = 1  AND  (Row_Number () Over (Partition by Ord_Srky_Id  Order by Ode_Seq_Nr, Ord_Division)) = 1  Then 1
+         Else 0
+    End)                      as Order_Bkd_as_Prem
+  ,(Case When (MAX((Case When No_Of_Ord_Bkd_Ship_as_Prem = 1 Then 1 Else 0 End)) Over (Partition by ORD_SRKY_ID)) = 1  AND  (Row_Number () Over (Partition by Ord_Srky_Id  Order by Ode_Seq_Nr, Ord_Division)) = 1  Then 1
+         Else 0
+    End)                      as Order_Bkd_and_Ship_as_Prem
+  From
+(Select
+   T2.Cou_Id                                                      as BA_Country_Cd
+  ,(CASE  When T3.dte_yrwk_nr_kpn  is NULL Then &apos; &apos;
+          When T3.dte_yrwk_nr_kpn  = &apos; &apos;   Then &apos; &apos;
+          Else CAST(T3.dte_yrwk_nr_kpn  as CHAR(6))
+    End)                                                          as Collection_Dt
+  ,T1.Bul_ID||T1.Ord_Add_User_Id                                  as Booking_Agent
+  ,(Case  When T1.Con_Srky_Id is Null Then &apos;N&apos;
+          When T1.Con_Srky_Id = &apos; &apos;   Then &apos;N&apos;
+          Else                             &apos;M&apos;
+    End)                                                          as Con_Match
+  ,T1.Ord_OrdNr_Range_Cd                                          as Booking_Type
+  ,(Case When T5.Gpe_Group_Cd is Not  Null   Then T5.Gpe_Group_Cd
+       Else &apos;Non Time Based&apos;
+      End)    as Ord_TB_Prem
+  ,(Case When T7.Opt_Id is Not Null   Then T7.Opt_Id
+      Else &apos;Non Value Added&apos;
+      End)    as Ord_VA_Prem
+  ,(Case  When T1.Div_Id_Ord  is Null         Then  &apos;NA&apos;
+    When T1.Div_Id_Ord = &apos; &apos;          Then &apos;NA&apos;
+    When T1.Prd_Id_Ord is Null  and  T1.Div_Id_Ord  is Not Null  and  T1.Div_Id_Ord &lt;&gt; &apos; &apos;  Then T1.Div_Id_Ord||&apos; &apos;
+    When T1.Prd_Id_Ord = &apos; &apos;        and  T1.Div_Id_Ord  is Not Null  and  T1.Div_Id_Ord &lt;&gt; &apos; &apos;  Then T1.Div_Id_Ord||&apos; &apos;
+            Else  T1.Div_Id_Ord||T1.Prd_Id_Ord
+    End)                                                          as Ord_Division
+  ,(Case  When T6.Gpe_Group_Cd is Not  Null   Then T6.Gpe_Group_Cd
+       Else &apos;Non Time Based&apos;
+      End)    as Con_TB_Prem
+  ,(Case  When T8.Opt_Id is Not Null  Then T8.Opt_Id
+      Else &apos;Non Value Added&apos;
+      End)    as Con_VA_Prem
+  ,(Case  When  T1.Div_Id_Con  is Null        Then  &apos;NA&apos;
+    When T1.Div_Id_Con = &apos; &apos;          Then &apos;NA&apos;
+    When T1.Prd_Id_Con is Null  and  T1.Div_Id_Con   is Not Null  and  T1.Div_Id_Con &lt;&gt; &apos; &apos; Then T1.Div_Id_Con||&apos; &apos;
+    When T1.Prd_Id_Con = &apos; &apos;        and  T1.Div_Id_Con  is Not Null  and  T1.Div_Id_Con &lt;&gt; &apos; &apos;  Then T1.Div_Id_Con||&apos; &apos;
+            Else  T1.Div_Id_Con||T1.Prd_Id_Con
+    End)                                                          as Con_Division
+  ,(Case  When  T1.Acc_Id_Inv is Not Null and T1.Acc_Id_Inv &lt;&gt; &apos; &apos; and T1.Cou_Id_Inv = T2.Cou_Id  Then   T1.Cou_Id_Inv||Acg_Id||T1.Acc_Id_Inv
+          Else &apos; &apos;
+     End)                                                         as Inv_Cust
+  ,T1.Top_Id                                                      as Terms_Of_Pay
+  ,T1.Dir_Id                                                      as Dir_Of_Trade
+  ,(Case  When T1.Ode_PremiumCon_In = &apos;Y&apos;  or  T1.Con_CS_PremCon_In = &apos;Y&apos;   Then 1
+          Else  0
+     End)                                                         as No_Of_Ord_Bkd_or_Ship_as_Prem
+  ,(Case  When T1.Ode_PremiumCon_In = &apos;Y&apos;  Then 1
+          Else  0
+    End)                                                          as No_Of_Ord_Bkd_as_Prem
+  ,(Case  When T1.Ode_PremiumCon_In = &apos;Y&apos; and  T1.Con_CS_PremCon_In = &apos;Y&apos;   Then 1
+          Else  0
+    End)                                                          as No_Of_Ord_Bkd_Ship_as_Prem
+  ,(Case  When (T1.Ode_Premium_Prd_In = &apos;Y&apos; or T1.Dpo_Premium_Cd  = &apos;T&apos;   or  T1.Dpo_Premium_Cd  =  &apos;V&apos;)  and  (T1.Ord_Record_Type_CD &lt;&gt; &apos;G&apos;)   Then 1
+          Else  0
+    End)                                                          as No_Of_Booking_Premiums
+  ,(Case  When (T1.Con_CS_PremPrd_In = &apos;Y&apos; or T1.Cop_CS_Prem_Cd  = &apos;T&apos;   or  T1.Cop_CS_Prem_Cd  =  &apos;V&apos;)  and  (T1.Con_Record_Type_CD &lt;&gt; &apos;G&apos;)   Then 1
+            Else  0
+    End)                                                          as No_Of_Shipped_Premiums
+  ,(Case  When T1.Con_CS_PremCon_In = &apos;Y&apos;    and   T1.Cou_Id_Inv = T2.Cou_Id  Then
+               T1.Con_Net_Rev_Am
+          Else  0
+    End)                                                          as Net_Rev_Mthly_Fx
+   ,(Case  When T1.Con_CS_PremCon_In = &apos;Y&apos;  and  T1.Cou_Id_Inv = T2.Cou_Id   Then 1
+          Else  0
+    End)                                                          as No_of_Prem_Inv_Cons
+  ,(Case  When T1.Con_CS_PremCon_In = &apos;Y&apos; Then 1
+          Else  0
+    End)                                                          as No_of_Prem_Trans_Cons
+ ,cast(T1.Ord_Srky_Id   as char(15))                              as Ord_Srky_Id
+ ,cast(T1.Ode_Seq_Nr  as char(9))                                 as Ode_Seq_Nr
+  FROM /shared/Source/EDW/Premium/PRODPREMIUM_P/ORDERCONOPTKPI_V01 T1
+  Left Join  /shared/Source/EDW/Premium/PRODPREMIUM_P/BUSLOC_V01         T2
+  on      T1.Bul_Id = T2.Bul_Id
+  Left Join   /shared/Source/EDW/Premium/PRODPREMIUM_P/CALENDAR_V01       T3
+  on    T1.Derived_Coll_Dt = T3.Dte_Dt
+  Left Join  /shared/Source/EDW/Premium/PRODPREMIUM_P/COUNTRYEXCHANGERATE_V01 T4
+  on  T1.Cou_Id_Inv = T4.Cou_Id
+  and (T1.Coe_Load_Dt BETWEEN T4.exp_start_dt  AND  T4.exp_end_dt)
+  and T4.egp_id = &apos;MO&apos;
+  and T4.cty_id = &apos;G&apos;
+  Left Join  /shared/Source/EDW/Premium/PRODPREMIUM_P/CSPREMIUMOPTION_V01 T5
+   on T1.Div_Id_Ord = T5.Div_Id
+  and T1.Prd_Id_Ord = T5.Prd_Id
+  and T1.Opt_Id_Ord = T5.Opt_Id
+  Left Join /shared/Source/EDW/Premium/PRODPREMIUM_P/CSPREMIUMOPTION_V01 T6
+    on T1.Div_Id_Con = T6.Div_Id
+  and T1.Prd_Id_Con = T6.Prd_Id
+  and T1.Opt_Id_Con = T6.Opt_Id
+Left Join /shared/Source/EDW/Premium/PRODPREMIUM_P/VALUEADDEDOPTION_V01 T7
+   on T1.Div_Id_Ord = T7.Div_Id
+  and T1.Opt_Id_Ord = T7.Opt_Id
+Left Join /shared/Source/EDW/Premium/PRODPREMIUM_P/VALUEADDEDOPTION_V01 T8
+   on T1.Div_Id_Con = T8.Div_Id
+  and T1.Opt_Id_Con = T8.Opt_Id
+    WHERE (T1.ORD_ORDNR_RANGE_CD = &apos;XBB&apos; OR T1.ORD_ORDNR_RANGE_CD = &apos;DET&apos;) --and T1.Coe_Load_Dt between &apos;2012-08-13&apos; and &apos;2013-08-13&apos;
+    AND (T1.Ode_PremiumCon_In = &apos;Y&apos;  or   T1.Con_CS_PremCon_In = &apos;Y&apos;)) as PremTran) as PremTranOut
+	 
+where Collection_Dt&lt;&gt;&apos;&apos;
+</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="creationDate" type="LONG">1558005088987</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20169</attribute>
+  <attribute name="creatorUserName" type="STRING">w101aqu</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563278155288</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20169</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1558005088987</attribute>
+</metadata>

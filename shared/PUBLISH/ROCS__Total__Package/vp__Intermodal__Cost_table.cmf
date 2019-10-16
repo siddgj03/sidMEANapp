@@ -1,0 +1,158 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Intermodal_Cost" path="/shared/Publish/ROCS_Total_Package/vp_Intermodal_Cost" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Intermodal_Scheduled_Local_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Scheduled_Reporting_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Actual_Local_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Actual_Local_Currency" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Actual_Reporting_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Actual_Reporting_Currency" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_CCT_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_CBT_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Intermodal_Parent_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_CostlineIntermodal" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCC_Deleted_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCC_Parent_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Trim_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="TCC_System_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Operator_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCC_CBT_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TCC_UOM_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TCC_CCT_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Local_Country_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Reporting_Country_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TCC_Sch_Quantity">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_Act_Quantity">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_PPU_Sch_Amount">
+        <datatype type="DECIMAL" maxDigits="21" maxFractionalDigits="4"/>
+      </element>
+      <element name="TCC_PPU_Act_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_Sch_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_Act_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_Repoting_Sch_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_Repoting_Act_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT  distinct
+ TCC_Sch_Amount             AS Intermodal_Scheduled_Local_Cost_Amount       ,
+TCC_Repoting_Sch_Amount     AS Intermodal_Scheduled_Reporting_Cost_Amount  ,
+
+TCC_Act_Amount           AS Intermodal_Actual_Local_Cost_Amount     ,
+Local_Country_ID           AS Intermodal_Actual_Local_Currency        ,
+TCC_Repoting_Act_Amount   AS Intermodal_Actual_Reporting_Cost_Amount ,
+Reporting_Country_ID           AS Intermodal_Actual_Reporting_Currency,
+TCC_CCT_Code Intermodal_CCT_Code ,
+TCC_CBT_Code  Intermodal_CBT_Code,
+TCC_Parent_Object_ID  Intermodal_Parent_Object_ID
+from 
+/shared/Core/Networks/ROCSTotalPackage/vc_CostlineIntermodal
+</attribute>
+  <attribute name="creationDate" type="LONG">1565240547356</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">40103</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565948470532</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">40103</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565240547356</attribute>
+</metadata>

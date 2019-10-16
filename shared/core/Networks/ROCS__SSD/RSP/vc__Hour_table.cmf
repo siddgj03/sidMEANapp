@@ -1,0 +1,308 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Hour" path="/shared/Core/Networks/ROCS_SSD/RSP/vc_Hour" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Hour" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hour_Description" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quarterhour" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hour_Quarter" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hour_Quarterhour_Description" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hour_Quarterhour_Short" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hour_Short" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Schdep_Tm_H_Q" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Scharr_Tm_H_Q" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Hour_test" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Hour_">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Description">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Quarterhour">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarter">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarterhour_Description">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarterhour_Short">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Short">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Schdep_Tm_H_Q">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Scharr_Tm_H_Q">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Hour_test2" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Hour_">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Description">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Quarterhour">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarter">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarterhour_Description">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Quarterhour_Short">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Hour_Short">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Schdep_Tm_H_Q">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Scharr_Tm_H_Q">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/FIles/Source_CSV/RSP-FIXED-hour.csv" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="HOUR">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="HOUR_DESCRIPTION">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="QUARTERHOUR">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="HOUR_QUARTER">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="HOUR_QUARTERHOUR_DESCRIPTION">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="HOUR_QUARTERHOUR_SORT">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="HOUR_SHORT">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    RSP_FIXED_hour_csv.HOUR &quot;Hour&quot;,
+RSP_FIXED_hour_csv.HOUR_DESCRIPTION &quot;Hour_Description&quot;,
+RSP_FIXED_hour_csv.QUARTERHOUR &quot;Quarterhour&quot;,
+RSP_FIXED_hour_csv.HOUR_QUARTER &quot;Hour_Quarter&quot;,
+RSP_FIXED_hour_csv.HOUR_QUARTERHOUR_DESCRIPTION &quot;Hour_Quarterhour_Description&quot;,
+RSP_FIXED_hour_csv.HOUR_QUARTERHOUR_SORT &quot;Hour_Quarterhour_Short&quot;,
+RSP_FIXED_hour_csv.HOUR_SHORT &quot;Hour_Short&quot;, 
+RSP_FIXED_hour_csv.HOUR_QUARTER AS Schdep_Tm_H_Q,
+RSP_FIXED_hour_csv.HOUR_QUARTER AS Scharr_Tm_H_Q  
+
+FROM      
+    /shared/Source/Files/Source_CSV/&quot;RSP-FIXED-hour.csv&quot; RSP_FIXED_hour_csv</attribute>
+  <attribute name="cacheBucketMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Hour_test</value>
+    </item>
+    <item>
+      <key type="STRING">result1</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Hour_test2</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE_OTPS</attribute>
+  <attribute name="creationDate" type="LONG">1557375871422</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20157</attribute>
+  <attribute name="creatorUserName" type="STRING">a614hod</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565331090521</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20157</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557375871422</attribute>
+  <trigger>
+    <security>
+      <owner user="x423xjm" domain="tntadtest"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Networks/ROCS_SSD/RSP/vc_Hour" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Hour">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Description">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Quarterhour">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Quarter">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Quarterhour_Description">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Quarterhour_Short">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Hour_Short">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Schdep_Tm_H_Q">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="Scharr_Tm_H_Q">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Networks/ROCS_SSD/RSP/vc_Hour&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1565327282000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1565328420950</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565331024995</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565328420950</attribute>
+  </trigger>
+</metadata>

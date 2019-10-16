@@ -1,0 +1,74 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="pp_Location_Network_Security_ROCSOP" path="/shared/Publish/ROCS_OP/pp_Location_Network_Security_ROCSOP" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
+  <annotation>Row Level Security Filter Policy
+
+Inputs:
+	Alias		The SQL alias to be used for the table to which this policy has been assigned
+	Result		The SQL predicate to be added to the consuming SQLs WHERE clause
+</annotation>
+  <parameters>
+    <parameter name="alias" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="255"/>
+    </parameter>
+    <parameter name="resource" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="16384"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ WRITE EXECUTE"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE EXECUTE"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE EXECUTE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE EXECUTE"/>
+  </security>
+  <dependency target="/lib/util/GetProperty" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="property" direction="IN">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="PropertyName" type="STRING" maxLength="255"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="PropertyValue" type="STRING" maxLength="4096"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="RbsFilterPolicy" type="STRING">&lt;ns1:FilterPolicy xmlns:ns1=&quot;http://www.compositesw.com/services/system/util/security&quot;&gt;&lt;ns1:name&gt;pp_Location_Network_Security_ROCSOP&lt;/ns1:name&gt;&lt;ns1:folder&gt;/shared/Publish/ROCS_OP&lt;/ns1:folder&gt;&lt;ns1:enabled&gt;true&lt;/ns1:enabled&gt;&lt;ns1:form&gt;CODE&lt;/ns1:form&gt;&lt;ns1:defaultRule&gt;&lt;ns1:filter&gt;ALL&lt;/ns1:filter&gt;&lt;/ns1:defaultRule&gt;&lt;ns1:memberRuleList&gt;&lt;/ns1:memberRuleList&gt;&lt;ns1:assignmentList&gt;&lt;/ns1:assignmentList&gt;&lt;/ns1:FilterPolicy&gt;</attribute>
+  <attribute name="Script" type="STRING">PROCEDURE &quot;pp_Location_Network_Security_ROCSOP&quot; (IN alias VARCHAR, IN resource VARCHAR(16384), OUT result VARCHAR(16384))
+BEGIN
+	DECLARE temp VARCHAR;
+	DECLARE t1 VARCHAR; 
+	CALL getProperty(&apos;CURRENT_USER_NAME&apos;,temp);
+	SET t1 = upper(temp);	
+SET result= &apos;&apos;;
+	SET result = &apos;(&apos; || alias || &apos;.NWK_ID IN (SELECT DISTINCT UNS.NWK_ID FROM /shared/Source/EDW/ROCSPackage_OP/PRODCMNDOPS_V/LOCATION_NETWORK_SECU_V01 UNS WHERE UNS.NLS_FUNCTION_ID LIKE &apos;&apos;%EDW_OP%&apos;&apos; and  UNS.NLS_FT_PRESENT_IN LIKE &apos;&apos;%Y%&apos;&apos;
+	 and UNS.NLS_USR_ID LIKE &apos;&apos;%&apos;|| t1 ||&apos;%&apos;&apos;))&apos;;
+END 
+</attribute>
+  <attribute name="creationDate" type="LONG">1569321269835</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="disallowUIEditing" type="BOOLEAN">false</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1570208810909</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="native_only" type="STRING">false</attribute>
+  <attribute name="procedureGenerator" type="STRING">RbsFilterPolicy</attribute>
+  <attribute name="references" type="MAP">
+    <item>
+      <key type="STRING">7/5</key>
+      <value type="STRING_ARRAY">
+        <item>lib</item>
+        <item>util</item>
+        <item>GetProperty</item>
+      </value>
+    </item>
+  </attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1569321269835</attribute>
+</metadata>

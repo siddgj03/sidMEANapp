@@ -1,0 +1,97 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Tour_Cost_Details" path="/shared/Publish/ROCS_Total_Package/vp_Tour_Cost_Details" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Tour_Cost_System_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_Cost_Details_Cost_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Tour_CBT_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_CostlineTour" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCC_System_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Journey_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_Cost_Type_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_CBT_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Rep_Actual_Amount">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="Country_ID_Reporting">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select 
+     --  Dim_Tour_Cost_Types.Cost_Type_Code  as  Tour_Cost_Type_Code,
+     --  Dim_Tour_Cost_Types.Cost_Type_Description  as  Tour_Cost_Type_Description,
+      -- Dim_Tour_Charge_Base_Types.Cost_Type_Code  as  Tour_Charge_Base_Code,
+     --  Dim_Tour_Charge_Base_Types.Cost_Type_Description  as  Tour_Charge_Base_Description,
+       case when (T.TCC_System_Indicator = &apos;Y&apos;) then &apos;Yes&apos; else &apos;No&apos; end   as  Tour_Cost_System_Indicator,
+T.Journey_Object_ID Tour_Object_ID	,
+Tour_Cost_Type_Code Tour_Cost_Details_Cost_Type_Code	,
+Tour_CBT_Code Tour_CBT_Code	
+ 
+
+from /shared/Core/Networks/ROCSTotalPackage/vc_CostlineTour T
+       
+ /*       left outer join 
+       /shared/Core/Networks/ROCS_Total_Package/vc_Dim_Tour_Cost_Types
+ Dim_Tour_Cost_Types
+            
+        on (Dim_Tour_Cost_Types.Cost_Type_Code = T.Tour_Cost_Type_Code)
+        left outer join 
+     /shared/Core/Networks/ROCS_Total_Package/vc_Dim_Tour_Charge_Base_Types Dim_Tour_Charge_Base_Types
+        on (Dim_Tour_Charge_Base_Types.Cost_Type_Code = T.Tour_CBT_Code)*/
+</attribute>
+  <attribute name="creationDate" type="LONG">1562750633028</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565948487294</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562750633028</attribute>
+</metadata>

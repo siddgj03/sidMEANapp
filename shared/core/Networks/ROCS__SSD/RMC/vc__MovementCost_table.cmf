@@ -1,0 +1,2572 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_MovementCost" path="/shared/Core/Networks/ROCS_SSD/RMC/vc_MovementCost" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Departure_Reporting_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Arrival_Reporting_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Financial_Reporting_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NWK_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID_ORIG" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID_DEST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="MTT_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CFG_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OPR_ID" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="BUL_CSYS_ID_CML" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CST_TYPE_CD" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="MP_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Distance" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Cost" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Cost" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CUY_ID_REP" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="TOUR_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="MOV_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SCH_CST_TYPE_DIST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ACT_CST_TYPE_DIST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CST_SOURCE_CD" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Scheduled_Cost_Lcl" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Actual_Cost_Lcl" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CUY_ID_LCL" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OPR_ID_A" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OPR_ID_S" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_MvmntCost" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Departure_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Arrival_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Financial_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="NWK_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_CSYS_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_CSYS_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTT_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CFG_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="OPR_ID">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="BUL_CSYS_ID_CML">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CST_TYPE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="MP_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Scheduled_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Actual_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Scheduled_Cost">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="Actual_Cost">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="CUY_ID_REP">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TOUR_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="SCH_CST_TYPE_DIST">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="ACT_CST_TYPE_DIST">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CST_SOURCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Scheduled_Cost_Lcl">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="Actual_Cost_Lcl">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="CUY_ID_LCL">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPR_ID_A">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="OPR_ID_S">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="PAD_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PAD_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PAD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PAD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PAD_SOFTLOCK_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PAD_ADDR_LINE_1_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PAD_ADDR_LINE_2_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PAD_ADDR_LINE_3_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PAD_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PAD_PROVINCE_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PAD_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BPM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/COSTDETAIL_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCD_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TCD_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCD_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCD_DISC_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TCD_FIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BAE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_PAY_BP_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCD_PBY_OPR_ACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCD_PBY_OPR_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_PAY_BP" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUP_OBJ_ID_P">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCD_FOC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/COSTLINE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TCC_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCC_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCC_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TCC_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TCC_DELETED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TCC_PARENT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCC_DISC_TYPE_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TCC_SYSTEM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OPR_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCC_QT">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="TCC_CBT_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TCC_UOM_CD" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TCC_PPU_AM">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="4"/>
+      </element>
+      <element name="TCC_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_LCL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TCC_REP_TCC_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_REP" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TCC_CCT_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TCD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="TCC_DISC_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/COUTZEXCP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTX_TYPE_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTX_END_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CTX_END_TM" nullable="false">
+        <datatype type="TIME"/>
+      </element>
+      <element name="TIZ_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTX_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CTX_START_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CTX_GMT_DIFF_TM">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/GL_TIMEZONE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TIZ_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TIZ_NM">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="TIZ_GMT_DIFF_TM">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/INTERMODAL_UNITUSAGE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="IUE_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="IUE_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="IUE_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_OBJ_ID_IM_ACT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_VOUCHER_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="IUE_PBY_OPR_ACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_ACTCROSSED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="IUE_SCHCROSSED_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_OBJ_ID_IM_SCH">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_PBY_OPR_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_CST_OPR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="IUE_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="IUE_FIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IUE_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_PLN_ACT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IUE_REMARKS_TX">
+        <datatype type="STRING" maxLength="500"/>
+      </element>
+      <element name="IUE_FIN_YRWK_NR">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/LOCATION_DETAIL_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOC_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LOC_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="LOC_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LOC_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_EFFECT_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_S_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LOC_S_UPDT_USER_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="LOC_S_SOFTLOCK_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="LOC_S_ACTIVE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_S_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_DOM_LEGACY_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_BARCODE_CD">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LOC_FIS_BARCODE_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOC_SAP_CD">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LOC_TNT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LOC_HUB_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_OPS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_DEPOT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_AIRPORT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_CLIENT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_CSYS_ID_CT_STN">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_WKEND_DAY_1_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_WKEND_DAY_2_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_ADDR_LINE_1_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LOC_ADDR_LINE_2_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LOC_ADDR_LINE_3_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LOC_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LOC_PRV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOC_POSTAL_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="LOC_ISO_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOC_PBOX_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LOC_PBOX_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="LOC_PBOX_POSTAL_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="LOC_TEL_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LOC_TEL_2_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LOC_FAX_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LOC_FAX_2_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="LOC_SS_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_SORT_CELL_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_DAYL_SAV_EX_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_TIZ_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOC_OPER_DAY_ST_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="LOC_DUP_DAYS_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="LOC_CSYS_ID_XBBK">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_IGNR_COUHOL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_SORT_LOC_TX">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_HOUSE_NR">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_FLAT_NR">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_STREET_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="LOC_LNG_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOC_SATELLITE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_LPT_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="LOC_MG_X_COORD_NR">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="7"/>
+      </element>
+      <element name="LOC_MG_Y_COORD_NR">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="7"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MOV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOC_OBJ_ID_MST_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_ID_MST_ORIG_S" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_MST_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_ID_MST_DEST_S" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_SCHDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PREP_PW_END_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_END_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_L_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_OPR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_OPR_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCHDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_SCHARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ESTARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTDEP_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTDEP_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_ACTARR_REP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_REP_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="MOV_PLND_XTRA_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_FIN_LD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="MOV_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MTT_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="MPT_ID_ACT" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCHDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCHARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SCH_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ACTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTDEP_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ESTARR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_ARRV_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_DEPT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_SCH_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_ACT_DRIVER_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_SCH">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_ACT">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_AV_RETLOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_CANCEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_ORIG" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DLY_ID_DEST" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_TUSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_PWSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_DRSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_OA_VHSTATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DRSWAP_PLND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_TSUNIT_SEAL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_TSUNIT_UNSL_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_CREATOR_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROC_OBJ_ID_S">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROC_OBJ_ID_A">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PASS_1_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PASS_2_NM" nullable="false">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="MOV_PREP_PW_STR_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PREP_PW_END_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_PW_HANDOVER_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOV_SPEC_INSTR_TX">
+        <datatype type="STRING" maxLength="4000"/>
+      </element>
+      <element name="MOV_ACTUAL_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="MOV_ACTUAL_DUR_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="MOV_ALL_DEST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_DG_ALLOW_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MPT_ID_SCH">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_DEV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_HSKP_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_S_TNTOWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_S_OPROWN_TU_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DEBRIEF_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_APPENDED_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_SCH_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="MOV_ACT_RTRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ZMD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="ZTD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOC_OBJ_ID_DEST_OL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_DIV_RSN_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DRT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_OBJ_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SEQ_NR_ORIG">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="DRT_OBJ_ID_SCHED">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_PROP_DRIVRS_QT">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_OBJ_ID_PROP">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MOV_SCH_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_ACT_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MOV_PRO_TU_PROV_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="NWK_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="NWK_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="NWK_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="NWK_ADHOC_OPER_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_ADHOC_RES_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_BRIEF_REQ_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_ACC_LOC_REQ_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_BILLING_CYC_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DELAY_MIN_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="NWK_REFRESH_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="CUY_ID_COST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_START_DAY_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="NWK_CFM_CKINTM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_CTM_CKOUTTM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_OBJ_ID_CM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_FW_COST_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_DELAY_CD_ARR">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="NWK_DELAY_CD_DEP">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="NWK_TR_DATE_BAS_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_EMER_TEL_1_NR">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="NWK_EMER_TEL_2_NR">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="NWK_INFO_TX_1">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="NWK_INFO_TX_2">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="NWK_INFO_TX_3">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="NWK_TRANS_TX_1">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_2">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_3">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_4">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_5">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_6">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_7">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_TRANS_TX_8">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="NWK_COSTDEV_TH_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="NWK_DISTDEV_DI">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="NWK_COSTSELMOV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_BIL_DL_DAY_QT">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_COSTREV_REQ_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_FM_CKIN_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_LM_CKOUT_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_AUTO_TR_CLS_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DISTDEV_PC">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_APPL_ACCLOC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_ALTERN_OPR_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RESP_DLINE_DW">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_RESP_DLINE_TM">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="NWK_DELAY_CLSNO_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_APP_MOV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RTRN_TO_HOM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_CALLOFF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DIV_MOV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DR_SHIFT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DR_SHIFT_TI">
+        <datatype type="STRING" maxLength="11"/>
+      </element>
+      <element name="NWK_COMB_TOURS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_OBJ_ID_OD">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_BD_DEADLINE_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_AL_DEADLINE_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_PS_DEADLINE_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_CI_DEADLINE_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_BD_DEADLINE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="NWK_AL_DEADLINE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="NWK_MARKETPLACE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_MARKETPLACE" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NWK_DORM_TOURS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_SDT_CONT_TX_1" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_SDT_CONT_TX_2" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_SDT_CONT_TX_3" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_SDT_CONT_TX_4" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_USES_GPS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_GPS_USED_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="NWK_PRCDIF_SWAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_PROP_ARR_TM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_TR_COMB_BAS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="NWK_CLT_DIRECT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_CLD_MOV_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="NWK_FB_OPT_SCH_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="USR_ID_FB_APPR" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="USR_ID_FB_REQ" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="NWK_FB_MOV_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_FB_CML">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_PAY_DACT_TR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_USE_RES_PRV_IN" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_CONT_TX_1" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_CONT_TX_2" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_CONT_TX_3" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_CONT_TX_4" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_VAT_NR_TX" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="NWK_LDV_EM_TE_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="NWK_LDV_EM_TE_2_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="NWK_COP_ALL_DEF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_WA_AR_NO_DE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RSCH_EXT_TM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RSCH_PLN_TM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RSCH_EXT_TR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RSCH_PLN_TR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_LOAD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_COP_ALL_DRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_COP_ALL_PV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_COP_ALL_TU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RPLN_PLN_TR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_RES_DIFF_OP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_AMRV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_AMSV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_AMU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_SSO_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_ALLC_TU_PLN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_CCALC_DEACT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_TU_DEADLINE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="NWK_TU_DEADLINE_TI">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NWK_ALT_SCH_HOL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_ECO_TAX_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_DEBRIEF_REQ_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_PLAN_MIGRAT_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_TNT_OWN_TU_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="NWK_EARLY_MINS_NR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="NWK_ETA_RECALC_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="JNY_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JNY_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_START_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="NWK_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="JNY_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_FIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_REASON_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_CANCEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_ATL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="OPR_OBJ_ID_A">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="OPR_OBJ_ID_S">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_CONF_CHKIN_MI">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_CONF_CHKOUT_MI">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_REMARKS_TX">
+        <datatype type="STRING" maxLength="500"/>
+      </element>
+      <element name="JNY_AGR_PRCE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_CSTOPR" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOC_OBJ_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_ON_TOUR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_RTRN_LOAD_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID_AP" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="JNY_CST_OPR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="BAE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_CREATORUSER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OPR_OBJ_ID_P">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_FIN_YRWK_NR">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_FOC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_APP_MOV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_MARKETPLACE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="JNY_BD_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_AL_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_PS_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_CI_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_MP_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LOC_OBJ_ID_MML">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_MPL_PUB_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_MPL_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JNY_MP_RM_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_LMB_AC_RSN_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_OPR_INSTR_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="JNY_MP_RM_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="JNY_ACTIVE_RSN_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_CNTR_PRCE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_CNTR_PRCE" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="JNY_NEW_TU_PLAN_NR">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_CLT_DIRECT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOC_OBJ_ID_REC">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="JNY_SUBC_REMARK_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="JNY_RSCH_REASON_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="JNY_ORG_TR_STR_TX">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+      <element name="JNY_PLN_DI">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="JNY_TU_DEADLINE_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JNY_WEB_ALL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT CAST(TDC.MOV_SCHDEP_LD AS DATE )		              AS Departure_Reporting_Date		
+        ,CAST(TDC.MOV_SCHARR_LD AS DATE )		          AS Arrival_Reporting_Date		
+        ,CAST(TDC.JNY_FIN_LD AS DATE )	                  AS Financial_Reporting_Date		
+        ,TDC.NWK_ID                                       AS NWK_ID		
+        ,CAST((TDC.LOC_OBJ_ID_ORIG) AS DECIMAL(18,0))         AS BUL_CSYS_ID_ORIG		
+        ,CAST((TDC.LOC_OBJ_ID_DEST) AS DECIMAL(18,0))         AS BUL_CSYS_ID_DEST		
+        ,TDC.MTT_ID                                      AS MTT_ID	
+        ,TDC.CFG_OBJ_ID_ACT                              AS CFG_ID		
+        ,TDC.OPR_OBJ_ID_P                                AS OPR_ID		
+        ,TDC.LOC_OBJ_ID_CMBL         AS BUL_CSYS_ID_CML
+        ,CONCAT(TDC.COST_TYPE,CONCAT( &apos;_&apos; , (TDC.NWK_ID) ))            AS CST_TYPE_CD
+        ,TDC.MOV_EXTRA_CD                                              AS MP_Indicator      
+        ,TDC.MOV_SCH_DI                                                AS Scheduled_Distance
+        ,TDC.MOV_ACTUAL_DI                                             AS Actual_Distance   
+        ,TDC.MOV_SCH_COST_AM                                           AS Scheduled_Cost    
+        ,TDC.MOV_ACTUAL_COST_AM	                                       AS Actual_Cost       
+        ,TDC.CUY_ID_REP                                                AS CUY_ID_REP        
+        ,TDC.JNY_ID                                                    AS TOUR_ID           
+        ,TDC.MOV_ID                                                    AS MOV_ID            
+        ,CASE WHEN TDC.C_TYPE_AM_MOV = 0
+	            THEN 0
+	            ELSE (TDC.MOV_SCH_DI/TDC.C_TYPE_AM_MOV)
+	       END                                                           AS SCH_CST_TYPE_DIST
+	      ,CASE WHEN TDC.C_TYPE_AM_MOV = 0
+	            THEN 0
+	            ELSE (TDC.MOV_ACTUAL_DI/TDC.C_TYPE_AM_MOV)
+	       END                                                         AS ACT_CST_TYPE_DIST
+	      ,&apos;T&apos;                                                         AS CST_SOURCE_CD		
+	      ,TDC.MOV_SCH_COST_LCL_AM                                     AS Scheduled_Cost_Lcl	
+	      ,TDC.MOV_ACTUAL_COST_LCL_AM                                  AS Actual_Cost_Lcl	
+	      ,TDC.CUY_ID_LCL                                              AS CUY_ID_LCL		
+        ,TDC.OPR_OBJ_ID_A                                         AS OPR_ID_A
+        ,TDC.OPR_OBJ_ID_S                                         AS OPR_ID_S	
+	
+	
+	FROM
+	     ( SELECT S1.JNY_OBJ_ID							
+               ,S1.MOV_OBJ_ID						
+               ,S1.MOV_SCHDEP_LD					
+               ,S1.MOV_SCHARR_LD					
+               ,S1.JNY_FIN_LD						
+               ,S1.NWK_ID						
+               ,S1.LOC_OBJ_ID_ORIG			
+               ,S1.LOC_OBJ_ID_DEST			
+               ,S1.MTT_ID						
+               ,S1.CFG_OBJ_ID_ACT			
+               ,S2.CTY_OPR_OBJ_ID_P AS OPR_OBJ_ID_P
+               ,S2.CTY_OPR_OBJ_ID_A AS OPR_OBJ_ID_A
+               ,S2.CTY_OPR_OBJ_ID_S AS OPR_OBJ_ID_S		
+ --              ,S2.LOC_OBJ_ID_CMBL			
+			         ,CASE WHEN T_ORIG.LOC_OBJ_ID_CMBL IS NULL THEN S2.LOC_OBJ_ID_CMBL ELSE T_ORIG.LOC_OBJ_ID_CMBL END AS LOC_OBJ_ID_CMBL               
+               ,S2.COST_TYPE					
+               ,S1.MOV_EXTRA_CD					
+               ,S1.MOV_SCH_DI_CALC AS MOV_SCH_DI						
+               ,S1.MOV_ACTUAL_DI_CALC AS MOV_ACTUAL_DI					
+               ,CASE WHEN S1.JNY_SCH_DI = 0
+		                 THEN 0
+		                 ELSE (CAST(S1.MOV_SCH_DI_CALC AS DECIMAL(18,6))/ CAST(S1.JNY_SCH_DI AS DECIMAL(18,6))) * S2.JNY_SCH_COST_AM
+		            END                                                   AS MOV_SCH_COST_AM -- C15 Scheduled movement costs amount (excl. dedicated movement costs)
+		           ,CASE WHEN S1.JNY_ACTUAL_DI = 0
+		                 THEN 0
+		                 ELSE (CAST(S1.MOV_ACTUAL_DI_CALC AS DECIMAL(18,6)) / CAST(S1.JNY_ACTUAL_DI AS DECIMAL(18,6))) * S2.JNY_ACTUAL_COST_AM
+		            END                                                   AS MOV_ACTUAL_COST_AM -- C16 Actual movement costs amount (excl. dedicated movement costs)
+               ,S2.CUY_ID_REP						
+               ,S2.JNY_ID						
+               ,S1.MOV_ID					
+               ,COUNT(S2.COST_TYPE) OVER (PARTITION BY S1.MOV_OBJ_ID) AS C_TYPE_AM_MOV
+               ,S1.JNY_SCH_DI						
+               ,S1.JNY_ACTUAL_DI					
+               ,S1.MOV_STATUS_CD						
+               ,S2.JNY_CANCEL_CD					
+               ,CASE WHEN S1.JNY_SCH_DI = 0
+		                 THEN 0
+		                 ELSE (CAST(S1.MOV_SCH_DI_CALC AS DECIMAL(18,6))/ CAST(S1.JNY_SCH_DI AS DECIMAL(18,6))) * S2.JNY_SCH_COST_LCL_AM
+		            END                                                   AS MOV_SCH_COST_LCL_AM -- C23 Scheduled movement costs amount local currency (excl. dedicated movement costs)
+               ,CASE WHEN S1.JNY_ACTUAL_DI = 0
+		                 THEN 0
+		                 ELSE (CAST(S1.MOV_ACTUAL_DI_CALC AS DECIMAL(18,6)) / CAST(S1.JNY_ACTUAL_DI AS DECIMAL(18,6))) * S2.JNY_ACTUAL_COST_LCL_AM
+		            END                                                   AS MOV_ACTUAL_COST_LCL_AM -- C24 Actual movement costs amount local currency (excl. dedicated movement costs)
+		,S2.CUY_ID_LCL								
+         FROM
+              ( SELECT M.JNY_OBJ_ID		
+                      ,M.MOV_OBJ_ID				
+                      ,MD.MOV_SCHDEP_LD					
+                      ,MD.MOV_SCHARR_LD				
+                      ,FIN_DAT.JNY_FIN_LD		
+                      ,MD.NWK_ID			
+                      ,M.LOC_OBJ_ID_ORIG			
+                      ,M.LOC_OBJ_ID_DEST			
+                      ,M.MTT_ID						
+                      ,M.CFG_OBJ_ID_ACT					
+                      ,MD.MOV_PLND_XTRA_IN    AS MOV_EXTRA_CD -- C12 Planned/extra movement code (&apos;P&apos; or &apos;E&apos;)
+			                ,M.MOV_SCH_DI_CALC							
+			                    /* Correct a bug in ROCS, where cancelled movements still have an actual distance, usually equal to the scheduled distance */
+			                ,CASE WHEN M.JNY_STATUS_CD &lt;&gt; &apos;CNCL&apos; AND M.MOV_STATUS_CD = &apos;CNCL&apos;
+			                      THEN 0
+			                      WHEN M.JNY_STATUS_CD = &apos;CNCL&apos; AND M.MOV_STATUS_CD = &apos;CNCL&apos; 
+                            THEN M.MOV_SCH_DI_CALC 
+			                      WHEN MOV_ACT_RTRN_IN = &apos;Y&apos;
+			                      THEN 0
+			                      ELSE M.MOV_ACTUAL_DI_CALC
+			                 END                                                AS MOV_ACTUAL_DI_CALC -- C14 Actual movement distance (km)
+                      ,NP.CUY_ID_COST AS CUY_ID_NWK				
+                      ,NP.NWK_TR_DATE_BAS_CD					
+                      ,SUM(M.MOV_SCH_DI_CALC) OVER (PARTITION BY M.JNY_OBJ_ID) AS JNY_SCH_DI -- I6  Total scheduled tour distance (km)
+	                        /* Correct a bug in ROCS, where cancelled movements still have an actual distance, usually equal to the scheduled distance */
+                      ,SUM (CASE WHEN M.JNY_STATUS_CD &lt;&gt; &apos;CNCL&apos; AND M.MOV_STATUS_CD = &apos;CNCL&apos;
+			                           THEN 0
+			                           WHEN M.JNY_STATUS_CD = &apos;CNCL&apos; AND M.MOV_STATUS_CD = &apos;CNCL&apos;
+                                 THEN M.MOV_SCH_DI_CALC 
+                                 ELSE M.MOV_ACTUAL_DI_CALC 
+                            END 
+                           ) OVER (PARTITION BY M.JNY_OBJ_ID) AS JNY_ACTUAL_DI -- I7  Total actual tour distance (km)
+                      ,M.MOV_ID						
+                      ,M.MOV_STATUS_CD
+                      ,M.JNY_OBJ_ID_ORIG
+                FROM       (SELECT     M.*
+                                      ,T.JNY_STATUS_CD
+                                      ,CASE WHEN MOV_SCH_RTRN_IN = &apos;Y&apos;
+			                                      THEN 0
+			                                      ELSE M.MOV_SCH_DI
+			                                 END  AS MOV_SCH_DI_CALC
+			                                ,CASE WHEN MOV_ACT_RTRN_IN = &apos;Y&apos;
+			                                      THEN 0
+			                                      WHEN T.JNY_STATUS_CD &lt;&gt; &apos;CNCL&apos; AND M.MOV_STATUS_CD = &apos;CNCL&apos;
+			                                      THEN 0			                                  
+			                                      ELSE M.MOV_ACTUAL_DI
+			                                 END  AS MOV_ACTUAL_DI_CALC  
+                            FROM       /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 M 
+                            INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T
+                            ON         M.JNY_OBJ_ID = T.JNY_OBJ_ID
+                            WHERE      MOV_SCH_RTRN_IN &lt;&gt; &apos;Y&apos; 
+                            AND        MOV_ACT_RTRN_IN &lt;&gt; &apos;Y&apos;
+                           ) M
+			          INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD				
+			          ON         M.MOV_OBJ_ID = MD.MOV_OBJ_ID		
+			          INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP				
+			          ON         MD.NWK_ID = NP.NWK_ID				
+			          INNER JOIN ( SELECT SUB.JNY_OBJ_ID
+                                   ,CASE WHEN CAST(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND) IS NOT NULL
+                                         THEN SUB.JNY_FIN_TD + Cast(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND) 
+                                         ELSE SUB.JNY_FIN_TD + Cast( TZ.TIZ_GMT_DIFF_TM as INTERVAL HOUR TO SECOND)
+                                    END AS JNY_FIN_LD	
+                             FROM ( SELECT DISTINCT MD.JNY_OBJ_ID
+                                                   ,T.LOC_OBJ_ID_CMBL						
+	                                                 ,CASE  WHEN NP.NWK_TR_DATE_BAS_CD = &apos;DEP&apos;				
+		                                                      THEN MIN(MOV.MOV_SCHDEP_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+		                                                      ELSE MAX(MOV.MOV_SCHARR_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+                                                    END AS JNY_FIN_TD
+                                    FROM            /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 MOV
+                                    INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD
+                                    ON              MOV.MOV_OBJ_ID = MD.MOV_OBJ_ID
+                                    INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T
+                                    ON              MOV.JNY_OBJ_ID = T.JNY_OBJ_ID
+                                    INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP				
+                                    ON              MD.NWK_ID = NP.NWK_ID 
+                                  ) SUB
+                             INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/LOCATION_DETAIL_V02 LD
+                             ON         SUB.LOC_OBJ_ID_CMBL = LD.LOC_ID
+                             LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/GL_TIMEZONE_V01 TZ
+                             ON         LD.LOC_TIZ_ID   = TZ.TIZ_ID
+                             LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/COUTZEXCP_V01 TE
+                             ON         LD.LOC_TIZ_ID   = TE.TIZ_ID
+                             AND        LD.LOC_ISO_ID   = TE.COU_ID
+                             AND        TE.CTX_TYPE_ID = &apos;C&apos;
+                         AND        SUB.JNY_FIN_TD BETWEEN 
+						CAST(CONCAT(TE.CTX_START_DT,CONCAT(&apos; &apos; ,TE.CTX_START_TM ) )     as TIMESTAMP)
+							and CAST(CONCAT(TE.CTX_END_DT,CONCAT(&apos; &apos; ,TE.CTX_END_TM ) )	   as TIMESTAMP)                        
+     ) FIN_DAT
+
+                ON         M.JNY_OBJ_ID = FIN_DAT.JNY_OBJ_ID
+--			          WHERE      ( MOV_CANCEL_CD IS NULL OR MOV_CANCEL_CD = &apos;&apos; ) 	
+		          ) S1
+		     INNER JOIN
+		          ( SELECT DISTINCT 
+                                   T.JNY_OBJ_ID			
+                                  ,CASE WHEN (BPA_P.COU_ISO_ID IS NOT NULL) 
+                                        THEN (TRIM(BPA_P.COU_ISO_ID)) 
+                                        ELSE (&apos;&apos;) 
+                                   END || CAST(CSD.BUP_OBJ_ID_P AS CHAR(18)) AS CTY_OPR_OBJ_ID_P -- C9 Optional country ID and payable operator object ID
+                                  ,CASE WHEN (BPA_A.COU_ISO_ID IS NOT NULL) 
+                                        THEN (TRIM(BPA_A.COU_ISO_ID)) 
+                                        ELSE (&apos;&apos;) 
+                                   END || CAST(T.OPR_OBJ_ID_A AS CHAR(18)) AS CTY_OPR_OBJ_ID_A
+                                  ,CASE WHEN (BPA_S.COU_ISO_ID IS NOT NULL) 
+                                        THEN (TRIM(BPA_S.COU_ISO_ID)) 
+                                        ELSE (&apos;&apos;) 
+                                   END || CAST(T.OPR_OBJ_ID_S AS CHAR(18)) AS CTY_OPR_OBJ_ID_S
+                                  ,T.LOC_OBJ_ID_CMBL					
+                                  ,C1.TCC_CCT_CD	AS COST_TYPE				
+                                  ,C1.CUY_ID_REP							
+                                  ,SUM ( CASE WHEN TRIM(C1.TCC_DISC_CD) = &apos;SCH&apos;		
+                                              THEN C1.TCC_REP_TCC_AM				        
+                                              ELSE 0						
+                                         END
+                                       ) AS JNY_SCH_COST_AM -- I8 Total scheduled tour costs amount (excl. movement dedicated costs)
+                                  ,T.JNY_ID						
+                                  ,SUM ( CASE WHEN TRIM(C1.TCC_DISC_CD) = &apos;ACT&apos;		
+                                              THEN C1.TCC_REP_TCC_AM				              
+                                              ELSE 0							
+                                         END
+                                       ) AS JNY_ACTUAL_COST_AM -- I9 Total actual tour costs amount (excl. movement dedicated costs)
+                                  ,T.JNY_CANCEL_CD						
+                                  ,C1.CUY_ID_LCL							
+                                  ,SUM ( CASE WHEN TRIM(C1.TCC_DISC_CD) = &apos;SCH&apos;		
+                                              THEN C1.TCC_AM			       		        
+                                              ELSE 0						
+                                         END
+                                       ) AS JNY_SCH_COST_LCL_AM -- I8 Total scheduled tour costs amount (excl. movement dedicated costs)
+                                  ,SUM ( CASE WHEN TRIM(C1.TCC_DISC_CD) = &apos;ACT&apos;	
+                                              THEN C1.TCC_AM					
+                                              ELSE 0							
+                                         END
+                                       ) AS JNY_ACTUAL_COST_LCL_AM -- I9 Total actual tour costs amount (excl. movement dedicated costs)			
+                            FROM /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T					
+	                    LEFT JOIN ( SELECT COU_ISO_ID
+                                              ,BUP_OBJ_ID
+                                        FROM ( SELECT BUP_OBJ_ID
+                                                     ,COU_ISO_ID
+                                                     ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                                               FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                                             ) BPA
+                                        WHERE BPA.ROWNUM = 1
+                                      ) BPA_A
+		            ON         T.OPR_OBJ_ID_A = BPA_A.BUP_OBJ_ID	
+		            LEFT JOIN ( SELECT COU_ISO_ID
+                                              ,BUP_OBJ_ID
+                                        FROM ( SELECT BUP_OBJ_ID
+                                                     ,COU_ISO_ID
+                                                     ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                                               FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                                             ) BPA
+                                        WHERE BPA.ROWNUM = 1
+                                      ) BPA_S
+		            ON         T.OPR_OBJ_ID_S = BPA_S.BUP_OBJ_ID		
+		            INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/COSTDETAIL_V01 CSD
+		            ON         CSD.JNY_OBJ_ID = T.JNY_OBJ_ID			            
+		            INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/COSTLINE_V01 C1
+		            ON         C1.TCD_OBJ_ID = CSD.TCD_OBJ_ID
+                            LEFT JOIN ( SELECT COU_ISO_ID
+                                              ,BUP_OBJ_ID
+                                        FROM ( SELECT BUP_OBJ_ID
+                                                     ,COU_ISO_ID
+                                                     ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                                               FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                                             ) BPA
+                                        WHERE BPA.ROWNUM = 1
+                                      ) BPA_P
+		            ON         CSD.BUP_OBJ_ID_P = BPA_P.BUP_OBJ_ID	
+                            WHERE      C1.MOV_OBJ_ID is NULL					
+                            AND        CSD.TCD_FIN_STATUS_CD = &apos;FINC&apos; 
+	                    AND        C1.TCC_DELETED_IN &lt;&gt; &apos;Y&apos;	
+                            GROUP BY  1, 2, 3, 4, 5, 6, 7, 9, 11 ,12
+                          ) S2									
+		     ON     S1.JNY_OBJ_ID = S2.JNY_OBJ_ID		
+		     
+		     LEFT JOIN /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T_ORIG
+		     ON     S1.JNY_OBJ_ID_ORIG = T_ORIG.JNY_OBJ_ID		
+	) TDC
+
+  WHERE TDC.NWK_ID IN (&apos;ATD&apos;, &apos;ARN&apos;, &apos;BED&apos;, &apos;BGD&apos;, &apos;CHD&apos;, &apos;CZD&apos;, &apos;DED&apos;, &apos;DKD&apos;, &apos;EED&apos;, &apos;ERN&apos;, &apos;ESD&apos;, 
+&apos;FAS&apos;,  &apos;FID&apos;, &apos;FRD&apos;, &apos;FRT&apos;, &apos;GBD&apos;, &apos;GRD&apos;, &apos;HUD&apos;, &apos;ICS&apos;, &apos;IDE&apos;, &apos;IED&apos;, &apos;ITD&apos;,  &apos;LTD&apos;, &apos;LVD&apos;,&apos;MEN&apos;,
+ &apos;MLK&apos;,  &apos;NLD&apos;, &apos;NOD&apos;, &apos;PLD&apos;, &apos;PTD&apos;, &apos;ROD&apos;, &apos;RUD&apos;,  &apos;SDS&apos;, &apos;SED&apos;, &apos;SID&apos;, &apos;SKD&apos;, &apos;SR1&apos;, &apos;SR2&apos;, &apos;TRD&apos;, &apos;UAE&apos;)
+  AND EXTRACT(YEAR FROM TDC.JNY_FIN_LD) &gt; EXTRACT(YEAR FROM CURRENT_DATE) - 2
+
+	UNION ALL
+	
+	-- Movement dedicated costs
+	( SELECT
+		
+		 CAST(MDC.MOV_SCHDEP_LD AS DATE)	        AS DEPARTURE_REPORTING_DATE	
+		,CAST(MDC.MOV_SCHARR_LD AS DATE)         	AS ARRIVAL_REPORTING_DATE	
+		,CAST(MDC.JNY_FIN_LD AS DATE)		        AS FINANCIAL_REPORTING_DATE	
+		,MDC.NWK_ID							        AS NWK_ID	
+    ,CAST((MDC.LOC_OBJ_ID_ORIG) AS CHAR(18))    	AS BUL_CSYS_ID_ORIG	
+		,CAST((MDC.LOC_OBJ_ID_DEST) AS CHAR(18)) 	AS BUL_CSYS_ID_DEST	
+		,MDC.MTT_ID          						AS MTT_ID	
+		,MDC.CFG_OBJ_ID_ACT			AS CFG_ID	
+		,MDC.OPR_OBJ_ID_P						AS OPR_ID	
+		,CAST((MDC.LOC_OBJ_ID_CMBL) AS CHAR(18))	AS BUL_CSYS_ID_CML		
+		,CONCAT(MDC.COST_TYPE ,CONCAT( &apos;_&apos;, (MDC.NWK_ID)))			AS CST_TYPE_CD	
+		,MDC.MOV_EXTRA_CD						    AS MP_INDICATOR      
+		,MDC.MOV_SCH_DI      						AS SCHEDULED_DISTANCE
+		,MDC.MOV_ACTUAL_DI   						AS ACTUAL_DISTANCE   
+		,MDC.MOV_SCH_COST_AM 						AS SCHEDULED_COST    
+		,MDC.MOV_ACTUAL_COST_AM						AS ACTUAL_COST       
+		,MDC.CUY_ID_REP      						AS CUY_ID_REP        
+		,MDC.JNY_ID							AS TOUR_ID	
+		,MDC.MOV_ID							AS MOV_ID	
+	  ,(MDC.MOV_SCH_DI/MDC.C_TYPE_AM_MOV)				AS SCH_CST_TYPE_DIST
+	  ,(MDC.MOV_ACTUAL_DI/MDC.C_TYPE_AM_MOV)			AS ACT_CST_TYPE_DIST	
+		,&apos;T&apos;								AS CST_SOURCE_CD
+		,MDC.MOV_SCH_COST_LCL_AM					AS SCHEDULED_COST_LCL
+		,MDC.MOV_ACTUAL_COST_LCL_AM					AS  ACTUAL_COST_LCL
+		,MDC.CUY_ID_LCL							AS CUY_ID_LCL
+		,TRIM(MDC.OPR_OBJ_ID_A)						AS OPR_ID_A
+		,TRIM(MDC.OPR_OBJ_ID_S)						AS 	OPR_ID_S	
+
+														 
+		FROM 
+		
+		( SELECT
+			 S1.JNY_OBJ_ID							-- I2  Tour object ID
+			,S1.MOV_OBJ_ID							-- I3  Movement object ID
+			,S1.MOV_SCHDEP_LD						-- C1  Scheduled movement departure date/time (local timezone at origin)
+			,S1.MOV_SCHARR_LD						-- C2  Scheduled movement arrival date/time (local timezone at destination)
+			,S1.JNY_FIN_LD							-- C3  Tour financial local date/time (either actual dep. or arr. depending on network)
+			,S1.NWK_ID							-- C4  Network ID
+			,S1.LOC_OBJ_ID_ORIG						-- C5  Movement origin location object ID
+			,S1.LOC_OBJ_ID_DEST						-- C6  Movement destination location object ID
+			,S1.MTT_ID						     	-- C7  Movement type ID
+			,S1.CFG_OBJ_ID_ACT						-- C8  Actual configuration (= truck type) object ID
+			,S2.CTY_OPR_OBJ_ID_P AS OPR_OBJ_ID_P				-- C9  Optional country ID and payable operator object ID
+			,S2.CTY_OPR_OBJ_ID_A AS OPR_OBJ_ID_A
+			,S2.CTY_OPR_OBJ_ID_S AS OPR_OBJ_ID_S
+	--		,S2.LOC_OBJ_ID_CMBL						-- C10 Cost Management Business Location object ID
+			,CASE WHEN T_ORIG.LOC_OBJ_ID_CMBL IS NULL THEN S2.LOC_OBJ_ID_CMBL ELSE T_ORIG.LOC_OBJ_ID_CMBL END AS LOC_OBJ_ID_CMBL 
+			,S2.COST_TYPE	AS COST_TYPE					-- C11 Cost type code
+			,S1.MOV_EXTRA_CD						-- C12 Planned/extra movement code (&apos;P&apos; or &apos;E&apos;)
+			,S1.MOV_SCH_DI							-- C13 Scheduled movement distance (km)
+			,S1.MOV_ACTUAL_DI						-- C14 Actual movement distance (km)
+			,S2.MOV_SCH_COST_AM						-- C15 Scheduled movement costs amount (excl. dedicated movement costs)
+			,S2.MOV_ACTUAL_COST_AM						-- C16 Actual movement costs amount (excl. dedicated movement costs)
+			,S2.CUY_ID_REP							-- C17 Reporting currency ID
+			,S2.JNY_ID							-- C18 Tour ID
+			,S1.MOV_ID							-- C19 Movement ID
+			,COUNT(S2.COST_TYPE) OVER (PARTITION BY S1.MOV_OBJ_ID) AS C_TYPE_AM_MOV	-- I6  
+			,S2.MOV_SCH_COST_LCL_AM						-- C23 Scheduled movement costs amount local currency (excl. dedicated movement costs)
+			,S2.MOV_ACTUAL_COST_LCL_AM						-- C24 Actual movement costs amount local currency (excl. dedicated movement costs)
+			,S2.CUY_ID_LCL							-- C25 Local currency ID								
+			FROM								
+			( SELECT							
+				 M.JNY_OBJ_ID					  	  -- I2  Tour object ID
+				,M.MOV_OBJ_ID						    -- I3  Movement object ID
+				,MD.MOV_SCHDEP_LD				  	-- C1  Scheduled movement departure date/time (local timezone at origin)
+				,MD.MOV_SCHARR_LD					  -- C2  Scheduled movement arrival date/time (local timezone at destination)
+				,FIN_DAT.JNY_FIN_LD				 	-- C3  Tour financial date/time - local timezone at origin/destination,
+				,MD.NWK_ID					       	-- C4  Network ID
+				,M.LOC_OBJ_ID_ORIG					-- C5  Movement origin location object ID
+				,M.LOC_OBJ_ID_DEST					-- C6  Movement destination location object ID
+				,M.MTT_ID						        -- C7  Movement type ID
+				,M.CFG_OBJ_ID_ACT				  	-- C8  Actual configuration - truck type - object ID
+				,MD.MOV_PLND_XTRA_IN AS MOV_EXTRA_CD -- C12 Planned/extra movement code (&apos;P&apos; or &apos;E&apos;)
+				,M.MOV_SCH_DI_CALC	AS MOV_SCH_DI	-- C13 Scheduled movement distance (km)
+				,M.MOV_ACTUAL_DI_CALC	AS MOV_ACTUAL_DI -- C14 Actual movement distance (km)
+				,M.MOV_ID						-- C19 Movement ID
+				,NP.CUY_ID_COST AS CUY_ID_NWK				-- I4  Network currency ID
+				,NP.NWK_TR_DATE_BAS_CD					-- I5  Network tour date base code to determine whether financial date
+				,M.JNY_OBJ_ID_ORIG
+											--     is based on either scheduled departure or arrival date
+			  FROM       (SELECT M.*
+                          ,CASE WHEN MOV_SCH_RTRN_IN = &apos;Y&apos;
+			                          THEN 0
+			                          ELSE M.MOV_SCH_DI
+			                     END  AS MOV_SCH_DI_CALC
+			                    ,CASE WHEN MOV_ACT_RTRN_IN = &apos;Y&apos;
+			                          THEN 0
+			                          ELSE M.MOV_ACTUAL_DI
+			                     END  AS MOV_ACTUAL_DI_CALC  
+                    FROM   /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 M 
+                    WHERE  MOV_SCH_RTRN_IN &lt;&gt; &apos;Y&apos; 
+                    AND    MOV_ACT_RTRN_IN &lt;&gt; &apos;Y&apos;
+                   ) M
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD		     	-- Contains local dates and times
+			  ON         M.MOV_OBJ_ID = MD.MOV_OBJ_ID			-- Join on movement object ID
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP					
+			  ON         MD.NWK_ID = NP.NWK_ID			      	-- Join on network ID
+			  INNER JOIN ( SELECT SUB.JNY_OBJ_ID
+                           ,CASE WHEN CAST(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND) IS NOT NULL
+                                 THEN SUB.JNY_FIN_TD + CAST(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND)
+                                 ELSE SUB.JNY_FIN_TD + CAST(TZ.TIZ_GMT_DIFF_TM as INTERVAL HOUR TO SECOND)
+                            END AS JNY_FIN_LD	
+                     FROM ( SELECT DISTINCT MD.JNY_OBJ_ID
+                                           ,T.LOC_OBJ_ID_CMBL						
+	                                         ,CASE  WHEN NP.NWK_TR_DATE_BAS_CD = &apos;DEP&apos;				
+		                                              THEN MIN(MOV.MOV_SCHDEP_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+		                                              ELSE MAX(MOV.MOV_SCHARR_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+                                            END AS JNY_FIN_TD
+                            FROM            /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 MOV
+                            INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD
+                            ON              MOV.MOV_OBJ_ID = MD.MOV_OBJ_ID
+                            INNER JOIN     /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T
+                            ON              MOV.JNY_OBJ_ID = T.JNY_OBJ_ID
+                            INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP				
+                            ON              MD.NWK_ID = NP.NWK_ID 
+                          ) SUB
+                     INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/LOCATION_DETAIL_V02 LD
+                     ON         SUB.LOC_OBJ_ID_CMBL = LD.LOC_ID
+                     LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/GL_TIMEZONE_V01 TZ
+                     ON         LD.LOC_TIZ_ID   = TZ.TIZ_ID
+                     LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/COUTZEXCP_V01 TE
+                     ON         LD.LOC_TIZ_ID   = TE.TIZ_ID
+                     AND        LD.LOC_ISO_ID   = TE.COU_ID
+                     AND        TE.CTX_TYPE_ID = &apos;C&apos;
+                    AND        SUB.JNY_FIN_TD BETWEEN 
+								CAST(CONCAT(TE.CTX_START_DT,CONCAT(&apos; &apos; ,TE.CTX_START_TM ) )     as TIMESTAMP)
+							and CAST(CONCAT(TE.CTX_END_DT,CONCAT(&apos; &apos; ,TE.CTX_END_TM ) )	   as TIMESTAMP) 
+                   ) FIN_DAT
+        ON         M.JNY_OBJ_ID = FIN_DAT.JNY_OBJ_ID			  
+			) S1								
+			INNER JOIN							
+			( SELECT							
+				 T.JNY_OBJ_ID					-- I2  Tour object ID
+				,C1.MOV_OBJ_ID 
+				,CASE WHEN (BPA_P.COU_ISO_ID IS NOT NULL)  THEN 
+				   (TRIM(BPA_P.COU_ISO_ID)) 
+				 ELSE (&apos;&apos;) 
+				END	 || CAST(T.OPR_OBJ_ID_P AS CHAR(18)) AS CTY_OPR_OBJ_ID_P					-- C9  Optional Country ID and payable operator object ID
+				,CASE WHEN (BPA_A.COU_ISO_ID IS NOT NULL) THEN 
+				   (TRIM(BPA_A.COU_ISO_ID)) 
+				      ELSE (&apos;&apos;) 
+				 END || CAST(T.OPR_OBJ_ID_A AS CHAR(18))  AS CTY_OPR_OBJ_ID_A
+				,CASE WHEN (BPA_S.COU_ISO_ID IS NOT NULL) THEN
+				   (TRIM(BPA_S.COU_ISO_ID)) 
+				      ELSE (&apos;&apos;) 
+				 END || CAST(T.OPR_OBJ_ID_S AS CHAR(18)) AS CTY_OPR_OBJ_ID_S
+				,T.LOC_OBJ_ID_CMBL					-- C10 Cost Management Business Location object ID
+				,C1.TCC_CCT_CD	AS COST_TYPE				-- C11 Cost type code
+				,CASE							
+					WHEN TRIM(C1.TCC_DISC_CD) = &apos;SCH&apos;       	-- Scheduled costs
+					THEN C1.TCC_REP_TCC_AM				-- Movement dedicated scheduled tour costs amount in reporting currency
+					ELSE 0						
+				 END							
+				 AS MOV_SCH_COST_AM					-- C15 Movement dedicated scheduled tour costs amount
+				,CASE
+					WHEN TRIM(C1.TCC_DISC_CD) = &apos;ACT&apos;       	-- Actual costs
+					THEN C1.TCC_REP_TCC_AM				-- Movement dedicated actual costs amount in reporting currency
+					ELSE 0						
+				 END
+				 AS MOV_ACTUAL_COST_AM					-- C16 Movement dedicated actual costs amount
+				,C1.CUY_ID_REP						-- C17 Reporting currency ID
+				,T.JNY_ID						-- C18 Tour ID
+				,CASE							
+					WHEN TRIM(C1.TCC_DISC_CD) = &apos;SCH&apos;       	-- Scheduled costs
+					THEN C1.TCC_AM					-- Movement dedicated scheduled tour costs amount in local currency
+					ELSE 0						
+				 END							
+				 AS MOV_SCH_COST_LCL_AM					-- C23 Movement dedicated scheduled tour costs amount
+				,CASE
+					WHEN TRIM(C1.TCC_DISC_CD) = &apos;ACT&apos;       	-- Actual costs
+					THEN C1.TCC_AM					-- Movement dedicated actual costs amount in local currency
+					ELSE 0						
+				 END
+				 AS MOV_ACTUAL_COST_LCL_AM				-- C24 Movement dedicated actual costs amount
+				,C1.CUY_ID_LCL						-- C25 local currency ID
+				FROM		/shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T				
+				LEFT JOIN						
+             ( SELECT COU_ISO_ID
+                     ,BUP_OBJ_ID
+               FROM
+                   ( SELECT	BUP_OBJ_ID
+                           ,COU_ISO_ID
+                           ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                     FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                   ) BPA
+               WHERE BPA.ROWNUM = 1
+              ) BPA_P
+		    ON  T.OPR_OBJ_ID_P = BPA_P.BUP_OBJ_ID
+		    LEFT JOIN						
+             ( SELECT COU_ISO_ID
+                     ,BUP_OBJ_ID
+               FROM
+                   ( SELECT	BUP_OBJ_ID
+                           ,COU_ISO_ID
+                           ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                     FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                   ) BPA
+               WHERE BPA.ROWNUM = 1
+              ) BPA_A
+		    ON  T.OPR_OBJ_ID_A = BPA_A.BUP_OBJ_ID
+				LEFT JOIN						
+             ( SELECT COU_ISO_ID
+                     ,BUP_OBJ_ID
+               FROM
+                   ( SELECT	BUP_OBJ_ID
+                           ,COU_ISO_ID
+                           ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                     FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                   ) BPA
+               WHERE BPA.ROWNUM = 1
+              ) BPA_S
+		    ON  T.OPR_OBJ_ID_S = BPA_S.BUP_OBJ_ID	
+				
+
+				INNER JOIN	/shared/Source/EDW/ROCS/PRODROCS_P/COSTLINE_V01 C1				
+				ON		C1.TCC_PARENT_OBJ_ID = T.JNY_OBJ_ID	-- Join on tour object ID
+--				AND		SUBSTR(C1.TCC_DISC_TYPE_CD,1,1) = &apos;T&apos;	-- Filter only tour costs
+				AND		C1.MOV_OBJ_ID is NOT NULL		-- Filter only costs not dedicated to a specific movement
+				AND 		T.JNY_FIN_STATUS_CD	= &apos;FINC&apos; 	-- Only include tours which are financially closed
+                                AND             C1.TCC_DELETED_IN &lt;&gt; &apos;Y&apos;
+			) S2	-- Movement dedicated scheduled and actual costs
+--		ON S1.JNY_OBJ_ID = S2.JNY_OBJ_ID				-- Join on tour object ID
+			ON S1.MOV_OBJ_ID = S2.MOV_OBJ_ID				-- Join on tour object ID			
+		     
+		  LEFT JOIN /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T_ORIG
+		  ON     S1.JNY_OBJ_ID_ORIG = T_ORIG.JNY_OBJ_ID	
+		  
+		) MDC	-- Planned Movements Costs (dedicated to a specific movement)
+
+	
+  WHERE MDC.NWK_ID IN (&apos;ATD&apos;, &apos;ARN&apos;, &apos;BED&apos;, &apos;BGD&apos;, &apos;CHD&apos;, &apos;CZD&apos;, &apos;DED&apos;, &apos;DKD&apos;, &apos;EED&apos;, &apos;ERN&apos;, &apos;ESD&apos;, 
+&apos;FAS&apos;,  &apos;FID&apos;, &apos;FRD&apos;, &apos;FRT&apos;, &apos;GBD&apos;, &apos;GRD&apos;, &apos;HUD&apos;, &apos;ICS&apos;, &apos;IDE&apos;, &apos;IED&apos;, &apos;ITD&apos;,  &apos;LTD&apos;, &apos;LVD&apos;,&apos;MEN&apos;,
+ &apos;MLK&apos;,  &apos;NLD&apos;, &apos;NOD&apos;, &apos;PLD&apos;, &apos;PTD&apos;, &apos;ROD&apos;, &apos;RUD&apos;,  &apos;SDS&apos;, &apos;SED&apos;, &apos;SID&apos;, &apos;SKD&apos;, &apos;SR1&apos;, &apos;SR2&apos;, &apos;TRD&apos;, &apos;UAE&apos;)
+  AND EXTRACT(YEAR FROM MDC.JNY_FIN_LD) &gt; EXTRACT(YEAR FROM CURRENT_DATE) - 2
+	
+
+)
+
+
+	UNION ALL
+	
+	-- Intermodal costs (always movement based)
+	( SELECT
+		
+		 CAST(IMC.MOV_SCHDEP_LD AS DATE)		AS DEPARTURE_REPORTING_DATE
+		,CAST(IMC.MOV_SCHARR_LD AS DATE)		AS ARRIVAL_REPORTING_DATE
+		,CAST(IMC.JNY_FIN_LD AS DATE)		AS FINANCIAL_REPORTING_DATE
+		,IMC.NWK_ID							AS NWK_ID
+         ,CAST((IMC.LOC_OBJ_ID_ORIG) AS CHAR(18))	AS BUL_CSYS_ID_ORIG	
+		,CAST((IMC.LOC_OBJ_ID_DEST) AS CHAR(18))	AS BUL_CSYS_ID_DEST
+		,IMC.MTT_ID          						AS MTT_ID          
+		,IMC.CFG_OBJ_ID_ACT					AS CFG_ID          
+		,IMC.OPR_OBJ_ID_P						AS OPR_ID          
+		,CAST((IMC.LOC_OBJ_ID_CMBL) AS CHAR(18)) 	AS BUL_CSYS_ID_CML			
+		,CONCAT(IMC.COST_TYPE , CONCAT(&apos;_&apos; , IMC.NWK_ID))		AS CST_TYPE_CD
+		,IMC.MOV_EXTRA_CD						    AS MP_INDICATOR      	
+		,IMC.MOV_SCH_DI      						AS SCHEDULED_DISTANCE	
+		,IMC.MOV_ACTUAL_DI   						AS ACTUAL_DISTANCE   	
+		,IMC.MOV_SCH_COST_AM 						AS SCHEDULED_COST    	
+		,IMC.MOV_ACTUAL_COST_AM						AS ACTUAL_COST       	
+		,IMC.CUY_ID_REP      						AS CUY_ID_REP        	
+		,IMC.JNY_ID							AS TOUR_ID
+		,IMC.MOV_ID							AS MOV_ID
+	        ,(IMC.MOV_SCH_DI/IMC.C_TYPE_AM_IM)		AS   SCH_CST_TYPE_DIST
+		,(IMC.MOV_ACTUAL_DI/IMC.C_TYPE_AM_IM)		AS  ACT_CST_TYPE_DIST
+		,&apos;I&apos;								        AS   CST_SOURCE_CD
+		,IMC.MOV_SCH_COST_LCL_AM 					AS SCHEDULED_COST_LCL
+		,IMC.MOV_ACTUAL_COST_LCL_AM					AS ACTUAL_COST_LCL
+		,IMC.CUY_ID_LCL      						AS CUY_ID_LCL
+		,IMC.OPR_OBJ_ID_A						AS  OPR_ID_A
+		,IMC.OPR_OBJ_ID_S						AS  OPR_ID_S
+
+		FROM 
+		
+		( SELECT
+			 S1.JNY_OBJ_ID							-- I2  Tour object ID
+			,S1.MOV_OBJ_ID							-- I3  Movement object ID
+			,S1.MOV_SCHDEP_LD						-- C1  Scheduled movement departure date/time (local timezone at origin)
+			,S1.MOV_SCHARR_LD						-- C2  Scheduled movement arrival date/time (local timezone at destination)
+			,S1.JNY_FIN_LD							-- C3  Tour financial local date/time (either actual dep. or arr. depending on network)
+			,S1.NWK_ID							-- C4  Network ID
+			,S1.LOC_OBJ_ID_ORIG						-- C5  Movement origin location object ID
+			,S1.LOC_OBJ_ID_DEST						-- C6  Movement destination location object ID
+			,S1.MTT_ID							-- C7  Movement type ID
+			,S1.CFG_OBJ_ID_ACT						-- C8  Actual configuration (= truck type) object ID
+			,S1.CTY_OPR_OBJ_ID_P AS OPR_OBJ_ID_P				-- C9  Optional country ID and payable operator object ID
+			,S1.CTY_OPR_OBJ_ID_A AS OPR_OBJ_ID_A
+			,S1.CTY_OPR_OBJ_ID_S AS OPR_OBJ_ID_S
+			,S1.LOC_OBJ_ID_CMBL						-- C10 Cost Management Business Location object ID
+			,S1.COST_TYPE	    						-- C11 Cost type code
+			,S1.MOV_EXTRA_CD						-- C12 Planned/extra movement code (&apos;P&apos; or &apos;E&apos;)
+			,S1.MOV_SCH_DI							-- C13 Scheduled movement distance (km)
+			,S1.MOV_ACTUAL_DI						-- C14 Actual movement distance (km)
+			,S1.MOV_SCH_COST_AM						-- C15 Scheduled movement costs amount (excl. dedicated movement costs)
+			,S1.MOV_ACTUAL_COST_AM						-- C16 Actual movement costs amount (excl. dedicated movement costs)
+			,S1.CUY_ID_REP							-- C17 Reporting currency ID
+			,S1.JNY_ID							-- C18 Tour ID
+			,S1.MOV_ID							-- C19 Movement ID
+			,COUNT(S1.COST_TYPE) OVER (PARTITION BY S1.MOV_OBJ_ID) AS C_TYPE_AM_IM
+			,S1.MOV_SCH_COST_LCL_AM						-- C23 Scheduled movement costs amount Local currency (excl. dedicated movement costs)
+			,S1.MOV_ACTUAL_COST_LCL_AM					-- C24 Actual movement costs amount Local currency (excl. dedicated movement costs)
+			,S1.CUY_ID_LCL							-- C25 Local currency ID					
+						
+			FROM								
+			( SELECT							
+				 MO.JNY_OBJ_ID						-- I2  Tour object ID
+				,MO.MOV_OBJ_ID						-- I3  Movement object ID
+				,MD.MOV_SCHDEP_LD					-- C1  Scheduled movement departure date/time (local timezone at origin)
+				,MD.MOV_SCHARR_LD					-- C2  Scheduled movement arrival date/time (local timezone at destination)
+				,FIN_DAT.JNY_FIN_LD				-- C3  Tour financial date/time - local timezone at origin/destination
+				,MD.NWK_ID						    -- C4  Network ID
+				/*** Origin and destination CML should be the same in movement view and intermodal usage view 	***/
+				/*** but we take it from the intermodal usage view						***/
+				,IU.LOC_OBJ_ID_ORIG					-- C5  Movement origin location object ID
+				,IU.LOC_OBJ_ID_DEST					-- C6  Movement destination location object ID
+				,MO.MTT_ID						-- C7  Movement type ID
+				,MO.CFG_OBJ_ID_ACT					-- C8  Actual configuration - truck type - object ID
+				/*** With intermodals, the actual operator is the payable operator ***/
+				,CASE  WHEN (BPA_A.COU_ISO_ID IS NOT NULL) 
+				       THEN (TRIM(BPA_A.COU_ISO_ID)) 
+				       ELSE (&apos;&apos;) 
+				 END
+				 || CAST(IU.BUP_OBJ_ID_IM_ACT AS CHAR(18))
+				 AS CTY_OPR_OBJ_ID_P					-- C9  Optional Country ID and payable (= actual) operator object ID
+				,CASE  WHEN (BPA_A.COU_ISO_ID IS NOT NULL) 
+				       THEN (TRIM(BPA_A.COU_ISO_ID)) 
+				       ELSE (&apos;&apos;) 
+				 END
+				 || CAST(IU.BUP_OBJ_ID_IM_ACT AS CHAR(18))
+				 AS CTY_OPR_OBJ_ID_A	
+				,CASE  WHEN (BPA_A.COU_ISO_ID IS NOT NULL) 
+				       THEN (TRIM(BPA_A.COU_ISO_ID)) 
+				       ELSE (&apos;&apos;) 
+				 END
+				 || CAST(IU.BUP_OBJ_ID_IM_ACT AS CHAR(18))
+				 AS CTY_OPR_OBJ_ID_S	
+				/*** CMBL should be derived from intermodal usage view, NOT from tour view!!! ***/
+				,IU.LOC_OBJ_ID_CMBL					-- C10 Cost Management Business Location object ID
+				,CC.TCC_CCT_CD	AS COST_TYPE				-- C11 Cost type code
+				,MD.MOV_PLND_XTRA_IN AS MOV_EXTRA_CD			-- C12 Planned/extra movement code, being P or E
+				,MO.MOV_SCH_DI						-- C13 Scheduled movement distance (km)
+				,MO.MOV_ACTUAL_DI					-- C14 Actual movement distance (km)
+				,SUM ( CASE							
+				   WHEN TRIM(CC.TCC_DISC_CD) = &apos;SCH&apos; 		-- Scheduled costs
+				   THEN CC.TCC_REP_TCC_AM				
+				   ELSE 0						
+				 END)							
+				 AS MOV_SCH_COST_AM					-- C15 Intermodal movement dedicated scheduled costs amount in reporting currency
+				,SUM ( CASE
+				   WHEN TRIM(CC.TCC_DISC_CD) = &apos;ACT&apos;		-- Actual costs
+				   THEN CC.TCC_REP_TCC_AM				
+				   ELSE 0						
+				 END)
+				 AS MOV_ACTUAL_COST_AM					-- C16 Intermodal movement dedicated actual costs amount in reporting currency
+				,CC.CUY_ID_REP						-- C17 Reporting currency ID
+				,T.JNY_ID						-- C18 Tour ID
+				,MO.MOV_ID						-- C19 Movement ID
+				,NP.CUY_ID_COST   AS CUY_ID_NWK				-- I4  Network currency ID
+				,NP.NWK_TR_DATE_BAS_CD					-- I5  Network tour date base code to determine whether financial date
+											--     is based on either scheduled departure or arrival date
+				,SUM ( CASE							
+				   WHEN TRIM(CC.TCC_DISC_CD) = &apos;SCH&apos; 		-- Scheduled costs
+				   THEN CC.TCC_AM				
+				   ELSE 0						
+				 END)							
+				 AS MOV_SCH_COST_LCL_AM					-- C23 Intermodal movement dedicated scheduled costs amount in local currency
+				,SUM ( CASE
+				   WHEN TRIM(CC.TCC_DISC_CD) = &apos;ACT&apos;		-- Actual costs
+				   THEN CC.TCC_AM				
+				   ELSE 0						
+				 END)
+				 AS MOV_ACTUAL_COST_LCL_AM				-- C24 Intermodal movement dedicated actual costs amount in local currency
+				,CC.CUY_ID_LCL						-- C25 local currency ID			  
+			  FROM       /shared/Source/EDW/ROCS/PRODROCS_P/COSTDETAIL_V01 CSD 
+                          INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/COSTLINE_V01 CC
+			  ON         CSD.TCD_OBJ_ID = CC.TCD_OBJ_ID
+			  AND 	     CSD.TCD_FIN_STATUS_CD = &apos;FINC&apos; 	      		-- Only include costs which are financially closed
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/INTERMODAL_UNITUSAGE_V01 IU			-- Contains intermodal details
+			  ON         IU.IUE_OBJ_ID = CSD.IUE_OBJ_ID                     -- Join on intermodal object ID (= movement object ID in this case)
+                          AND        CC.TCC_DELETED_IN &lt;&gt; &apos;Y&apos;
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 MO 					-- Contains movement details
+			  ON         MO.MOV_OBJ_ID = IU.MOV_OBJ_ID 			-- Join on movement object ID
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD				-- Contains local dates and times
+			  ON         MD.MOV_OBJ_ID = MO.MOV_OBJ_ID 			-- Join on movement object ID
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP					-- Contains network currency ID and network tour date base code
+			  ON         NP.NWK_ID = MD.NWK_ID 				-- Join on network ID
+			  INNER JOIN ( SELECT SUB.JNY_OBJ_ID
+                                            , CASE WHEN CAST(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND) IS NOT NULL
+                                                   THEN SUB.JNY_FIN_TD + CAST(TE.CTX_GMT_DIFF_TM as INTERVAL HOUR TO SECOND)
+                                                   ELSE SUB.JNY_FIN_TD + CAST(TZ.TIZ_GMT_DIFF_TM as INTERVAL HOUR TO SECOND)
+                                              END AS JNY_FIN_LD	
+	
+                                       FROM ( SELECT DISTINCT MD.JNY_OBJ_ID
+                                                             ,T.LOC_OBJ_ID_CMBL						
+	                                                     ,CASE  WHEN NP.NWK_TR_DATE_BAS_CD = &apos;DEP&apos;				
+		                                                    THEN MIN(MOV.MOV_SCHDEP_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+		                                                    ELSE MAX(MOV.MOV_SCHARR_TD) OVER (PARTITION BY MD.JNY_OBJ_ID)	
+                                                              END AS JNY_FIN_TD
+                                              FROM            /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_V01 MOV
+                                              INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/MOVEMENT_DERIVED_V01 MD
+                                              ON              MOV.MOV_OBJ_ID = MD.MOV_OBJ_ID
+                                              INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T
+                                              ON              MOV.JNY_OBJ_ID = T.JNY_OBJ_ID
+                                              INNER JOIN      /shared/Source/EDW/ROCS/PRODROCS_P/NETWORKPARM_V01 NP				
+                                              ON              MD.NWK_ID = NP.NWK_ID 
+                                            ) SUB
+                                       INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/LOCATION_DETAIL_V02 LD
+                                       ON         SUB.LOC_OBJ_ID_CMBL = LD.LOC_ID
+                                       LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/GL_TIMEZONE_V01 TZ
+                                       ON         LD.LOC_TIZ_ID   = TZ.TIZ_ID
+                                       LEFT JOIN  /shared/Source/EDW/ROCS/PRODROCS_P/COUTZEXCP_V01 TE
+                                       ON         LD.LOC_TIZ_ID   = TE.TIZ_ID
+                                       AND        LD.LOC_ISO_ID   = TE.COU_ID
+                                       AND        TE.CTX_TYPE_ID = &apos;C&apos;
+                                      AND        SUB.JNY_FIN_TD  BETWEEN  
+	   
+							CAST(CONCAT(TE.CTX_START_DT,CONCAT(&apos; &apos; ,TE.CTX_START_TM ) )     as TIMESTAMP)
+							and CAST(CONCAT(TE.CTX_END_DT,CONCAT(&apos; &apos; ,TE.CTX_END_TM ) )	   as TIMESTAMP)
+									--CAST(CONCAT(TE.CTX_START_DT, TE.CTX_START_TM ) AS TIMESTAMP)
+                                                  -- AND CAST(CONCAT(TE.CTX_END_DT ,TE.CTX_END_TM )AS TIMESTAMP)
+                                     ) FIN_DAT
+                          ON         MO.JNY_OBJ_ID = FIN_DAT.JNY_OBJ_ID				  
+			  INNER JOIN /shared/Source/EDW/ROCS/PRODROCS_P/TOUR_V01 T						-- Contains tour details
+			  ON         T.JNY_OBJ_ID = MO.JNY_OBJ_ID			-- Join on tour object ID
+                          LEFT JOIN  ( SELECT COU_ISO_ID
+                                             ,BUP_OBJ_ID
+                                       FROM   ( SELECT BUP_OBJ_ID
+                                                      ,COU_ISO_ID
+                                                      ,ROW_NUMBER() OVER (PARTITION BY BUP_OBJ_ID ORDER BY BUP_OBJ_ID) AS ROWNUM
+                                                FROM   /shared/Source/EDW/ROCS/PRODROCS_P/BUSPARTNER_ADDRESS_V01
+                                              ) BPA
+                                       WHERE BPA.ROWNUM = 1
+                                     ) BPA_A
+		          ON  IU.BUP_OBJ_ID_IM_ACT = BPA_A.BUP_OBJ_ID
+                          GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,21,22,23,24,25,28
+                        ) S1								
+			
+	        ) IMC	-- Intermodal Costs
+	  
+
+   WHERE IMC.NWK_ID IN (&apos;ATD&apos;, &apos;ARN&apos;, &apos;BED&apos;, &apos;BGD&apos;, &apos;CHD&apos;, &apos;CZD&apos;, &apos;DED&apos;, &apos;DKD&apos;, &apos;EED&apos;, &apos;ERN&apos;, &apos;ESD&apos;, 
+&apos;FAS&apos;,  &apos;FID&apos;, &apos;FRD&apos;, &apos;FRT&apos;, &apos;GBD&apos;, &apos;GRD&apos;, &apos;HUD&apos;, &apos;ICS&apos;, &apos;IDE&apos;, &apos;IED&apos;, &apos;ITD&apos;,  &apos;LTD&apos;, &apos;LVD&apos;,&apos;MEN&apos;,
+ &apos;MLK&apos;,  &apos;NLD&apos;, &apos;NOD&apos;, &apos;PLD&apos;, &apos;PTD&apos;, &apos;ROD&apos;, &apos;RUD&apos;,  &apos;SDS&apos;, &apos;SED&apos;, &apos;SID&apos;, &apos;SKD&apos;, &apos;SR1&apos;, &apos;SR2&apos;, &apos;TRD&apos;, &apos;UAE&apos;)   
+  AND EXTRACT(YEAR FROM IMC.JNY_FIN_LD) &gt; EXTRACT(YEAR FROM CURRENT_DATE) - 2   )              
+
+       </attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_MvmntCost</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1556621464638</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20147</attribute>
+  <attribute name="creatorUserName" type="STRING">m983vbl</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565614960283</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20147</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556621464638</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Networks/ROCS_SSD/RMC/vc_MovementCost" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Departure_Reporting_Date">
+          <datatype type="DATE"/>
+        </element>
+        <element name="Arrival_Reporting_Date">
+          <datatype type="DATE"/>
+        </element>
+        <element name="Financial_Reporting_Date">
+          <datatype type="DATE"/>
+        </element>
+        <element name="NWK_ID">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="BUL_CSYS_ID_ORIG">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+        </element>
+        <element name="BUL_CSYS_ID_DEST">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+        </element>
+        <element name="MTT_ID">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="CFG_ID">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+        </element>
+        <element name="OPR_ID">
+          <datatype type="STRING" minLength="18" maxLength="20" trailingSpaces="false"/>
+        </element>
+        <element name="BUL_CSYS_ID_CML">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+        </element>
+        <element name="CST_TYPE_CD">
+          <datatype type="STRING" minLength="9" maxLength="9"/>
+        </element>
+        <element name="MP_Indicator">
+          <datatype type="STRING" minLength="1" maxLength="1"/>
+        </element>
+        <element name="Scheduled_Distance">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Actual_Distance">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="Scheduled_Cost">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+        </element>
+        <element name="Actual_Cost">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+        </element>
+        <element name="CUY_ID_REP">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="TOUR_ID">
+          <datatype type="STRING" minLength="8" maxLength="8"/>
+        </element>
+        <element name="MOV_ID">
+          <datatype type="STRING" minLength="8" maxLength="8"/>
+        </element>
+        <element name="SCH_CST_TYPE_DIST">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="ACT_CST_TYPE_DIST">
+          <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+        </element>
+        <element name="CST_SOURCE_CD">
+          <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+        </element>
+        <element name="Scheduled_Cost_Lcl">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+        </element>
+        <element name="Actual_Cost_Lcl">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+        </element>
+        <element name="CUY_ID_LCL">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="OPR_ID_A">
+          <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+        </element>
+        <element name="OPR_ID_S">
+          <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Networks/ROCS_SSD/RMC/vc_MovementCost&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1564727013000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1565614960164</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565614960164</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565614960164</attribute>
+  </trigger>
+</metadata>

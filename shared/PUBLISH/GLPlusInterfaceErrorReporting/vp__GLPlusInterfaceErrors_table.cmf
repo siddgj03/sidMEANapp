@@ -1,0 +1,212 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_GLPlusInterfaceErrors" path="/shared/Publish/GLPlusInterfaceErrorReporting/vp_GLPlusInterfaceErrors" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country_Code_Reciever" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Error_Description" nullable="true">
+      <datatype type="STRING" maxLength="35"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Error_Data" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Operational_Source_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Keyed_In_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Creation_Date" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Consignment_Creation_Time" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Collection_Time" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Divisional_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Number" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Depot_Destination" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Terms_Of_Payment" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Paying_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Paying_Account_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Load_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="country_filter" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+  </security>
+  <dependency target="/shared/Core/SpecialServices/GLPlusInterfaceErrorReporting/vc_GLPlusInterfaceErrors" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Country_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Country_Code_Reciever">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Consignment_Number">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="Error_Description">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Error_Data">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Operational_Source_Code">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Keyed_In_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Consignment_Creation_Date">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Consignment_Creation_Time">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Collection_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Collection_Time">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Divisional_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Product_Number">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Origin_Depot">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Depot_Destination">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Terms_Of_Payment">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Paying_Account_Number">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Paying_Account_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Load_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="country_filter">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    *
+ from /shared/Core/SpecialServices/GLPlusInterfaceErrorReporting/vc_GLPlusInterfaceErrors</attribute>
+  <attribute name="creationDate" type="LONG">1566452149790</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170137</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568897053433</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170137</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566452149790</attribute>
+</metadata>

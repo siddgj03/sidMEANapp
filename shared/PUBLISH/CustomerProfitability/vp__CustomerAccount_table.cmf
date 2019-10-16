@@ -1,0 +1,387 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CustomerAccount" path="/shared/Publish/CustomerProfitability/vp_CustomerAccount" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Account_Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Country_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Division_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_IMP_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Account_GAM_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ENT_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ID_ACC" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COU_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ACC_ID" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DIV_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ACG_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="COM_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NAD_ID_MAIN" nullable="true">
+      <datatype type="STRING" minLength="12" maxLength="12"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Costed&amp;Groupset" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INV_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_INVOICE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="WGT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OUP_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Customer_Account_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OUP_LATESTENTRY_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_ACC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_INV">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DIV_INVDIVISION_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_RATING_CALC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RCT_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RZO_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="PFT_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ACC_ID_APPLIC">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ID_APPLIC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DFD_SRKY_ID_1">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFD_SRKY_ID_2">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WSL_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV1">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV2">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV3">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV4">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOB_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_INVPRODUCT_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CM_STR_LVL1_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL1_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL5_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL5_ID">
+        <datatype type="STRING" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="Invoicing_Region">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="COU_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ACTUAL">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="OUP_COSTED_STAT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_COSTED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="STT_ID_LATEST">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Billing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Billing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Destination_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Origin_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Partner_Country">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Cubic_Conversion_Factor">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Direction_of_Trade">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Entry_Type">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Invoice_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Mode_of_Transport">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SDS_Currency">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Value_of_Goods_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Terms_of_Payment_cd">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Tariff_Type">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_NOTE_SRC_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_PCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="OUP_DCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONTYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_CustomerAccount" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Customer_Account_Division_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="NAM_NM">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Customer_Account_IMP_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Customer_Account_GAM_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="DIV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="NAD_ID_MAIN">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+    TRIMTRAILING(vc_Costed_Groupset.COU_ID_ACC) Customer_Account_Country_Code, 
+    COALESCE(vc_Costed_Groupset.COU_ENT_NM, &apos;&apos;) Customer_Account_Country_Name, 
+    vc_Costed_Groupset.DIV_INVDIVISION_ID Customer_Account_Division_Code, 
+    vc_CustomerAccount.Customer_Account_Division_Name, 
+    vc_Costed_Groupset.ACC_NR_INV Customer_Account_Number, 
+    COALESCE(vc_CustomerAccount.NAM_NM, vc_Costed_Groupset.ACC_NR_INV) Customer_Account_Name, 
+    vc_CustomerAccount.Customer_Account_IMP_Indicator, 
+    vc_CustomerAccount.Customer_Account_GAM_Indicator, 
+    vc_Costed_Groupset.COU_ENT_ID, 
+    vc_Costed_Groupset.COU_ID_ACC, 
+    vc_CustomerAccount.COU_ID, 
+    vc_CustomerAccount.ACC_ID, 
+    vc_CustomerAccount.DIV_ID, 
+    vc_CustomerAccount.ACG_ID,
+ vc_CustomerAccount.COM_ID,
+ vc_CustomerAccount.NAD_ID_MAIN
+
+FROM      
+    /shared/Core/Finance/CustomerProfitability/&quot;vc_Costed&amp;Groupset&quot; vc_Costed_Groupset LEFT OUTER JOIN 
+        /shared/Core/Finance/CustomerProfitability/vc_CustomerAccount vc_CustomerAccount
+    ON vc_Costed_Groupset.COU_ID_ACC = vc_CustomerAccount.COU_ID AND 
+        vc_Costed_Groupset.ACC_NR_INV = vc_CustomerAccount.ACC_ID AND 
+        vc_Costed_Groupset.ACG_ID_INV = vc_CustomerAccount.ACG_ID AND 
+        vc_Costed_Groupset.DIV_INVDIVISION_ID = vc_CustomerAccount.DIV_ID  
+WHERE vc_Costed_Groupset.OUP_LATESTENTRY_IN = &apos;Y&apos;</attribute>
+  <attribute name="creationDate" type="LONG">1563804177539</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565777016103</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563804177539</attribute>
+</metadata>

@@ -1,0 +1,83 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_CSACostItem" path="/shared/Core/Finance/Control_And_Reconciliation/vc_CSACostItem" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CSA_Cost_Item_Code" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Upts_DateTime" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_User_Id" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Item_Description" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CSA_Definition" nullable="true">
+      <datatype type="STRING" maxLength="255"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CTM_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_CM_UPTS_TS">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CTM_CM_USR_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CTM_NM" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CTM_DEFINITION_TX" nullable="false">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING"> 
+Select 
+	CM_COSTITEM_V01.CTM_SRKY_ID as CSA_Cost_Item_Code,
+	CM_COSTITEM_V01.CTM_CM_UPTS_TS as CSA_Upts_DateTime,
+	CM_COSTITEM_V01.CTM_CM_USR_ID as CSA_User_Id,
+	CM_COSTITEM_V01.CTM_NM as Cost_Item_Description,
+	CM_COSTITEM_V01.CTM_DEFINITION_TX  as  CSA_Definition
+From 
+
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTITEM_V01   CM_COSTITEM_V01
+</attribute>
+  <attribute name="creationDate" type="LONG">1563859838391</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564050869609</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563859838391</attribute>
+</metadata>

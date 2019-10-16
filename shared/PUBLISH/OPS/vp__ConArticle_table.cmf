@@ -1,0 +1,201 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_ConArticle" path="/shared/Publish/OPS/vp_ConArticle" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Article_Description_Line_1" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Net_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Tariff_Number" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Srky_Id" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Item_Quantity" nullable="true">
+      <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Amount_Currency_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Invoice_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Article_Final_Clearance_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/CONARTICLE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CNA_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CNA_NET_WT">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CNA_ITEM_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="CNA_GROSS_WT">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CNA_ART_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_AM">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNA_SAMPLE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_SAMPLE">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNA_INVOICE_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNA_TRANS_TYPE_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CNA_SEP_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CNA_SIMPL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CNA_SELFCL_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CNA_ISSUE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CNA_ART_LINE1_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CNA_LIC_ID">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="CNA_ORIG_COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CNA_TF_ID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CNA_HAZ_CD_1">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CNA_HAZ_CD_2">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CNA_UN_CD_1">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CNA_UN_CD_2">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CNA_MARKS_TX">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="BUL_ID_FIN_CLR">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CNA_EXPDOC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CNA_UNITS_NR">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="CNA_UNITS_DS">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+CNA_ART_LINE1_DS &quot;Article_Description_Line_1&quot;,
+CNA_GROSS_WT &quot;Article_Gross_Weight&quot;,
+CNA_NET_WT &quot;Article_Net_Weight&quot;,
+CNA_TF_ID &quot;Article_Tariff_Number&quot;,
+CON_SRKY_ID &quot;Con_Srky_Id&quot; ,
+CNA_ID &quot;Article_ID&quot;,
+CNA_ITEM_QT  Article_Item_Quantity,
+CNA_ART_AM Article_Amount,
+CUY_ID_AM Article_Amount_Currency_Code,
+CNA_INVOICE_AM Article_Invoice_Amount,
+BUL_ID_FIN_CLR Article_Final_Clearance_Depot_Code
+from /shared/Source/EDW/OPS/PRODOPS_P/CONARTICLE_V01
+</attribute>
+  <attribute name="creationDate" type="LONG">1563252410546</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566312666542</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563252410546</attribute>
+</metadata>

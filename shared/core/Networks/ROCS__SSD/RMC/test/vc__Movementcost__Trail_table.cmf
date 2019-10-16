@@ -1,0 +1,120 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Movementcost_Trail" path="/shared/Core/Networks/ROCS_SSD/RMC/test/vc_Movementcost_Trail" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="sum_1" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCS_SSD/RMC/vc_MovementCost" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Departure_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Arrival_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Financial_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="NWK_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUL_CSYS_ID_ORIG">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_CSYS_ID_DEST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="MTT_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CFG_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="OPR_ID">
+        <datatype type="STRING" minLength="18" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="BUL_CSYS_ID_CML">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CST_TYPE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="MP_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Scheduled_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Actual_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Scheduled_Cost">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="Actual_Cost">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="CUY_ID_REP">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TOUR_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="MOV_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="SCH_CST_TYPE_DIST">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="ACT_CST_TYPE_DIST">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="CST_SOURCE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Scheduled_Cost_Lcl">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="Actual_Cost_Lcl">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      </element>
+      <element name="CUY_ID_LCL">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPR_ID_A">
+        <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="OPR_ID_S">
+        <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select count(*) as sum_1
+from /shared/Core/Networks/ROCS_SSD/RMC/vc_MovementCost
+where extract(year from Financial_Reporting_Date)=&apos;2018&apos;; --- cube have 3254904</attribute>
+  <attribute name="creationDate" type="LONG">1567583782335</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567584084976</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1567583782335</attribute>
+</metadata>

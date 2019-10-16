@@ -1,0 +1,696 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_RevenueWeights&amp;Consignment" path="/shared/Core/Finance/CustomerProfitability/vc_RevenueWeights&amp;Consignment" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>Comments saved during Model Generation 2019/07/13 15:13:09
+--case when SUM(OUP_PCPS_QT) = 0 then 0
+--  else (SUM(T1.Number_of_Consignments)/SUM((OUP_CONS_QT /OUP_PCPS_QT) ))
+-- end  as  PU_Cons_per_Stop,
+--case when OUP_DCPS_QT = 0 then 0
+-- else cast((OUP_CONS_QT / OUP_DCPS_QT)as float)
+--end  as  Del_Stops_per_con 
+--case when XSUM(OUP_DCPS_QT ) = 0 then 0
+-- else (XSUM( Number_of_Consignments) / XSUM((OUP_CONS_QT /OUP_DCPS_QT) ))
+--end  as  Del_Cons_per_Stop
+--GROUP BY   1,2,3,4,5,6,7,8,9,1,0,11,1,2,13,14,15,16,17,18,19,20
+</annotation>
+  <columns>
+    <column name="Net_Revenue_Amount_Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Net_Revenue_Amount_Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Consignments" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Items" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_of_Items_ca" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pay_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Real_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Statistical_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Road_Statistical_Weight" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Volume" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Volume_ca" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="C__age_Discount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="41" maxFractionalDigits="13"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Revenue_Amount__Euro" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Gross_Revenue_Amount__Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Discount_Amount__Euro_" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Discount_Amount__Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="6"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PU_Stops_per_con" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Del_Stops_per_con" nullable="true">
+      <datatype type="FLOAT" minValue="2.2250738585072014E-308" maxValue="1.7976931348623157E308"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_PCPS_QT" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_DCPS_QT" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Del_Cons_per_Stop" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PU_Cons_per_Stop" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_SRKY_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Finance/CustomerProfitability/vc_Costed&amp;Groupset" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="INV_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="OUP_INVOICE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="WGT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OUP_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Customer_Account_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OUP_LATESTENTRY_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_ACC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACG_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ACC_NR_INV">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DIV_INVDIVISION_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_RATING_CALC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RCT_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RZO_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="PFT_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ACC_ID_APPLIC">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ID_APPLIC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DFD_SRKY_ID_1">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DFD_SRKY_ID_2">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WSL_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV1">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV2">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV3">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPT_ID_INV4">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LOB_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_INVPRODUCT_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CM_STR_LVL1_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL1_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL5_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL5_ID">
+        <datatype type="STRING" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="Invoicing_Region">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="COU_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ACTUAL">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="OUP_COSTED_STAT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_COSTED_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="STT_ID_LATEST">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Billing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Billing_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Invoicing_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Origin_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Country_Code">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Destination_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Origin_Post_Code__ca">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Partner_Country">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Cubic_Conversion_Factor">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="Direction_of_Trade">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Entry_Type">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Invoice_Number">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Mode_of_Transport">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RUN_TYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="SDS_Currency">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Value_of_Goods_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Terms_of_Payment_cd">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Tariff_Type">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_NOTE_SRC_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_PCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="OUP_DCPS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_CONTYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTEDENTRY_TOTLS_CP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OUP_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MRN_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="OUP_COMLH_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_NETLH_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_COULH_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PUD_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OPS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_CLEARANCE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_DIRECT_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_INDIRECT_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OTHERS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_CSA_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_CONADJ_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_CONS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_TOTL_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_TOTL_ITEM_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_TOTL_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_A_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_TOTL_R_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_TOTL_REAL_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_TOTL_PAY_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_TOTL_COMPNY_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_HDRATE_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_CUST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_NFR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_GROSS_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_GROSS_MAX_VL">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_GROSS_ITEMS_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_INV_ITM_QT">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_INV_R_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_INV_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="OUP_T_DIRC_RCHG_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PTNR_RCHG_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_NETW_EX_PL_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_NETW_PL_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PTNR_NRCHG_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OWN_DIRCT_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OWN_IDIRCT_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PTNR_IDIRCT_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_DIRECT_OTH_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_VAR_DIR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_VAR_DIR_OWN_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_VAR_DIR_PTR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_VAR_NETW_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_FIX_DIR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_FIX_DIR_OWN_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_FIX_DIR_PTR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_FIX_NETW_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_INDIR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_INDIR_OWN_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_INDIR_PTNR_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_FBK_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_OTHER_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_TOTL_CTS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OWN_CTS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PTNR_CTS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_NETW_CTS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_OWN_OTHER_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="OUP_PTNR_OTHER_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COUNTRY_CURRENCY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ACT_INV_COU" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="REP_CUY" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAB_VER_FR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAB_VER_TO_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/EXCHANGERATE_V02" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EGP_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EXP_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM">
+        <datatype type="DECIMAL" maxDigits="23" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM Net_Revenue_Amount_Euro, 
+    CASE WHEN CM_COUNTRY_CURRENCY_V01.REP_CUY &lt;&gt; &apos;EUR&apos;
+     THEN CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM * EXCHANGERATE_V02.EXR_RATE_AM AS DECIMAL(23,6))
+        ELSE CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM AS DECIMAL(23,6))
+        END Net_Revenue_Amount_Local, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_CONS_QT Number_of_Consignments, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_INV_ITM_QT Number_of_Items, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_GROSS_ITEMS_QT Number_of_Items_ca, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_PAY_WT Pay_Weight, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_GROSS_WT Gross_Weight, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_INV_R_WT Real_Weight, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_A_STAT_WT Air_Statistical_Weight, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_R_STAT_WT Road_Statistical_Weight, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_INV_VL Volume, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_GROSS_MAX_VL Gross_Volume_ca, 
+    CASE WHEN sum(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM) &gt; 0
+            THEN sum(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM - CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM) / sum(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM) * 100
+        ELSE 0
+        END C__age_Discount, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM Gross_Revenue_Amount__Euro, 
+    CASE WHEN CM_COUNTRY_CURRENCY_V01.REP_CUY &lt;&gt; &apos;EUR&apos;
+            THEN CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM * EXCHANGERATE_V02.EXR_RATE_AM AS DECIMAL(23,6))
+        ELSE CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM AS DECIMAL(23,6))
+        END Gross_Revenue_Amount__Local, 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM - CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM Discount_Amount__Euro_, 
+    CASE WHEN CM_COUNTRY_CURRENCY_V01.REP_CUY &lt;&gt; &apos;EUR&apos; THEN CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM * EXCHANGERATE_V02.EXR_RATE_AM AS DECIMAL(23,6)) ELSE CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_COMPNY_AM AS DECIMAL(23,6)) END - CASE WHEN CM_COUNTRY_CURRENCY_V01.REP_CUY &lt;&gt; &apos;EUR&apos; THEN CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM * EXCHANGERATE_V02.EXR_RATE_AM AS DECIMAL(23,6)) ELSE CAST(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_TOTL_REV_AM AS DECIMAL(23,6)) END Discount_Amount__Local, 
+    CASE WHEN CM_COSTEDENTRY_V01.OUP_PCPS_QT = 0
+            THEN 0
+        ELSE CAST(CM_COSTEDENTRY_V01.OUP_CONS_QT / (nullif (CM_COSTEDENTRY_V01.OUP_PCPS_QT,0)) AS FLOAT)
+        END PU_Stops_per_con, 
+    CASE WHEN CM_COSTEDENTRY_V01.OUP_DCPS_QT = 0
+            THEN 0
+        ELSE CAST(CM_COSTEDENTRY_V01.OUP_CONS_QT / (nullif(CM_COSTEDENTRY_V01.OUP_DCPS_QT,0)) AS FLOAT)
+        END Del_Stops_per_con, 
+    CM_COSTEDENTRY_V01.OUP_PCPS_QT OUP_PCPS_QT, 
+    CM_COSTEDENTRY_V01.OUP_DCPS_QT OUP_DCPS_QT ,
+    CASE WHEN sum(CM_COSTEDENTRY_V01.OUP_DCPS_QT) = 0
+            THEN 0
+        ELSE sum(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_CONS_QT) /(nullif( sum(CM_COSTEDENTRY_V01.OUP_CONS_QT / (nullif(CM_COSTEDENTRY_V01.OUP_DCPS_QT,0))),0))
+        END Del_Cons_per_Stop ,
+   CASE WHEN sum(CM_COSTEDENTRY_V01.OUP_PCPS_QT) = 0
+            THEN 0
+        ELSE sum(CM_COSTEDENTRY_TOTLS_CP_V01.OUP_CONS_QT) /(nullif( sum(CM_COSTEDENTRY_V01.OUP_CONS_QT / (nullif (CM_COSTEDENTRY_V01.OUP_PCPS_QT,0))),0))
+        END PU_Cons_per_Stop   ,
+CM_COSTEDENTRY_V01.OUP_SRKY_ID       
+FROM      
+    /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTEDENTRY_TOTLS_CP_V01 CM_COSTEDENTRY_TOTLS_CP_V01, 
+    /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COUNTRY_CURRENCY_V01 CM_COUNTRY_CURRENCY_V01, 
+    /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/EXCHANGERATE_V02 EXCHANGERATE_V02, 
+     /shared/Core/Finance/CustomerProfitability/&quot;vc_Costed&amp;Groupset&quot; CM_COSTEDENTRY_V01
+WHERE
+    (((((CM_COSTEDENTRY_V01.OUP_LATESTENTRY_IN = &apos;Y&apos; AND 
+    CM_COSTEDENTRY_TOTLS_CP_V01.OUP_SRKY_ID = CM_COSTEDENTRY_V01.OUP_SRKY_ID) AND 
+    CM_COSTEDENTRY_V01.COU_ID_ACTUAL = CM_COUNTRY_CURRENCY_V01.ACT_INV_COU) AND 
+    CM_COUNTRY_CURRENCY_V01.LATESTVERSN_IN = &apos;Y&apos;) AND 
+    CM_COUNTRY_CURRENCY_V01.REP_CUY = EXCHANGERATE_V02.CUY_ID) AND 
+    EXCHANGERATE_V02.EGP_ID = &apos;YR&apos;) AND 
+    CASE WHEN EXTRACT(MONTH FROM current_date) = 1
+            THEN add_months(current_date, -12)
+        ELSE current_date
+        END BETWEEN EXCHANGERATE_V02.EXP_START_DT AND EXCHANGERATE_V02.EXP_END_DT
+GROUP BY 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21 ,
+CM_COSTEDENTRY_V01.OUP_SRKY_ID</attribute>
+  <attribute name="creationDate" type="LONG">1563007345395</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70126</attribute>
+  <attribute name="creatorUserName" type="STRING">h572cph</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1566205259383</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70126</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563007345395</attribute>
+</metadata>

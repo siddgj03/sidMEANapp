@@ -1,0 +1,256 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Movement_Diversion_Reason" path="/shared/Publish/ROCS_Total_Package/vp_Movement_Diversion_Reason" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Movement_Diversion_Reason_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Movement_Diversion_Reason" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Movement_Details" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Movement_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Network_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Movement_Scheduled_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Movement_Actual_Distance">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="3"/>
+      </element>
+      <element name="Mov_Sch_Arr_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Sch_Dep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Act_Arr_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Act_Dep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Sch_Driver_Quantity">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Act_Driver_Quantity">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Sequence_Number">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Planned_Extra_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Mov_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Derived_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Act_Arr_Operational_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Act_Arr_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Act_Dep_Operational_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Act_Dep_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Route_Object_ID_Actual">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Route_Object_ID_Scheduled">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="CFG_Object_ID_Actual">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Cancel_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Daily_ID_Dest">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Location_Object_ID_Dest">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Div_Reason_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_OA_Driver_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_Est_Arr_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Est_Arr_Operating_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Est_Arr_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Est_Dep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Est_Dep_Operating_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Est_Dep_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CFG_Object_ID_Scheduled">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Movement_Transition_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Location_Object_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Dest_Ol">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Daily_Origin_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Journey_Object_ID_Origin">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Origin">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_OA_Pw_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="MPT_Actual_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_Sch_Arr_Operating_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Sch_Arr_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Movement_Scheduled_Dep_Operating_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_Sch_Dep_Reporting_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Mov_OA_TU_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_OA_VH_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ZMD_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Journey_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Mov_Passenger_Name_1">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="Mov_Passenger_Name_2">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="Scheduled_Departure_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Act_Dep_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Sch_Arr_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="MOv_Act_Arr_LD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Sch_Dep_Rep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Act_Dep_Rep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Sch_Arr_Rep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Act_Arr_Rep_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Financial_Date_Time">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Mov_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Mov_OA_Transunit_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Reasons" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Reason_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Reason_Description">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Reason_Type_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Language_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT  distinct
+T9.Mov_Div_Reason_Code  as  Movement_Diversion_Reason_Code,
+       T10.Reason_Description  as  Movement_Diversion_Reason
+FROM
+/shared/Core/Networks/ROCSTotalPackage/vc_Movement_Details  T9
+left outer join
+/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Reasons T10
+ on (T10.Reason_Code = T9.Mov_Div_Reason_Code)
+and upper(T10.Language_ID)=&apos;EN&apos;  and Reason_Type_Code=&apos;DV_MO&apos; </attribute>
+  <attribute name="creationDate" type="LONG">1562760371607</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565953688849</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562760371607</attribute>
+</metadata>

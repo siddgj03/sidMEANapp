@@ -1,0 +1,242 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Actual_Operators" path="/shared/Publish/ROCS_Total_Package/vp_Actual_Operators" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Actual_Operator_Code" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Name" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Own_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Address_Line_1" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Address_Line_2" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Address_Line_3" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Postal_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Town" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Province" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Country" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Address_Type" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Address_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Operator_Country_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Object_Indicator" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Partner_Object_Indicator" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_AddressTypeDescription" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Address_Type_Description">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Address_Type_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Country" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Country_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Actual_Vendor_Country">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_Operator" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Business_Partner_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Business_Partner_Name">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Business_Partner_Own_Company_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="Business_Partner_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Address" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Address_Line_1">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Address_Line_2">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Address_Line_3">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Postal_Code">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Town_Name">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Province_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BUP_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PAD_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Country_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Address_Type" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="PAD_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="PAT_Type_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T.Business_Partner_ID  as  Actual_Operator_Code,
+       T.Business_Partner_Name  as  Actual_Operator_Name,
+       T.Business_Partner_Own_Company_Indicator as  Actual_Operator_Own_Indicator,
+       T8.Address_Line_1  as  Actual_Operator_Address_Line_1,
+       T8.Address_Line_2  as  Actual_Operator_Address_Line_2,
+       T8.Address_Line_3  as  Actual_Operator_Address_Line_3,
+       T8.Postal_Code  as  Actual_Operator_Postal_Code,
+       T8.Town_Name  as  Actual_Operator_Town,
+       T8.Province_Name  as  Actual_Operator_Province,
+       T9.Country_Name  as  Actual_Operator_Country,
+       T10.Address_Type_Description  as  Actual_Operator_Address_Type,
+       T.Business_Partner_Object_ID  as  Actual_Operator_Object_ID,
+
+ T10.Address_Type_ID    as Actual_Operator_Address_ID,
+T8.Country_ID      as Actual_Operator_Country_ID,
+T8.BUP_Object_ID as Business_Partner_Object_Indicator	,
+T8.PAD_Object_ID as Partner_Object_Indicator	
+
+FROM 
+ /shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_Operator  T ,
+ /shared/Core/Networks/ROCSTotalPackage/vc_Tour_Address
+  T8,
+      /shared/Core/Networks/ROCSTotalPackage/vc_Country T9,
+
+    /shared/Core/Networks/ROCSTotalPackage/vc_AddressTypeDescription T10,
+/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Address_Type    T12
+       
+
+ where 
+       
+       (T8.BUP_Object_ID = T.Business_Partner_Object_ID) and 
+       (T12.PAD_Object_ID = T8.PAD_Object_ID) and 
+       (T10.Address_Type_ID = T12.PAT_Type_Object_ID) and 
+       (T9.Country_ID = T8.Country_ID) 
+       
+</attribute>
+  <attribute name="creationDate" type="LONG">1562739759877</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565948431812</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562739759877</attribute>
+</metadata>

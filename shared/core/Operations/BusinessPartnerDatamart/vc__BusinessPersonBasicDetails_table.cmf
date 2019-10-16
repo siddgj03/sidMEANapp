@@ -1,0 +1,567 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_BusinessPersonBasicDetails" path="/shared/Core/Operations/BusinessPartnerDatamart/vc_BusinessPersonBasicDetails" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Personnel_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Surname" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="First_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Social_Security_Number" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_ID" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Badge_ID" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Digi_Tacho_ID" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="First_Usage_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Recent_Usage_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Personnel_Update_User_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Personnel_Update_Date_Time" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Person_Type_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Person_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Implementation_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Implementation_Type_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Personnel_Usage_Implementation" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Personnel_Status" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Personnel_Owner" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Relation_With_Business_Partner" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Operations/BusinessPartnerDatamart/vc_Security" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="USR_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSINESS_ENTITY_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSINESS_PERSON_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BPS_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPS_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPS_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPS_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPS_FORE_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_SUR_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_BIRTH_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPS_LIC_PLATE_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPT_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPS_TEL_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BPS_TEL_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_FAX_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BPS_FAX_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_MOB_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BPS_MOB_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_TNT_ID">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_RELATION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPS_PM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPS_PERSON_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPS_DATA_Q_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPS_BLACKLIST_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPS_SOCIAL_SEC_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_BADGE_TX">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_DIGI_TACHO_ID">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_FIRST_USAGE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPS_LAST_USAGE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPS_NU_REAS_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_ISO_ID_NAT" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPS_HOME_ADDR_TX">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_HOME_PBOX_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="BPS_HOMETOWN_NM">
+        <datatype type="STRING" minLength="40" maxLength="40"/>
+      </element>
+      <element name="BPS_HOME_PRVNCE_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_GENDER_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_NOK_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_NOKTEL_1_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BPS_NOKTEL_2_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_ORIGINAL_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPS_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_BIRTH_PLACE_TX" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPS_ENDDBY_SUBC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_ID_CARD_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="BPS_ADR_APPR_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_CASH_HAND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_TNT_UNIFORM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPS_LIC_TYPE_TX">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSNS_PERSON_RELN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BPR_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPR_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPR_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPR_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPR_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPR_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPR_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPS_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPR_REL_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/DTA_ENTRY_STATUS_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/IMPLEMENTATION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BPM_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BPM_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="BPM_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPM_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPM_TYPE_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_ENTITY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPM_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="BPM_MET_IMP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BPM_INTL_REG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_COU_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_COU_REG_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="FST_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="SPN_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BMP_CALD_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_MP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_EQ_AVG_SP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ISO_ID_BPM_LOC" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOC_OBJ_ID_TZ">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_ISO_ID_BPM_HOV" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPM_ALC_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_MNT_RES_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_PRC_AGR_WEB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BPM_ONN_TX">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/PERSON_IMPLEMENTATION_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="IPE_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="IPE_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="IPE_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="IPE_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="IPE_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BPS_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/PERSON_RELN_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="AVO_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="AVO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="AVO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="AVO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="AVO_SUBTYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="AVO_DS">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="AVO_NOT_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT DISTINCT 
+T1.BPS_PERSON_ID Personnel_ID,
+T1.BPS_SUR_NM Surname,
+T1.BPS_FORE_NM First_Name,
+T1.BPS_SOCIAL_SEC_NR Social_Security_Number,
+T1.BPS_TNT_ID TNT_ID,
+T1.BPS_BADGE_TX Badge_ID,
+T1.BPS_DIGI_TACHO_ID Digi_Tacho_ID,
+T1.BPS_FIRST_USAGE_DT First_Usage_Date,
+T1.BPS_LAST_USAGE_DT Recent_Usage_Date,
+T1.BPS_UPDT_USER_ID Personnel_Update_User_ID,
+T1.BPS_UPDT_TD Personnel_Update_Date_Time,
+T1.BPT_OBJ_ID Business_Person_Type_Object_ID,
+T1.BPS_OBJ_ID Business_Person_Object_ID,
+T3.BPM_OBJ_ID Implementation_Object_ID, 
+T3.BPM_TYPE_OBJ_ID Implementation_Type_Object_ID,
+T7.AVO_DS Personnel_Usage_Implementation,
+T2.AVO_DS Personnel_Status,
+T5.AVO_DS Personnel_Owner,
+T8.AVO_DS Relation_With_Business_Partner,
+T0.BUP_OBJ_ID Business_Partner_Object_ID
+
+FROM /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSNS_PERSON_RELN_V01 T0
+INNER JOIN (/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSINESS_PERSON_V01 T1
+LEFT OUTER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/PERSON_IMPLEMENTATION_V01 T4 ON T1.BPS_OBJ_ID = T4.BPS_OBJ_ID)
+ON T0.BPS_OBJ_ID = T1.BPS_OBJ_ID
+INNER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/DTA_ENTRY_STATUS_TYPE_V01 T2 ON T2.AVO_OBJ_ID = T1.BPS_DATA_Q_OBJ_ID
+INNER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/IMPLEMENTATION_V01 T3 ON T3.BPM_OBJ_ID = T1.BPM_OBJ_ID
+INNER JOIN /shared/Core/Operations/BusinessPartnerDatamart/vc_Security Business_Person_Security ON T3.BPM_OBJ_ID = Business_Person_Security.BPM_OBJ_ID
+INNER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSINESS_ENTITY_TYPE_V01 T5 ON T5.AVO_OBJ_ID = T3.BPM_ENTITY_OBJ_ID
+LEFT OUTER JOIN (/shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/IMPLEMENTATION_V01 T6 
+INNER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/BUSINESS_ENTITY_TYPE_V01 T7 ON T7.AVO_OBJ_ID = T6.BPM_ENTITY_OBJ_ID) ON T6.BPM_OBJ_ID = T4.BPM_OBJ_ID
+LEFT OUTER JOIN /shared/Source/EDW/BusinessPartner/PRODBUSINESSPARTNER_P/PERSON_RELN_TYPE_V01 T8 ON T0.BPR_REL_OBJ_ID = T8.AVO_OBJ_ID
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1566114706039</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170137</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1569312505227</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170137</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">n091fhm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1566114706039</attribute>
+</metadata>

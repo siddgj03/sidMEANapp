@@ -1,0 +1,582 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_FTPReportingCosts" path="/shared/Publish/Fiscal_Transfer_Pricing_Datamart/vp_FTPReportingCosts" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="COZ_REP_UNIT_CD" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Invoice_Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Region_Code" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Operating_Unit_Code" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Reporting_Unit_Code" nullable="true">
+      <datatype type="STRING" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Reporting_Unit" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Parent_Country_Code" nullable="true">
+      <datatype type="STRING" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Parent_Country" nullable="true">
+      <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_Code" nullable="true">
+      <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Current_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Current_Month" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Current_Year_Month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Years_Difference" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Months_Difference" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Allocation_Status_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Allocation_Status" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Line_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Line" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="EU_Indicator_Description" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Invoice_RBC_Invoice_Number" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Owner_RBC_Invoice_Number" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Network_FAP_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Network_FAP_Description" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_Description" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="FTP_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_CountryNetworkGroupSet" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ENT_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="LNG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ENT_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL1_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL1_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL1_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL2_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL2_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL2_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL3_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL3_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL3_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL4_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL4_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL4_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL5_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL5_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL5_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL6_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CM_STR_LVL6_SH_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CM_STR_LVL6_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="COU_EU_DIFF_CD">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CM_NETWORK_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_Dates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DTE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MAX_MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MAX_YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MIN_MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MIN_YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_MonthlyMeasures" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID_ACTUAL">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CEK_OWNER_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_YR_NR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OUP_MTH_NR">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="OUP_YEAR_MTH_NR">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_ALLOC_STAT_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_BUS_LINE_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOB_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="OUP_EU_IN">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_DIVISION_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_PRODUCT_CD">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="INV_RBC_ACC_NR">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="INV_RBC_INV_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CEK_RBC_ACC_NR">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CEK_RBC_INV_NR">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="OUP_COST_SPLIT_CD">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTM_COST_GROUP_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="OUP_POS_NEG_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CEK_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUSLINE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_TP_ALLOCTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/LINE_OF_BUSINESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOB_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOB_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="LOB_NM_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOB_NM_EFFECTTO_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/RPU_OVERRIDE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID_INV" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DIV_INVDIVISION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_INVPRODUCT_CD" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OPT_INVOPTION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COZ_TAB_VER_FR_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COZ_TAB_VER_TO_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COZ_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="COZ_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="COZ_LATESTVERSN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COZ_BUS_UNIT_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="WGZ_GRP_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RBU_GRP_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="SRBU_GRP_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="COZ_REP_UNIT_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select	TRIM(vc_RPUOverRide.COZ_REP_UNIT_CD) AS COZ_REP_UNIT_CD,
+		--vc_CountryNetworkGroupSet.CM_STR_LVL1_ID  as  &quot;Actual_Invoice_Region_Code&quot;,
+		--vc_CountryNetworkGroupSet.CM_STR_LVL3_ID  as  &quot;Actual_Invoice_Operating_Unit_Code&quot;,
+		--coalesce(vc_RPUOverRide.COZ_REP_UNIT_CD,vc_CountryNetworkGroupSet.CM_STR_LVL5_ID,TRIM(vc_MonthlyMeasures.COU_ID_ACTUAL))  as  &quot;Actual_Invoice_Reporting_Unit_Code&quot;,
+		--coalesce(vc_RPUOverRide.COZ_REP_UNIT_CD,vc_CountryNetworkGroupSet.CM_STR_LVL5_NM,vc_CountryNetworkGroupSet.CM_STR_LVL5_ID,TRIM(vc_MonthlyMeasures.COU_ID_ACTUAL))  as  &quot;Actual_Invoice_Reporting_Unit&quot;,
+		--TRIM(coalesce(vc_RPUOverRide.COZ_REP_UNIT_CD,vc_CountryNetworkGroupSet.CM_STR_LVL4_ID))  as  &quot;Actual_Invoice_Parent_Country_Code&quot;,
+		--TRIM(coalesce(vc_RPUOverRide.COZ_REP_UNIT_CD,vc_CountryNetworkGroupSet.CM_STR_LVL4_NM,vc_CountryNetworkGroupSet.CM_STR_LVL4_ID))  as  &quot;Actual_Invoice_Parent_Country&quot;,
+		TRIM(vc_MonthlyMeasures.COU_ID_ACTUAL)  as  &quot;Actual_Invoice_Country_Code&quot;,
+		--coalesce(vc_CountryNetworkGroupSet.COU_ENT_NM,TRIM(vc_MonthlyMeasures.COU_ID_ACTUAL))  as  &quot;Actual_Invoice_Country&quot;,
+		vc_CountryNetworkGroupSet1.CM_STR_LVL1_ID  as  &quot;Cost_Owner_Region_Code&quot;,
+		vc_CountryNetworkGroupSet1.CM_STR_LVL3_ID  as  &quot;Cost_Owner_Operating_Unit_Code&quot;,
+		coalesce(vc_CountryNetworkGroupSet1.CM_STR_LVL5_ID,TRIM(vc_MonthlyMeasures.CEK_OWNER_CD))  as  &quot;Cost_Owner_Reporting_Unit_Code&quot;,
+		coalesce(vc_CountryNetworkGroupSet1.CM_STR_LVL5_NM,vc_CountryNetworkGroupSet1.CM_STR_LVL5_ID,TRIM(vc_MonthlyMeasures.CEK_OWNER_CD))  as  &quot;Cost_Owner_Reporting_Unit&quot;,
+		TRIM(vc_CountryNetworkGroupSet1.CM_STR_LVL4_ID)  as  &quot;Cost_Owner_Parent_Country_Code&quot;,
+		TRIM(coalesce(vc_CountryNetworkGroupSet1.CM_STR_LVL4_NM,vc_CountryNetworkGroupSet1.CM_STR_LVL4_ID))  as  &quot;Cost_Owner_Parent_Country&quot;,
+		TRIM(vc_MonthlyMeasures.CEK_OWNER_CD)  as  &quot;Cost_Owner_Code&quot;,
+		coalesce(vc_CountryNetworkGroupSet1.COU_ENT_NM,TRIM(vc_MonthlyMeasures.CEK_OWNER_CD))  as  &quot;Cost_Owner&quot;,
+		vc_MonthlyMeasures.OUP_YR_NR  as  &quot;Current_Year&quot;,
+		vc_MonthlyMeasures.OUP_MTH_NR  as  &quot;Current_Month&quot;,
+		vc_MonthlyMeasures.OUP_YEAR_MTH_NR  as  &quot;Current_Year_Month&quot;,
+		vc_TNTCalDaysDiff.MIN_YRS_DIFF  as  &quot;Years_Difference&quot;,
+		vc_TNTCalDaysDiff.MIN_MTHS_DIFF  as  &quot;Months_Difference&quot;,
+		vc_MonthlyMeasures.OUP_ALLOC_STAT_CD  as  &quot;Allocation_Status_Code&quot;,
+		vc_AllocType.TAV_DS  as  &quot;Allocation_Status&quot;,
+		vc_MonthlyMeasures.OUP_BUS_LINE_CD  as  &quot;Business_Line_Code&quot;,
+		vc_BusLine.TAV_DS  as  &quot;Business_Line&quot;,
+		--vc_MonthlyMeasures.LOB_ID  as  Line_Of_Business_Code,
+		--vc_LineOfBussiness.LOB_NM  as  Line_Of_Business,
+		--vc_MonthlyMeasures.OUP_EU_IN  as  &quot;EU Indicator Code&quot;,
+		case 
+			when vc_MonthlyMeasures.OUP_EU_IN = &apos;N&apos; then &apos;Non-EU&apos;
+			when vc_MonthlyMeasures.OUP_EU_IN = &apos;E&apos; then &apos;EU&apos;
+			else &apos;UNKNOWN&apos;
+		end  as  &quot;EU_Indicator_Description&quot;,
+		--vc_CountryRecharge.COU_ICC_CD  as  ICC_Charge_Code,
+		--vc_CountryRecharge1.COU_ICC_CD  as  ICC_Credit_Code,
+		--vc_MonthlyMeasures.INV_RBC_ACC_NR  as  &quot;Invoice RBC Account Number&quot;,
+		vc_MonthlyMeasures.INV_RBC_INV_NR  as  &quot;Invoice_RBC_Invoice_Number&quot;,
+		--vc_MonthlyMeasures.CEK_RBC_ACC_NR  as  Cost_Owner_RBC_Account_Number,
+		vc_MonthlyMeasures.CEK_RBC_INV_NR  as  &quot;Cost_Owner_RBC_Invoice_Number&quot;,
+		vc_MonthlyMeasures.OUP_COST_SPLIT_CD  as  &quot;Revenue_Network_FAP_Code&quot;,
+		case 
+			when vc_MonthlyMeasures.OUP_COST_SPLIT_CD = &apos;REV&apos; then &apos;Revenue Share&apos;
+			when vc_MonthlyMeasures.OUP_COST_SPLIT_CD = &apos;NET&apos; then &apos;Network Share&apos;
+			when vc_MonthlyMeasures.OUP_COST_SPLIT_CD = &apos;FAP&apos; then &apos;FAP Cost&apos;
+			else &apos;UNKNOWN&apos;
+		end  as  &quot;Revenue_Network_FAP_Description&quot;,
+		vc_MonthlyMeasures.CTM_COST_GROUP_CD  as  &quot;Cost_Group_Code&quot;,
+		vc_CostGroup.TAV_DS  as  &quot;Cost_Group_Description&quot;,
+		/*vc_MonthlyMeasures.OUP_POS_NEG_IN  as  Positive___Negative_Indicator,
+		case 
+		when vc_MonthlyMeasures.OUP_POS_NEG_IN = &apos;N&apos; then &apos;Negative&apos;
+		when vc_MonthlyMeasures.OUP_POS_NEG_IN = &apos;P&apos; then &apos;Positive&apos;
+		else &apos;UNKNOWN&apos;
+		end  as  Postive___Negative_Indicator,*/
+		vc_MonthlyMeasures.CEK_AM  as  &quot;FTP_Cost_Amount&quot;
+ from 	 
+		 --/shared/Core/Finance/FTP/vc_CountryNetworkGroupSet vc_CountryNetworkGroupSet
+        --left outer join 
+       	 /shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_MonthlyMeasures vc_MonthlyMeasures
+        	--on vc_MonthlyMeasures.COU_ID_ACTUAL = vc_CountryNetworkGroupSet.COU_ENT_ID 
+			--and vc_CountryNetworkGroupSet.LNG_ID = &apos;EN&apos;
+        left outer join 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/RPU_OVERRIDE_V01 vc_RPUOverRide
+        	on vc_MonthlyMeasures.COU_ID_ACTUAL = vc_RPUOverRide.COU_ID_INV 
+			and vc_MonthlyMeasures.DIV_DIVISION_CD = vc_RPUOverRide.DIV_INVDIVISION_CD 
+			and vc_MonthlyMeasures.PRD_PRODUCT_CD = vc_RPUOverRide.PRD_INVPRODUCT_CD 
+			and vc_RPUOverRide.COZ_LATESTVERSN_IN = &apos;Y&apos;
+        left outer join 
+        /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_TP_ALLOCTYPE_V01 vc_AllocType
+        on vc_AllocType.TAV_VALUE_ID = vc_MonthlyMeasures.OUP_ALLOC_STAT_CD
+		and vc_AllocType.LNG_ID = &apos;EN&apos; and vc_AllocType.TAV_NON_USE_IN = &apos;N&apos; 
+		and vc_AllocType.COM_ID = &apos;WW&apos;
+        left outer join /shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_Dates vc_TNTCalDaysDiff
+        	on vc_TNTCalDaysDiff.TNT_YR = vc_MonthlyMeasures.OUP_YR_NR
+			and vc_TNTCalDaysDiff.TNT_MTH = vc_MonthlyMeasures.OUP_MTH_NR
+        left outer join    
+		/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_BUSLINE_V01 vc_BusLine
+        on vc_BusLine.TAV_VALUE_ID = vc_MonthlyMeasures.OUP_BUS_LINE_CD 
+		and vc_BusLine.LNG_ID = &apos;EN&apos; 
+		and vc_BusLine.TAV_NON_USE_IN = &apos;N&apos; 
+		and vc_BusLine.COM_ID = &apos;WW&apos;
+        left outer join 
+       	/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01 vc_CostGroup
+        on vc_CostGroup.TAV_VALUE_ID = vc_MonthlyMeasures.CTM_COST_GROUP_CD 
+		and vc_CostGroup.LNG_ID = &apos;EN&apos; 
+		and vc_CostGroup.TAV_NON_USE_IN = &apos;N&apos;
+        left outer join /shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/LINE_OF_BUSINESS_V01 vc_LineOfBussiness
+        on vc_LineOfBussiness.LOB_ID = vc_MonthlyMeasures.LOB_ID and vc_LineOfBussiness.LOB_ACTIVE_IN = &apos;Y&apos; and vc_LineOfBussiness.LNG_ID = &apos;EN&apos; 
+		AND current_date between vc_LineOfBussiness.LOB_NM_EFFECT_DT and vc_LineOfBussiness.LOB_NM_EFFECTTO_DT
+        left outer join 
+        /shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_CountryNetworkGroupSet vc_CountryNetworkGroupSet1
+        on vc_MonthlyMeasures.CEK_OWNER_CD = vc_CountryNetworkGroupSet1.COU_ENT_ID and vc_CountryNetworkGroupSet1.LNG_ID = &apos;EN&apos;
+--group by 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32</attribute>
+  <attribute name="creationDate" type="LONG">1562140084688</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564051427336</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562140084688</attribute>
+</metadata>

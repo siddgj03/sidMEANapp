@@ -1,0 +1,220 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_SenderAddress" path="/shared/Publish/OPS/vp_SenderAddress" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Sender_Account_Number" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Address_Line_1" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Address_Line_2" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Address_Line_3" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Alternative_Telelphone_Number_1" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Alternative_Telelphone_Number_2" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_City_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Company_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Contact_Surname" nullable="true">
+      <datatype type="STRING" maxLength="22"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Country" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Post_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Province_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Telephone_Number_1" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Telephone_Number_2" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_VAT_Number" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Consignment_Key" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/CONSENADDRESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CON_SRKY_ID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CPN_VAT_ID">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="CPN_NM">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CPN_CITY_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CPN_PRV_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="COU_ID_CPN">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CPN_ADDR_LN1_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CPN_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_TEL_1_ID">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="CPN_ADDR_LN2_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CPN_TEL_2_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_ADDR_LN3_DS">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="ACC_ID_CPN">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_TITLE_NM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CPN_INIT_NM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CPN_CPF_TEL_1_ID">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="CPN_CPF_TEL_2_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_FAX_1_ID">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="CPN_FAX_2_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_TELX_1_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CPN_CPF_LAST_NM">
+        <datatype type="STRING" maxLength="22"/>
+      </element>
+      <element name="ACG_ID_CPN">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="NAD_ID_CPN">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+      <element name="COU_ID_NAD_CPN">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+ ACC_ID_CPN as &quot;Sender_Account_Number&quot;,
+CPN_ADDR_LN1_DS as &quot;Sender_Address_Line_1&quot;,
+CPN_ADDR_LN2_DS as &quot;Sender_Address_Line_2&quot;,
+CPN_ADDR_LN3_DS as &quot;Sender_Address_Line_3&quot;,
+CPN_CPF_TEL_1_ID as &quot;Sender_Alternative_Telelphone_Number_1&quot;,
+CPN_CPF_TEL_2_ID as &quot;Sender_Alternative_Telelphone_Number_2&quot;,
+CPN_CITY_NM as &quot;Sender_City_Name&quot;,
+CPN_NM as &quot;Sender_Company_Name&quot;,
+CPN_CPF_LAST_NM as &quot;Sender_Contact_Surname&quot;,
+COU_ID_CPN as &quot;Sender_Country&quot;,
+CPN_PCODE_CD as &quot;Sender_Post_Code&quot;,
+CPN_PRV_NM as &quot;Sender_Province_Name&quot;,
+CPN_TEL_1_ID as &quot;Sender_Telephone_Number_1&quot;,
+CPN_TEL_2_ID as &quot;Sender_Telephone_Number_2&quot;,
+CPN_VAT_ID as &quot;Sender_VAT_Number&quot;,
+CON_SRKY_ID	 &quot;Unique_Consignment_Key&quot;
+from /shared/Source/EDW/OPS/PRODOPS_P/CONSENADDRESS_V01</attribute>
+  <attribute name="creationDate" type="LONG">1563011323251</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563778683626</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563011323251</attribute>
+</metadata>

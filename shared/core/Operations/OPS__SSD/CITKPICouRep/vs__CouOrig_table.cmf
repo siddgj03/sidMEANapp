@@ -1,0 +1,300 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vs_CouOrig" path="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="RELATIVE_TIME_CATEGORY" nullable="true">
+      <datatype type="STRING" maxLength="25"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="COU_ID" nullable="true">
+      <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CIT_ID" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DOMINT_CD" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NBR_CONS" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NBR_ACC" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig010" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NBR_ACC">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig020" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NBR_ACC">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig030" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NBR_ACC">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig040" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="10"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NBR_ACC">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vs_CouOrig" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="RELATIVE_TIME_CATEGORY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" maxLength="6"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NBR_ACC">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT *
+FROM /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig010
+UNION ALL
+SELECT *
+FROM /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig020
+UNION ALL
+SELECT *
+FROM /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig030
+UNION ALL
+SELECT *
+FROM /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig040</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vs_CouOrig</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557236060044</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1563788483113</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557236060044</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="RELATIVE_TIME_CATEGORY">
+          <datatype type="STRING" maxLength="25"/>
+        </element>
+        <element name="COU_ID">
+          <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+        </element>
+        <element name="CIT_ID">
+          <datatype type="STRING" minLength="1" maxLength="6" trailingSpaces="false"/>
+        </element>
+        <element name="DOMINT_CD">
+          <datatype type="STRING" minLength="1" maxLength="12" trailingSpaces="false"/>
+        </element>
+        <element name="NBR_CONS">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="NBR_ACC">
+          <datatype type="INTEGER"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CouOrig&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562319421000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1563788483065</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1563788483065</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563788483065</attribute>
+  </trigger>
+</metadata>

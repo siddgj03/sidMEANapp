@@ -1,0 +1,85 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="CACHE_DB" path="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE" subtype="RELATIONAL" changeToken="0">
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE EXECUTE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE EXECUTE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_status" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking" type="TABLE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <attribute name="LowerBoundForDataShip" type="LONG">50000</attribute>
+  <attribute name="OAuthConfig" type="NULL"/>
+  <attribute name="UpperBoundForDataShip" type="LONG">5000000</attribute>
+  <attribute name="allDatabases" type="BOOLEAN">false</attribute>
+  <attribute name="anyCharWildcard" type="STRING">%</attribute>
+  <attribute name="authentication" type="STRING">BASIC</attribute>
+  <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
+  <attribute name="cacheStatusAndTrackingDS" type="STRING"/>
+  <attribute name="cacheStatusTable" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_status</attribute>
+  <attribute name="cacheTrackingTable" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="collationSensitive" type="BOOLEAN">false</attribute>
+  <attribute name="commitOnFetchDone" type="BOOLEAN">false</attribute>
+  <attribute name="concurrentRequestLimit" type="INTEGER">0</attribute>
+  <attribute name="connCheckOutProcedure" type="STRING"/>
+  <attribute name="connPoolMaxSize" type="INTEGER">200</attribute>
+  <attribute name="connPoolMinSize" type="INTEGER">1</attribute>
+  <attribute name="connPoolTimeout" type="INTEGER">450</attribute>
+  <attribute name="connProperties" type="MAP"></attribute>
+  <attribute name="connStaleTimeout" type="INTEGER">150</attribute>
+  <attribute name="connValidateQuery" type="STRING"/>
+  <attribute name="connectorName" type="STRING"/>
+  <attribute name="creationDate" type="LONG">1562147067199</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="dataShipTempTablePrefix" type="STRING">T</attribute>
+  <attribute name="destinationSchema" type="STRING"/>
+  <attribute name="driverName" type="STRING">Microsoft SQL Server 2016</attribute>
+  <attribute name="execTimeout" type="INTEGER">0</attribute>
+  <attribute name="healthmonitortable" type="STRING">cis_hm_table</attribute>
+  <attribute name="isPassThrough" type="STRING">Disabled</attribute>
+  <attribute name="keytabFile" type="STRING"/>
+  <attribute name="lastModifiedDate" type="LONG">1568893078763</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="login" type="STRING">TDVDBA</attribute>
+  <attribute name="maxNumberForOrSyntax" type="INTEGER">2147483647</attribute>
+  <attribute name="maxSourceSideCardinalityForSJ" type="STRING"/>
+  <attribute name="maximumContainerDepth" type="INTEGER">2</attribute>
+  <attribute name="minTargetToSourceRatioForSJ" type="STRING"/>
+  <attribute name="name" type="STRING">CACHE_DB</attribute>
+  <attribute name="nativeDataLoadingEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="noReturnParam" type="BOOLEAN">false</attribute>
+  <attribute name="password" type="PASSWORD_STRING">ENC(sYcnbk2duLYabdAT1MZjGA==$ddWJWckj/CXl5lmhfyYugg==)</attribute>
+  <attribute name="patternSeparator" type="STRING">,</attribute>
+  <attribute name="persistPassword" type="BOOLEAN">true</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562147067199</attribute>
+  <attribute name="searchCaseSensitively" type="BOOLEAN">false</attribute>
+  <attribute name="searchEscape" type="STRING">\</attribute>
+  <attribute name="selectMode" type="STRING">Direct</attribute>
+  <attribute name="singleCharWildcard" type="STRING">_</attribute>
+  <attribute name="spn" type="STRING"/>
+  <attribute name="sqlserverEnableBcp" type="BOOLEAN">false</attribute>
+  <attribute name="supportsDataship" type="BOOLEAN">false</attribute>
+  <attribute name="supportsDatashipAsTarget" type="BOOLEAN">false</attribute>
+  <attribute name="supportsStarSchema" type="BOOLEAN">false</attribute>
+  <attribute name="topicName" type="STRING"/>
+  <attribute name="txnIsolationLevel" type="STRING">Read Committed</attribute>
+  <attribute name="type" type="STRING">SqlServer</attribute>
+  <attribute name="url" type="STRING">jdbc:sqlserver://TNTAZNSFIRESQL1:1433;databaseName=TDV_CACHE;selectMethod=direct</attribute>
+  <attribute name="urlDatabaseName" type="STRING">TDV_CACHE</attribute>
+  <attribute name="urlIP" type="STRING">TNTAZNSFIRESQL1</attribute>
+  <attribute name="urlPatternStr" type="STRING">jdbc:sqlserver://&lt;HOST&gt;:&lt;PORT&gt;;databaseName=&lt;DATABASE_NAME&gt;;selectMethod=&lt;SELECT_MODE&gt;</attribute>
+  <attribute name="urlPort" type="INTEGER">1433</attribute>
+  <attribute name="useQuotesForTableIdentifierInBCP" type="BOOLEAN">false</attribute>
+  <attribute name="useTrustedConnectionWithBCP" type="BOOLEAN">false</attribute>
+</metadata>

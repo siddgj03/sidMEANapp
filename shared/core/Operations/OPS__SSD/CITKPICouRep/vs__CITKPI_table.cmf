@@ -1,0 +1,307 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vs_CITKPI" path="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CUBE_COU_CD" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DTE_YRWK_COLL" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DOMINT_CD" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="COU_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SEND_COU_ACC_CD" nullable="true">
+      <datatype type="STRING" maxLength="22" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CIT_ID" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="COU_STE_ID" nullable="true">
+      <datatype type="STRING" maxLength="14" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NBR_CONS" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/lib/sources/cacheDataSource" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/lib/sources/cacheDataSource/view77874" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CUBE_COU_CD">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="DTE_YRWK_COLL">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SEND_COU_ACC_CD">
+        <datatype type="STRING" maxLength="22"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_STE_ID">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI010" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUBE_COU_CD">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="DTE_YRWK_COLL">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="X01">
+        <datatype type="STRING" maxLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SEND_COU_ACC_CD">
+        <datatype type="STRING" maxLength="22" trailingSpaces="false"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="COU_STE_ID">
+        <datatype type="STRING" maxLength="14" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI020" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUBE_COU_CD">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="DTE_YRWK_COLL">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DOMINT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="X01">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="COU_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SEND_COU_ACC_CD">
+        <datatype type="STRING" minLength="9" maxLength="22"/>
+      </element>
+      <element name="CIT_ID">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="COU_STE_ID">
+        <datatype type="STRING" maxLength="14" trailingSpaces="false"/>
+      </element>
+      <element name="NBR_CONS">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT  DISTINCT
+ CUBE_COU_CD,
+ DTE_YRWK_COLL,
+ DOMINT_CD,
+ COU_ID,
+ SEND_COU_ACC_CD,
+ CIT_ID,
+ COU_STE_ID,
+ NBR_CONS
+      From /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI010
+UNION ALL
+SELECT DISTINCT
+ CUBE_COU_CD,
+ DTE_YRWK_COLL,
+ DOMINT_CD,
+ COU_ID,
+ SEND_COU_ACC_CD,
+ CIT_ID,
+ COU_STE_ID,
+ NBR_CONS
+      From /shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI020</attribute>
+  <attribute name="cacheBucketMode" type="STRING">AUTO_GEN</attribute>
+  <attribute name="cacheBucketPrefix" type="STRING">view55177_</attribute>
+  <attribute name="cacheBucketSchema" type="STRING">ciscache</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheDropCreateIdx" type="BOOLEAN">true</attribute>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/lib/sources/cacheDataSource/cstracking</attribute>
+  <attribute name="cacheNumBuckets" type="INTEGER">3</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/lib/sources/cacheDataSource</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/lib/sources/cacheDataSource/view77874</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">AUTOMATIC</attribute>
+  <attribute name="creationDate" type="LONG">1557211047572</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1570650163184</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557211047572</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="CUBE_COU_CD">
+          <datatype type="STRING" minLength="11" maxLength="11"/>
+        </element>
+        <element name="DTE_YRWK_COLL">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="DOMINT_CD">
+          <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+        </element>
+        <element name="COU_ID">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="SEND_COU_ACC_CD">
+          <datatype type="STRING" maxLength="22" trailingSpaces="false"/>
+        </element>
+        <element name="CIT_ID">
+          <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+        </element>
+        <element name="COU_STE_ID">
+          <datatype type="STRING" maxLength="14" trailingSpaces="false"/>
+        </element>
+        <element name="NBR_CONS">
+          <datatype type="INTEGER"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/OPS_SSD/CITKPICouRep/vs_CITKPI&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1557211369000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">false</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1557211378128</attribute>
+    <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+    <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+    <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562233683647</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557211378128</attribute>
+  </trigger>
+</metadata>

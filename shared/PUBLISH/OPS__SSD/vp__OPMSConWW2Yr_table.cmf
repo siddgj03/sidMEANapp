@@ -1,0 +1,1485 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_OPMSConWW2Yr" path="/shared/Publish/OPS_SSD/vp_OPMSConWW2Yr" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Con_Original_Due_Year" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Year_And_Quarter" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Year_And_Month" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="21"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Original_Due_Year_And_Week" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_BU_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_BU_Region_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Area_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Product_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="17" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Code" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Type_Weight_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Type_Weight_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="19" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_BU_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_BU_Region_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Area_Code" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Code" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Premium_Label" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Premium_Code" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="GAM_Account_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Road_Parent" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Air_Road_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Custom_Controlled_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WWTT_Value_Code" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Hazardous_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CIT_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Actual_Transit_Days" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Actual_Transit_Delivery_Status" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Sub_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_Status_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_CPP_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_CPP_Sub_Group_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Delivery_CPP_Status_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Damaged_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Sender_Failure_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Orig_Control_Failure_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Linehaul_Delay_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Transit_Delay_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dest_Control_Failure_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Held_Customs_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="100"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Receiver_Failure_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Non_Controllable_Failure_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="100"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Negative_Status_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_NR_Status_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_On_Time_POD_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_POD_Image_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_PACS_Image_Indicator" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Nbr_Of_Cons" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Weight_In_kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Volume_In_m3" nullable="true">
+      <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Nbr_Of_Pieces" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="o362wtv" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="o362wtv" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="o362wtv" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/OPMSConWW2Yr/vc_AllTransactions" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_Committed_Due_Delivery_Week">
+        <datatype type="STRING" minLength="6" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="Destination_Location">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Actual_Transit_Days">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Origin_Location">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Air_Road_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Premium_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Division_Product_Code">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Product_Type">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Con_CIT_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Custom_Controlled_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Hazardous_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="On_Time_POD_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Delivered_Ontime_By_Con_Max_Del_Dt">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Delivered_Ontime_CEM_By_Con_Max_Del_Dt">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Damaged_Con">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Origin_Controllable_Failure">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Destination_Controllable_Failure">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Customer_Controllable_Failure">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Negative_Status_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Manifest_NR_Received">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Linehaul_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Transit_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Held_Customs_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="High_Low_Value_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PACS_Image_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="POD_Image_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Non_Controllable_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Sender_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Receiver_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Competitor_Equivalent_Total_Failure_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Gam_Account_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Con_Count">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Con_Weight">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Con_Volume">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+      </element>
+      <element name="Piece_Count">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/OPMSConWW2Yr/vc_DestDates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_Original_Due_Year">
+        <datatype type="STRING" minLength="4" maxLength="4" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Year_Label">
+        <datatype type="STRING" minLength="7" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Year_Quarter">
+        <datatype type="STRING" minLength="6" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Quarter_Label">
+        <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Year_Month">
+        <datatype type="STRING" minLength="6" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Month_Label">
+        <datatype type="STRING" minLength="8" maxLength="21"/>
+      </element>
+      <element name="Con_Original_Due_Year_Week">
+        <datatype type="STRING" minLength="6" maxLength="6" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Original_Due_Week_Label">
+        <datatype type="STRING" minLength="13" maxLength="13" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ClearanceFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Held_Customs_Indicator">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Daily_Con_Held_Customs_Label">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ConPresetNet" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Air_Road_Parent">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Air_Road_Indicator">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Air_Road_Label">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ConSourceCodes" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_CIT_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Con_CIT_Indicator_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_CustomCntrl" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Customs_Controlled_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Customs_Controlled_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DelOnTimeCPP" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Delivery_CPP_Group_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_CPP_Group_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Daily_Con_Delivery_CPP_Sub_Group_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_CPP_Sub_Group_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Daily_Con_Delivery_CPP_Status_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_CPP_Status_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DeliveryOnTime" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Delivery_Group_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_Group_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Daily_Con_Delivery_Sub_Group_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_Sub_Group_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Daily_Con_Delivery_Status_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Delivery_Status_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DeliveryPerfectCond" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Damaged_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Daily_Con_Damaged_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DestControlFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dest_Control_Failure_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Dest_Control_Failure_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DestinationDepots" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DestinationBUCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationBULabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationBURegionCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationBURegionLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationBURegionShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationCountryGroupCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationCountryGroupLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationCountryGroupShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationCountryCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DestinationCountryLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationCountryShortName">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="DestinationAreaCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationAreaLabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationDepotCode">
+        <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="DestinationDepotLabel">
+        <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="DestinationDepotLongName">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Division" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ActualProductGroupCode">
+        <datatype type="STRING" minLength="2" maxLength="2" trailingSpaces="false"/>
+      </element>
+      <element name="ActualProductGroupLabel">
+        <datatype type="STRING" minLength="5" maxLength="17" trailingSpaces="false"/>
+      </element>
+      <element name="DivisionCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ActualProductCode">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="UniqueDivProdId">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="UniqueCategoryForDivisionCode">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_DocNonDoc" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ProductTypeWeightGroupCode">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="ProductTypeWeightGroupLabel">
+        <datatype type="STRING" minLength="9" maxLength="13" trailingSpaces="false"/>
+      </element>
+      <element name="ProductTypeWeightCode">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ProductTypeWeightLabel">
+        <datatype type="STRING" minLength="9" maxLength="19" trailingSpaces="false"/>
+      </element>
+      <element name="UniqueCategoryForProductTypeWeightCode">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_GAMImp" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_GAM_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Con_GAM_Label">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_HazardousIndicators" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Hazardous_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Hazardous_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_LhaulControlFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Linehaul_Delay_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Linehaul_Delay_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_NRStatus" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_NR_Status_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_NR_Status_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Negative" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Negative_Status_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Negative_Status_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_NonControlFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Non_Controllable_Failure_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Non_Controllable_Failure_Label">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OriginControlFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Orig_Control_Failure_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Orig_Control_Failure_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_OriginDepots" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OriginBUCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBULabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginBURegionCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBURegionLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginBURegionShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryGroupCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginCountryGroupLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginCountryGroupShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OriginCountryLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginCountryShortName">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="OriginAreaCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginAreaLabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginDepotCode">
+        <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="OriginDepotLabel">
+        <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="OriginDepotLongName">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PACSImage" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_PACS_Image_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_PACS_Image_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PODImage" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_POD_Image_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_POD_Image_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_PODInput" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_On_Time_POD_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Con_On_Time_POD_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_Premium" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TotalPremiumLabel">
+        <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+      </element>
+      <element name="PremiumCode">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PremiumLabel">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_ReceiverFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Receiver_Failure_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Receiver_Failure_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_SenderFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Sender_Failure_Indicator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Daily_Con_Sender_Failure_Label">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_TransControlFailure" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Daily_Con_Transit_Delay_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Daily_Con_Transit_Delay_Label">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_TransitDays" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_Actual_Transit_Status_Code">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="Con_Actual_Transit_Status_Label">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Con_Actual_Transit_Days_Code">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Con_Actual_Transit_Days_Label">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/vc_WWTTValue" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="WWTT_Value_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="WWTT_Value_Label">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_OPMSConWW2Yr" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Con_Original_Due_Year">
+        <datatype type="STRING" minLength="7" maxLength="7"/>
+      </element>
+      <element name="Con_Original_Due_Year_And_Qu">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Con_Original_Due_Year_And_Mo">
+        <datatype type="STRING" maxLength="21"/>
+      </element>
+      <element name="Con_Original_Due_Year_And_We">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Destination_BU_Code">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Destination_BU_Region_Code">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Destination_Country_Group_Co">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Destination_Country_Code">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Destination_Area_Code">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Actual_Product_Group_Code">
+        <datatype type="STRING" maxLength="17"/>
+      </element>
+      <element name="Product_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Division_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Product_Type_Weight_Group_Co">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Product_Type_Weight_Code">
+        <datatype type="STRING" maxLength="19"/>
+      </element>
+      <element name="Origin_BU_Code">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Origin_BU_Region_Code">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Origin_Country_Group_Code">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Origin_Country_Code">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Origin_Area_Code">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Total_Premium_Label">
+        <datatype type="STRING" maxLength="8"/>
+      </element>
+      <element name="Premium_Code">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="GAM_Account_Indicator">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Air_Road_Parent">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Air_Road_Indicator">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Custom_Controlled_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="WWTT_Value_Code">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Hazardous_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CIT_Indicator">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Actual_Transit_Days">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Con_Actual_Transit_Delivery_">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="Con_Delivery_Group_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Delivery_Sub_Group_Indic">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Delivery_Status_Indicato">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Delivery_CPP_Group_Indic">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Delivery_CPP_Sub_Group_I">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Delivery_CPP_Status_Indi">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Damaged_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Sender_Failure_Indicator">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Orig_Control_Failure_Indicat">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Linehaul_Delay_Indicator">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Con_Transit_Delay_Indicator">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Dest_Control_Failure_Indicat">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Held_Customs_Indicator">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="Receiver_Failure_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Non_Controllable_Failure_Ind">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="Con_Negative_Status_Indicato">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_NR_Status_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_On_Time_POD_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_POD_Image_Indicator">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_PACS_Image_Indicator">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Nbr_Of_Cons">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Con_Weight_In_kg">
+        <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+      </element>
+      <element name="Con_Volume_In_m3">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+      </element>
+      <element name="Nbr_Of_Pieces">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    vc_OpmsConWW2YrDestDates.Con_Original_Due_Year_Label Con_Original_Due_Year, 
+    vc_OpmsConWW2YrDestDates.Con_Original_Due_Quarter_Label Con_Original_Due_Year_And_Quarter, 
+    vc_OpmsConWW2YrDestDates.Con_Original_Due_Month_Label Con_Original_Due_Year_And_Month, 
+    vc_OpmsConWW2YrDestDates.Con_Original_Due_Week_Label Con_Original_Due_Year_And_Week, 
+    vc_DestinationDepots.DestinationBULabel Destination_BU_Code, 
+    vc_DestinationDepots.DestinationBURegionLabel Destination_BU_Region_Code, 
+    vc_DestinationDepots.DestinationCountryGroupLabel Destination_Country_Group_Code, 
+    vc_DestinationDepots.DestinationCountryLabel Destination_Country_Code, 
+    vc_DestinationDepots.DestinationAreaLabel Destination_Area_Code, 
+    vc_FactOpmsConWW2Yr.Destination_Location Destination_Depot_Code, 
+    vc_Division.ActualProductGroupLabel Actual_Product_Group_Code, 
+    vc_Division.ActualProductCode Product_Code, 
+    vc_Division.DivisionCode Division_Code, 
+    vc_DocNonDoc.ProductTypeWeightGroupLabel Product_Type_Weight_Group_Code, 
+    vc_DocNonDoc.ProductTypeWeightLabel Product_Type_Weight_Code, 
+    vc_OriginDepots.OriginBULabel Origin_BU_Code, 
+    vc_OriginDepots.OriginBURegionLabel Origin_BU_Region_Code, 
+    vc_OriginDepots.OriginCountryGroupLabel Origin_Country_Group_Code, 
+    vc_OriginDepots.OriginCountryLabel Origin_Country_Code, 
+    vc_OriginDepots.OriginAreaLabel Origin_Area_Code, 
+    vc_FactOpmsConWW2Yr.Origin_Location Origin_Depot_Code, 
+    vc_Premium.TotalPremiumLabel Total_Premium_Label, 
+    vc_Premium.PremiumLabel Premium_Code, 
+    vc_GAMImp.Con_GAM_Label GAM_Account_Indicator, 
+    vc_ConPresetNet.Air_Road_Parent Air_Road_Parent, 
+    vc_ConPresetNet.Air_Road_Label Air_Road_Indicator, 
+    vc_CustomControl.Customs_Controlled_Label Custom_Controlled_Indicator, 
+    COALESCE(vs_WTTValue.WWTT_Value_Label, &apos;No Data&apos;) WWTT_Value_Code, 
+    vc_Hazardous.Hazardous_Label Hazardous_Indicator, 
+    vc_ConSourceCodes.Con_CIT_Indicator_Label CIT_Indicator, 
+    vc_TransitDays.Con_Actual_Transit_Days_Code Con_Actual_Transit_Days, 
+    vc_TransitDays.Con_Actual_Transit_Status_Label Con_Actual_Transit_Delivery_Status, 
+    vc_DelOnTimes.Daily_Con_Delivery_Group_Label Con_Delivery_Group_Indicator, 
+    vc_DelOnTimes.Daily_Con_Delivery_Sub_Group_Label Con_Delivery_Sub_Group_Indicator, 
+    vc_DelOnTimes.Daily_Con_Delivery_Status_Label Con_Delivery_Status_Indicator, 
+    vc_DelOnTimeCPP.Daily_Con_Delivery_CPP_Group_Label Con_Delivery_CPP_Group_Indicator, 
+    vc_DelOnTimeCPP.Daily_Con_Delivery_CPP_Sub_Group_Label Con_Delivery_CPP_Sub_Group_Indicator, 
+    vc_DelOnTimeCPP.Daily_Con_Delivery_CPP_Status_Label Con_Delivery_CPP_Status_Indicator, 
+    vc_DeliveryPerfectCond.Daily_Con_Damaged_Label Con_Damaged_Indicator, 
+    vc_SenderFailure.Daily_Con_Sender_Failure_Label Sender_Failure_Indicator, 
+    vc_OriginControlFailure.Daily_Orig_Control_Failure_Label Orig_Control_Failure_Indicator, 
+    vc_LhaulControlFailure.Daily_Con_Linehaul_Delay_Label Con_Linehaul_Delay_Indicator, 
+    vc_TransControlFailure.Daily_Con_Transit_Delay_Label Con_Transit_Delay_Indicator, 
+    vc_DestControlFailure.Dest_Control_Failure_Label Dest_Control_Failure_Indicator, 
+    COALESCE(vc_ClearanceFailure.Daily_Con_Held_Customs_Label, &apos;No Data&apos;) Con_Held_Customs_Indicator, 
+    vc_ReceiverFailure.Daily_Con_Receiver_Failure_Label Receiver_Failure_Indicator, 
+    vc_NonControlFailure.Daily_Con_Non_Controllable_Failure_Label Non_Controllable_Failure_Indicator, 
+    vc_Negative.Daily_Con_Negative_Status_Label Con_Negative_Status_Indicator, 
+    vc_NRStatus.Daily_Con_NR_Status_Label Con_NR_Status_Indicator, 
+    vc_LifecycledlyFixedPODInput.Con_On_Time_POD_Label Con_On_Time_POD_Indicator, 
+    vc_PODImage.Daily_Con_POD_Image_Label Con_POD_Image_Indicator, 
+    vc_PACSImage.Daily_Con_PACS_Image_Label Con_PACS_Image_Indicator, 
+    vc_FactOpmsConWW2Yr.Con_Count Nbr_Of_Cons, 
+    vc_FactOpmsConWW2Yr.Con_Weight Con_Weight_In_kg, 
+    vc_FactOpmsConWW2Yr.Con_Volume Con_Volume_In_m3, 
+    vc_FactOpmsConWW2Yr.Piece_Count Nbr_Of_Pieces
+FROM      
+    /shared/Core/Operations/OPS_SSD/OPMSConWW2Yr/vc_AllTransactions vc_FactOpmsConWW2Yr LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/OPMSConWW2Yr/vc_DestDates vc_OpmsConWW2YrDestDates
+    ON vc_FactOpmsConWW2Yr.Con_Committed_Due_Delivery_Week = vc_OpmsConWW2YrDestDates.Con_Original_Due_Year_Week LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DestinationDepots vc_DestinationDepots
+    ON vc_FactOpmsConWW2Yr.Destination_Location = vc_DestinationDepots.DestinationDepotCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Division vc_Division
+    ON vc_FactOpmsConWW2Yr.Division_Product_Code = vc_Division.UniqueDivProdId LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DocNonDoc vc_DocNonDoc
+    ON vc_FactOpmsConWW2Yr.Product_Type = vc_DocNonDoc.ProductTypeWeightCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OriginDepots vc_OriginDepots
+    ON vc_FactOpmsConWW2Yr.Origin_Location = vc_OriginDepots.OriginDepotCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Premium vc_Premium
+    ON vc_FactOpmsConWW2Yr.Premium_Code = vc_Premium.PremiumCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_GAMImp vc_GAMImp
+    ON vc_FactOpmsConWW2Yr.Gam_Account_Indicator = vc_GAMImp.Con_GAM_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ConPresetNet vc_ConPresetNet
+    ON vc_FactOpmsConWW2Yr.Air_Road_Indicator = vc_ConPresetNet.Air_Road_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_WWTTValue vs_WTTValue
+    ON vc_FactOpmsConWW2Yr.High_Low_Value_Code = vs_WTTValue.WWTT_Value_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_TransitDays vc_TransitDays
+    ON vc_FactOpmsConWW2Yr.Actual_Transit_Days = vc_TransitDays.Con_Actual_Transit_Days_Code LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DeliveryPerfectCond vc_DeliveryPerfectCond
+    ON vc_FactOpmsConWW2Yr.Damaged_Con = vc_DeliveryPerfectCond.Daily_Con_Damaged_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_SenderFailure vc_SenderFailure
+    ON vc_FactOpmsConWW2Yr.Sender_Failure_Indicator = vc_SenderFailure.Daily_Con_Sender_Failure_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_OriginControlFailure vc_OriginControlFailure
+    ON vc_FactOpmsConWW2Yr.Origin_Controllable_Failure = vc_OriginControlFailure.Daily_Orig_Control_Failure_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_LhaulControlFailure vc_LhaulControlFailure
+    ON vc_FactOpmsConWW2Yr.Linehaul_Failure_Indicator = vc_LhaulControlFailure.Daily_Con_Linehaul_Delay_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_TransControlFailure vc_TransControlFailure
+    ON vc_FactOpmsConWW2Yr.Transit_Failure_Indicator = vc_TransControlFailure.Daily_Con_Transit_Delay_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DestControlFailure vc_DestControlFailure
+    ON vc_FactOpmsConWW2Yr.Destination_Controllable_Failure = vc_DestControlFailure.Dest_Control_Failure_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ClearanceFailure vc_ClearanceFailure
+    ON vc_FactOpmsConWW2Yr.Held_Customs_Indicator = vc_ClearanceFailure.Daily_Con_Held_Customs_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ReceiverFailure vc_ReceiverFailure
+    ON vc_FactOpmsConWW2Yr.Receiver_Failure_Indicator = vc_ReceiverFailure.Daily_Con_Receiver_Failure_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_NonControlFailure vc_NonControlFailure
+    ON vc_FactOpmsConWW2Yr.Non_Controllable_Failure_Indicator = vc_NonControlFailure.Daily_Con_Non_Controllable_Failure_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_Negative vc_Negative
+    ON vc_FactOpmsConWW2Yr.Negative_Status_Indicator = vc_Negative.Daily_Con_Negative_Status_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_NRStatus vc_NRStatus
+    ON vc_FactOpmsConWW2Yr.Manifest_NR_Received = vc_NRStatus.Daily_Con_NR_Status_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PACSImage vc_PACSImage
+    ON vc_FactOpmsConWW2Yr.PACS_Image_Indicator = vc_PACSImage.Daily_Con_PACS_Image_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PODInput vc_LifecycledlyFixedPODInput
+    ON vc_FactOpmsConWW2Yr.On_Time_POD_Indicator = vc_LifecycledlyFixedPODInput.Con_On_Time_POD_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_PODImage vc_PODImage
+    ON vc_FactOpmsConWW2Yr.POD_Image_Indicator = vc_PODImage.Daily_Con_POD_Image_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_HazardousIndicators vc_Hazardous
+    ON vc_FactOpmsConWW2Yr.Hazardous_Indicator = vc_Hazardous.Hazardous_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_CustomCntrl vc_CustomControl
+    ON vc_FactOpmsConWW2Yr.Custom_Controlled_Indicator = vc_CustomControl.Customs_Controlled_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DeliveryOnTime vc_DelOnTimes
+    ON vc_FactOpmsConWW2Yr.Delivered_Ontime_By_Con_Max_Del_Dt = vc_DelOnTimes.Daily_Con_Delivery_Status_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_DelOnTimeCPP vc_DelOnTimeCPP
+    ON vc_FactOpmsConWW2Yr.Delivered_Ontime_CEM_By_Con_Max_Del_Dt = vc_DelOnTimeCPP.Daily_Con_Delivery_CPP_Status_Indicator LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/vc_ConSourceCodes vc_ConSourceCodes
+    ON vc_FactOpmsConWW2Yr.Con_CIT_Indicator = vc_ConSourceCodes.Con_CIT_Indicator
+where vc_OriginDepots.OriginBULabel  like &apos;%o.SEMEA%&apos;  and  
+vc_Division.ActualProductCode like &apos;%48N%&apos; and vc_DestinationDepots.DestinationBULabel  like &apos;%d.NEUR%&apos;
+and vc_DestinationDepots.DestinationAreaLabel like &apos;%d.BE_AR1%&apos;
+</attribute>
+  <attribute name="cacheClearRule" type="STRING">ON_LOAD</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_OPMSConWW2Yr</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557145084661</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20167</attribute>
+  <attribute name="creatorUserName" type="STRING">o362wtv</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565792151298</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20167</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING"/>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/OPS_SSD/vp_OPMSConWW2Yr</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557145084661</attribute>
+  <trigger>
+    <security>
+      <owner user="o362wtv" domain="tntadtest"/>
+      <privilege user="o362wtv" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/OPS_SSD/vp_OPMSConWW2Yr" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Con_Original_Due_Year">
+          <datatype type="STRING" minLength="7" maxLength="7" trailingSpaces="false"/>
+        </element>
+        <element name="Con_Original_Due_Year_And_Quarter">
+          <datatype type="STRING" minLength="10" maxLength="10" trailingSpaces="false"/>
+        </element>
+        <element name="Con_Original_Due_Year_And_Month">
+          <datatype type="STRING" minLength="8" maxLength="21"/>
+        </element>
+        <element name="Con_Original_Due_Year_And_Week">
+          <datatype type="STRING" minLength="13" maxLength="13" trailingSpaces="false"/>
+        </element>
+        <element name="Destination_BU_Code">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="Destination_BU_Region_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Destination_Country_Group_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Destination_Country_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Destination_Area_Code">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="Destination_Depot_Code">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="Actual_Product_Group_Code">
+          <datatype type="STRING" minLength="5" maxLength="17" trailingSpaces="false"/>
+        </element>
+        <element name="Product_Code">
+          <datatype type="STRING" minLength="4" maxLength="4"/>
+        </element>
+        <element name="Division_Code">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="Product_Type_Weight_Group_Code">
+          <datatype type="STRING" minLength="9" maxLength="13" trailingSpaces="false"/>
+        </element>
+        <element name="Product_Type_Weight_Code">
+          <datatype type="STRING" minLength="9" maxLength="19" trailingSpaces="false"/>
+        </element>
+        <element name="Origin_BU_Code">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="Origin_BU_Region_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Origin_Country_Group_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Origin_Country_Code">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="Origin_Area_Code">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="Origin_Depot_Code">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="Total_Premium_Label">
+          <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+        </element>
+        <element name="Premium_Code">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="GAM_Account_Indicator">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="Air_Road_Parent">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="Air_Road_Indicator">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="Custom_Controlled_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="WWTT_Value_Code">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Hazardous_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="CIT_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Actual_Transit_Days">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="Con_Actual_Transit_Delivery_Status">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="Con_Delivery_Group_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_Delivery_Sub_Group_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_Delivery_Status_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_Delivery_CPP_Group_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Delivery_CPP_Sub_Group_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Delivery_CPP_Status_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Damaged_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Sender_Failure_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Orig_Control_Failure_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Linehaul_Delay_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Con_Transit_Delay_Indicator">
+          <datatype type="STRING" maxLength="40"/>
+        </element>
+        <element name="Dest_Control_Failure_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_Held_Customs_Indicator">
+          <datatype type="STRING" maxLength="100"/>
+        </element>
+        <element name="Receiver_Failure_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Non_Controllable_Failure_Indicator">
+          <datatype type="STRING" maxLength="100"/>
+        </element>
+        <element name="Con_Negative_Status_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_NR_Status_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_On_Time_POD_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_POD_Image_Indicator">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Con_PACS_Image_Indicator">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Nbr_Of_Cons">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Con_Weight_In_kg">
+          <datatype type="DECIMAL" maxDigits="15" maxFractionalDigits="3"/>
+        </element>
+        <element name="Con_Volume_In_m3">
+          <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="3"/>
+        </element>
+        <element name="Nbr_Of_Pieces">
+          <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/OPS_SSD/vp_OPMSConWW2Yr&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1557391137000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1557391408589</attribute>
+    <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+    <attribute name="creatorUserId" type="INTEGER">20167</attribute>
+    <attribute name="creatorUserName" type="STRING">o362wtv</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562827403638</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">20167</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">o362wtv</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557391408589</attribute>
+  </trigger>
+</metadata>

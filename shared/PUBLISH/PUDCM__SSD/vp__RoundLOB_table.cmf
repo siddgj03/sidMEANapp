@@ -1,0 +1,1082 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_RoundLOB" path="/shared/Publish/PUDCM_SSD/vp_RoundLOB" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Rty_Id" nullable="true">
+      <datatype type="STRING" maxLength="35" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rty_Normal_In" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Dte_Day_Nr" nullable="true">
+      <datatype type="STRING" maxLength="25" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Year" nullable="true">
+      <datatype type="STRING" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Quarter" nullable="true">
+      <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Month" nullable="true">
+      <datatype type="STRING" minLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Week" nullable="true">
+      <datatype type="STRING" minLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Opr_Type_Cd" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="68" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Grp_Id" nullable="true">
+      <datatype type="STRING" maxLength="33"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Iso_Id" nullable="true">
+      <datatype type="STRING" maxLength="35"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Iso_Id_operator" nullable="true">
+      <datatype type="STRING" maxLength="36"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cou_Iso_Id_Vendor" nullable="true">
+      <datatype type="STRING" maxLength="35"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Bul_Csys_Id" nullable="true">
+      <datatype type="STRING" maxLength="38"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Bul_Csys_Id_Operator" nullable="true">
+      <datatype type="STRING" maxLength="38"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Region_Cd" nullable="true">
+      <datatype type="STRING" maxLength="43"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Area_Cd" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="24"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Opr_Key" nullable="true">
+      <datatype type="STRING" maxLength="51" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pod_Id" nullable="true">
+      <datatype type="STRING" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Lob" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Group" nullable="true">
+      <datatype type="STRING" minLength="14" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Product_Sub_Group" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Day" nullable="true">
+      <datatype type="STRING"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Rod_Active_Dt" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Pickup_Positive_Stops" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Pickup_Negative_Stops" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Delivery_Positive_Stops" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_of_Delivery_Negative_Stops" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Stops" nullable="true">
+      <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Pickup_Connotes" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Delivery_Connotes" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Connotes" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Pickup_Pieces" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Delivery_Pieces" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="No_Of_Pieces" nullable="true">
+      <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Pickup_Weight_Kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Delivery_Weight_Kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Weight_Kg" nullable="true">
+      <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Bonus_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CI_Bonus_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Penalty_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fuel_Surcharge_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Total_Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Base_Costs" nullable="true">
+      <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Per_Consignment" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Per_Stop" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_Operator" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Opr_Key">
+        <datatype type="STRING" minLength="1" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="Opr_Id">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Opr_Nm">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Opr_Short_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Opr_Long_Ds">
+        <datatype type="STRING" maxLength="51" trailingSpaces="false"/>
+      </element>
+      <element name="Bul_Csys_Id_Operator">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Cou_Iso_Id_Operator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Opr_Type_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Pod_Id">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="Pod_Nm">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Pod_Short_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Pod_Long_Ds">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Cou_Iso_Id_Vendor">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_ProductGroup" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Lob_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Lob_Nm">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Prg_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Prg_Nm">
+        <datatype type="STRING" minLength="14" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="Psg_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Psg_Nm">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_RoundLOB" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Bul_Csys_Id">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Rod_Active_Dt">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Lob_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Prg_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Psg_Id">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Opr_Id">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Opr_Key">
+        <datatype type="STRING" minLength="1" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="Rty_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Nr_Pickup_Pos_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Pickup_Neg_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Delivery_Pos_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Delivery_Neg_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Pickup_Cons">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Delivery_Cons">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Pickup_Pcs">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Nr_Delivery_Pcs">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="Wt_Pickup">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="Wt_Delivery">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="Am_Bonus">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      </element>
+      <element name="Am_Ci_Bonus">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Am_Penalty">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+      <element name="Am_Fuel_Cost">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Am_Total_Cost">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+      <element name="Am_Base_Cost">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/vc_Location" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Cou_Grp_Id">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Cou_Grp_Nm">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Cou_Grp_Short_Ds">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Cou_Grp_Long_Ds">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Cou_Iso_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Nm">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Cou_Short_Ds">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="Cou_Long_Ds">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Bul_Csys_Id">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Bul_Nm">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Bul_Short_Ds">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Bul_Long_Ds">
+        <datatype type="STRING" maxLength="38"/>
+      </element>
+      <element name="Region_Cd">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="Region_Ds">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Region_Long_Ds">
+        <datatype type="STRING" maxLength="43"/>
+      </element>
+      <element name="Area_Cd">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Area_Long_Ds">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Cou_Iso_Id_Operator">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Iso_Id_Vendor">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Cou_Loc">
+        <datatype type="STRING" minLength="3" maxLength="22" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/vc_OpreratorTypeCode" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Opr_Type_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Opr_Type_Short_Ds">
+        <datatype type="STRING" maxLength="60" trailingSpaces="false"/>
+      </element>
+      <element name="Opr_Type_Long_Ds">
+        <datatype type="STRING" minLength="3" maxLength="68" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/vc_Period" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dte_Dt">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Dte_Day_Nr">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_Day_Nm">
+        <datatype type="STRING" maxLength="13" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Year">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Quarter">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Quarter_Ds">
+        <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Month">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Month_Ds">
+        <datatype type="STRING" minLength="3"/>
+      </element>
+      <element name="Dte_F_Week">
+        <datatype type="STRING" trailingSpaces="false"/>
+      </element>
+      <element name="Dte_F_Week_Ds">
+        <datatype type="STRING" minLength="3" trailingSpaces="false"/>
+      </element>
+      <element name="Rod_Active_Dt">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/vc_RoundType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Rty_Id">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Rty_Ds">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Rty_Short_Ds">
+        <datatype type="STRING" maxLength="30" trailingSpaces="false"/>
+      </element>
+      <element name="Rty_Long_Ds">
+        <datatype type="STRING" maxLength="35" trailingSpaces="false"/>
+      </element>
+      <element name="Rty_Normal_In">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Rty_Normal_In_Ds">
+        <datatype type="STRING" minLength="8" maxLength="12" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/PUDCM_SSD/vc_Today" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Today">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Rod_Active_Dt">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/PUDCM_SSD/pp_RoundLOB" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="alias" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="resource" direction="IN">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_RoundLOB" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Rty_Id">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Rty_Normal_In">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Dte_Day_Nr">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="Year_">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Quarter">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Month_">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Week">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Opr_Type_Cd">
+        <datatype type="STRING" maxLength="68"/>
+      </element>
+      <element name="Cou_Grp_Id">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="Cou_Iso_Id">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Cou_Iso_Id_operator">
+        <datatype type="STRING" maxLength="36"/>
+      </element>
+      <element name="Cou_Iso_Id_Vendor">
+        <datatype type="STRING" maxLength="35"/>
+      </element>
+      <element name="Bul_Csys_Id">
+        <datatype type="STRING" maxLength="38"/>
+      </element>
+      <element name="Bul_Csys_Id_Operator">
+        <datatype type="STRING" maxLength="38"/>
+      </element>
+      <element name="Region_Cd">
+        <datatype type="STRING" maxLength="43"/>
+      </element>
+      <element name="Area_Cd">
+        <datatype type="STRING" maxLength="24"/>
+      </element>
+      <element name="Opr_Key">
+        <datatype type="STRING" maxLength="51"/>
+      </element>
+      <element name="Pod_Id">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Lob">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Product_Group">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Product_Sub_Group">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="Day_">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="Rod_Active_Dt">
+        <datatype type="STRING" maxLength="16"/>
+      </element>
+      <element name="No_of_Pickup_Positive_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_of_Pickup_Negative_Stops">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_of_Delivery_Positive_Stop">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_of_Delivery_Negative_Stop">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Stops">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Pickup_Connotes">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Delivery_Connotes">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Connotes">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Pickup_Pieces">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Delivery_Pieces">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="No_Of_Pieces">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="Pickup_Weight_Kg">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="Delivery_Weight_Kg">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="Total_Weight_Kg">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="Bonus_Amount">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      </element>
+      <element name="CI_Bonus_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Penalty_Amount">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+      <element name="Fuel_Surcharge_Amount">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="Total_Cost_Amount">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+      <element name="Base_Costs">
+        <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+      </element>
+      <element name="Cost_Per_Consignment">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+      </element>
+      <element name="Cost_Per_Stop">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+   /* Dim_Round_Today.Today, 
+    Dim_Round_RoundType.Rty_Id, 
+    Dim_Round_RoundType.Rty_Ds, 
+    Dim_Round_RoundType.Rty_Short_Ds, 
+						*/
+    ISNULL(Dim_Round_RoundType.Rty_Long_Ds,&apos;No data reported&apos;) &quot;Rty_Id&quot;,      
+    --Dim_Round_RoundType.Rty_Normal_In,                     
+    ISNULL(Dim_Round_RoundType.Rty_Normal_In_Ds,&apos;Round type: reference data N/A&apos;) &quot;Rty_Normal_In&quot;, 
+    --Dim_Round_Period.Dte_Dt, 
+    --Dim_Round_Period.Dte_Day_Nr,      
+    ISNULL(Dim_Round_Period.Dte_Day_Nm,&apos;Weekday: no data reported&apos;) &quot;Dte_Day_Nr&quot;,         
+    Dim_Round_Period.Dte_F_Year &quot;Year&quot;, 
+    --Dim_Round_Period.Dte_F_Quarter, 
+    Dim_Round_Period.Dte_F_Quarter_Ds &quot;Quarter&quot;, 
+    --Dim_Round_Period.Dte_F_Month, 
+    Dim_Round_Period.Dte_F_Month_Ds &quot;Month&quot;, 
+    --Dim_Round_Period.Dte_F_Week, 
+    Dim_Round_Period.Dte_F_Week_Ds &quot;Week&quot;,   
+    --Dim_Round_OpreratorTypeCode.Opr_Type_Short_Ds, 
+    ISNULL(Dim_Round_OpreratorTypeCode.Opr_Type_Long_Ds,&apos;Operator type: reference data N/A&apos;) &quot;Opr_Type_Cd&quot;,   /*
+    Dim_Round_Location.Cou_Grp_Id, 
+    Dim_Round_Location.Cou_Grp_Nm, 
+    Dim_Round_Location.Cou_Grp_Short_Ds,   */
+    ISNULL(Dim_Round_Location.Cou_Grp_Long_Ds,&apos;Business unit: reference data N/A&apos;) &quot;Cou_Grp_Id&quot;,      /*
+    Dim_Round_Location.Cou_Iso_Id, 
+    Dim_Round_Location.Cou_Nm, 
+    Dim_Round_Location.Cou_Short_Ds,           */
+    ISNULL(Dim_Round_Location.Cou_Long_Ds,&apos;Country: reference data N/A&apos;) &quot;Cou_Iso_Id&quot;,
+	ISNULL(Dim_Round_Location.Cou_Long_Ds,&apos;Operator country: reference data N/A&apos;) &quot;Cou_Iso_Id_operator&quot;,
+	ISNULL(Dim_Round_Location.Cou_Long_Ds,&apos;Vendor country: reference data N/A&apos;) &quot;Cou_Iso_Id_Vendor&quot;, 
+    --Dim_Round_Location.Bul_Nm, 
+    --Dim_Round_Location.Bul_Short_Ds, 
+    ISNULL(Dim_Round_Location.Bul_Long_Ds,&apos;Depot: no data reported&apos;) &quot;Bul_Csys_Id&quot;, 
+	ISNULL(Dim_Round_Location.Bul_Long_Ds,&apos;Operator depot: reference data N/A&apos;) &quot;Bul_Csys_Id_Operator&quot;,
+    --Dim_Round_Location.Region_Cd, 
+    --Dim_Round_Location.Region_Ds,                 
+    ISNULL(Dim_Round_Location.Region_Long_Ds,&apos;Region: reference data N/A&apos;) &quot;Region_Cd&quot;,  
+    --Dim_Round_Location.Area_Cd, 
+    ISNULL(Dim_Round_Location.Area_Long_Ds,&apos;Area: reference data N/A&apos;) &quot;Area_Cd&quot;,   /*
+    Dim_Round_Location.Cou_Iso_Id_Operator Cou_Iso_Id_Operator_Loc, 
+    Dim_Round_Location.Cou_Iso_Id_Vendor Cou_Iso_Id_Vendor_Loc, 
+    Dim_Round_Location.COU_LOC, 
+    Dim_RoundLOBOperator.Opr_Nm, 
+    Dim_RoundLOBOperator.Opr_Short_Ds,        */
+    ISNULL(Dim_RoundLOBOperator.Opr_Long_Ds,&apos;No data reported&apos;) &quot;Opr_Key&quot;, /*
+    Dim_RoundLOBOperator.Bul_Csys_Id_Operator, 
+    Dim_RoundLOBOperator.Cou_Iso_Id_Operator Cou_Iso_Id_Operator_Opr, 
+    Dim_RoundLOBOperator.Opr_Type_Cd, 
+    Dim_RoundLOBOperator.Pod_Id, 
+    Dim_RoundLOBOperator.Pod_Nm, 
+    Dim_RoundLOBOperator.Pod_Short_Ds,      */
+    ISNULL(Dim_RoundLOBOperator.Pod_Long_Ds,&apos;Vendor: reference data N/A&apos;) &quot;Pod_Id&quot;,         
+    --Dim_RoundLOBOperator.Cou_Iso_Id_Vendor Cou_Iso_Id_Vendor_Opr, 
+    ISNULL(Dim_RoundLOBProductGroup.Lob_Nm,&apos;LOB type: reference data N/A&apos;) &quot;Lob&quot;, 
+    ISNULL(Dim_RoundLOBProductGroup.Prg_Nm,&apos;No data reported&apos;) &quot;Product_Group&quot;,   
+    Dim_RoundLOBProductGroup.Psg_Nm &quot;Product_Sub_Group&quot;, 
+    --Fact_RoundLOB.Bul_Csys_Id,      
+	TO_CHAR(TO_DATE(Fact_RoundLOB.Rod_Active_Dt,&apos;yyyy-MM-dd&apos;),&apos;yyyy/MM/dd - Dy&apos;) &quot;Day&quot;,
+	ISNULL(Fact_RoundLOB.Rod_Active_Dt,&apos;No data reported&apos;) &quot;Rod_Active_Dt&quot;,/*
+	Fact_RoundLOB.Lob_Id, 
+	Fact_RoundLOB.Prg_Id, 
+	Fact_RoundLOB.Psg_Id, 
+	Fact_RoundLOB.Opr_Id, 
+	Fact_RoundLOB.Opr_Key,                                           */
+	Fact_RoundLOB.Nr_Pickup_Pos_Stops &quot;No_of_Pickup_Positive_Stops&quot;, 
+	Fact_RoundLOB.Nr_Pickup_Neg_Stops &quot;No_of_Pickup_Negative_Stops&quot;, 
+	Fact_RoundLOB.Nr_Delivery_Pos_Stops &quot;No_of_Delivery_Positive_Stops&quot;, 
+	Fact_RoundLOB.Nr_Delivery_Neg_Stops &quot;No_of_Delivery_Negative_Stops&quot;, 
+	Fact_RoundLOB.Nr_Pickup_Pos_Stops+Fact_RoundLOB.Nr_Pickup_Neg_Stops+Fact_RoundLOB.Nr_Delivery_Pos_Stops+Fact_RoundLOB.Nr_Delivery_Neg_Stops &quot;No_Of_Stops&quot;,
+	Fact_RoundLOB.Nr_Pickup_Cons &quot;No_Of_Pickup_Connotes&quot;, 
+	Fact_RoundLOB.Nr_Delivery_Cons &quot;No_Of_Delivery_Connotes&quot;,
+	Fact_RoundLOB.Nr_Pickup_Cons+Fact_RoundLOB.Nr_Delivery_Cons &quot;No_Of_Connotes&quot;, 
+	Fact_RoundLOB.Nr_Pickup_Pcs &quot;No_Of_Pickup_Pieces&quot;, 
+	Fact_RoundLOB.Nr_Delivery_Pcs &quot;No_Of_Delivery_Pieces&quot;,
+	Fact_RoundLOB.Nr_Pickup_Pcs+Fact_RoundLOB.Nr_Delivery_Pcs &quot;No_Of_Pieces&quot;, 
+	Fact_RoundLOB.Wt_Pickup &quot;Pickup_Weight_Kg&quot;, 
+	Fact_RoundLOB.Wt_Delivery &quot;Delivery_Weight_Kg&quot;,
+	Fact_RoundLOB.Wt_Pickup+Fact_RoundLOB.Wt_Delivery &quot;Total_Weight_Kg&quot;,
+	Fact_RoundLOB.Am_Bonus &quot;Bonus_Amount&quot;, 
+	Fact_RoundLOB.Am_CI_Bonus &quot;CI_Bonus_Amount&quot;, 
+	Fact_RoundLOB.Am_Penalty &quot;Penalty_Amount&quot;, 
+	Fact_RoundLOB.Am_Fuel_Cost &quot;Fuel_Surcharge_Amount&quot;, 
+	Fact_RoundLOB.Am_Total_Cost &quot;Total_Cost_Amount&quot;, 
+	Fact_RoundLOB.Am_Base_Cost &quot;Base_Costs&quot;,    
+	CASE WHEN ( (Fact_RoundLOB.Nr_Pickup_Cons+Fact_RoundLOB.Nr_Delivery_Cons) = 0 ) then ( 0 ) else ( Fact_RoundLOB.Am_Total_Cost / (Fact_RoundLOB.Nr_Pickup_Cons+Fact_RoundLOB.Nr_Delivery_Cons) )END &quot;Cost_Per_Consignment&quot;,
+	CASE WHEN ( (Fact_RoundLOB.Nr_Pickup_Pos_Stops+Fact_RoundLOB.Nr_Pickup_Neg_Stops+Fact_RoundLOB.Nr_Delivery_Pos_Stops+Fact_RoundLOB.Nr_Delivery_Neg_Stops) = 0 ) then ( 0 ) else ( Fact_RoundLOB.Am_Total_Cost / (Fact_RoundLOB.Nr_Pickup_Pos_Stops+Fact_RoundLOB.Nr_Pickup_Neg_Stops+Fact_RoundLOB.Nr_Delivery_Pos_Stops+Fact_RoundLOB.Nr_Delivery_Neg_Stops) ) END &quot;Cost_Per_Stop&quot;	
+  
+
+
+FROM      
+     /shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_RoundLOB Fact_RoundLOB LEFT OUTER JOIN 
+         /shared/Core/Operations/PUDCM_SSD/vc_Location Dim_Round_Location
+    ON Fact_RoundLOB.BUL_CSYS_ID = Dim_Round_Location.Bul_Csys_Id LEFT OUTER JOIN 
+        /shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_Operator Dim_RoundLOBOperator
+    ON Fact_RoundLOB.OPR_KEY = Dim_RoundLOBOperator.Opr_Key AND 
+        Fact_RoundLOB.OPR_ID = Dim_RoundLOBOperator.Opr_Id LEFT OUTER JOIN 
+        /shared/Core/Operations/PUDCM_SSD/vc_OpreratorTypeCode Dim_Round_OpreratorTypeCode
+    ON Dim_RoundLOBOperator.Opr_Type_Cd = Dim_Round_OpreratorTypeCode.Opr_Type_Cd LEFT OUTER JOIN 
+        /shared/Core/Operations/PUDCM_SSD/vc_Period Dim_Round_Period
+    ON Fact_RoundLOB.ROD_ACTIVE_DT = Dim_Round_Period.Rod_Active_Dt LEFT OUTER JOIN 
+        /shared/Core/Operations/PUDCM_SSD/RoundLOB/vc_ProductGroup  Dim_RoundLOBProductGroup
+    ON (Fact_RoundLOB.LOB_ID = Dim_RoundLOBProductGroup.Lob_Id AND 
+        Fact_RoundLOB.PRG_ID = Dim_RoundLOBProductGroup.Prg_Id) AND 
+        Fact_RoundLOB.PSG_ID = Dim_RoundLOBProductGroup.Psg_Id LEFT OUTER JOIN 	 
+		/shared/Core/Operations/PUDCM_SSD/vc_RoundType Dim_Round_RoundType
+    ON Fact_RoundLOB.RTY_ID = Dim_Round_RoundType.Rty_Id LEFT OUTER JOIN 
+          /shared/Core/Operations/PUDCM_SSD/vc_Today   Dim_Round_Today
+    ON Fact_RoundLOB.ROD_ACTIVE_DT = Dim_Round_Today.ROD_ACTIVE_DT</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_RoundLOB</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1561038361611</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70118</attribute>
+  <attribute name="creatorUserName" type="STRING">w101aqu</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1564409897577</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70118</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING">/shared/Publish/PUDCM_SSD/pp_RoundLOB</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/PUDCM_SSD/vp_RoundLOB</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1561038361611</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/PUDCM_SSD/vp_RoundLOB" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Rty_Id">
+          <datatype type="STRING" maxLength="35" trailingSpaces="false"/>
+        </element>
+        <element name="Rty_Normal_In">
+          <datatype type="STRING" minLength="8" maxLength="30" trailingSpaces="false"/>
+        </element>
+        <element name="Dte_Day_Nr">
+          <datatype type="STRING" maxLength="25" trailingSpaces="false"/>
+        </element>
+        <element name="Year">
+          <datatype type="STRING" trailingSpaces="false"/>
+        </element>
+        <element name="Quarter">
+          <datatype type="STRING" minLength="4" trailingSpaces="false"/>
+        </element>
+        <element name="Month">
+          <datatype type="STRING" minLength="3"/>
+        </element>
+        <element name="Week">
+          <datatype type="STRING" minLength="3" trailingSpaces="false"/>
+        </element>
+        <element name="Opr_Type_Cd">
+          <datatype type="STRING" minLength="3" maxLength="68" trailingSpaces="false"/>
+        </element>
+        <element name="Cou_Grp_Id">
+          <datatype type="STRING" maxLength="33"/>
+        </element>
+        <element name="Cou_Iso_Id">
+          <datatype type="STRING" maxLength="35"/>
+        </element>
+        <element name="Cou_Iso_Id_operator">
+          <datatype type="STRING" maxLength="36"/>
+        </element>
+        <element name="Cou_Iso_Id_Vendor">
+          <datatype type="STRING" maxLength="35"/>
+        </element>
+        <element name="Bul_Csys_Id">
+          <datatype type="STRING" maxLength="38"/>
+        </element>
+        <element name="Bul_Csys_Id_Operator">
+          <datatype type="STRING" maxLength="38"/>
+        </element>
+        <element name="Region_Cd">
+          <datatype type="STRING" maxLength="43"/>
+        </element>
+        <element name="Area_Cd">
+          <datatype type="STRING" minLength="10" maxLength="24"/>
+        </element>
+        <element name="Opr_Key">
+          <datatype type="STRING" maxLength="51" trailingSpaces="false"/>
+        </element>
+        <element name="Pod_Id">
+          <datatype type="STRING" trailingSpaces="false"/>
+        </element>
+        <element name="Lob">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Product_Group">
+          <datatype type="STRING" minLength="14" maxLength="30" trailingSpaces="false"/>
+        </element>
+        <element name="Product_Sub_Group">
+          <datatype type="STRING" maxLength="40"/>
+        </element>
+        <element name="Day">
+          <datatype type="STRING"/>
+        </element>
+        <element name="Rod_Active_Dt">
+          <datatype type="STRING" minLength="10" maxLength="16"/>
+        </element>
+        <element name="No_of_Pickup_Positive_Stops">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_of_Pickup_Negative_Stops">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_of_Delivery_Positive_Stops">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_of_Delivery_Negative_Stops">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Stops">
+          <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Pickup_Connotes">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Delivery_Connotes">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Connotes">
+          <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Pickup_Pieces">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Delivery_Pieces">
+          <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+        </element>
+        <element name="No_Of_Pieces">
+          <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+        </element>
+        <element name="Pickup_Weight_Kg">
+          <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+        </element>
+        <element name="Delivery_Weight_Kg">
+          <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+        </element>
+        <element name="Total_Weight_Kg">
+          <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+        </element>
+        <element name="Bonus_Amount">
+          <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+        </element>
+        <element name="CI_Bonus_Amount">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+        </element>
+        <element name="Penalty_Amount">
+          <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+        </element>
+        <element name="Fuel_Surcharge_Amount">
+          <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+        </element>
+        <element name="Total_Cost_Amount">
+          <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+        </element>
+        <element name="Base_Costs">
+          <datatype type="DECIMAL" maxDigits="33" maxFractionalDigits="16"/>
+        </element>
+        <element name="Cost_Per_Consignment">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+        </element>
+        <element name="Cost_Per_Stop">
+          <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="21"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/PUDCM_SSD/vp_RoundLOB&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562671816000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562671888066</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562740364202</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562671888066</attribute>
+  </trigger>
+</metadata>

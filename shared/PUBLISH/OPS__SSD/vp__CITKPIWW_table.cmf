@@ -1,0 +1,1302 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CITKPIWW" path="/shared/Publish/OPS_SSD/vp_CITKPIWW" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="CubeCountryCode" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="11"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionYearAndWeek" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationDepot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConOriginalDueYearAndWeek" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginDepot" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DomIntlDescription" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="UniqueDivProdOptId" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="PremiumCode" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ProductTypeWeightLabel" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="14" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConSourceCode" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderCountryAccountCode" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="14"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NumberOfCons" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="AverageCons" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NumberOfWeeks" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="NumberOfCITAccounts" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CITConndicator" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="18" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConSourceCodeGroup" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConSourceTypeCode" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConSourceDescription" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderBU" nullable="true">
+      <datatype type="STRING" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderBURegion" nullable="true">
+      <datatype type="STRING" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderCountryGroup" nullable="true">
+      <datatype type="STRING" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderCountry" nullable="true">
+      <datatype type="STRING" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderAccountGroupingCode" nullable="true">
+      <datatype type="STRING" maxLength="18"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="SenderAccountName" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DivisionCode" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ActualProductCode" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CubeBULabel" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="18"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CubeRegionCode" nullable="true">
+      <datatype type="STRING" minLength="18" maxLength="18"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CubeRegionLabel" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="38"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="CubeCountryLabel" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="38"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Worldwide" nullable="true">
+      <datatype type="STRING" minLength="17" maxLength="17" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConOriginalDueYear" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConOriginalDueQuarter" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConOriginalDueMonth" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="37"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConOriginalDueWeek" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationBU" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationBURegion" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationCountryGroup" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationCountry" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DestinationArea" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionYear" nullable="true">
+      <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionYearLabel" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionYearAndQuarter" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionQuarterLabel" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionYearAndMonth" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionMonthLabel" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="37"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="ConCollectionWeekLabel" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBU" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginBURegion" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountryGroup" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginCountry" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="33"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="OriginArea" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="TotalPremiumLabel" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="PremiumLabel" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DomIntl Code" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="DomInt Description" nullable="true">
+      <datatype type="STRING" maxLength="32768"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vc_CITKPIWW_Old" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Cube_Country_Code">
+        <datatype type="STRING" minLength="8" maxLength="11"/>
+      </element>
+      <element name="Con_Collection_Year_And_Week">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Destination_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Con_Original_Due_Year_And_Week">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Origin_Depot_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DomIntl_Code">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Unique_DivProdOpt_Id">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Premium_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Product_Type_Weight_Code">
+        <datatype type="STRING" minLength="1" maxLength="14" trailingSpaces="false"/>
+      </element>
+      <element name="Con_Source_Code">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="X01">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="Sender_Country_Account_Code">
+        <datatype type="STRING" minLength="9" maxLength="14"/>
+      </element>
+      <element name="C13">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="C14">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="C15">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Number_Of_Cons">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Number_Of_Weeks">
+        <datatype type="INTEGER"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Operations/OPS_SSD/CITKPIWW/vc_SenderCountry" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="SenderBUCode">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="SenderBULabel">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="SenderBURegionCode">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="SenderBURegionLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="SenderBURegionShortName">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="SenderCountryGroupCode">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="SenderCountryGroupLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="SenderCountryGroupShortName">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="SenderCountryCode">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="SenderCountryLabel">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="SenderCountryShortName">
+        <datatype type="STRING" maxLength="6"/>
+      </element>
+      <element name="SenderAccountGroupingCode">
+        <datatype type="STRING" maxLength="18"/>
+      </element>
+      <element name="SenderAccountCode">
+        <datatype type="STRING" maxLength="11"/>
+      </element>
+      <element name="SenderCountryAccountCode">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="SenderAccountName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_ConSourceCode" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DailyConCITIndicator">
+        <datatype type="STRING" minLength="9" maxLength="18" trailingSpaces="false"/>
+      </element>
+      <element name="ConSourceTypeCode">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ConsourceCodeGroup">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ConSourceCode">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ConSourceDescription">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ConSourceDescriptionOld">
+        <datatype type="STRING" minLength="9" maxLength="138"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_CubeLevel" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CubeBULabel">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="CubeRegionCode">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="CubeRegionLabel">
+        <datatype type="STRING" minLength="8" maxLength="38"/>
+      </element>
+      <element name="CubeCountryCode">
+        <datatype type="STRING" minLength="8" maxLength="11" trailingSpaces="false"/>
+      </element>
+      <element name="CubeCountryLabel">
+        <datatype type="STRING" minLength="8" maxLength="38"/>
+      </element>
+      <element name="Worldwide">
+        <datatype type="STRING" minLength="17" maxLength="17" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_DestinationDates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ConOriginalDueYear">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ConOriginalDueYearLabel">
+        <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+      </element>
+      <element name="ConOriginalDueYearAndQuarter">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConOriginalDueQuarterLabel">
+        <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      </element>
+      <element name="ConOriginalDueYearAndMonth">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConOriginalDueMonthLabel">
+        <datatype type="STRING" minLength="5" maxLength="37"/>
+      </element>
+      <element name="ConOriginalDueYearAndWeek">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConOriginalDueWeekLabel">
+        <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_DestinationDepots" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DestinationBUCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationBULabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationBURegionCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationBURegionLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationBURegionShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationCountryGroupCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationCountryGroupLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationCountryGroupShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationCountryCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="DestinationCountryLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="DestinationCountryShortName">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="DestinationAreaCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="DestinationAreaLabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationDepotCode">
+        <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="DestinationDepotLabel">
+        <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="DestinationDepotLongName">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_Division" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Actual_Product_Group_Code">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Actual_Product_Group_Label">
+        <datatype type="STRING" minLength="17" maxLength="17"/>
+      </element>
+      <element name="Division_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Actual_Product_Code">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Product_Sort_Code">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Unique_DivProdOpt_Id">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_DomIntlCode" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DomIntl Code">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+      <element name="DomInt Description">
+        <datatype type="STRING" maxLength="32768"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_OriginDates" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ConCollectionYear">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ConCollectionYearLabel">
+        <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+      </element>
+      <element name="ConCollectionYearAndQuarter">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConCollectionQuarterLabel">
+        <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+      </element>
+      <element name="ConCollectionYearAndMonth">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConCollectionMonthLabel">
+        <datatype type="STRING" minLength="5" maxLength="37"/>
+      </element>
+      <element name="ConCollectionYearAndWeek">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConCollectionWeekLabel">
+        <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_OriginDepots" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OriginBUCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBULabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginBURegionCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginBURegionLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginBURegionShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryGroupCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginCountryGroupLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginCountryGroupShortName">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginCountryCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OriginCountryLabel">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+      <element name="OriginCountryShortName">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="OriginAreaCode">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OriginAreaLabel">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginDepotCode">
+        <datatype type="STRING" minLength="5" maxLength="7" trailingSpaces="false"/>
+      </element>
+      <element name="OriginDepotLabel">
+        <datatype type="STRING" minLength="3" maxLength="10" trailingSpaces="false"/>
+      </element>
+      <element name="OriginDepotLongName">
+        <datatype type="STRING" minLength="3" maxLength="33"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Publish/OPS_SSD/vp_Premium" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TotalPremiumLabel">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="PremiumCode">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="PremiumLabel">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Security/CITKPI" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="1">
+      <element name="alias" direction="IN">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="resource" direction="IN">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+      <element name="result" direction="OUT">
+        <datatype type="STRING" maxLength="16384"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_CITKPIWW" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CubeCountryCode">
+        <datatype type="STRING" maxLength="11"/>
+      </element>
+      <element name="ConCollectionYearAndWeek">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="DestinationDepot">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ConOriginalDueYearAndWeek">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OriginDepot">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="DomIntlDescription">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="UniqueDivProdOptId">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="PremiumCode">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="ProductTypeWeightLabel">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="ConSourceCode">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="SenderCountryAccountCode">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="NumberOfCons">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="AverageCons">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NumberOfWeeks">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="NumberOfCITAccounts">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="CITConndicator">
+        <datatype type="STRING" maxLength="18"/>
+      </element>
+      <element name="ConSourceCodeGroup">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ConSourceTypeCode">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ConSourceDescription">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="SenderBU">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="SenderBURegion">
+        <datatype type="STRING" minLength="33" maxLength="33"/>
+      </element>
+      <element name="SenderCountryGroup">
+        <datatype type="STRING" minLength="33" maxLength="33"/>
+      </element>
+      <element name="SenderCountry">
+        <datatype type="STRING" minLength="33" maxLength="33"/>
+      </element>
+      <element name="SenderAccountGroupingCode">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="SenderAccountName">
+        <datatype type="STRING" minLength="50" maxLength="50"/>
+      </element>
+      <element name="DivisionCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ActualProductCode">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="CubeBULabel">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="CubeRegionCode">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="CubeRegionLabel">
+        <datatype type="STRING" maxLength="38"/>
+      </element>
+      <element name="CubeCountryLabel">
+        <datatype type="STRING" maxLength="38"/>
+      </element>
+      <element name="Worldwide">
+        <datatype type="STRING" minLength="17" maxLength="17"/>
+      </element>
+      <element name="ConOriginalDueYear">
+        <datatype type="STRING" maxLength="23"/>
+      </element>
+      <element name="ConOriginalDueQuarter">
+        <datatype type="STRING" maxLength="26"/>
+      </element>
+      <element name="ConOriginalDueMonth">
+        <datatype type="STRING" maxLength="37"/>
+      </element>
+      <element name="ConOriginalDueWeek">
+        <datatype type="STRING" maxLength="47"/>
+      </element>
+      <element name="DestinationBU">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="DestinationBURegion">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="DestinationCountryGroup">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="DestinationCountry">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="DestinationArea">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="ConCollectionYear">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ConCollectionYearLabel">
+        <datatype type="STRING" maxLength="23"/>
+      </element>
+      <element name="ConCollectionYearAndQuarter">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConCollectionQuarterLabel">
+        <datatype type="STRING" maxLength="26"/>
+      </element>
+      <element name="ConCollectionYearAndMonth">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ConCollectionMonthLabel">
+        <datatype type="STRING" maxLength="37"/>
+      </element>
+      <element name="ConCollectionWeekLabel">
+        <datatype type="STRING" maxLength="47"/>
+      </element>
+      <element name="OriginBU">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OriginBURegion">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginCountryGroup">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginCountry">
+        <datatype type="STRING" maxLength="33"/>
+      </element>
+      <element name="OriginArea">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="TotalPremiumLabel">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="PremiumLabel">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+      <element name="DomIntl_Code">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+      <element name="DomInt_Description">
+        <datatype type="CLOB" maxLength="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+	Fact_CitKpiWW.Cube_Country_Code AS CubeCountryCode,
+	Fact_CitKpiWW.Con_Collection_Year_And_Week AS ConCollectionYearAndWeek,
+	Fact_CitKpiWW.Destination_Depot_Code AS DestinationDepot,
+	Fact_CitKpiWW.Con_Original_Due_Year_And_Week AS ConOriginalDueYearAndWeek,
+	Fact_CitKpiWW.Origin_Depot_Code AS OriginDepot,
+	Fact_CitKpiWW.DomIntl_Code AS DomIntlDescription,
+	Fact_CitKpiWW.Unique_DivProdOpt_Id AS UniqueDivProdOptId,
+	Fact_CitKpiWW.Premium_Code AS PremiumCode,
+	Fact_CitKpiWW.Product_Type_Weight_Code AS ProductTypeWeightLabel,
+	Fact_CitKpiWW.Con_Source_Code AS ConSourceCode,
+	Fact_CitKpiWW.Sender_Country_Account_Code AS SenderCountryAccountCode,
+	Fact_CitKpiWW.Number_Of_Cons AS NumberOfCons,
+	Fact_CitKpiWW.Number_Of_Cons AS AverageCons,
+	Fact_CitKpiWW.Number_Of_Weeks AS NumberOfWeeks,
+		Fact_CitKpiWW.Number_Of_Weeks AS NumberOfCITAccounts,   
+	Dim_CIT_KPI_FEXP_ConSourceCode.DailyConCITIndicator AS CITConndicator,
+	Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceCodeGroup AS ConSourceCodeGroup,
+	Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceTypeCode AS ConSourceTypeCode,
+	--Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceCode AS ConSourceCode,
+	Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceDescription AS ConSourceDescription,
+	--Dim_CIT_KPI_FEXP_ConSourceCode.DailyConCITIndicator||Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceTypeCode
+	--	||Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceCodeGroup AS UniqueCategoryforConSourceCodeGroup,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderBUCode,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderBULabel AS SenderBU,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderBURegionCode,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderBURegionLabel AS SenderBURegion,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderBURegionShortName,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryGroupCode,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryGroupLabel AS SenderCountryGroup,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryGroupShortName,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryCode,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryLabel AS SenderCountry,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryShortName,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderAccountGroupingCode,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderAccountCode,
+	Dim_CIT_KPI_FEXP_SenderCountry.SenderAccountName,
+	--Dim_CIT_KPI_FEXP_SenderCountry.SenderBUCode||Dim_CIT_KPI_FEXP_SenderCountry.SenderBURegionCode||
+	--	Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryGroupCode||Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryCode||
+	--		Dim_CIT_KPI_FEXP_SenderCountry.SenderAccountGroupingCode AS UniqueCategoryforAccountGroupCode,
+	Dim_CIT_KPI_FEXP_Division.Division_Code AS DivisionCode,
+	Dim_CIT_KPI_FEXP_Division.Actual_Product_Code as ActualProductCode,
+	--Dim_CIT_KPI_FEXP_Division.Unique_DivProdOpt_Id AS UniqueDivProdOptId,
+	Dim_CIT_KPI_FEXP_CubeLevel.CubeBULabel,
+	Dim_CIT_KPI_FEXP_CubeLevel.CubeRegionCode,
+	Dim_CIT_KPI_FEXP_CubeLevel.CubeRegionLabel,
+	Dim_CIT_KPI_FEXP_CubeLevel.CubeCountryLabel,
+	Dim_CIT_KPI_FEXP_CubeLevel.Worldwide,
+	--Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueYear,
+	Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueYearLabel as ConOriginalDueYear,
+	--Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueYearAndQuarter,
+	Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueQuarterLabel AS ConOriginalDueQuarter,
+	--Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueYearAndMonth,
+	Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueMonthLabel AS ConOriginalDueMonth,
+	Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueWeekLabel AS ConOriginalDueWeek,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationBUCode,
+	Dim_CIT_KPI_FEXP_DestinationDepots.DestinationBULabel AS DestinationBU,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationBURegionCode,
+	Dim_CIT_KPI_FEXP_DestinationDepots.DestinationBURegionLabel AS DestinationBURegion,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationBURegionShortName,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryGroupCode,
+	Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryGroupLabel AS DestinationCountryGroup,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryGroupShortName,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryCode,
+	Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryLabel AS DestinationCountry,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationCountryShortName,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationAreaCode,
+	Dim_CIT_KPI_FEXP_DestinationDepots.DestinationAreaLabel AS DestinationArea,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationDepotLabel AS DestinationDepot,
+	--Dim_CIT_KPI_FEXP_DestinationDepots.DestinationDepotLongName,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionYear,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionYearLabel,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionYearAndQuarter,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionQuarterLabel,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionYearAndMonth,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionMonthLabel,
+	Dim_CIT_KPI_FEXP_OriginDates.ConCollectionWeekLabel,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginBUCode,
+	Dim_CIT_KPI_FEXP_OriginDepots.OriginBULabel AS OriginBU,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginBURegionCode,
+	Dim_CIT_KPI_FEXP_OriginDepots.OriginBURegionLabel AS OriginBURegion,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginBURegionShortName,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryGroupCode,
+	Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryGroupLabel AS OriginCountryGroup,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryGroupShortName,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryCode,
+	Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryLabel AS OriginCountry,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginCountryShortName,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginAreaCode,
+	Dim_CIT_KPI_FEXP_OriginDepots.OriginAreaLabel AS OriginArea,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginDepotLabel AS OriginDepot,
+	--Dim_CIT_KPI_FEXP_OriginDepots.OriginDepotLongName,
+	Dim_CIT_KPI_FEXP_Premium.TotalPremiumLabel,
+	--Dim_CIT_KPI_FEXP_Premium.PremiumCode AS Dim_PremiumCode,
+	Dim_CIT_KPI_FEXP_Premium.PremiumLabel,
+	CIT_KPI_FEXP_DomIntl_csv.*
+FROM      
+    /shared/Core/Operations/OPS_SSD/CITKPIWW/vc_CITKPIWW_Old Fact_CitKpiWW LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_DestinationDates Dim_CIT_KPI_FEXP_DestinationDates
+    ON Fact_CitKpiWW.Con_Original_Due_Year_And_Week = Dim_CIT_KPI_FEXP_DestinationDates.ConOriginalDueYearAndWeek LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_DestinationDepots Dim_CIT_KPI_FEXP_DestinationDepots
+    ON Fact_CitKpiWW.Destination_Depot_Code = Dim_CIT_KPI_FEXP_DestinationDepots.DestinationDepotCode LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_OriginDates Dim_CIT_KPI_FEXP_OriginDates
+    ON Fact_CitKpiWW.Con_Collection_Year_And_Week = Dim_CIT_KPI_FEXP_OriginDates.ConCollectionYearAndWeek LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_DomIntlCode CIT_KPI_FEXP_DomIntl_csv
+    ON Fact_CitKpiWW.DomIntl_Code = CIT_KPI_FEXP_DomIntl_csv.&quot;DomIntl Code&quot; LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_OriginDepots Dim_CIT_KPI_FEXP_OriginDepots
+    ON Fact_CitKpiWW.Origin_Depot_Code = Dim_CIT_KPI_FEXP_OriginDepots.OriginDepotCode LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_CubeLevel Dim_CIT_KPI_FEXP_CubeLevel
+    ON Fact_CitKpiWW.Cube_Country_Code = Dim_CIT_KPI_FEXP_CubeLevel.CubeCountryCode LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_Division Dim_CIT_KPI_FEXP_Division
+    ON Fact_CitKpiWW.Unique_DivProdOpt_Id = Dim_CIT_KPI_FEXP_Division.Unique_DivProdOpt_Id LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_Premium Dim_CIT_KPI_FEXP_Premium
+    ON Fact_CitKpiWW.Premium_Code = Dim_CIT_KPI_FEXP_Premium.PremiumCode LEFT OUTER JOIN 
+        /shared/Publish/OPS_SSD/vp_ConSourceCode Dim_CIT_KPI_FEXP_ConSourceCode
+    ON Fact_CitKpiWW.Con_Source_Code = Dim_CIT_KPI_FEXP_ConSourceCode.ConSourceCode LEFT OUTER JOIN 
+        /shared/Core/Operations/OPS_SSD/CITKPIWW/vc_SenderCountry Dim_CIT_KPI_FEXP_SenderCountry
+    ON Fact_CitKpiWW.Sender_Country_Account_Code = Dim_CIT_KPI_FEXP_SenderCountry.SenderCountryAccountCode</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_CITKPIWW</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1557306878009</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565156722608</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING">/shared/Security/CITKPI</attribute>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/OPS_SSD/vp_CITKPIWW</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1557306878009</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/OPS_SSD/vp_CITKPIWW" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="CubeCountryCode">
+          <datatype type="STRING" minLength="8" maxLength="11"/>
+        </element>
+        <element name="ConCollectionYearAndWeek">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="DestinationDepot">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="ConOriginalDueYearAndWeek">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="OriginDepot">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+        <element name="DomIntlDescription">
+          <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+        </element>
+        <element name="UniqueDivProdOptId">
+          <datatype type="STRING" minLength="10" maxLength="10"/>
+        </element>
+        <element name="PremiumCode">
+          <datatype type="STRING" minLength="4" maxLength="4"/>
+        </element>
+        <element name="ProductTypeWeightLabel">
+          <datatype type="STRING" minLength="1" maxLength="14" trailingSpaces="false"/>
+        </element>
+        <element name="ConSourceCode">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="SenderCountryAccountCode">
+          <datatype type="STRING" minLength="9" maxLength="14"/>
+        </element>
+        <element name="NumberOfCons">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="AverageCons">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="NumberOfWeeks">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="NumberOfCITAccounts">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="CITConndicator">
+          <datatype type="STRING" minLength="9" maxLength="18" trailingSpaces="false"/>
+        </element>
+        <element name="ConSourceCodeGroup">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="ConSourceTypeCode">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="ConSourceDescription">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="SenderBU">
+          <datatype type="STRING" maxLength="13"/>
+        </element>
+        <element name="SenderBURegion">
+          <datatype type="STRING" maxLength="33"/>
+        </element>
+        <element name="SenderCountryGroup">
+          <datatype type="STRING" maxLength="33"/>
+        </element>
+        <element name="SenderCountry">
+          <datatype type="STRING" maxLength="33"/>
+        </element>
+        <element name="SenderAccountGroupingCode">
+          <datatype type="STRING" maxLength="18"/>
+        </element>
+        <element name="SenderAccountName">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="DivisionCode">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="ActualProductCode">
+          <datatype type="STRING" minLength="4" maxLength="4"/>
+        </element>
+        <element name="CubeBULabel">
+          <datatype type="STRING" minLength="18" maxLength="18"/>
+        </element>
+        <element name="CubeRegionCode">
+          <datatype type="STRING" minLength="18" maxLength="18"/>
+        </element>
+        <element name="CubeRegionLabel">
+          <datatype type="STRING" minLength="8" maxLength="38"/>
+        </element>
+        <element name="CubeCountryLabel">
+          <datatype type="STRING" minLength="8" maxLength="38"/>
+        </element>
+        <element name="Worldwide">
+          <datatype type="STRING" minLength="17" maxLength="17" trailingSpaces="false"/>
+        </element>
+        <element name="ConOriginalDueYear">
+          <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+        </element>
+        <element name="ConOriginalDueQuarter">
+          <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+        </element>
+        <element name="ConOriginalDueMonth">
+          <datatype type="STRING" minLength="5" maxLength="37"/>
+        </element>
+        <element name="ConOriginalDueWeek">
+          <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+        </element>
+        <element name="DestinationBU">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="DestinationBURegion">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="DestinationCountryGroup">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="DestinationCountry">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="DestinationArea">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="ConCollectionYear">
+          <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+        </element>
+        <element name="ConCollectionYearLabel">
+          <datatype type="STRING" minLength="4" maxLength="23" trailingSpaces="false"/>
+        </element>
+        <element name="ConCollectionYearAndQuarter">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="ConCollectionQuarterLabel">
+          <datatype type="STRING" minLength="7" maxLength="26" trailingSpaces="false"/>
+        </element>
+        <element name="ConCollectionYearAndMonth">
+          <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="ConCollectionMonthLabel">
+          <datatype type="STRING" minLength="5" maxLength="37"/>
+        </element>
+        <element name="ConCollectionWeekLabel">
+          <datatype type="STRING" minLength="9" maxLength="47" trailingSpaces="false"/>
+        </element>
+        <element name="OriginBU">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="OriginBURegion">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginCountryGroup">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginCountry">
+          <datatype type="STRING" minLength="3" maxLength="33"/>
+        </element>
+        <element name="OriginArea">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="TotalPremiumLabel">
+          <datatype type="STRING" minLength="11" maxLength="11"/>
+        </element>
+        <element name="PremiumLabel">
+          <datatype type="STRING" minLength="60" maxLength="60"/>
+        </element>
+        <element name="DomIntl Code">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+        <element name="DomInt Description">
+          <datatype type="STRING" maxLength="32768"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/OPS_SSD/vp_CITKPIWW&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562999596000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562999677816</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562999677816</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562999677816</attribute>
+  </trigger>
+</metadata>

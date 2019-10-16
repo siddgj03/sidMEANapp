@@ -1,0 +1,242 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_ConsignmentInformationKeyPerformanceIndicators" path="/shared/Publish/SCD/vp_ConsignmentInformationKeyPerformanceIndicators" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Consignment_Entry_Identifier" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Account_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Revenue_Per_Kilo_Local" nullable="true">
+      <datatype type="DECIMAL" maxDigits="31" maxFractionalDigits="12"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Sales/SCD/vc_ConEntry" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COE_SRKY_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CON_COLL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TOP_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_ID_CON_ORIG">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="BUL_ID_DEST">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ETP_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ACC_ID">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="ACG_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RZO_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RGP_VERSION_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RCG_SEQ_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_GFR_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_NFR_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_NET_REV_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="COE_CONSIGNMENT_QT">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+      <element name="COE_TOTAL_ITEM_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="COE_PAY_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="COE_STAT_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="COE_WT">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="COE_TOTAL_ITEM_VL">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="STT_ID_LATEST">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_PRESET_NET">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CND_NOTE_SRC_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COE_CLNT_REF_TX">
+        <datatype type="STRING" maxLength="24"/>
+      </element>
+      <element name="CON_CREATE_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CON_CREATE_TM">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COE_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CON_ID">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="COE_CSL_VL_CONV_QT">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="3"/>
+      </element>
+      <element name="COE_DEST_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="DIR_ID">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="DIV_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COE_HAND_PRICE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ID_INV">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ID_ACC">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="INV_NR">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Option_Combination">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="COE_ORIG_PCODE_CD">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COE_OTA_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRD_ID">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="COE_PTYPE_WGT_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_RATING_CALC_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="RGP_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COM_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COE_REC_SRC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RCT_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COE_RATING_CALC_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_TAR_TYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COE_LOAD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ACC_ID_APPLIC">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/COUNTRYEXCHANGERATE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTY_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EGP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EXP_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+T1.COE_SRKY_ID as Consignment_Entry_Identifier,
+T1.&quot;COU_ID_ACC&quot; AS Account_Country_Code,
+case when(  T1.&quot;ETP_ID&quot;  like  &apos;F%&apos;  )  
+	then ((CAST((T1.&quot;COE_NET_REV_AM&quot;  *   T2.&quot;EXR_RATE_AM&quot;) AS DECIMAL(18,2)) / 
+case when(T1.&quot;COE_PAY_WT&quot; &lt;&gt;  0) then (T1.&quot;COE_PAY_WT&quot;) else (1) end ))
+else (0) end AS Revenue_Per_Kilo_Local
+from /shared/Core/Sales/SCD/vc_ConEntry T1 LEFT OUTER JOIN
+ /shared/Source/EDW/SCD/PRODSCD_P/COUNTRYEXCHANGERATE_V01 T2 
+ ON T1.&quot;COU_ID_ACC&quot; = T2.&quot;COU_ID&quot; 
+	and T1.&quot;COE_LOAD_DT&quot; between T2.&quot;EXP_START_DT&quot; and T2.&quot;EXP_END_DT&quot; 
+	and T2.&quot;EGP_ID&quot; = &apos;MO&apos; 
+	and T2.&quot;CTY_ID&quot; = &apos;G&apos;</attribute>
+  <attribute name="creationDate" type="LONG">1562593560812</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565019862281</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562593560812</attribute>
+</metadata>

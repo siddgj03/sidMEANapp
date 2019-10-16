@@ -1,0 +1,684 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Customer_03" path="/shared/Publish/SCD/vp_Customer_03" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Customer_Number" nullable="true">
+      <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Delete_Indicator" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Location_Description" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_House_Nr" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Flat_Nr" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Customer_Street_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_1" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_2" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Line_3" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Full_Address" nullable="true">
+      <datatype type="STRING" maxLength="166"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="City" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Post_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Country_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Validation_Error_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Address_Validation_Error_Description" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ProvinceOrState_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Telephone_Number_1" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Telephone_Number_2" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fax_Number_1" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Fax_Number_2" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Identifier" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Identifier_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Unique_Identifier_Type_Description" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="VAT_Number" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PO_Box_Number" nullable="true">
+      <datatype type="STRING" minLength="15" maxLength="15"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PO_Box_City_Name" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PO_Box_Post_Code" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_CLO_ADDR_ERR_CD_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAV_DS" nullable="false">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+      <element name="TAV_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_CLX_TYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CLX_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_DS" nullable="false">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/AV_CUF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TAV_ATTR_ID" nullable="false">
+        <datatype type="STRING" minLength="18" maxLength="18"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TAV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TAV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TAV_DS" nullable="false">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+      <element name="TAV_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CS_PROVINCE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="PRV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRV_EFFECT_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRV_EFFECT_TO_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="PRV_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PRV_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="PRV_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="PRV_NM">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="PRV_ALIAS_CT">
+        <datatype type="DECIMAL" maxDigits="2" maxFractionalDigits="0"/>
+      </element>
+      <element name="PRV_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTNFUNCTN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CUF_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLF_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLF_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLF_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CLF_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTNIDENTIFIER_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLX_TYPE_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CLX_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLX_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLX_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLX_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CLX_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLX_DISPLAY_SEQ_NR">
+        <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTN_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CUS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="EDW_LOAD_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLO_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLO_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CLO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="CLO_COMPANY_NM">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+      <element name="CLO_HOUSE_NR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CLO_FLAT_NR" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CLO_STREET_NM" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CLO_ADDR_LINE_1_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="CLO_ADDR_LINE_2_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="CLO_ADDR_LINE_3_TX">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="CLO_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="CLO_STD_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PRV_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CLO_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_ADDR_ERR_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_PBOX_TYP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_PBOX_NR" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="CLO_PBOX_TOWN_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="CLO_PBOX_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="COU_ISO_ID_PBOX" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_SECTION_X_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_SECTION_Y_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_STREET_X_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_STREET_Y_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_SEC_RESULT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_STR_RESULT_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_SUDO_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CLO_PRIVATE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_PREF_DAY_NR">
+        <datatype type="DECIMAL" maxDigits="1" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_DFLT_COLL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_DFLT_DELIV_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_INTL_TEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CLO_TEL_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CLO_TEL_2_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLO_INTL_FAX_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CLO_FAX_1_NR" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CLO_FAX_2_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLO_VAT_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLO_MON_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_MON_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_MON_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_MON_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_TUE_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_TUE_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_TUE_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_TUE_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_WED_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_WED_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_WED_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_WED_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_THU_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_THU_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_THU_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_THU_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_FRI_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_FRI_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_FRI_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_FRI_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SAT_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SAT_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SAT_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SAT_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SUN_AM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SUN_AM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SUN_PM_OPEN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_SUN_PM_CLSE_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="CLO_POSTAL_CD_SCH" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CLO_PB_PSTL_CD_SCH" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CLO_COORD_LONG_NR">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="7"/>
+      </element>
+      <element name="CLO_COORD_LAT_NR">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="7"/>
+      </element>
+      <element name="COU_ISO_ID_CUS" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_VAT_2_NR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLO_ADDL_LOC_NM">
+        <datatype type="STRING" maxLength="32"/>
+      </element>
+      <element name="CLO_COMPANY_NM_CR" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="CLO_GEO_ACC_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_SHUF_POSTAL_CD" nullable="false">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="CLO_IC_CD" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CLO_IDSTRCT_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_IPROV_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CLO_IMUNICIP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_ISO_ID_TEL" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_ISO_ID_FAX" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CLO_MAIL_PREF_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_MAIN_LOC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_THAI_BRANCH_ID">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_HEAD_OFFICE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CLO_DUNS_NR">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="0"/>
+      </element>
+      <element name="CLO_UID_NR" nullable="false">
+        <datatype type="STRING" minLength="15" maxLength="15"/>
+      </element>
+      <element name="CLO_VAT_SUFFIX_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+			 
+T9.CUS_ID as Customer_Number,
+T9.CLO_DELETE_IN as Customer_Delete_Indicator, 
+T8.TAV_DS as Location_Description,
+T9.CLO_HOUSE_NR as Customer_House_Nr,
+T9.CLO_FLAT_NR as Customer_Flat_Nr,
+T9.CLO_STREET_NM as Customer_Street_Name,
+T9.CLO_ADDR_LINE_1_TX as Address_Line_1,
+T9.CLO_ADDR_LINE_2_TX as Address_Line_2,
+T9.CLO_ADDR_LINE_3_TX as Address_Line_3,
+((case  when  NOT T9.&quot;CLO_FLAT_NR&quot; is null then TRIM(T9.&quot;CLO_FLAT_NR&quot;) || &apos; &apos; else &apos;&apos; end ) || 
+(case  when  NOT T9.&quot;CLO_HOUSE_NR&quot; is null then TRIM(T9.&quot;CLO_HOUSE_NR&quot;) || &apos; &apos; else &apos;&apos; end ) || 
+(case  when  NOT T9.&quot;CLO_STREET_NM&quot; is null then TRIM(T9.&quot;CLO_STREET_NM&quot;) || &apos; &apos; else &apos;&apos; end ) || 
+(case  when  NOT T9.&quot;CLO_ADDR_LINE_1_TX&quot; is null then TRIM(T9.&quot;CLO_ADDR_LINE_1_TX&quot;) || &apos; &apos; else &apos;&apos; end ) || 
+(case  when  NOT T9.&quot;CLO_ADDR_LINE_2_TX&quot; is null then TRIM(T9.&quot;CLO_ADDR_LINE_2_TX&quot;) || &apos; &apos; else &apos;&apos; end ) || 
+(case  when  NOT T9.&quot;CLO_ADDR_LINE_3_TX&quot; is null then TRIM(T9.&quot;CLO_ADDR_LINE_3_TX&quot;) || &apos; &apos; else &apos;&apos; end )) as Full_Address,
+T9.CLO_TOWN_NM as City,
+T9.CLO_POSTAL_CD as Post_Code,
+T9.COU_ISO_ID as Address_Country_Code,
+T9.CLO_ADDR_ERR_CD as Address_Validation_Error_Code,
+T10.TAV_DS as Address_Validation_Error_Description,
+T11.PRV_NM as ProvinceOrState_Name,
+T9.CLO_TEL_1_NR as Telephone_Number_1,
+T9.CLO_TEL_2_NR as Telephone_Number_2,
+T9.CLO_FAX_1_NR as Fax_Number_1,
+T9.CLO_FAX_2_NR as Fax_Number_2, 
+T12.CLX_ID as Unique_Identifier,
+T12.CLX_TYPE_CD	 as Unique_Identifier_Type_Code,
+T13.TAV_DS as Unique_Identifier_Type_Description,
+T9.CLO_VAT_NR as VAT_Number,
+T9.CLO_PBOX_NR as PO_Box_Number,
+T9.CLO_PBOX_TOWN_NM AS PO_Box_City_Name,
+T9.CLO_PBOX_POSTAL_CD as PO_Box_Post_Code
+FROM /shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTN_V01 T9 
+ LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTNFUNCTN_V01 T25 
+ on T9.&quot;CUS_ID&quot; = T25.&quot;CUS_ID&quot; and T9.&quot;CLO_ID&quot; = T25.&quot;CLO_ID&quot; and &apos;Y&apos; &lt;&gt; T25.&quot;CLF_DELETE_IN&quot;
+ LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_CUF_V01 T8 
+ on T25.&quot;CUF_CD&quot; = T8.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T8.&quot;LNG_ID&quot; 
+ LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_CLO_ADDR_ERR_CD_V01 T10 
+ on T9.&quot;CLO_ADDR_ERR_CD&quot; = T10.&quot;TAV_VALUE_ID&quot; and &apos;EN&apos; = T10.&quot;LNG_ID&quot;
+ LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CS_PROVINCE_V01 T11 
+ on T9.&quot;COU_ISO_ID_CUS&quot; = T11.&quot;COU_ISO_ID&quot; and T9.&quot;PRV_ID&quot; = T11.&quot;PRV_ID&quot; 
+	and CURRENT_DATE between T11.&quot;PRV_EFFECT_DT&quot; and T11.&quot;PRV_EFFECT_TO_DT&quot; and &apos;Y&apos; = T11.&quot;PRV_ACTIVE_IN&quot; 
+ LEFT OUTER JOIN /shared/Source/EDW/SCD/PRODSCD_P/CUSTLOCTNIDENTIFIER_V01 T12 
+ on T9.&quot;CUS_ID&quot; = T12.&quot;CUS_ID&quot; and T9.&quot;CLO_ID&quot; = T12.&quot;CLO_ID&quot; and &apos;Y&apos; &lt;&gt; T12.&quot;CLX_DELETE_IN&quot;
+ LEFT OUTER	 JOIN /shared/Source/EDW/SCD/PRODSCD_P/AV_CLX_TYPE_V01 T13 
+ on T12.&quot;CLX_TYPE_CD&quot; = T13.&quot;CLX_TYPE_CD&quot; and &apos;EN&apos; = T13.&quot;LNG_ID&quot;</attribute>
+  <attribute name="creationDate" type="LONG">1563273076314</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1563273076314</attribute>
+</metadata>

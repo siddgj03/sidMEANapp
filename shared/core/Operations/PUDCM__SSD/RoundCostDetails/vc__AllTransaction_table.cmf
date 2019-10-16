@@ -1,0 +1,1829 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_AllTransaction" path="/shared/Core/Operations/PUDCM_SSD/RoundCostDetails/vc_AllTransaction" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="BUL_CSYS_ID" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ID" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_KEY" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="25" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ACTIVE_DT" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RTY_ID" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TTY_ID" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPR_KEY" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="30" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OPR_ID" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="10"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="BPS_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ID_R" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_ROUNDS" nullable="true">
+      <datatype type="INTEGER" minValue="-128" maxValue="127"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_POS_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_NEG_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_POS_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_NEG_STOPS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_CONS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_CONS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_PICKUP_PCS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NR_DELIVERY_PCS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WT_PICKUP" nullable="true">
+      <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WT_DELIVERY" nullable="true">
+      <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TOTAL_TM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DISTANCE" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_BONUS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_CI_BONUS" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_PENALTY" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_FUEL_COST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_BASE_COST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_TOTAL_COST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_TOTAL_STD_COST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="AM_TOTAL_NSTD_COST" nullable="true">
+      <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TTK_STOP_QT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RLB_COLDEL_CD" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_RND_AREA_CD" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="RND_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POS_PICK_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NEG_PICK_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PICK_STOP_TOT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="POS_DEL_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="NEG_DEL_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DEL_STOP_TOT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TOT_POS_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TOT_NEG_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TOT_STOP_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_PICK_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_DEL_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CON_TOT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PCS_PICK_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PCS_DEL_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="PCS_TOT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WGT_PICK_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WGT_DEL_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="WGT_TOT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="DIST_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TIME_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ON_RD_DUR_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STOPS_PER_WGT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CONN_PER_WGT_COST_AM" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STEM_DISTANCE_FROM_DEPOT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="STEM_DISTANCE_TO_DEPOT" nullable="true">
+      <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_ID_DS" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ROD_KEY2" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_RoundCostDetails" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BUL_CSYS_ID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ROD_ID">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_KEY">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="ROD_ACTIVE_DT">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RTY_ID">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TTY_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OPR_KEY">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OPR_ID">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="BPS_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ROD_ID_R">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="NR_ROUNDS">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="NR_PICKUP_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_POS_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_NEG_STOPS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_CONS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_PICKUP_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="NR_DELIVERY_PCS">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="0"/>
+      </element>
+      <element name="WT_PICKUP">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+      <element name="WT_DELIVERY">
+        <datatype type="DECIMAL" maxDigits="14" maxFractionalDigits="3"/>
+      </element>
+      <element name="TOTAL_TM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DISTANCE">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="AM_BONUS">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="6"/>
+      </element>
+      <element name="AM_CI_BONUS">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="AM_PENALTY">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="20"/>
+      </element>
+      <element name="AM_FUEL_COST">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="AM_BASE_COST">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="20"/>
+      </element>
+      <element name="AM_TOTAL_COST">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="AM_TOTAL_STD_COST">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="AM_TOTAL_NSTD_COST">
+        <datatype type="DECIMAL" maxDigits="38" maxFractionalDigits="16"/>
+      </element>
+      <element name="TTK_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_COLDEL_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_RND_AREA_CD">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RND_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="POS_PICK_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="NEG_PICK_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="PICK_STOP_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="POS_DEL_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="NEG_DEL_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DEL_STOP_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="TOT_POS_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="TOT_NEG_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="TOT_STOP_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CON_PICK_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CON_DEL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CON_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="PCS_PICK_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="PCS_DEL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="PCS_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="WGT_PICK_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="WGT_DEL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="WGT_TOT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="DIST_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="TIME_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ON_RD_DUR_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="STOPS_PER_WGT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="CONN_PER_WGT_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="STEM_DISTANCE_FROM_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="STEM_DISTANCE_TO_DEPOT">
+        <datatype type="DECIMAL" maxDigits="12" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_ID_DS">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="ROD_KEY2">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="EGP_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="EXR_ADD_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXP_END_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="EXR_RATE_AM" nullable="false">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/CNTRYTRANSTYPEPARAM_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TTY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TTK_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TTK_FROM_DI" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="TTK_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TTK_TO_DI">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="TTK_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="2"/>
+      </element>
+      <element name="TTK_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TTK_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TTK_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/COUNTRYROUND_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="COU_CO_UPDT_TD">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="COU_O_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="COU_CO_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="COU_BRK_DUR_VIS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_BRK_IN_CALC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_O_PAST_DAYS_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_WRN_DI">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_DI">
+        <datatype type="DECIMAL" maxDigits="6" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_WRN_WT">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_WT">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_STP_WRN_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_STP_QT">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_CON_WRN_QT">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_RND_MAX_CON_QT">
+        <datatype type="DECIMAL" maxDigits="4" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_INCL_TT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_MILES_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_FUS_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_FSI_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="POD_ID_EBO">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_LOB_LEVEL_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_SRV_ISS_REQ_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ROUND_AC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_BRK_TM_DFLT_NR">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="COU_SUPVAL_GRP_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="COU_REG_STM_DST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ADH_RND_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ADH_GEN_ID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_AHDST_TMOPT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_FUS_PERIOD_CD" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="COU_EMISS_STD_V_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_WEIGHT_MAN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_AREA_TM_WRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_MISS_PU_OPT_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_FUS_TO_SAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ROD_DET_SAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_START_DFLT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="COU_FINISH_DFLT_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="COU_USE_DFLT_TM_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_EBO_EX_DET_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDCOSTINTERVAL_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_ACTIVE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ROD_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="INT_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RIN_COLDEL_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RIN_BAND_WT" nullable="false">
+        <datatype type="DECIMAL" maxDigits="9" maxFractionalDigits="3"/>
+      </element>
+      <element name="RIN_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RIN_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RIN_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RIN_OPS_QT">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="3"/>
+      </element>
+      <element name="RIN_DRVR_QT">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="3"/>
+      </element>
+      <element name="RIN_MODIFIED_QT">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="3"/>
+      </element>
+      <element name="RIN_COMMENT_TX" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CUY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RIN_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RIN_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDLOBGROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_ACTIVE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ROD_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RLB_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RLB_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RLB_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RLB_COLDEL_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RLB_COL_PS_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_NG_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_CON_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_PCE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="RLB_DEL_PS_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NG_STOP_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CON_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_PCE_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_WT">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="RLB_COL_COA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_MISS_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NH_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_WA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_CR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_HO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_OTHER_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_CO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NH_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_WA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_CR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_HO_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_OTHER_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_BASE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_BONUS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_PENALTIES_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_FUS_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_ACTUAL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="CUY_ID_COST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="RLB_BONUS_CI_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_CHARGE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="RLB_STATUS_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RLB_COL_APR_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_CAB_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_GUA_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_UTT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_COL_MPW_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_NAAT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NACC_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_DEL_C_NAAT_QT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RLB_BONUS_XTR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDTEMPLATE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RDT_VERSION_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RDT_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RTY_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RDT_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="OPR_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="RDT_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="TSU_ID_MAIN" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="RDT_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="TTY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BPS_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RDT_START_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="RDT_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="RDT_MON_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_TUE_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_WED_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_THU_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_FRI_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_SAT_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_SUN_VALID_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_REVIEW_COST_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RKD_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="RKD_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RKT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID_R">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_ID_R" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RDT_VERSION_NR_R">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RDT_SEQ_NR_R">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RDT_DS">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="RDT_FUS_USE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_FUS_PC">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="3"/>
+      </element>
+      <element name="FSI_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RDT_FUS_VALUE_NR">
+        <datatype type="DECIMAL" maxDigits="7" maxFractionalDigits="4"/>
+      </element>
+      <element name="RDT_RND_AREA_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BPM_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_BRKDUR_MINS_NR">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PRG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="PSG_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_WAVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RDT_DOT_TARGET_PC">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_DOT_BONUS_PC">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUL_CSYS_ID_COST">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDTYPE_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="RTY_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RTY_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RTY_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="RTY_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="RTY_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="RTY_NORMAL_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="RTY_NON_USE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUND_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUL_CSYS_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_ACTIVE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ROD_SEQ_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="RST_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RTY_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ROD_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ROD_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ROD_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="OPR_ID" nullable="false">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="TSU_ID_MAIN" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="TTY_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BPS_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ROD_DEPART_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_RETURN_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_START_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_FINISH_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_BRKDUR_MINS_NR">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_START_ODO_NR">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_END_ODO_NR">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_FIRST_COL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_LAST_COL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_FIRST_DEL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_LAST_DEL_TM">
+        <datatype type="TIME"/>
+      </element>
+      <element name="ROD_REVIEW_TX">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="ROD_APPROVAL_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="USR_ID_DISP" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="ROD_COST_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CUY_ID_COST" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ROD_PENALTIES_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_BASE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_ACTUAL_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_BONUS_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="ROD_CHARGE_COST_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+      <element name="RKD_ID" nullable="false">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="RKD_SEQ_NR">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="RKT_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID_R">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_ID_R" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_ACTIVE_DT_R">
+        <datatype type="DATE"/>
+      </element>
+      <element name="ROD_SEQ_NR_R">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ROD_CUST_COST_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="FSI_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="ROD_DS">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="ROD_DIST_TYPE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_RND_AREA_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ROD_VERS_RND_NR">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_BONUS_CI_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_FIRST_ODO_NR">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_LAST_ODO_NR">
+        <datatype type="DECIMAL" maxDigits="11" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_REVERT_TX">
+        <datatype type="STRING" maxLength="256"/>
+      </element>
+      <element name="ROD_COU_WRN_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUL_CSYS_ID_RDT">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="RDT_VERSION_NR">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="RDT_SEQ_NR">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_FROM_CD_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_COST_REF_DS" nullable="false">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="ROD_BONUS_XTR_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="ROD_INCAB_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_CORP_UNIF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_CORP_VEHIC_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="ROD_ALLOC_CONS_NR">
+        <datatype type="DECIMAL" maxDigits="3" maxFractionalDigits="0"/>
+      </element>
+      <element name="ROD_DOT_BONUS_AM">
+        <datatype type="DECIMAL" maxDigits="13" maxFractionalDigits="2"/>
+      </element>
+      <element name="BUL_CSYS_ID_COST">
+        <datatype type="DECIMAL" maxDigits="5" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+	BUL_CSYS_ID,
+	ROD_ID,
+	ROD_KEY ,
+	ROD_ACTIVE_DT,
+	RTY_ID,
+	TTY_ID,
+	OPR_KEY,
+	OPR_ID,
+	BPS_ID,
+	ROD_ID_R,
+	NR_ROUNDS,
+	NR_PICKUP_POS_STOPS,
+	NR_PICKUP_NEG_STOPS,
+	NR_DELIVERY_POS_STOPS,
+	NR_DELIVERY_NEG_STOPS,
+	NR_PICKUP_CONS,
+	NR_DELIVERY_CONS,
+	NR_PICKUP_PCS,
+	NR_DELIVERY_PCS,
+	WT_PICKUP,
+	WT_DELIVERY,
+	TOTAL_TM,
+	DISTANCE,
+	AM_BONUS,
+	AM_CI_BONUS,
+	AM_PENALTY,
+	AM_FUEL_COST,
+	AM_BASE_COST,
+	AM_TOTAL_COST,
+	AM_TOTAL_STD_COST,
+	AM_TOTAL_NSTD_COST,
+	TTK_STOP_QT ,
+	RLB_COLDEL_CD,
+	ROD_RND_AREA_CD ,
+	RND_COST_AM,
+	POS_PICK_STOP_COST_AM,
+	NEG_PICK_STOP_COST_AM,
+	PICK_STOP_TOT_COST_AM,
+	POS_DEL_STOP_COST_AM,
+	NEG_DEL_STOP_COST_AM,
+	DEL_STOP_TOT_COST_AM,
+	TOT_POS_STOP_COST_AM,
+	TOT_NEG_STOP_COST_AM,
+	TOT_STOP_COST_AM,
+	CON_PICK_COST_AM,
+	CON_DEL_COST_AM,
+	CON_TOT_COST_AM,
+	PCS_PICK_COST_AM,
+	PCS_DEL_COST_AM	,
+	PCS_TOT_COST_AM	,
+	WGT_PICK_COST_AM,
+	WGT_DEL_COST_AM,
+	WGT_TOT_COST_AM,
+	DIST_COST_AM,
+	TIME_COST_AM,
+	ON_RD_DUR_COST_AM,
+	STOPS_PER_WGT_COST_AM,
+	CONN_PER_WGT_COST_AM,
+	STEM_DISTANCE_FROM_DEPOT,
+	STEM_DISTANCE_TO_DEPOT,
+	ROD_ID_DS,
+	ROD_KEY2
+ FROM 
+
+ ( SELECT
+	CAST(ROD.BUL_CSYS_ID AS INTEGER) AS Bul_Csys_Id,
+	ROD.ROD_ID AS Rod_Id,
+	CAST(ROD.BUL_CSYS_ID AS INTEGER) ||TRIM(ROD.ROD_ID) AS Rod_Key,
+	CAST(FORMAT_DATE(ROD.ROD_ACTIVE_DT , &apos;YYYY-MM-DD&apos;) AS CHAR(10)) AS Rod_Active_Dt,
+	ROD.ROD_SEQ_NR AS Rod_Seq_Nr,
+	ROD.RTY_ID AS Rty_Id,	
+	ROD.TTY_ID AS Tty_Id,
+	CAST(ROD.BUL_CSYS_ID AS INTEGER) || TRIM(ROD.OPR_ID) AS Opr_Key,
+	ROD.OPR_ID AS Opr_Id,
+	ROD.BPS_ID AS Bps_Id,
+	ROD.ROD_ID_R AS Rod_Id_R,
+
+	--Measures
+	1 AS Nr_Rounds,
+	RLG.RLB_COL_PS_STOP_QT AS Nr_Pickup_Pos_Stops,
+	RLG.RLB_COL_NG_STOP_QT AS Nr_Pickup_Neg_Stops,
+	RLG.RLB_DEL_PS_STOP_QT AS Nr_Delivery_Pos_Stops,
+	RLG.RLB_DEL_NG_STOP_QT AS Nr_Delivery_Neg_Stops,
+        RLG.RLB_COL_CON_QT AS Nr_Pickup_Cons,
+        RLG.RLB_DEL_CON_QT AS Nr_Delivery_Cons,
+	RLG.RLB_COL_PCE_QT AS Nr_Pickup_Pcs,
+	RLG.RLB_DEL_PCE_QT AS Nr_Delivery_Pcs,
+	RLG.RLB_COL_WT AS Wt_Pickup,
+	RLG.RLB_DEL_WT AS Wt_Delivery,
+
+       CAST(CASE WHEN (COR.COU_BRK_IN_CALC_IN = &apos;N&apos;)
+	  THEN(EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) )
+	  ELSE (EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) ) - ROD.ROD_BRKDUR_MINS_NR
+	END AS DECIMAL (18,6)) AS Total_Tm,	
+	ROD.ROD_END_ODO_NR - ROD.ROD_START_ODO_NR AS Distance,
+	CASE WHEN ((COALESCE(ROD.ROD_BONUS_AM,0) / EXR.EXR_RATE_AM) - (COALESCE(ROD.ROD_BONUS_CI_AM,0) / EXR.EXR_RATE_AM)) &lt; 0
+	       THEN 0
+	 ELSE (CAST((COALESCE(ROD.ROD_BONUS_AM,0) / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) -
+		CAST((COALESCE(ROD.ROD_BONUS_CI_AM,0) / EXR.EXR_RATE_AM) AS DECIMAL(18,6))
+	)  END Am_Bonus,
+	CAST((ROD.ROD_BONUS_CI_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS Am_Ci_Bonus,
+	(ROD.ROD_PENALTIES_AM / EXR.EXR_RATE_AM) AS Am_Penalty,
+	CAST((ROD.ROD_CUST_COST_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS Am_Fuel_Cost,
+	(ROD.ROD_BASE_COST_AM / EXR.EXR_RATE_AM) AS Am_Base_Cost,
+	--(ROD.ROD_ACTUAL_COST_AM / EXR.EXR_RATE_AM) AS AM_TOTAL_COST,
+	--ZEROIFNULL(AM_BASE_COST) + ZEROIFNULL(AM_CI_BONUS) + ZEROIFNULL(AM_ONUS)  - ZEROIFNULL(AM_PENALTY) + ZEROIFNULL(AM_FUEL_COST) AS Am_Total_Cost,
+	COALESCE((ROD.ROD_BASE_COST_AM / EXR.EXR_RATE_AM),0 ) + COALESCE(CAST((ROD.ROD_BONUS_CI_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0) + COALESCE((CASE WHEN ((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) - (COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM)) &lt; 0
+	       THEN 0
+	 ELSE (CAST((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) -
+		CAST((COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6))
+	)  END ),0)  - COALESCE((ROD.ROD_PENALTIES_AM / EXR.EXR_RATE_AM),0) + COALESCE(CAST((ROD.ROD_CUST_COST_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0) AS Am_Total_Cost,
+
+	CASE WHEN RTY.RTY_NORMAL_IN = &apos;Y&apos; THEN (COALESCE((ROD.ROD_BASE_COST_AM / EXR.EXR_RATE_AM),0 ) + COALESCE(CAST((ROD.ROD_BONUS_CI_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0) + COALESCE((CASE WHEN ((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) - (COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM)) &lt; 0
+	       THEN 0
+	 ELSE (CAST((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) -
+		CAST((COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6))
+	)  END ),0)  - COALESCE((ROD.ROD_PENALTIES_AM / EXR.EXR_RATE_AM),0) + COALESCE(CAST((ROD.ROD_CUST_COST_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0)) ELSE 0 END AS Am_Total_Std_Cost,
+	CASE WHEN RTY.RTY_NORMAL_IN = &apos;N&apos; THEN (COALESCE((ROD.ROD_BASE_COST_AM / EXR.EXR_RATE_AM),0 ) + COALESCE(CAST((ROD.ROD_BONUS_CI_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0) + COALESCE((CASE WHEN ((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) - (COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM)) &lt; 0
+	       THEN 0
+	 ELSE (CAST((COALESCE(ROD.ROD_BONUS_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6)) -
+		CAST((COALESCE(ROD.ROD_BONUS_CI_AM) / EXR.EXR_RATE_AM) AS DECIMAL(18,6))
+	)  END ),0)  - COALESCE((ROD.ROD_PENALTIES_AM / EXR.EXR_RATE_AM),0) + COALESCE(CAST((ROD.ROD_CUST_COST_AM / EXR.EXR_RATE_AM) AS DECIMAL(18,6)),0)) ELSE 0 END AS Am_Total_Nstd_Cost,
+	CTTP.TTK_STOP_QT AS Ttk_Stop_Qt,
+	CASE WHEN PICKUP_CD + DELIVERY_CD + BOTH_CD = 1 THEN &apos;P&apos;
+ 	 ELSE CASE WHEN PICKUP_CD + DELIVERY_CD + BOTH_CD = 2 THEN &apos;D&apos;
+	 ELSE &apos;B&apos;
+        END END AS Rlb_Coldel_Cd,
+	--RLG.RLB_COLDEL_CD,
+	ROD.ROD_RND_AREA_CD AS Rod_Rnd_Area_Cd,
+	CAST((RCI.RND_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS Rnd_Cost_AM,
+	CAST((RCI.POS_PICK_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS POS_PICK_STOP_COST_AM,
+	CAST((RCI.NEG_PICK_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS NEG_PICK_STOP_COST_AM,
+	CAST((RCI.PICK_STOP_TOT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS PICK_STOP_TOT_COST_AM,
+	CAST((RCI.POS_DEL_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS POS_DEL_STOP_COST_AM,
+	CAST((RCI.NEG_DEL_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS NEG_DEL_STOP_COST_AM,
+	CAST((RCI.DEL_STOP_TOT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS DEL_STOP_TOT_COST_AM,
+	CAST((RCI.TOT_POS_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS TOT_POS_STOP_COST_AM,
+	CAST((RCI.TOT_NEG_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS TOT_NEG_STOP_COST_AM,
+	CAST((RCI.TOT_STOP_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS TOT_STOP_COST_AM,
+	CAST((RCI.CON_PICK_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS CON_PICK_COST_AM,
+	CAST((RCI.CON_DEL_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS CON_DEL_COST_AM,
+	CAST((RCI.CON_TOT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS CON_TOT_COST_AM,
+	CAST((RCI.PCS_PICK_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS PCS_PICK_COST_AM,
+	CAST((RCI.PCS_DEL_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS PCS_DEL_COST_AM,
+	CAST((RCI.PCS_TOT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS PCS_TOT_COST_AM,
+	CAST((RCI.WGT_PICK_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS WGT_PICK_COST_AM,
+	CAST((RCI.WGT_DEL_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS WGT_DEL_COST_AM,
+	CAST((RCI.WGT_TOT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS WGT_TOT_COST_AM,
+	CAST((RCI.DIST_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS DIST_COST_AM,
+	CAST((RCI.TIME_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS TIME_COST_AM,
+	CAST((RCI.ON_RD_DUR_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS ON_RD_DUR_COST_AM,	
+	CAST((RCI.STOPS_PER_WGT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS STOPS_PER_WGT_COST_AM,
+	CAST((RCI.CONN_PER_WGT_COST_AM/ EXR.EXR_RATE_AM) AS DECIMAL(18,6)) AS CONN_PER_WGT_COST_AM,
+	CASE WHEN COALESCE(ROD.ROD_FIRST_ODO_NR,0) = 0 THEN
+	  0
+	ELSE  
+	  ROD.ROD_FIRST_ODO_NR - ROD.ROD_START_ODO_NR 
+	END AS STEM_DISTANCE_FROM_DEPOT,
+	CASE WHEN COALESCE(ROD.ROD_LAST_ODO_NR,0) = 0 THEN
+	  0
+	ELSE  
+	  ROD.ROD_END_ODO_NR - ROD.ROD_LAST_ODO_NR
+	END AS STEM_DISTANCE_TO_DEPOT,
+	ROD.ROD_ID || case when (ROD.ROD_ID_R &lt;&gt; &apos;&apos; ) then ( &apos; (&apos; || ROD.ROD_ID_R || &apos;)&apos; ) else ( &apos;&apos; ) end AS ROD_ID_DS,
+	CAST(ROD.BUL_CSYS_ID AS INTEGER) ||TRIM(ROD.ROD_ID) || case when ( ROD.ROD_ID_R &lt;&gt; &apos;&apos; ) then ( ROD.ROD_ID_R ) else ( &apos;&apos; ) end  AS ROD_KEY2
+
+  FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUND_V01 ROD
+
+  LEFT JOIN 
+
+    ( SELECT 
+          RLGSQ.BUL_CSYS_ID,
+	  RLGSQ.ROD_ID,
+	  RLGSQ.ROD_ACTIVE_DT,
+	  RLGSQ.ROD_SEQ_NR,
+	  --RLGSQ.RLB_COLDEL_CD,
+	  AVG(CASE WHEN RLGSQ.RLB_COLDEL_CD = &apos;P&apos; THEN 1 ELSE 0 END) AS PICKUP_CD,
+          AVG(CASE WHEN RLGSQ.RLB_COLDEL_CD = &apos;D&apos; THEN 2 ELSE 0 END) AS DELIVERY_CD,
+          AVG(CASE WHEN RLGSQ.RLB_COLDEL_CD = &apos;B&apos; THEN 4 ELSE 0 END) AS BOTH_CD,
+	  SUM(RLGSQ.RLB_COL_PS_STOP_QT)  AS RLB_COL_PS_STOP_QT,
+ 	  SUM(RLGSQ.RLB_COL_NG_STOP_QT)  AS RLB_COL_NG_STOP_QT, 
+ 	  SUM(RLGSQ.RLB_DEL_PS_STOP_QT)  AS RLB_DEL_PS_STOP_QT,
+	  SUM(RLGSQ.RLB_DEL_NG_STOP_QT)  AS RLB_DEL_NG_STOP_QT,
+          SUM(RLGSQ.RLB_COL_CON_QT) AS RLB_COL_CON_QT,
+          SUM(RLGSQ.RLB_DEL_CON_QT)  AS RLB_DEL_CON_QT,
+	  SUM(RLGSQ.RLB_COL_PCE_QT)  AS RLB_COL_PCE_QT,
+	  SUM(RLGSQ.RLB_DEL_PCE_QT) AS RLB_DEL_PCE_QT,
+	  SUM(RLGSQ.RLB_COL_WT) AS RLB_COL_WT,
+	  SUM(RLGSQ.RLB_DEL_WT) AS RLB_DEL_WT
+
+    FROM   /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDLOBGROUP_V01 RLGSQ
+	WHERE RLGSQ.RLB_STATUS_CD &lt;&gt; &apos;ND&apos;
+      GROUP BY
+          RLGSQ.BUL_CSYS_ID,
+	  RLGSQ.ROD_ID,
+	  RLGSQ.ROD_ACTIVE_DT,
+	  RLGSQ.ROD_SEQ_NR
+    --WHERE RLGSQ.RLB_STATUS_CD &lt;&gt; &apos;ND&apos;
+          --RLGSQ.RLB_COLDEL_CD
+      ) RLG
+   
+    ON ROD.BUL_CSYS_ID      = RLG.BUL_CSYS_ID
+   AND ROD.ROD_ID           = RLG.ROD_ID
+   AND ROD.ROD_ACTIVE_DT    = RLG.ROD_ACTIVE_DT
+   AND ROD.ROD_SEQ_NR       = RLG.ROD_SEQ_NR
+
+
+ 	--ROUND COST INTERVAL AMOUNTS
+	
+	LEFT JOIN 
+	   ( SELECT
+		BUL_CSYS_ID,
+		ROD_ID,
+		ROD_ACTIVE_DT,
+		ROD_SEQ_NR,
+		
+		SUM(CASE WHEN ( INT_ID = &apos;RND&apos;  ) THEN RIN_AM ELSE 0 END)   AS RND_COST_AM,
+		SUM(CASE WHEN ( INT_ID = &apos;PST&apos; AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS POS_PICK_STOP_COST_AM,
+		SUM(CASE WHEN ( INT_ID = &apos;NST&apos; AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS NEG_PICK_STOP_COST_AM,
+		SUM(CASE WHEN ( INT_ID IN (&apos;PST&apos;,&apos;NST&apos; ) AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS PICK_STOP_TOT_COST_AM,
+
+		SUM(CASE WHEN ( INT_ID = &apos;PST&apos; AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS POS_DEL_STOP_COST_AM,
+		SUM(CASE WHEN ( INT_ID = &apos;NST&apos; AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS NEG_DEL_STOP_COST_AM,
+		SUM(CASE WHEN ( INT_ID IN (&apos;PST&apos;,&apos;NST&apos; ) AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS DEL_STOP_TOT_COST_AM,
+
+		SUM(CASE WHEN ( INT_ID = &apos;PST&apos; AND RIN_COLDEL_CD IN( &apos;D&apos;,&apos;P&apos;) ) THEN RIN_AM ELSE 0 END)   AS TOT_POS_STOP_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;NST&apos; AND RIN_COLDEL_CD IN( &apos;D&apos;,&apos;P&apos;) ) THEN RIN_AM ELSE 0 END)   AS TOT_NEG_STOP_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;ST&apos;) THEN RIN_AM ELSE 0 END)   AS TOT_STOP_COST_AM,	
+
+		SUM(CASE WHEN ( INT_ID = &apos;CON&apos; AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS CON_PICK_COST_AM,			
+		SUM(CASE WHEN ( INT_ID = &apos;CON&apos; AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS CON_DEL_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;CON&apos; AND RIN_COLDEL_CD IN (&apos;D&apos;,&apos;P&apos;) ) THEN RIN_AM ELSE 0 END)   AS CON_TOT_COST_AM,	
+
+		SUM(CASE WHEN ( INT_ID = &apos;PCS&apos; AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS PCS_PICK_COST_AM,
+		SUM(CASE WHEN ( INT_ID = &apos;PCS&apos; AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS PCS_DEL_COST_AM,
+		SUM(CASE WHEN ( INT_ID IN (&apos;PCS&apos;) AND RIN_COLDEL_CD IN (&apos;P&apos;,&apos;D&apos;) ) THEN RIN_AM ELSE 0 END)   AS PCS_TOT_COST_AM,
+		
+		SUM(CASE WHEN ( INT_ID = &apos;WGT&apos; AND RIN_COLDEL_CD = &apos;P&apos; ) THEN RIN_AM ELSE 0 END)   AS WGT_PICK_COST_AM,
+		SUM(CASE WHEN ( INT_ID = &apos;WGT&apos; AND RIN_COLDEL_CD = &apos;D&apos; ) THEN RIN_AM ELSE 0 END)   AS WGT_DEL_COST_AM,
+		SUM(CASE WHEN ( INT_ID IN (&apos;WGT&apos;) AND RIN_COLDEL_CD IN (&apos;P&apos;,&apos;D&apos;) ) THEN RIN_AM ELSE 0 END)   AS WGT_TOT_COST_AM,		
+
+		SUM(CASE WHEN ( INT_ID = &apos;DST&apos;) THEN RIN_AM ELSE 0 END)   AS DIST_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;TM&apos;) THEN RIN_AM ELSE 0 END)   AS TIME_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;RTM&apos;) THEN RIN_AM ELSE 0 END)   AS ON_RD_DUR_COST_AM,	
+			
+		SUM(CASE WHEN ( INT_ID = &apos;STW&apos; AND RIN_COLDEL_CD IN (&apos;P&apos;,&apos;D&apos;)) THEN RIN_AM ELSE 0 END)   AS STOPS_PER_WGT_COST_AM,	
+		SUM(CASE WHEN ( INT_ID = &apos;COW&apos; AND RIN_COLDEL_CD IN (&apos;P&apos;,&apos;D&apos;)) THEN RIN_AM ELSE 0 END)   AS CONN_PER_WGT_COST_AM			
+		
+		
+		FROM  /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDCOSTINTERVAL_V01
+		GROUP BY 
+		     BUL_CSYS_ID,
+		     ROD_ID,
+		     ROD_ACTIVE_DT,
+		     ROD_SEQ_NR
+		)  RCI
+	 ON   ROD.BUL_CSYS_ID = RCI.BUL_CSYS_ID
+	 AND ROD.ROD_ID = RCI.ROD_ID
+	 AND ROD.ROD_ACTIVE_DT = RCI.ROD_ACTIVE_DT
+	 AND ROD.ROD_SEQ_NR = RCI.ROD_SEQ_NR
+
+
+
+    INNER JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/COUNTRYROUND_V01 COR
+	ON ROD.COU_ISO_ID = COR.COU_ISO_ID
+
+    LEFT JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDTYPE_V01	 RTY
+	ON ROD.RTY_ID = RTY.RTY_ID
+	
+	
+	-- EXCHANGE RATE FOR ROUND
+
+	LEFT JOIN 
+		(SELECT
+			   er.CUY_ID
+			   ,er.EGP_ID
+			   ,er.EXR_ADD_DT AS EXP_START_DT
+			   ,CASE WHEN dt.EXR_ADD_DT IS NULL THEN er.EXP_END_DT
+			         ELSE dt.NEXT_EXR_ADD_DT - 1
+			    END AS EXP_END_DT
+			   ,er.EXR_RATE_AM
+			 FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01 er
+			   LEFT OUTER JOIN
+			       (SELECT
+			           er1.EGP_ID
+			          ,er1.CUY_ID
+			          ,er1.EXP_END_DT
+			          ,er1.EXR_ADD_DT
+			          ,MIN(er2.EXR_ADD_DT) AS NEXT_EXR_ADD_DT
+			        FROM /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01	 er1
+			          INNER JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/CE_EXCHANGERATE_V01	 er2
+			            ON (er1.EXR_ADD_DT &lt; er2.EXR_ADD_DT
+			            AND er1.EXP_END_DT = er2.EXP_END_DT
+			            AND er1.CUY_ID = er2.CUY_ID
+			            AND er1.EGP_ID = er2.EGP_ID
+			            )
+			        GROUP BY
+			           er1.EGP_ID
+			          ,er1.CUY_ID
+			          ,er1.EXP_END_DT
+			          ,er1.EXR_ADD_DT) dt
+			     ON ( er.EGP_ID = dt.EGP_ID
+			     AND er.CUY_ID = dt.CUY_ID
+			     AND er.EXP_END_DT = dt.EXP_END_DT
+			     AND er.EXR_ADD_DT = dt.EXR_ADD_DT)
+			     WHERE er.EGP_ID = &apos;MO&apos;  )	EXR
+			
+		ON ROD.CUY_ID_COST = EXR.CUY_ID
+		AND ROD.ROD_ACTIVE_DT BETWEEN EXR.EXP_START_DT AND EXR.EXP_END_DT
+
+	
+	-- /EXCHANGE RATE FOR ROUND
+
+
+
+	LEFT JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/CNTRYTRANSTYPEPARAM_V01 CTTP
+	  ON ROD.COU_ISO_ID = CTTP.COU_ISO_ID
+	 AND ROD.TTY_ID = CTTP.TTY_ID
+	 AND ROD.ROD_ACTIVE_DT BETWEEN CTTP.TTK_START_DT AND CASE WHEN  CTTP.TTK_END_DT IS NULL THEN CAST (&apos;2100-01-01&apos;  AS DATE) ELSE CTTP.TTK_END_DT END  
+      -- AND (DISTANCE / (TOTAL_TM / 60)) BETWEEN CTTP.TTK_FROM_DI AND CTTP.TTK_TO_DI
+	 AND CASE WHEN (CAST(CASE WHEN (COR.COU_BRK_IN_CALC_IN = &apos;N&apos;)
+	  THEN(EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) )
+	  ELSE (EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) ) - ROD.ROD_BRKDUR_MINS_NR
+	END AS DECIMAL (18,6))) = 0 THEN -1 ELSE ((ROD.ROD_END_ODO_NR - ROD.ROD_START_ODO_NR) / ((CAST(CASE WHEN (COR.COU_BRK_IN_CALC_IN = &apos;N&apos;)
+	  THEN(EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) )
+	  ELSE (EXTRACT(HOUR
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM))) * 60 + EXTRACT(MINUTE
+           FROM ((ROD.ROD_FINISH_TM - ROD.ROD_START_TM) )) ) - ROD.ROD_BRKDUR_MINS_NR
+	END AS DECIMAL (18,6))) / 60)) END BETWEEN CTTP.TTK_FROM_DI AND CTTP.TTK_TO_DI
+	
+       LEFT JOIN /shared/Source/EDW/PUDCM/PRODPUDCM_P/ROUNDTEMPLATE_V01 RT
+          ON ROD.BUL_CSYS_ID_RDT = RT.BUL_CSYS_ID
+          AND ROD.RDT_ID = RT.RDT_ID
+          AND ROD.RDT_VERSION_NR = RT.RDT_VERSION_NR
+          AND ROD.RDT_SEQ_NR = RT.RDT_SEQ_NR	
+
+
+WHERE ROD.RST_ID NOT IN (&apos;ND&apos;,&apos;OR&apos;, &apos;CE&apos;) -- Exclude Not Driven Rounds, OR Status and Cost Error --
+--  AND ROD.RKT_ID &lt;&gt; &apos;A&apos;  -- Exclude Area Rounds  --
+  AND ((ROD.RKT_ID = &apos;A&apos; AND RT.RDT_WAVE_IN = &apos;Y&apos;) OR  ( TRIM(ROD.RKT_ID) IN (&apos;&apos;, &apos;N&apos;, &apos;S&apos;,&apos;H&apos;)   AND (RT.RDT_WAVE_IN  IS NULL OR RT.RDT_WAVE_IN = &apos;N&apos; OR TRIM(RT.RDT_WAVE_IN) = &apos;&apos;)))
+  AND ROD.ROD_ACTIVE_DT &gt;= CAST( EXTRACT (YEAR FROM CURRENT_DATE) -2 || &apos;-01-01&apos; AS DATE)
+    ) AS FCT_ROUND</attribute>
+  <attribute name="cacheBucketMode" type="STRING">AUTO_GEN</attribute>
+  <attribute name="cacheBucketPrefix" type="STRING">view167127_</attribute>
+  <attribute name="cacheBucketSchema" type="STRING">ciscache</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheDropCreateIdx" type="BOOLEAN">true</attribute>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cacheNumBuckets" type="INTEGER">3</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_RoundCostDetails</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1556872572122</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565068233393</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556872572122</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/PUDCM_SSD/Round-cost-details/vc_AllTransaction&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1562740670000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1562818665442</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1562818783668</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">q445qzb</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562818665442</attribute>
+  </trigger>
+</metadata>

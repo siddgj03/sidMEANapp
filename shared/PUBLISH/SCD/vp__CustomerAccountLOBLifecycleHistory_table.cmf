@@ -1,0 +1,142 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_CustomerAccountLOBLifecycleHistory" path="/shared/Publish/SCD/vp_CustomerAccountLOBLifecycleHistory" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Line_of_Business_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Line_of_Business_Name" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Start_Week" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="End_Week" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="6"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Lifecycle_Status" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/ACCNT_LOB_LIFECYCLE_HIST_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CAC_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="0"/>
+      </element>
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CAB_ST_START_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_LST_TRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_LST_TRD_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_FST_TRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_FST_TRD_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_REACT_TRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_REACT_TRD_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_NEW_TRD_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_NEW_TRD_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_ST_START_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_ST_END_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="CAB_ST_END_WK" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CAB_LCYCL_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CAB_UPDATE_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/SCD/PRODSCD_P/LINE_OF_BUSINESS_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LOB_ID" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LOB_ACTIVE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="LOB_NM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="LOB_NM_EFFECT_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="LOB_NM_EFFECTTO_DT">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+	T1.LOB_ID AS Line_of_Business_Code,
+	T2.LOB_NM AS Line_of_Business_Name,
+	T1.CAB_ST_START_WK AS Start_Week,
+	T1.CAB_ST_END_WK AS End_Week,
+	case  when CAB_LCYCL_STAT_CD is null then &apos;PRO&apos; else CAB_LCYCL_STAT_CD end as Lifecycle_Status
+from /shared/Source/EDW/SCD/PRODSCD_P/LINE_OF_BUSINESS_V01 T2, 
+/shared/Source/EDW/SCD/PRODSCD_P/ACCNT_LOB_LIFECYCLE_HIST_V01 T1
+ where T2.&quot;LOB_ID&quot; = T1.&quot;LOB_ID&quot; and T2.&quot;LNG_ID&quot; = &apos;EN&apos; and T2.&quot;LOB_ACTIVE_IN&quot; = &apos;Y&apos;</attribute>
+  <attribute name="creationDate" type="LONG">1562927975249</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565003134988</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562927975249</attribute>
+</metadata>

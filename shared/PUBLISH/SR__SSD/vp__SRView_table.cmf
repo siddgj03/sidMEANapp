@@ -1,0 +1,1242 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_SRView" path="/shared/Publish/SR_SSD/vp_SRView" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Case_Close_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Close_Quarter" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Close_Month" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Close_Week" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Actual_Case_Status_Name" nullable="true">
+      <datatype type="STRING" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Key" nullable="true">
+      <datatype type="STRING" minLength="13" maxLength="13"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Region_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Operating_Unit_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Reporting_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Country_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Depot_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Agent" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Region_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Operating_Unit_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Reporting_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Country_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Depot_Name" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Key" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="11"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="21"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Division_Name" nullable="true">
+      <datatype type="STRING" minLength="21" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Region_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Operating_Unit_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Reporting_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Country_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Origin_Depot_Name" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Region_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Operating_Unit_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Reporting_Group_Name" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="41"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Country_Name" nullable="true">
+      <datatype type="STRING" minLength="30" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Destination_Depot_Name" nullable="true">
+      <datatype type="STRING" minLength="14" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Con_Movement_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Complaint_Type_Name" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Complaint_Cause_Name" nullable="true">
+      <datatype type="STRING" minLength="20" maxLength="20"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Action_Group_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Action_Type_Name" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="30"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Days_Open" nullable="true">
+      <datatype type="STRING" minLength="6" maxLength="12" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Automotive_Indicator" nullable="true">
+      <datatype type="STRING" minLength="10" maxLength="14" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_CO_Cases" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_Actions" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Amount" nullable="true">
+      <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_CO_Cases_With_Costs" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_CO_Cases_Without_Costs" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Number_Of_OIB_Cases" nullable="true">
+      <datatype type="INTEGER"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Cost_Euros" nullable="true">
+      <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OIB_Cost_Euros" nullable="true">
+      <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="case_Type_Name_CO" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Name_CO" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Type_Name_OIB" nullable="true">
+      <datatype type="STRING" minLength="9" maxLength="9"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Case_Name_OIB" nullable="true">
+      <datatype type="STRING" maxLength="60"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CO_Country" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Region_Id" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OperatingUnit_Id" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="ReportingGroup_Id" nullable="true">
+      <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_ActionType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Action_Group_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Action_Type_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Action_Type_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_ActualCaseStatus" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Actual_Case_Status_Cd">
+        <datatype type="STRING" maxLength="5"/>
+      </element>
+      <element name="Actual_Case_Status_Nm">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_AllTransactions" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Case_Closed_Yr_Wk">
+        <datatype type="STRING" minLength="1" maxLength="6"/>
+      </element>
+      <element name="Actual_Case_Status_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CO_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="OIB_Depot_Cd">
+        <datatype type="STRING" maxLength="5"/>
+      </element>
+      <element name="Div_Key">
+        <datatype type="STRING" minLength="1" maxLength="4"/>
+      </element>
+      <element name="Orig_Depot_Cd">
+        <datatype type="STRING" minLength="1" maxLength="5"/>
+      </element>
+      <element name="Dest_Depot_Cd">
+        <datatype type="STRING" minLength="1" maxLength="5"/>
+      </element>
+      <element name="Con_Movement_Cd">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Complaint_Type_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Complaint_Cause_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Action_Type_Cd">
+        <datatype type="STRING" maxLength="2" trailingSpaces="false"/>
+      </element>
+      <element name="Days_open">
+        <datatype type="STRING" minLength="6" maxLength="12" trailingSpaces="false"/>
+      </element>
+      <element name="Automotive_Ind">
+        <datatype type="STRING" minLength="10" maxLength="14" trailingSpaces="false"/>
+      </element>
+      <element name="Num_Cases">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Cost_Amt">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="Num_Actions">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Num_Cases_With_Costs">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Num_Cases_Without_Costs">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Number_of_OIB_Cases">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="CO_Cost_Euros">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="OIB_Costs_Euros">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="Case_Cd_CO">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="Case_Cd_OIB">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="c">
+        <datatype type="STRING" minLength="1" maxLength="3"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_AutomotiveInd" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Automotive_Ind">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_CaseClosedDate" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Case_Closed_Date">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="Case_Closed_Qtr">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Case_Closed_Qtr_Name">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Case_Closed_Yr_Mth">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="Case_Closed_Yr_Mth_Name">
+        <datatype type="STRING" minLength="5" maxLength="18"/>
+      </element>
+      <element name="Case_Closed_Mth_Name">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="Case_Closed_Yr_Wk_Name">
+        <datatype type="STRING" minLength="5"/>
+      </element>
+      <element name="Case_Closed_Yr_Wk">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_CauseTypes" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Complaint_Cause_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Complaint_Cause_Name">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_CoCaseDefinition" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Case_Type_Cd_CO">
+        <datatype type="STRING" minLength="1" maxLength="2"/>
+      </element>
+      <element name="Case_Type_Name_CO">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Case_Cd_CO">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Case_Name_CO">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_ComplaintOwners" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="CO_Region_Cd">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="CO_Region_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CO_Operating_Unit_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="CO_Operating_Unit_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="CO_Reporting_Group_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="CO_Reporting_Group_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="CO_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CO_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CO_Depot_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="CO_Depot_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CO_Agent">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="CO_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_ComplaintType" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Complaint_Type_Cd">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Complaint_Type_Nam">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_ConMovement" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Con_Movement_Cd">
+        <datatype type="STRING" maxLength="2"/>
+      </element>
+      <element name="Con_Movement_Nm">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_DaysOpen" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Days_Open">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_DestinationLocation" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Dest_Region_Cd">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Dest_Region_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Dest_Operating_Unit_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Dest_Operating_Unit_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="Dest_Reporting_Group_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Dest_Reporting_Group_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="Dest_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Dest_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Dest_Depot_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Dest_Depot_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_Division" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Div_Group_Cd">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Div_Group_Nm">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Div_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Div_Nm">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Div_Key">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_Heirarchy" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Id_for_Cube_Build">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Country_Id">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Region_Id">
+        <datatype type="STRING" minLength="7" maxLength="20"/>
+      </element>
+      <element name="OperatingUnit_Id">
+        <datatype type="STRING" minLength="7" maxLength="20"/>
+      </element>
+      <element name="ReportingGroup_Id">
+        <datatype type="STRING" minLength="7" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_OIB" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="OIB_Region_Cd">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="OIB_Region_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OIB_Operating_Unit_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="OIB_Operating_Unit_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="OIB_Reporting_Group_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="OIB_Reporting_Group_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="OIB_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OIB_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OIB_Depot_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="OIB_Depot_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_OIBCaseDefinition" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Case_Type_Cd_OIB">
+        <datatype type="STRING" minLength="1" maxLength="2"/>
+      </element>
+      <element name="Case_Type_Name_OIB">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Case_Cd_OIB">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Case_Name_OIB">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Core/Services/SR_SSD/vc_OriginLocation" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Orig_Region_Cd">
+        <datatype type="STRING" minLength="10" maxLength="10"/>
+      </element>
+      <element name="Orig_Region_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Orig_Operating_Unit_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Orig_Operating_Unit_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="Orig_Reporting_Group_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="Orig_Reporting_Group_Name">
+        <datatype type="STRING" minLength="41" maxLength="41"/>
+      </element>
+      <element name="Orig_Country_Cd">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Orig_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Orig_Depot_Cd">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Orig_Depot_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_SRView" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Case_Close_Year">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Case_Close_Quarter">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Case_Close_Month">
+        <datatype type="STRING" maxLength="13"/>
+      </element>
+      <element name="Case_Close_Week">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Actual_Case_Status_Name">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="CO_Key">
+        <datatype type="STRING" minLength="13" maxLength="13"/>
+      </element>
+      <element name="CO_Region_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CO_Operating_Unit_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="CO_Reporting_Group_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="CO_Country_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="CO_Depot_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="CO_Agent">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OIB_Region_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OIB_Operating_Unit_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="OIB_Reporting_Group_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="OIB_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="OIB_Depot_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Division_Key">
+        <datatype type="STRING" maxLength="11"/>
+      </element>
+      <element name="Division_Group_Name">
+        <datatype type="STRING" maxLength="21"/>
+      </element>
+      <element name="Division_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Origin_Region_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Origin_Operating_Unit_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="Origin_Reporting_Group_Name">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="Origin_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Origin_Depot_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Destination_Region_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Destination_Operating_Unit_N">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="Destination_Reporting_Group_">
+        <datatype type="STRING" maxLength="41"/>
+      </element>
+      <element name="Destination_Country_Name">
+        <datatype type="STRING" minLength="30" maxLength="30"/>
+      </element>
+      <element name="Destination_Depot_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Con_Movement_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Complaint_Type_Name">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Complaint_Cause_Name">
+        <datatype type="STRING" minLength="20" maxLength="20"/>
+      </element>
+      <element name="Action_Group_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Action_Type_Name">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="Days_Open">
+        <datatype type="STRING" maxLength="12"/>
+      </element>
+      <element name="Automotive_Indicator">
+        <datatype type="STRING" maxLength="14"/>
+      </element>
+      <element name="Number_Of_CO_Cases">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Number_Of_Actions">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Cost_Amount">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="Number_Of_CO_Cases_With_Cost">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Number_Of_CO_Cases_Without_C">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="Number_Of_OIB_Cases">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="CO_Cost_Euros">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="OIB_Cost_Euros">
+        <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+      </element>
+      <element name="case_Type_Name_CO">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Case_Name_CO">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="Case_Type_Name_OIB">
+        <datatype type="STRING" minLength="9" maxLength="9"/>
+      </element>
+      <element name="Case_Name_OIB">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="CO_Country">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="Region_Id">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="OperatingUnit_Id">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+      <element name="ReportingGroup_Id">
+        <datatype type="STRING" maxLength="20"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+	--Fact_SRTransaction.claim_Nr,
+   COALESCE(DIm_SRCaseClosedDate.Case_Closed_Date, &apos;No Close Date&apos;) Case_Close_Year, 
+    COALESCE(DIm_SRCaseClosedDate.Case_Closed_Qtr, &apos;No Close Date&apos;) Case_Close_Quarter, 
+    COALESCE(DIm_SRCaseClosedDate.Case_Closed_Yr_Mth, &apos;No Close Date&apos;) Case_Close_Month, 
+    cast(COALESCE(DIm_SRCaseClosedDate.Case_Closed_Yr_Wk_Name, &apos;No Close Date&apos;) as varchar(30)) Case_Close_Week,  
+    cast(CSV_ActualCaseStatus.Actual_Case_Status_Nm as varchar(20)) Actual_Case_Status_Name, 
+    Fact_SRTransaction.CO_Key CO_Key, 
+    COALESCE(Dim_SRComplaintOwners.CO_Region_Name, &apos;N/A&apos;) CO_Region_Name, 
+    COALESCE(Dim_SRComplaintOwners.CO_Operating_Unit_Name, &apos;N/A&apos;) CO_Operating_Unit_Name, 
+    COALESCE(Dim_SRComplaintOwners.CO_Reporting_Group_Name, &apos;N/A&apos;) CO_Reporting_Group_Name, 
+    COALESCE(Dim_SRComplaintOwners.CO_Country_Name, &apos;N/A&apos;) CO_Country_Name, 
+    Dim_SRComplaintOwners.CO_Depot_Name CO_Depot_Name, 
+    Dim_SRComplaintOwners.CO_Agent CO_Agent, 
+    COALESCE(Dim_SROIB.OIB_Region_Name, &apos;N/A&apos;) OIB_Region_Name, 
+    COALESCE(Dim_SROIB.OIB_Operating_Unit_Name, &apos;N/A&apos;) OIB_Operating_Unit_Name, 
+    COALESCE(Dim_SROIB.OIB_Reporting_Group_Name, &apos;N/A&apos;) OIB_Reporting_Group_Name, 
+    Dim_SROIB.OIB_Country_Name OIB_Country_Name, 
+    COALESCE(Dim_SROIB.OIB_Depot_Name, &apos;No OIB&apos;) OIB_Depot_Name, 
+    COALESCE(Fact_SRTransaction.Div_Key, &apos;No Division&apos;) Division_Key, 
+    COALESCE(Dim_SRDivision.Div_Group_Nm, &apos;No Division Available&apos;) Division_Group_Name, 
+    COALESCE(Dim_SRDivision.Div_Nm, &apos;No Division Available&apos;) Division_Name, 
+    COALESCE(Dim_SROriginLocation.Orig_Region_Name, &apos;N/A&apos;) Origin_Region_Name, 
+    COALESCE(Dim_SROriginLocation.Orig_Operating_Unit_Name, &apos;N/A&apos;) Origin_Operating_Unit_Name, 
+    COALESCE(Dim_SROriginLocation.Orig_Reporting_Group_Name, &apos;N/A&apos;) Origin_Reporting_Group_Name, 
+    Dim_SROriginLocation.Orig_Country_Name Origin_Country_Name, 
+    COALESCE(Dim_SROriginLocation.Orig_Depot_Name, &apos;No Origin&apos;) Origin_Depot_Name, 
+    COALESCE(Dim_SRDestinationLocation.Dest_Region_Name, &apos;N/A&apos;) Destination_Region_Name, 
+    COALESCE(Dim_SRDestinationLocation.Dest_Operating_Unit_Name, &apos;N/A&apos;) Destination_Operating_Unit_Name, 
+    COALESCE(Dim_SRDestinationLocation.Dest_Reporting_Group_Name, &apos;N/A&apos;) Destination_Reporting_Group_Name, 
+    Dim_SRDestinationLocation.Dest_Country_Name Destination_Country_Name, 
+    COALESCE(Dim_SRDestinationLocation.Dest_Depot_Name, &apos;No Destination&apos;) Destination_Depot_Name, 
+    cast(CSV_ConMovement.Con_Movement_Nm as varchar(50))  Con_Movement_Name, 
+    Dim_SRComplaintType.Complaint_Type_Nam Complaint_Type_Name, 
+    Dim_SRCauseTypes.Complaint_Cause_Name Complaint_Cause_Name, 
+    Dim_SRActionType.Action_Group_Cd Action_Group_Code, 
+    COALESCE(Dim_SRActionType.Action_Type_Name, &apos;No Actions&apos;) Action_Type_Name, 
+    Fact_SRTransaction.Days_open Days_Open, 
+    Fact_SRTransaction.Automotive_Ind Automotive_Indicator, 
+    Fact_SRTransaction.Num_Cases Number_Of_CO_Cases, 
+    Fact_SRTransaction.Num_Actions Number_Of_Actions, 
+	Fact_SRTransaction.Cost_Amt Cost_Amount,
+    Fact_SRTransaction.Num_Cases_With_Costs Number_Of_CO_Cases_With_Costs, 
+    Fact_SRTransaction.Num_Cases_Without_Costs Number_Of_CO_Cases_Without_Costs, 
+    Fact_SRTransaction.Number_of_OIB_Cases Number_Of_OIB_Cases, 
+    Fact_SRTransaction.CO_Cost_Euros CO_Cost_Euros, 
+    Fact_SRTransaction.OIB_Costs_Euros OIB_Cost_Euros, 
+    Dim_SRCoCaseDefinition.Case_Type_Name_CO case_Type_Name_CO, 
+    Dim_SRCoCaseDefinition.Case_Name_CO Case_Name_CO, 
+    Dim_SROIBCaseDefinition.Case_Type_Name_OIB Case_Type_Name_OIB, 
+    case when Dim_SROIBCaseDefinition.Case_Name_OIB=&apos;&apos; then &apos;No OIB&apos; else COALESCE(Dim_SROIBCaseDefinition.Case_Name_OIB,&apos;No OIB&apos;) end  Case_Name_OIB, 
+ 	--trim(Fact_SRTransaction.CO_field_CO)||Trim(Fact_SRTransaction.OIB_field_CO)||Trim(Fact_SRTransaction.orig_field_CO)||trim(Fact_SRTransaction.dest_field_CO) CO_Country   
+     c as CO_Country  ,
+	Trim(vc_Heirarchy.Region_Id) as  Region_Id,
+	Trim(vc_Heirarchy.OperatingUnit_Id) as OperatingUnit_Id,
+	Trim(vc_Heirarchy.ReportingGroup_Id)  as   ReportingGroup_Id
+FROM      
+    /shared/Core/Services/SR_SSD/vc_AllTransactions Fact_SRTransaction    left outer join
+	/shared/Core/Services/SR_SSD/vc_Heirarchy    vc_Heirarchy
+	on trim(vc_Heirarchy.Country_Id)=trim(Fact_SRTransaction.c)  LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_ActionType Dim_SRActionType
+    ON Fact_SRTransaction.Action_Type_Cd = Dim_SRActionType.Action_Type_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_CaseClosedDate DIm_SRCaseClosedDate
+    ON Fact_SRTransaction.Case_Closed_Yr_Wk = DIm_SRCaseClosedDate.Case_Closed_Yr_Wk LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_CauseTypes Dim_SRCauseTypes
+    ON Fact_SRTransaction.Complaint_Cause_Cd = Dim_SRCauseTypes.Complaint_Cause_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_CoCaseDefinition Dim_SRCoCaseDefinition
+    ON Fact_SRTransaction.Case_Cd_CO = Dim_SRCoCaseDefinition.Case_Cd_CO LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_ComplaintOwners Dim_SRComplaintOwners
+    ON Fact_SRTransaction.CO_Key = Dim_SRComplaintOwners.CO_Key LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_ComplaintType Dim_SRComplaintType
+    ON Fact_SRTransaction.Complaint_Type_Cd = Dim_SRComplaintType.Complaint_Type_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_DestinationLocation Dim_SRDestinationLocation
+    ON Fact_SRTransaction.Dest_Depot_Cd = Dim_SRDestinationLocation.Dest_Depot_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_Division Dim_SRDivision
+    ON Fact_SRTransaction.Div_Key = Dim_SRDivision.Div_Key LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_OIB Dim_SROIB
+    ON Fact_SRTransaction.OIB_Depot_Cd = Dim_SROIB.OIB_Depot_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_OIBCaseDefinition Dim_SROIBCaseDefinition
+    ON Fact_SRTransaction.Case_Cd_OIB = Dim_SROIBCaseDefinition.Case_Cd_OIB LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_OriginLocation Dim_SROriginLocation
+    ON Fact_SRTransaction.Orig_Depot_Cd = Dim_SROriginLocation.Orig_Depot_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_ActualCaseStatus CSV_ActualCaseStatus
+    ON Fact_SRTransaction.Actual_Case_Status_Cd = CSV_ActualCaseStatus.Actual_Case_Status_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_AutomotiveInd CSV_AutomotiveInd
+    ON Fact_SRTransaction.Automotive_Ind = CSV_AutomotiveInd.Automotive_Ind LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_ConMovement CSV_ConMovement
+    ON Fact_SRTransaction.Con_Movement_Cd = CSV_ConMovement.Con_Movement_Cd LEFT OUTER JOIN 
+        /shared/Core/Services/SR_SSD/vc_DaysOpen CSV_DaysOpen
+    ON Fact_SRTransaction.Days_open = CSV_DaysOpen.Days_Open</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vp_SRView</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1556865035757</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20151</attribute>
+  <attribute name="creatorUserName" type="STRING">t174rqq</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1567061467354</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20151</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="rbsFilterProcedure" type="STRING"/>
+  <attribute name="rbsFilteredTablePath" type="STRING">/shared/Publish/SR_SSD/vp_SRView</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556865035757</attribute>
+  <trigger>
+    <security>
+      <owner user="q445qzb" domain="tntadtest"/>
+      <privilege user="n228dpo" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Publish/SR_SSD/vp_SRView" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Case_Close_Year">
+          <datatype type="STRING" minLength="4" maxLength="13"/>
+        </element>
+        <element name="Case_Close_Quarter">
+          <datatype type="STRING" minLength="8" maxLength="13"/>
+        </element>
+        <element name="Case_Close_Month">
+          <datatype type="STRING" minLength="6" maxLength="13"/>
+        </element>
+        <element name="Case_Close_Week">
+          <datatype type="STRING" maxLength="30"/>
+        </element>
+        <element name="Actual_Case_Status_Name">
+          <datatype type="STRING" maxLength="20"/>
+        </element>
+        <element name="CO_Key">
+          <datatype type="STRING" minLength="13" maxLength="13"/>
+        </element>
+        <element name="CO_Region_Name">
+          <datatype type="STRING" minLength="3" maxLength="30"/>
+        </element>
+        <element name="CO_Operating_Unit_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="CO_Reporting_Group_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="CO_Country_Name">
+          <datatype type="STRING" minLength="3" maxLength="30"/>
+        </element>
+        <element name="CO_Depot_Name">
+          <datatype type="STRING" minLength="30" maxLength="30"/>
+        </element>
+        <element name="CO_Agent">
+          <datatype type="STRING" minLength="8" maxLength="8"/>
+        </element>
+        <element name="OIB_Region_Name">
+          <datatype type="STRING" minLength="3" maxLength="30"/>
+        </element>
+        <element name="OIB_Operating_Unit_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="OIB_Reporting_Group_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="OIB_Country_Name">
+          <datatype type="STRING" minLength="30" maxLength="30"/>
+        </element>
+        <element name="OIB_Depot_Name">
+          <datatype type="STRING" minLength="6" maxLength="30"/>
+        </element>
+        <element name="Division_Key">
+          <datatype type="STRING" minLength="1" maxLength="11"/>
+        </element>
+        <element name="Division_Group_Name">
+          <datatype type="STRING" minLength="20" maxLength="21"/>
+        </element>
+        <element name="Division_Name">
+          <datatype type="STRING" minLength="21" maxLength="30"/>
+        </element>
+        <element name="Origin_Region_Name">
+          <datatype type="STRING" minLength="3" maxLength="30"/>
+        </element>
+        <element name="Origin_Operating_Unit_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="Origin_Reporting_Group_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="Origin_Country_Name">
+          <datatype type="STRING" minLength="30" maxLength="30"/>
+        </element>
+        <element name="Origin_Depot_Name">
+          <datatype type="STRING" minLength="9" maxLength="30"/>
+        </element>
+        <element name="Destination_Region_Name">
+          <datatype type="STRING" minLength="3" maxLength="30"/>
+        </element>
+        <element name="Destination_Operating_Unit_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="Destination_Reporting_Group_Name">
+          <datatype type="STRING" minLength="3" maxLength="41"/>
+        </element>
+        <element name="Destination_Country_Name">
+          <datatype type="STRING" minLength="30" maxLength="30"/>
+        </element>
+        <element name="Destination_Depot_Name">
+          <datatype type="STRING" minLength="14" maxLength="30"/>
+        </element>
+        <element name="Con_Movement_Name">
+          <datatype type="STRING" maxLength="50"/>
+        </element>
+        <element name="Complaint_Type_Name">
+          <datatype type="STRING" minLength="20" maxLength="20"/>
+        </element>
+        <element name="Complaint_Cause_Name">
+          <datatype type="STRING" minLength="20" maxLength="20"/>
+        </element>
+        <element name="Action_Group_Code">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="Action_Type_Name">
+          <datatype type="STRING" minLength="10" maxLength="30"/>
+        </element>
+        <element name="Days_Open">
+          <datatype type="STRING" minLength="6" maxLength="12" trailingSpaces="false"/>
+        </element>
+        <element name="Automotive_Indicator">
+          <datatype type="STRING" minLength="10" maxLength="14" trailingSpaces="false"/>
+        </element>
+        <element name="Number_Of_CO_Cases">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Number_Of_Actions">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Cost_Amount">
+          <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+        </element>
+        <element name="Number_Of_CO_Cases_With_Costs">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Number_Of_CO_Cases_Without_Costs">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="Number_Of_OIB_Cases">
+          <datatype type="INTEGER"/>
+        </element>
+        <element name="CO_Cost_Euros">
+          <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+        </element>
+        <element name="OIB_Cost_Euros">
+          <datatype type="DECIMAL" maxDigits="24" maxFractionalDigits="2"/>
+        </element>
+        <element name="case_Type_Name_CO">
+          <datatype type="STRING" minLength="9" maxLength="9"/>
+        </element>
+        <element name="Case_Name_CO">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="Case_Type_Name_OIB">
+          <datatype type="STRING" minLength="9" maxLength="9"/>
+        </element>
+        <element name="Case_Name_OIB">
+          <datatype type="STRING" maxLength="60"/>
+        </element>
+        <element name="CO_Country">
+          <datatype type="STRING" minLength="1" maxLength="3"/>
+        </element>
+        <element name="Region_Id">
+          <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+        </element>
+        <element name="OperatingUnit_Id">
+          <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+        </element>
+        <element name="ReportingGroup_Id">
+          <datatype type="STRING" maxLength="20" trailingSpaces="false"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Publish/SR_SSD/vp_SRView&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1564055721000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1564056326213</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">90103</attribute>
+    <attribute name="creatorUserName" type="STRING">n228dpo</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1564056326213</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">90103</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">n228dpo</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564056326213</attribute>
+  </trigger>
+</metadata>

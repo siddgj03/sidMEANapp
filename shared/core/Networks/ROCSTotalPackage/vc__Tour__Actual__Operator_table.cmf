@@ -1,0 +1,258 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vc_Tour_Actual_Operator" path="/shared/Core/Networks/ROCSTotalPackage/vc_Tour_Actual_Operator" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Business_Partner_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Name" nullable="true">
+      <datatype type="STRING" maxLength="40"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Own_Company_Indicator" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="7" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Business_Partner_Object_ID" nullable="true">
+      <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+  </security>
+  <dependency target="/shared/Core/Networks/ROCSTotalPackage/vc_TourTP" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Tour_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="Tour_Network_ID">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Tour_Status_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Reason_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Remarks_Tx">
+        <datatype type="STRING" maxLength="500"/>
+      </element>
+      <element name="Tour_Cancel_Code">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="Tour_Country_AP">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Operator_Object_Actual_Id">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Operator_Object_Scheduled_Id">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_App_Mov_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Location_Object_ID_CMBL">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_TourString_Tx">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="Tour_Foc_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Tour_Scheduled_Departure_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Tour_Planned_Extra_Indicator">
+        <datatype type="STRING" minLength="1" maxLength="1" trailingSpaces="false"/>
+      </element>
+      <element name="Tour_Start_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Tour_Scheduled_Departure_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Tour_Scheduled_Arrival_LT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Tour_Scheduled_Arrival_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Location_Object_ID_Origin">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Destination">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Location_Object_ID_Record">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="Tour_Billing_Object_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="NLS_USR_ID">
+        <datatype type="STRING" minLength="12" maxLength="12"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/ROCSPackage/PRODROCS_P/BUSINESS_PARTNER_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="BUP_OBJ_ID" nullable="false">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_DELETE_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUP_UPDT_USER_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUP_UPDT_TD" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_SOFTLOCK_TS" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="BUP_OBJ_ID_SCON">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPY_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_NM">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="BUP_RELATION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="BUP_INET_ACCS_TX">
+        <datatype type="STRING" maxLength="255"/>
+      </element>
+      <element name="BUP_OWN_COMPANY_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUP_EMAIL_ADDR_TX">
+        <datatype type="STRING" maxLength="129"/>
+      </element>
+      <element name="BUP_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUP_DA_QUAL_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BPM_OBJ_ID_ADD">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_ORIGINAL_ID" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="BUP_HSKP_CD" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUP_MGR_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+      <element name="BUP_BIDREC_NOTF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="BUP_NWTOUR_NOTF_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="COU_ISO_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TIZ_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="BUP_SEG_OBJ_ID">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="0"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+  T1.BUP_ID Business_Partner_ID,
+T1.BUP_NM Business_Partner_Name,
+case 
+         when upper(trim(T1.BUP_OWN_COMPANY_IN)) = &apos;Y&apos; then &apos;Yes&apos;
+         when upper(trim(T1.BUP_OWN_COMPANY_IN)) = &apos;N&apos; then &apos;No&apos;
+         else &apos;Unknown&apos;
+       end  as   Business_Partner_Own_Company_Indicator,
+T1.BUP_OBJ_ID  Business_Partner_Object_ID
+
+FROM /shared/Source/EDW/ROCSPackage/PRODROCS_P/BUSINESS_PARTNER_V01  T1
+inner join
+/shared/Core/Networks/ROCSTotalPackage/vc_TourTP T2 ON
+ --    T2.Operator_Object_Scheduled_ID=T1.BUP_OBJ_ID
+     T2.Operator_Object_Actual_Id=T1.BUP_OBJ_ID
+where not (T1.BUP_OBJ_ID is NULL)
+
+/*
+select 
+       T.BUP_ID  as  Actual_Operator_Code,
+       T.BUP_NM  as  Actual_Operator_Name,
+       case 
+         when upper(trim(T.BUP_OWN_COMPANY_IN)) = &apos;Y&apos; then &apos;Yes&apos;
+         when upper(trim(T.BUP_OWN_COMPANY_IN)) = &apos;N&apos; then &apos;No&apos;
+         else &apos;Unknown&apos;
+       end  as  Actual_Operator_Own_Indicator,
+       T8.PAD_ADDR_LINE_1_TX  as  Actual_Operator_Address_Line_1,
+       T8.PAD_ADDR_LINE_2_TX  as  Actual_Operator_Address_Line_2,
+       T8.PAD_ADDR_LINE_3_TX  as  Actual_Operator_Address_Line_3,
+       T8.PAD_POSTAL_CD  as  Actual_Operator_Postal_Code,
+       T8.PAD_TOWN_NM  as  Actual_Operator_Town,
+       T8.PAD_PROVINCE_NM  as  Actual_Operator_Province,
+       T9.COU_NM  as  Actual_Operator_Country,
+       T10.AVO_DS  as  Actual_Operator_Address_Type,
+       ACT_BUP_Filter.BUP_OBJ_ID  as  BUP_OBJ_ID
+ from 
+       /shared/Source/EDW/ROCS/TESTROCS_P/BUSINESS_PARTNER_V01 T,
+       [ROCS_TERADATA].BUSPARTNER_ADDRESS_V01 T8,
+       [ROCS_TERADATA].COUNTRY_V01 T9,
+       [ROCS_TERADATA].ADDR_TYPE_V01 T10,
+       ACT_BUP_Filter,
+       [ROCS_TERADATA].BUSPARTNER_ADDR_TYPE_V01 T12
+ where 
+       (not (ACT_BUP_Filter.BUP_OBJ_ID is NULL)) and 
+       (T8.BUP_OBJ_ID = T.BUP_OBJ_ID) and 
+       (T12.PAD_OBJ_ID = T8.PAD_OBJ_ID) and 
+       (T10.AVO_OBJ_ID = T12.PAT_TYPE_OBJ_ID) and 
+       (T9.COU_ISO_ID = T8.COU_ISO_ID) and 
+       (ACT_BUP_Filter.BUP_OBJ_ID = T.BUP_OBJ_ID)	*/  
+/*where exists  ( select 
+           OPR_OBJ_ID_S
+     from 
+           [ROCS_TERADATA].TOUR_V01 T
+     where  ( T.OPR_OBJ_ID_S = B.BUP_OBJ_ID )  ) )  */
+
+</attribute>
+  <attribute name="creationDate" type="LONG">1562241371475</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">70102</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565760579486</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">70102</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562241371475</attribute>
+</metadata>

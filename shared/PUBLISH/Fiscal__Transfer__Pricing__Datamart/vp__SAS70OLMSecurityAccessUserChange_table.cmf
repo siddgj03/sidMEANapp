@@ -1,0 +1,192 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_SAS70OLMSecurityAccessUserChange" path="/shared/Publish/Fiscal_Transfer_Pricing_Datamart/vp_SAS70OLMSecurityAccessUserChange" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="TNT_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Month" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Months_Diff" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reviewer_2_Last_Reviewer" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="User_ID" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="User_Name" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Country" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Requested_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Effective_Date_Time_Stamp" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Change_Status_Type_Code" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Change_Status_Type_Description" nullable="true">
+      <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Security_Role_Description" nullable="true">
+      <datatype type="STRING" minLength="25" maxLength="25"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Reviewer_1_Penultimate_Reviewer_Ranking" nullable="true">
+      <datatype type="STRING" minLength="1" maxLength="8"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Security_Role_Cd" nullable="true">
+      <datatype type="STRING" minLength="11" maxLength="11"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="TNT_Date" nullable="true">
+      <datatype type="DATE"/>
+      <security>
+        <owner user="q445qzb" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="q445qzb" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_SAS70OLMSecurityAccessUserChange" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="TNT_Year">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="TNT_Month">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_Months_Diff">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Reviewer_2__Last_Reviewer_">
+        <datatype type="STRING" minLength="1" maxLength="8"/>
+      </element>
+      <element name="c5">
+        <datatype type="STRING" minLength="1" maxLength="8"/>
+      </element>
+      <element name="User_ID">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="User_Name">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Country">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Requested_Date">
+        <datatype type="DATE"/>
+      </element>
+      <element name="Effective_Date_Time_Stamp">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Change_Status_Type_Code">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="Change_Status_Type_Description">
+        <datatype type="STRING" minLength="7" maxLength="8" trailingSpaces="false"/>
+      </element>
+      <element name="Security_Role_Description">
+        <datatype type="STRING" minLength="25" maxLength="25"/>
+      </element>
+      <element name="Security_Role_Cd">
+        <datatype type="STRING" minLength="11" maxLength="11"/>
+      </element>
+      <element name="TNT_Date">
+        <datatype type="DATE"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 	 
+	  
+vc_SAS70OLMSecurityAccessUserChange.&quot;TNT_Year&quot; as TNT_Year
+,vc_SAS70OLMSecurityAccessUserChange.&quot;TNT_Month&quot; as TNT_Month
+,vc_SAS70OLMSecurityAccessUserChange.TNT_Months_Diff as TNT_Months_Diff
+--,vs_SAS70OLMSecurityAccessUserChange001.&quot;Reviewer 2 Last Reviewer Ranking&quot;  AS &quot;Reviewer_2_Last_Reviewer_Ranking&quot;
+,vc_SAS70OLMSecurityAccessUserChange.Reviewer_2__Last_Reviewer_ AS  &quot;Reviewer_2_Last_Reviewer&quot;
+--,vs_SAS70OLMSecurityAccessUserChange001.&quot;Penultimate Request Decision ID&quot; as Penultimate_Request_Decision_ID
+,vc_SAS70OLMSecurityAccessUserChange.User_ID  as User_ID
+,vc_SAS70OLMSecurityAccessUserChange.User_Name as User_Name
+,vc_SAS70OLMSecurityAccessUserChange.&quot;Country&quot;
+,vc_SAS70OLMSecurityAccessUserChange.Requested_Date as Requested_Date
+,vc_SAS70OLMSecurityAccessUserChange.Effective_Date_Time_Stamp as Effective_Date_Time_Stamp
+,vc_SAS70OLMSecurityAccessUserChange.Change_Status_Type_Code  as Change_Status_Type_Code
+,vc_SAS70OLMSecurityAccessUserChange.Change_Status_Type_Description as Change_Status_Type_Description
+,vc_SAS70OLMSecurityAccessUserChange.Security_Role_Description as Security_Role_Description
+,vc_SAS70OLMSecurityAccessUserChange.c5 as  &quot;Reviewer_1_Penultimate_Reviewer_Ranking&quot;
+,vc_SAS70OLMSecurityAccessUserChange.Security_Role_Cd as Security_Role_Cd 
+,vc_SAS70OLMSecurityAccessUserChange.TNT_Date as TNT_Date
+
+
+
+FROM /shared/Core/Finance/Fiscal_Transfer_Pricing_Datamart/vc_SAS70OLMSecurityAccessUserChange</attribute>
+  <attribute name="creationDate" type="LONG">1562165715871</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">170135</attribute>
+  <attribute name="creatorUserName" type="STRING">q445qzb</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568376145199</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">170135</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1562165715871</attribute>
+</metadata>

@@ -1,0 +1,341 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_Status_Quality" path="/shared/Publish/OPS_SSD/vp_Status_Quality" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Quality_Code" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Quality_Label" nullable="true">
+      <datatype type="STRING" minLength="60" maxLength="60"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Quality_Order" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Status_Code" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+    <column name="Unique_StatusQuality_Id" nullable="true">
+      <datatype type="STRING" minLength="5" maxLength="5"/>
+      <security>
+        <owner user="nobody" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="nobody" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/Cache/CACHE_DB" type="DATA_SOURCE">
+    <datatype name="Tree" type="TREE" refId="1"></datatype>
+  </dependency>
+  <dependency target="/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Quality" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="cachekey" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Quality_Code">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Quality_Label">
+        <datatype type="STRING" minLength="60" maxLength="60"/>
+      </element>
+      <element name="Quality_Order">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Status_Code">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Unique_StatusQuality_Id">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/OPSQUALITY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/STATUSQUALITY_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COM_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="QLT_ID" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CST_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="SQV_FROM_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SQV_TO_DT">
+        <datatype type="DATE"/>
+      </element>
+      <element name="SQV_VALUE_CD">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT
+		CAST(Quality_Code AS CHAR(2)) as Quality_Code
+		,CAST(Quality_Label AS CHAR(60)) as Quality_Label
+		,CAST(Quality_Order AS CHAR(2)) as Quality_Order
+		,CAST(Status_Code AS CHAR(3)) as Status_Code
+		,CAST(Unique_StatusQuality_Id AS CHAR(5)) as Unique_StatusQuality_Id
+ FROM                                                                       
+  (SELECT 	QLT_ID			   		AS Quality_Code
+      , TAV_DS                AS Quality_Label
+      , CASE
+          WHEN QLT_ID = &apos;51&apos;
+          THEN &apos;1&apos;
+          WHEN QLT_ID = &apos;33&apos;
+          THEN &apos;2&apos;
+          WHEN QLT_ID = &apos;23&apos;
+          THEN &apos;3&apos;
+          WHEN QLT_ID = &apos;56&apos;
+          THEN &apos;4&apos;
+          WHEN QLT_ID = &apos;34&apos;
+          THEN &apos;5&apos;
+          WHEN QLT_ID = &apos;22&apos;
+          THEN &apos;6&apos;
+          WHEN QLT_ID = &apos;52&apos;
+          THEN &apos;7&apos;
+          WHEN QLT_ID = &apos;57&apos;
+          THEN &apos;8&apos;
+          WHEN QLT_ID = &apos;18&apos;
+          THEN &apos;9&apos;
+          WHEN QLT_ID = &apos;65&apos;
+          THEN &apos;10&apos;
+          WHEN QLT_ID = &apos;36&apos;
+          THEN &apos;11&apos;
+          WHEN QLT_ID = &apos;06&apos;
+          THEN &apos;12&apos;
+          WHEN QLT_ID = &apos;46&apos;
+          THEN &apos;13&apos;
+          WHEN QLT_ID = &apos;43&apos;
+          THEN &apos;14&apos;
+          WHEN QLT_ID = &apos;20&apos;
+          THEN &apos;15&apos;
+          WHEN QLT_ID = &apos;21&apos;
+          THEN &apos;16&apos;
+          WHEN QLT_ID = &apos;02&apos;
+          THEN &apos;17&apos;
+          WHEN QLT_ID = &apos;24&apos;
+          THEN &apos;18&apos;
+          WHEN QLT_ID = &apos;48&apos;
+          THEN &apos;19&apos;
+          WHEN QLT_ID = &apos;05&apos;
+          THEN &apos;20&apos;
+          WHEN QLT_ID = &apos;03&apos;
+          THEN &apos;21&apos;
+          WHEN QLT_ID = &apos;19&apos;
+          THEN &apos;22&apos;
+         ELSE NULL
+        END AS Quality_Order
+		, CST_ID AS Status_Code
+		, QLT_ID || CST_ID AS Unique_StatusQuality_Id
+   From  /shared/Source/EDW/OPS/PRODOPS_P/STATUSQUALITY_V01 T2
+inner join
+         /shared/Source/EDW/OPS/PRODOPS_P/OPSQUALITY_V01 T3
+        on T2.qlt_id = T3.tav_value_id
+cross join
+        (Select min(dte_dt) as min_dt
+         from /shared/Source/EDW/OPS/PRODOPS_P/TNTCALDAYSDIFF_V01
+         Where wks_diff &lt;= 4
+         and wks_diff &lt;&gt; 0
+         and days_diff &gt;= 0) T1
+   Where SQV_VALUE_CD = &apos;Y&apos;
+   and ((sqv_to_dt is null) or (sqv_to_dt &gt;= min_dt))
+   and QLT_ID in (&apos;02&apos;, &apos;03&apos;, &apos;05&apos;, &apos;06&apos;, &apos;18&apos;, &apos;19&apos;, &apos;20&apos;, &apos;21&apos;, &apos;22&apos;, &apos;23&apos;, &apos;24&apos;, &apos;33&apos;, &apos;34&apos;, &apos;36&apos;, &apos;43&apos;, &apos;46&apos;, &apos;48&apos;, &apos;51&apos;, &apos;52&apos;, &apos;56&apos;, &apos;57&apos;, &apos;65&apos;)
+     ) QUALITY
+order by 1,2,3,4;</attribute>
+  <attribute name="cacheClearRule" type="STRING">MANUAL</attribute>
+  <attribute name="cacheConfigured" type="BOOLEAN">true</attribute>
+  <attribute name="cacheDeltaLoader" type="NULL"/>
+  <attribute name="cacheEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="cacheIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheLastTracking" type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/cache_tracking</attribute>
+  <attribute name="cachePostRefreshCallback" type="NULL"/>
+  <attribute name="cachePreRefreshCallback" type="NULL"/>
+  <attribute name="cachePullBasedIncremental" type="BOOLEAN">false</attribute>
+  <attribute name="cacheRefreshMode" type="STRING">MANUAL</attribute>
+  <attribute name="cacheSnapshotLoader" type="NULL"/>
+  <attribute name="cacheStorageSource" type="STRING">/shared/Source/Cache/CACHE_DB</attribute>
+  <attribute name="cacheStorageTargets" type="MAP">
+    <item>
+      <key type="STRING">result</key>
+      <value type="STRING">/shared/Source/Cache/CACHE_DB/TDV_CACHE/TDVDBA/vc_Quality</value>
+    </item>
+  </attribute>
+  <attribute name="cacheStorageType" type="STRING">DATA_SOURCE</attribute>
+  <attribute name="creationDate" type="LONG">1556614067269</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20171</attribute>
+  <attribute name="creatorUserName" type="STRING">j274pxd</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1565083839739</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20171</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1556614067269</attribute>
+  <trigger>
+    <security>
+      <owner user="nobody" domain="composite"/>
+      <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    </security>
+    <dependency target="/lib/resource/RefreshResourceCache" type="PROCEDURE">
+      <datatype name="Tree" type="TREE" refId="1"></datatype>
+    </dependency>
+    <dependency target="/shared/Core/Operations/OPS_SSD/OPMSStatusWW/vc_Quality" type="TABLE">
+      <datatype type="TABLE" refId="1">
+        <element name="Quality_Code">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="Quality_Label">
+          <datatype type="STRING" minLength="60" maxLength="60"/>
+        </element>
+        <element name="Quality_Order">
+          <datatype type="STRING" minLength="2" maxLength="2"/>
+        </element>
+        <element name="Status_Code">
+          <datatype type="STRING" minLength="3" maxLength="3"/>
+        </element>
+        <element name="Unique_StatusQuality_Id">
+          <datatype type="STRING" minLength="5" maxLength="5"/>
+        </element>
+      </datatype>
+    </dependency>
+    <attribute name="actionProperties" type="MAP">
+      <item>
+        <key type="STRING">PATH</key>
+        <value type="STRING">/lib/resource/RefreshResourceCache</value>
+      </item>
+      <item>
+        <key type="STRING">PARAMETERS</key>
+        <value type="STRING">&apos;/shared/Core/Operations/OPS_SSD/OPMSStatusWW/vc_Quality&apos;,&apos;TABLE&apos;</value>
+      </item>
+    </attribute>
+    <attribute name="actionType" type="STRING">PROCEDURE</attribute>
+    <attribute name="conditionSchedule" type="MAP">
+      <item>
+        <key type="STRING">mode</key>
+        <value type="STRING">CALENDAR</value>
+      </item>
+      <item>
+        <key type="STRING">period</key>
+        <value type="INTEGER">2</value>
+      </item>
+      <item>
+        <key type="STRING">lastRunTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">lastScheduledTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">count</key>
+        <value type="INTEGER">1</value>
+      </item>
+      <item>
+        <key type="STRING">startTime</key>
+        <value type="LONG">1564542823000</value>
+      </item>
+      <item>
+        <key type="STRING">interval</key>
+        <value type="INTEGER">0</value>
+      </item>
+      <item>
+        <key type="STRING">endTime</key>
+        <value type="LONG">0</value>
+      </item>
+      <item>
+        <key type="STRING">isCluster</key>
+        <value type="BOOLEAN">true</value>
+      </item>
+    </attribute>
+    <attribute name="conditionType" type="STRING">TIMER</attribute>
+    <attribute name="creationDate" type="LONG">1564654588374</attribute>
+    <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="creatorUserId" type="INTEGER">80101</attribute>
+    <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+    <attribute name="enabled" type="BOOLEAN">false</attribute>
+    <attribute name="isChildTrigger" type="BOOLEAN">true</attribute>
+    <attribute name="lastModifiedDate" type="LONG">1565078004532</attribute>
+    <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+    <attribute name="lastModifiedUserId" type="INTEGER">80101</attribute>
+    <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+    <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1564654588374</attribute>
+  </trigger>
+</metadata>

@@ -1,0 +1,227 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:09816cfc-2cfc-4d80-84c8-01e141e93e2a -->
+<metadata name="vp_SAS70CostLevelMeasuresReport" path="/shared/Publish/Fiscal_Transfer_Pricing_Datamart/vp_SAS70CostLevelMeasuresReport" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Year_Month" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Current_Year" nullable="true">
+      <datatype type="STRING" minLength="4" maxLength="4"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Current_Month" nullable="true">
+      <datatype type="STRING" minLength="2" maxLength="2"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group" nullable="true">
+      <datatype type="STRING" minLength="8" maxLength="8" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="MTHS_DIFF" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="OUP_COST_SPLIT_CD" nullable="true">
+      <datatype type="STRING" minLength="3" maxLength="3"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_Description" nullable="true">
+      <datatype type="STRING" maxLength="60" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="Cost_Group_DescriptionNET" nullable="true">
+      <datatype type="STRING" maxLength="13" trailingSpaces="false"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CHARGE" nullable="true">
+      <datatype type="FLOAT" minValue="1.1754943508222875E-38" maxValue="3.4028234663852886E38"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+    <column name="CREDIT" nullable="true">
+      <datatype type="FLOAT" minValue="1.1754943508222875E-38" maxValue="3.4028234663852886E38"/>
+      <security>
+        <owner user="x423xjm" domain="tntadtest"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="x423xjm" domain="tntadtest"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="all" domain="dynamic" privileges="READ WRITE"/>
+    <privilege user="q445qzb" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege user="x423xjm" domain="tntadtest" privileges="READ WRITE"/>
+    <privilege group="SG-Spotfire-Users-WW" domain="tntadtest" privileges="READ WRITE SELECT UPDATE INSERT DELETE GRANT"/>
+    <privilege group="apr_ww" domain="composite" privileges="READ WRITE SELECT"/>
+    <privilege group="corp.headofficedsql" domain="composite" privileges="READ WRITE SELECT"/>
+  </security>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="LNG_ID" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="TAV_VALUE_ID" nullable="false">
+        <datatype type="STRING" minLength="5" maxLength="5"/>
+      </element>
+      <element name="TAV_NON_USE_IN">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TAV_DS">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_FTP_COST_MEASURES_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="COU_ID_ACTUAL" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CEK_OWNER_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_YEAR_MTH_NR" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="OUP_YR_NR" nullable="false">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="OUP_MTH_NR" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="OUP_ALLOC_STAT_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="OUP_BUS_LINE_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="DIV_DIVISION_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="PRD_PRODUCT_CD" nullable="false">
+        <datatype type="STRING" minLength="8" maxLength="8"/>
+      </element>
+      <element name="OUP_COST_SPLIT_CD" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="CTM_SRKY_ID">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="CTM_ID" nullable="false">
+        <datatype type="STRING" minLength="6" maxLength="6"/>
+      </element>
+      <element name="CTM_COST_GROUP_CD" nullable="false">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="CTM_FAP_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CTM_UO_IN" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="CEK_AM">
+        <datatype type="DECIMAL" maxDigits="18" maxFractionalDigits="6"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="DTE_DT" nullable="false">
+        <datatype type="DATE"/>
+      </element>
+      <element name="TNT_WK">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_MTH">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="TNT_QTR">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="TNT_YR">
+        <datatype type="STRING" minLength="4" maxLength="4"/>
+      </element>
+      <element name="DAYS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="WKS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="MTHS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="QTRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="YRS_DIFF">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">select	CM_FTP_COST_MEASURES_V01.OUP_YEAR_MTH_NR Year_Month , CM_FTP_COST_MEASURES_V01.OUP_YR_NR Current_Year ,
+		CM_FTP_COST_MEASURES_V01.OUP_MTH_NR Current_Month , &apos;LINEHAUL&apos; Cost_Group , T3.MTHS_DIFF, 
+CM_FTP_COST_MEASURES_V01.OUP_COST_SPLIT_CD,
+		(
+case	 
+	when	CM_FTP_COST_MEASURES_V01.CTM_COST_GROUP_CD = &apos;VA&apos; then &apos;HEADLINE ADJUSTMENT&apos; 
+else	T2.TAV_DS 
+end	) Cost_Group_Description ,
+(
+case	 
+	when	CM_FTP_COST_MEASURES_V01.OUP_COST_SPLIT_CD = &apos;NET&apos; then &apos;NETWORK SHARE&apos; 
+	when	CM_FTP_COST_MEASURES_V01.OUP_COST_SPLIT_CD = &apos;REV&apos; then &apos;REVENUE SHARE&apos; 
+else	&apos;&apos; 
+end	) Cost_Group_DescriptionNET , 
+cast(CM_FTP_COST_MEASURES_V01.CEK_AM as float) CHARGE ,
+ cast(CM_FTP_COST_MEASURES_V01.CEK_AM as float) CREDIT 
+ from 
+(/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_FTP_COST_MEASURES_V01 CM_FTP_COST_MEASURES_V01 
+
+LEFT OUTER JOIN 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/CM_COSTGROUP_V01 T2 
+	on	CM_FTP_COST_MEASURES_V01.CTM_COST_GROUP_CD = T2.TAV_VALUE_ID 
+	and	&apos;EN&apos; = T2.LNG_ID 
+	and	&apos;N&apos; = T2.TAV_NON_USE_IN    )
+
+LEFT OUTER JOIN (
+select	T1.TNT_YR TNT_YR , T1.TNT_MTH TNT_MTH , min(T1.MTHS_DIFF) MTHS_DIFF 
+ from 
+/shared/Source/EDW/CostModelling/PRODCOSTMDLG_P/TNTCALDAYSDIFF_V01 T1
+ group by T1.TNT_YR, T1.TNT_MTH) T3 
+	on	CM_FTP_COST_MEASURES_V01.OUP_YR_NR = T3.TNT_YR 
+	and	CM_FTP_COST_MEASURES_V01.OUP_MTH_NR = T3.TNT_MTH 
+	--and	CM_FTP_COST_MEASURES_V01.OUP_COST_SPLIT_CD in (&apos;OIC&apos;,&apos;OLM&apos;&apos;REV&apos;,&apos;NET&apos;,&apos;FAP&apos;)	  
+	and	CM_FTP_COST_MEASURES_V01.COU_ID_ACTUAL &lt;&gt; CM_FTP_COST_MEASURES_V01.CEK_OWNER_CD
+ </attribute>
+  <attribute name="creationDate" type="LONG">1568796395574</attribute>
+  <attribute name="creatorUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="creatorUserId" type="INTEGER">90101</attribute>
+  <attribute name="creatorUserName" type="STRING">x423xjm</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1568796586244</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">tntadtest</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">90101</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">x423xjm</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1568796395574</attribute>
+</metadata>

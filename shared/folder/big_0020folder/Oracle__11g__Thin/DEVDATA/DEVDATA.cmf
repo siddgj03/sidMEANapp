@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DEVDATA" path="/shared/folder/big folder/Oracle_11g_Thin/DEVDATA" type="CONTAINER" subtype="SCHEMA" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1533695925346</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1533695925346</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1533695925346</attribute>
+  <attribute name="userDeletedSet" type="SET">
+    <item type="NAME_TYPE_PAIR">
+      <name>ALL_DATATYPES_10M_1_eae2c7aa</name>
+      <type>2</type>
+    </item>
+  </attribute>
+</metadata>

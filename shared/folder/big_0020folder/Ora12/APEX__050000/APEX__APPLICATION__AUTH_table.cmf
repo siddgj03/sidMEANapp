@@ -1,0 +1,302 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="APEX_APPLICATION_AUTH" path="/shared/folder/big folder/Ora12/APEX_050000/APEX_APPLICATION_AUTH" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="WORKSPACE" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="WORKSPACE_DISPLAY_NAME" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="APPLICATION_ID" nullable="false">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="APPLICATION_NAME" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="IS_CURRENT_AUTHENTICATION" nullable="true">
+      <datatype name="CHAR" extendedName="CHAR(1)" subType="DATASOURCE_TYPE" type="STRING" minLength="1" maxLength="1"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="IS_SUBSCRIBED" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(3)" subType="DATASOURCE_TYPE" type="STRING" maxLength="3"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SCHEME_TYPE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SCHEME_TYPE_CODE" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="AUTHENTICATION_SCHEME_NAME" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="INVALID_SESSION_TYPE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(13)" subType="DATASOURCE_TYPE" type="STRING" maxLength="13"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="INVALID_SESSION_URL" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PLSQL_CODE" nullable="true">
+      <datatype name="CLOB" extendedName="CLOB" subType="DATASOURCE_TYPE" type="CLOB" maxLength="4294967295"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="VERIFICATION_FUNCTION" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PRE_AUTHENTICATION_PROCESS" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="POST_AUTHENTICATION_PROCESS" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COOKIE_NAME" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COOKIE_PATH" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COOKIE_DOMAIN" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COOKIE_SECURE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(3)" subType="DATASOURCE_TYPE" type="STRING" maxLength="3"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LOGOUT_URL" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_01" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_02" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_03" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_04" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_05" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_06" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_07" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_08" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_09" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_10" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_11" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_12" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_13" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_14" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ATTRIBUTE_15" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="RAS_MODE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(14)" subType="DATASOURCE_TYPE" type="STRING" maxLength="14"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="RAS_DYNAMIC_ROLES" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="RAS_NAMESPACES" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="HELP_TEXT" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COMMENTS" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="AUTHENTICATION_SCHEME_ID" nullable="false">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="REFERENCED_SCHEMA_ID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LAST_UPDATED_BY" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LAST_UPDATED_ON" nullable="true">
+      <datatype name="DATE" extendedName="DATE" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CREATED_BY" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CREATED_ON" nullable="true">
+      <datatype name="DATE" extendedName="DATE" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COMPONENT_SIGNATURE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876798500</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876798500</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876798500</attribute>
+</metadata>

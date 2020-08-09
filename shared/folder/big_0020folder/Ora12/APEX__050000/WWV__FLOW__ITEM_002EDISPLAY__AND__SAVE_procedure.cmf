@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="WWV_FLOW_ITEM.DISPLAY_AND_SAVE" path="/shared/folder/big folder/Ora12/APEX_050000/WWV_FLOW_ITEM.DISPLAY_AND_SAVE" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[DISPLAY_AND_SAVE is a procedure in an Oracle package &apos;WWV_FLOW_ITEM&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="RETURN" direction="RETURN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_IDX" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_VALUE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ITEM_ID" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ITEM_LABEL" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_LABEL_TEMPLATE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_BEFORE_ITEM" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_AFTER_ITEM" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876795695</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876795695</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">WWV_FLOW_ITEM</attribute>
+  <attribute name="procedureName" type="STRING">DISPLAY_AND_SAVE</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876795695</attribute>
+</metadata>

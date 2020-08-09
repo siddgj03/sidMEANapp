@@ -1,0 +1,68 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DBMS_XMLSCHEMA.COPYEVOLVE" path="/shared/folder/big folder/Ora12/XDB/DBMS_XMLSCHEMA.COPYEVOLVE" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[COPYEVOLVE is a procedure in an Oracle package &apos;DBMS_XMLSCHEMA&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="SCHEMAURLS" direction="IN" nullable="unknown">
+      <datatype name="XDB$STRING_LIST_T" extendedName="XDB$STRING_LIST_T" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="NEWSCHEMAS" direction="IN" nullable="unknown">
+      <datatype name="XMLSEQUENCETYPE" extendedName="XMLSEQUENCETYPE" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="OPAQUE/XMLTYPE" extendedName="OPAQUE/XMLTYPE" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="TRANSFORMS" direction="IN" nullable="unknown">
+      <datatype name="XMLSEQUENCETYPE" extendedName="XMLSEQUENCETYPE" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="OPAQUE/XMLTYPE" extendedName="OPAQUE/XMLTYPE" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="PRESERVEOLDDOCS" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="MAPTABNAME" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="GENERATETABLES" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="FORCE" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="SCHEMAOWNERS" direction="IN" nullable="unknown">
+      <datatype name="XDB$STRING_LIST_T" extendedName="XDB$STRING_LIST_T" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="PARALLELDEGREE" direction="IN" nullable="unknown">
+      <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="OPTIONS" direction="IN" nullable="unknown">
+      <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876800935</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876800935</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">DBMS_XMLSCHEMA</attribute>
+  <attribute name="procedureName" type="STRING">COPYEVOLVE</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876800935</attribute>
+</metadata>

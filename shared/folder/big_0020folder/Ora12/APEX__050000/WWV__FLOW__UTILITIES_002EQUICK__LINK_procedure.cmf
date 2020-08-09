@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="WWV_FLOW_UTILITIES.QUICK_LINK" path="/shared/folder/big folder/Ora12/APEX_050000/WWV_FLOW_UTILITIES.QUICK_LINK" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[QUICK_LINK is a procedure in an Oracle package &apos;WWV_FLOW_UTILITIES&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="RETURN" direction="RETURN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_FORMINPUT" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_FORM_VALUE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_DISPLAY" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_SYSTEM_MESSAGE" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="P_FORMINPUT2" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_FORM_VALUE2" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_DISABLE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_POPUP_MESSAGE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876794616</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876794616</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">WWV_FLOW_UTILITIES</attribute>
+  <attribute name="procedureName" type="STRING">QUICK_LINK</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876794616</attribute>
+</metadata>

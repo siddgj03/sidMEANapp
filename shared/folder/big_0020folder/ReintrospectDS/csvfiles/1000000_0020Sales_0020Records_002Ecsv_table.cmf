@@ -1,0 +1,100 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="1000000 Sales Records.csv" path="/shared/folder/big folder/ReintrospectDS/csvfiles/1000000 Sales Records.csv" type="TABLE" subtype="DELIMITED_FILE" changeToken="0" tableType="NONE">
+  <columns>
+    <column name="col0" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col1" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col2" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col3" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col4" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col5" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col6" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col7" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="col8" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="32768"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="charset" type="STRING">iso-8859-1</attribute>
+  <attribute name="creationDate" type="LONG">1596558867245</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="delimiter" type="STRING">,</attribute>
+  <attribute name="eol" type="STRING">
+</attribute>
+  <attribute name="hasHeaders" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596560001010</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="path" type="STRING">\1000000 Sales Records.csv</attribute>
+  <attribute name="qualifier" type="STRING">&quot;</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1596558867245</attribute>
+  <attribute name="startRow" type="INTEGER">1</attribute>
+</metadata>

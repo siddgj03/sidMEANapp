@@ -1,0 +1,55 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="HTMLDB_ITEM.SELECT_LIST" path="/shared/folder/big folder/Ora12/APEX_050000/HTMLDB_ITEM.SELECT_LIST" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[SELECT_LIST is a procedure in an Oracle package &apos;HTMLDB_ITEM&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="RETURN" direction="RETURN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_IDX" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_VALUE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_LIST_VALUES" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ATTRIBUTES" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_SHOW_NULL" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_NULL_VALUE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_NULL_TEXT" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ITEM_ID" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ITEM_LABEL" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_SHOW_EXTRA" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876793495</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876793495</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">HTMLDB_ITEM</attribute>
+  <attribute name="procedureName" type="STRING">SELECT_LIST</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876793495</attribute>
+</metadata>

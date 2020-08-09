@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DBMS_SODA_ADMIN.CREATE_COLLECTION" path="/shared/folder/big folder/Ora12/XDB/DBMS_SODA_ADMIN.CREATE_COLLECTION" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[CREATE_COLLECTION is a procedure in an Oracle package &apos;DBMS_SODA_ADMIN&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="P_URI_NAME" direction="IN" nullable="unknown">
+      <datatype name="NVARCHAR2" extendedName="NVARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_CREATE_MODE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_DESCRIPTOR" direction="INOUT" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_CREATE_TIME" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_VERBOSE" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876798763</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876798763</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">DBMS_SODA_ADMIN</attribute>
+  <attribute name="procedureName" type="STRING">CREATE_COLLECTION</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876798763</attribute>
+</metadata>

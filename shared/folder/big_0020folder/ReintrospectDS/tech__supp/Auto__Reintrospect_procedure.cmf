@@ -1,0 +1,88 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="Auto_Reintrospect" path="/shared/folder/big folder/ReintrospectDS/tech_supp/Auto_Reintrospect" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
+  <parameters></parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/lib/debug/Print" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="258">
+      <element name="textToPrint" direction="IN">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="Text" type="STRING" maxLength="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/lib/resource/GetDataSourceReintrospectReport" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="258">
+      <element name="reintrospectId" direction="IN">
+        <datatype referenceDefinitionSet="/lib/resource/ResourceDefs" referenceType="ReintrospectId" type="STRING" maxLength="255"/>
+      </element>
+      <element name="isBlocking" direction="IN">
+        <datatype type="BOOLEAN"/>
+      </element>
+      <element name="status" direction="OUT">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="OperationStatus" type="STRING" maxLength="255"/>
+      </element>
+      <element name="report" direction="OUT">
+        <datatype referenceDefinitionSet="/lib/resource/ResourceDefs" referenceType="ReintrospectReport" type="STRING" maxLength="32767"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/lib/resource/ReintrospectDataSource" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="258">
+      <element name="path" direction="IN">
+        <datatype referenceDefinitionSet="/lib/resource/ResourceDefs" referenceType="ResourcePath" type="STRING" maxLength="4096"/>
+      </element>
+      <element name="reintrospectId" direction="OUT">
+        <datatype referenceDefinitionSet="/lib/resource/ResourceDefs" referenceType="ReintrospectId" type="STRING" maxLength="255"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/lib/resource/ResourceDefs" type="DEFINITION_SET">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <dependency target="/lib/util/System" type="DEFINITION_SET">
+    <datatype name="Tree" type="TREE" refId="257"></datatype>
+  </dependency>
+  <attribute name="Script" type="STRING">PROCEDURE Auto_Reintrospect()
+BEGIN
+  DECLARE ReintrospectId /lib/resource/ResourceDefs.ReintrospectId;&#x9;&#x9;   
+  DECLARE status /lib/util/System.OperationStatus;
+  DECLARE report /lib/resource/ResourceDefs.ReintrospectReport;&#x9;&#x9;  
+  
+  CALL /lib/resource/ReintrospectDataSource(&apos;/shared/ReintrospectDS/csvfiles&apos;, ReintrospectId); 
+  CALl PRINT(&apos;The reintrospect id is : &apos; || ReintrospectId);
+  CALL /lib/resource/GetDataSourceReintrospectReport(ReintrospectId, TRUE, status, report);&#x9;   
+  CALL PRINT(&apos;REPORT:&apos; || report);
+END</attribute>
+  <attribute name="creationDate" type="LONG">1553873090187</attribute>
+  <attribute name="creatorUserDomain" type="STRING">na</attribute>
+  <attribute name="creatorUserId" type="INTEGER">250108</attribute>
+  <attribute name="creatorUserName" type="STRING">asp5665</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596559974963</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">250108</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="native_only" type="STRING">false</attribute>
+  <attribute name="references" type="MAP">
+    <item>
+      <key type="STRING">8/8</key>
+      <value type="STRING_ARRAY">
+        <item>lib</item>
+        <item>debug</item>
+        <item>Print</item>
+      </value>
+    </item>
+    <item>
+      <key type="STRING">8/10</key>
+      <value type="STRING_ARRAY">
+        <item>lib</item>
+        <item>debug</item>
+        <item>Print</item>
+      </value>
+    </item>
+  </attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1553873090187</attribute>
+</metadata>

@@ -1,0 +1,164 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="APEX_APPLICATION_PAGE_TREES" path="/shared/folder/big folder/Ora12/APEX_050000/APEX_APPLICATION_PAGE_TREES" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="WORKSPACE" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="WORKSPACE_DISPLAY_NAME" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="APPLICATION_ID" nullable="false">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="APPLICATION_NAME" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PAGE_ID" nullable="false">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PAGE_NAME" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="REGION_ID" nullable="false">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="REGION_NAME" nullable="false">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_ID" nullable="true">
+      <datatype name="DOUBLE" extendedName="NUMBER" subType="DATASOURCE_TYPE" type="FLOAT"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_QUERY" nullable="true">
+      <datatype name="CLOB" extendedName="CLOB" subType="DATASOURCE_TYPE" type="CLOB" maxLength="4294967295"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_SOURCE" nullable="true">
+      <datatype name="CLOB" extendedName="CLOB" subType="DATASOURCE_TYPE" type="CLOB" maxLength="4294967295"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_TEMPLATE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_CLICK_ACTION" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_START_VALUE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(10)" subType="DATASOURCE_TYPE" type="STRING" maxLength="10"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_START_ITEM" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(10)" subType="DATASOURCE_TYPE" type="STRING" maxLength="10"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_SELECTED_NODE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SHOW_HINTS" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_HINT_TEXT" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_HAS_FOCUS" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(10)" subType="DATASOURCE_TYPE" type="STRING" maxLength="10"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TREE_BUTTON_OPTION" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(10)" subType="DATASOURCE_TYPE" type="STRING" maxLength="10"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LAST_UPDATED_BY" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LAST_UPDATED_ON" nullable="true">
+      <datatype name="DATE" extendedName="DATE" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COMPONENT_COMMENT" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="COMPONENT_SIGNATURE" nullable="true">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2(4000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876798550</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876798550</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876798550</attribute>
+</metadata>

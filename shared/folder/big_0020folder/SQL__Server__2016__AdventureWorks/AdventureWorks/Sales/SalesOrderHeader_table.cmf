@@ -1,0 +1,517 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="SalesOrderHeader" path="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesOrderHeader" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="SalesOrderID" nullable="false">
+      <datatype name="int identity" extendedName="int identity" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="RevisionNumber" nullable="false">
+      <datatype name="tinyint" extendedName="tinyint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="0" maxValue="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OrderDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="DueDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipDate" nullable="true">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Status" nullable="false">
+      <datatype name="tinyint" extendedName="tinyint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="0" maxValue="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OnlineOrderFlag" nullable="false">
+      <datatype name="Flag" extendedName="Flag" subType="DATASOURCE_TYPE" type="INTEGER" minValue="0" maxValue="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SalesOrderNumber" nullable="false">
+      <datatype name="nvarchar" extendedName="nvarchar(25)" subType="DATASOURCE_TYPE" type="STRING" maxLength="25"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PurchaseOrderNumber" nullable="true">
+      <datatype name="OrderNumber" extendedName="OrderNumber(25)" subType="DATASOURCE_TYPE" type="STRING" maxLength="25"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="AccountNumber" nullable="true">
+      <datatype name="AccountNumber" extendedName="AccountNumber(15)" subType="DATASOURCE_TYPE" type="STRING" maxLength="15"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CustomerID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ContactID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SalesPersonID" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TerritoryID" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="BillToAddressID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipToAddressID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ShipMethodID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CreditCardID" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CreditCardApprovalCode" nullable="true">
+      <datatype name="varchar" extendedName="varchar(15)" subType="DATASOURCE_TYPE" type="STRING" maxLength="15"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CurrencyRateID" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SubTotal" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TaxAmt" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Freight" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="TotalDue" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Comment" nullable="true">
+      <datatype name="nvarchar" extendedName="nvarchar(128)" subType="DATASOURCE_TYPE" type="STRING" maxLength="128"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="rowguid" nullable="false">
+      <datatype name="uniqueidentifier" extendedName="uniqueidentifier" subType="DATASOURCE_TYPE" type="STRING" minLength="36" maxLength="36"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ModifiedDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="PK_SalesOrderHeader_SalesOrderID" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="SalesOrderID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="AK_SalesOrderHeader_rowguid" type="OTHER" unique="true">
+      <indexColumn name="rowguid" sortOrder="ASCENDING"/>
+    </index>
+    <index name="AK_SalesOrderHeader_SalesOrderNumber" type="OTHER" unique="true">
+      <indexColumn name="SalesOrderNumber" sortOrder="ASCENDING"/>
+    </index>
+    <index name="IX_SalesOrderHeader_CustomerID" type="OTHER" unique="false">
+      <indexColumn name="CustomerID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="IX_SalesOrderHeader_SalesPersonID" type="OTHER" unique="false">
+      <indexColumn name="SalesPersonID" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys>
+    <foreignKey name="FK_SalesOrderHeader_Address_BillToAddressID" primaryKeyName="PK_Address_AddressID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Person/Address">
+      <foreignKeyColumn primaryColumnName="AddressID" foreignColumnName="BillToAddressID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_ShipMethod_ShipMethodID" primaryKeyName="PK_ShipMethod_ShipMethodID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Purchasing/ShipMethod">
+      <foreignKeyColumn primaryColumnName="ShipMethodID" foreignColumnName="ShipMethodID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_CreditCard_CreditCardID" primaryKeyName="PK_CreditCard_CreditCardID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/CreditCard">
+      <foreignKeyColumn primaryColumnName="CreditCardID" foreignColumnName="CreditCardID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_Address_ShipToAddressID" primaryKeyName="PK_Address_AddressID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Person/Address">
+      <foreignKeyColumn primaryColumnName="AddressID" foreignColumnName="ShipToAddressID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_Contact_ContactID" primaryKeyName="PK_Contact_ContactID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Person/Contact">
+      <foreignKeyColumn primaryColumnName="ContactID" foreignColumnName="ContactID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_Customer_CustomerID" primaryKeyName="PK_Customer_CustomerID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/Customer">
+      <foreignKeyColumn primaryColumnName="CustomerID" foreignColumnName="CustomerID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_CurrencyRate_CurrencyRateID" primaryKeyName="PK_CurrencyRate_CurrencyRateID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/CurrencyRate">
+      <foreignKeyColumn primaryColumnName="CurrencyRateID" foreignColumnName="CurrencyRateID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_SalesPerson_SalesPersonID" primaryKeyName="PK_SalesPerson_SalesPersonID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesPerson">
+      <foreignKeyColumn primaryColumnName="SalesPersonID" foreignColumnName="SalesPersonID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderHeader_SalesTerritory_TerritoryID" primaryKeyName="PK_SalesTerritory_TerritoryID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesTerritory">
+      <foreignKeyColumn primaryColumnName="TerritoryID" foreignColumnName="TerritoryID"/>
+    </foreignKey>
+  </foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Person/Address" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="AddressID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="AddressLine1" nullable="false">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="AddressLine2">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="City" nullable="false">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="StateProvinceID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="PostalCode" nullable="false">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Person/Contact" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="ContactID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="NameStyle" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Title">
+        <datatype type="STRING" maxLength="8"/>
+      </element>
+      <element name="FirstName" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="MiddleName">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="LastName" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="Suffix">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="EmailAddress">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="EmailPromotion" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Phone">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="PasswordHash" nullable="false">
+        <datatype type="STRING" maxLength="40"/>
+      </element>
+      <element name="PasswordSalt" nullable="false">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="AdditionalContactInfo">
+        <datatype name="xml" extendedName="xml" referenceType="xml" subType="DATASOURCE_TYPE" type="XML" contentConstraint="SEQUENCE" schemaConstraint="UNTYPED" componentType="TYPE" componentName="xml">
+          <schemaDatatype>
+            <datatype name="XML" type="TREE" refId="257"></datatype>
+          </schemaDatatype>
+        </datatype>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Purchasing/ShipMethod" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="ShipMethodID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Name" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="ShipBase" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="ShipRate" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/CreditCard" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="CreditCardID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CardType" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CardNumber" nullable="false">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="ExpMonth" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="255"/>
+      </element>
+      <element name="ExpYear" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/CurrencyRate" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="CurrencyRateID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CurrencyRateDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="FromCurrencyCode" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="ToCurrencyCode" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="AverageRate" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="EndOfDayRate" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/Customer" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="CustomerID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="TerritoryID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="AccountNumber" nullable="false">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="CustomerType" nullable="false">
+        <datatype type="STRING" minLength="1" maxLength="1"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesPerson" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="SalesPersonID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="TerritoryID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SalesQuota">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="Bonus" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="CommissionPct" nullable="false">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="4" minValue="-214748.3648" maxValue="214748.3647"/>
+      </element>
+      <element name="SalesYTD" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="SalesLastYear" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesTerritory" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="TerritoryID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Name" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CountryRegionCode" nullable="false">
+        <datatype type="STRING" maxLength="3"/>
+      </element>
+      <element name="Group" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="SalesYTD" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="SalesLastYear" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="CostYTD" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="CostLastYear" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1583935456265</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1583935456265</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1583935456265</attribute>
+</metadata>

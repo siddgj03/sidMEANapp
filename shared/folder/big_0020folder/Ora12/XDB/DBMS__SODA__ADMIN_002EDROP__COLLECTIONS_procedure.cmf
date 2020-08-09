@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DBMS_SODA_ADMIN.DROP_COLLECTIONS" path="/shared/folder/big folder/Ora12/XDB/DBMS_SODA_ADMIN.DROP_COLLECTIONS" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[DROP_COLLECTIONS is a procedure in an Oracle package &apos;DBMS_SODA_ADMIN&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="P_COLLECTIONS" direction="OUT" nullable="unknown">
+      <datatype name="DBMS_SODA_ADMIN" extendedName="DBMS_SODA_ADMIN" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="NVARCHAR2" extendedName="NVARCHAR2(65534)" subType="DATASOURCE_TYPE" type="STRING" maxLength="65534"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="P_ERRORS" direction="OUT" nullable="unknown">
+      <datatype name="DBMS_SODA_ADMIN" extendedName="DBMS_SODA_ADMIN" subType="DATASOURCE_TYPE" type="ARRAY" maxLength="0">
+        <itemDatatype>
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(32767)" subType="DATASOURCE_TYPE" type="STRING" maxLength="32767"/>
+        </itemDatatype>
+      </datatype>
+    </parameter>
+    <parameter name="P_FORCE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876798764</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876798764</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">DBMS_SODA_ADMIN</attribute>
+  <attribute name="procedureName" type="STRING">DROP_COLLECTIONS</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876798764</attribute>
+</metadata>

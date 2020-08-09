@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="WWV_FLOW_ITEM_HELP.SHOW_PLUGIN_ATTRIBUTE_HELP" path="/shared/folder/big folder/Ora12/APEX_050000/WWV_FLOW_ITEM_HELP.SHOW_PLUGIN_ATTRIBUTE_HELP" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[SHOW_PLUGIN_ATTRIBUTE_HELP is a procedure in an Oracle package &apos;WWV_FLOW_ITEM_HELP&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="P_APPLICATION_ID" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_BUILDER_PAGE_ID" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_SESSION_ID" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_PLUGIN_TYPE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_PLUGIN_NAME" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ATTRIBUTE_SCOPE" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_ATTRIBUTE_SEQUENCE" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_OUTPUT_FORMAT" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876795706</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876795706</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">WWV_FLOW_ITEM_HELP</attribute>
+  <attribute name="procedureName" type="STRING">SHOW_PLUGIN_ATTRIBUTE_HELP</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876795706</attribute>
+</metadata>

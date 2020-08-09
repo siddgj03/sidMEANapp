@@ -1,0 +1,72 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="Ora12" path="/shared/folder/big folder/Ora12" type="DATA_SOURCE" subtype="RELATIONAL" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="LowerBoundForDataShip" type="LONG">50000</attribute>
+  <attribute name="UpperBoundForDataShip" type="LONG">5000000</attribute>
+  <attribute name="authentication" type="STRING">BASIC</attribute>
+  <attribute name="collationSensitive" type="BOOLEAN">false</attribute>
+  <attribute name="commitOnFetchDone" type="BOOLEAN">false</attribute>
+  <attribute name="connPoolMaxSize" type="INTEGER">100</attribute>
+  <attribute name="connPoolMinSize" type="INTEGER">0</attribute>
+  <attribute name="connPoolTimeout" type="INTEGER">30</attribute>
+  <attribute name="connProperties" type="MAP">
+    <item>
+      <key type="STRING">AccumulateBatchResult</key>
+      <value type="STRING">true</value>
+    </item>
+    <item>
+      <key type="STRING">SetBigStringTryClob</key>
+      <value type="STRING">true</value>
+    </item>
+    <item>
+      <key type="STRING">disableDefineColumnType</key>
+      <value type="STRING">true</value>
+    </item>
+    <item>
+      <key type="STRING">processEscapes</key>
+      <value type="STRING">true</value>
+    </item>
+  </attribute>
+  <attribute name="connStaleTimeout" type="INTEGER">60</attribute>
+  <attribute name="creationDate" type="LONG">1539876759349</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="dataShipTempTablePrefix" type="STRING">T</attribute>
+  <attribute name="driverName" type="STRING">Oracle 12c (Thin Driver)</attribute>
+  <attribute name="enablePassThroughPreparedStatements" type="BOOLEAN">false</attribute>
+  <attribute name="execTimeout" type="INTEGER">0</attribute>
+  <attribute name="includeInvalidObjects" type="BOOLEAN">false</attribute>
+  <attribute name="introspectCommentsEnabled" type="BOOLEAN">false</attribute>
+  <attribute name="introspectProceduresEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="introspectUsingDBA_Views" type="BOOLEAN">false</attribute>
+  <attribute name="isPassThrough" type="STRING">Disabled</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876759349</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="login" type="STRING">VIYER</attribute>
+  <attribute name="maxNumberForOrSyntax" type="INTEGER">2147483647</attribute>
+  <attribute name="maxSourceSideCardinalityForSJ" type="STRING"/>
+  <attribute name="maximumContainerDepth" type="INTEGER">1</attribute>
+  <attribute name="minTargetToSourceRatioForSJ" type="STRING"/>
+  <attribute name="name" type="STRING">Ora12</attribute>
+  <attribute name="nativeDataLoadingEnabled" type="BOOLEAN">true</attribute>
+  <attribute name="password" type="PASSWORD_STRING">ENC(Fm1UDkgc1u8q65RaGlSitw==$xBfjuHV2Ab7i5/rc5u1jyQ==)</attribute>
+  <attribute name="persistPassword" type="BOOLEAN">true</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876759349</attribute>
+  <attribute name="supportsDBLink" type="BOOLEAN">false</attribute>
+  <attribute name="supportsDataship" type="BOOLEAN">false</attribute>
+  <attribute name="supportsDatashipAsTarget" type="BOOLEAN">false</attribute>
+  <attribute name="supportsStarSchema" type="BOOLEAN">false</attribute>
+  <attribute name="txnIsolationLevel" type="STRING">Read Committed</attribute>
+  <attribute name="type" type="STRING">Oracle</attribute>
+  <attribute name="urlDatabaseName" type="STRING">ora12c3</attribute>
+  <attribute name="urlIP" type="STRING">dv-ora12-3.dv.local</attribute>
+  <attribute name="urlPatternStr" type="STRING">jdbc:oracle:thin:@&lt;HOST&gt;:&lt;PORT&gt;:&lt;DATABASE_NAME&gt;</attribute>
+  <attribute name="urlPort" type="INTEGER">1521</attribute>
+  <attribute name="useLoginCertEncryption" type="BOOLEAN">false</attribute>
+</metadata>

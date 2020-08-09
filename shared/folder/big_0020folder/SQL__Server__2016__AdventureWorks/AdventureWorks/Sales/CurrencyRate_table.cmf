@@ -1,0 +1,105 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="CurrencyRate" path="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/CurrencyRate" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="CurrencyRateID" nullable="false">
+      <datatype name="int identity" extendedName="int identity" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CurrencyRateDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="FromCurrencyCode" nullable="false">
+      <datatype name="nchar" extendedName="nchar(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ToCurrencyCode" nullable="false">
+      <datatype name="nchar" extendedName="nchar(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="AverageRate" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EndOfDayRate" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ModifiedDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="PK_CurrencyRate_CurrencyRateID" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="CurrencyRateID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="AK_CurrencyRate_CurrencyRateDate_FromCurrencyCode_ToCurrencyCode" type="OTHER" unique="true">
+      <indexColumn name="CurrencyRateDate" sortOrder="ASCENDING"/>
+      <indexColumn name="FromCurrencyCode" sortOrder="ASCENDING"/>
+      <indexColumn name="ToCurrencyCode" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys>
+    <foreignKey name="FK_CurrencyRate_Currency_FromCurrencyCode" primaryKeyName="PK_Currency_CurrencyCode" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/Currency">
+      <foreignKeyColumn primaryColumnName="CurrencyCode" foreignColumnName="FromCurrencyCode"/>
+    </foreignKey>
+    <foreignKey name="FK_CurrencyRate_Currency_ToCurrencyCode" primaryKeyName="PK_Currency_CurrencyCode" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/Currency">
+      <foreignKeyColumn primaryColumnName="CurrencyCode" foreignColumnName="ToCurrencyCode"/>
+    </foreignKey>
+  </foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/Currency" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="CurrencyCode" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Name" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1583935451401</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1583935451401</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1583935451401</attribute>
+</metadata>

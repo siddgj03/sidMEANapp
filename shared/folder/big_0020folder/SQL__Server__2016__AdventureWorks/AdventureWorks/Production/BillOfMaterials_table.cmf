@@ -1,0 +1,206 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="BillOfMaterials" path="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/BillOfMaterials" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="BillOfMaterialsID" nullable="false">
+      <datatype name="int identity" extendedName="int identity" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ProductAssemblyID" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ComponentID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="StartDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EndDate" nullable="true">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="UnitMeasureCode" nullable="false">
+      <datatype name="nchar" extendedName="nchar(3)" subType="DATASOURCE_TYPE" type="STRING" minLength="3" maxLength="3"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="BOMLevel" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="PerAssemblyQty" nullable="false">
+      <datatype name="decimal" extendedName="decimal(8,2)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="8" maxFractionalDigits="2"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ModifiedDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate" type="CLUSTERED" unique="true">
+      <indexColumn name="ProductAssemblyID" sortOrder="ASCENDING"/>
+      <indexColumn name="ComponentID" sortOrder="ASCENDING"/>
+      <indexColumn name="StartDate" sortOrder="ASCENDING"/>
+    </index>
+    <index name="PK_BillOfMaterials_BillOfMaterialsID" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="BillOfMaterialsID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="IX_BillOfMaterials_UnitMeasureCode" type="OTHER" unique="false">
+      <indexColumn name="UnitMeasureCode" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys>
+    <foreignKey name="FK_BillOfMaterials_Product_ProductAssemblyID" primaryKeyName="PK_Product_ProductID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/Product">
+      <foreignKeyColumn primaryColumnName="ProductID" foreignColumnName="ProductAssemblyID"/>
+    </foreignKey>
+    <foreignKey name="FK_BillOfMaterials_Product_ComponentID" primaryKeyName="PK_Product_ProductID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/Product">
+      <foreignKeyColumn primaryColumnName="ProductID" foreignColumnName="ComponentID"/>
+    </foreignKey>
+    <foreignKey name="FK_BillOfMaterials_UnitMeasure_UnitMeasureCode" primaryKeyName="PK_UnitMeasure_UnitMeasureCode" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/UnitMeasure">
+      <foreignKeyColumn primaryColumnName="UnitMeasureCode" foreignColumnName="UnitMeasureCode"/>
+    </foreignKey>
+  </foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/Product" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="ProductID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Name" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="ProductNumber" nullable="false">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="MakeFlag" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="FinishedGoodsFlag" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="Color">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="SafetyStockLevel" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="ReorderPoint" nullable="false">
+        <datatype type="INTEGER" minValue="-32768" maxValue="32767"/>
+      </element>
+      <element name="StandardCost" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="ListPrice" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="Size">
+        <datatype type="STRING" maxLength="5"/>
+      </element>
+      <element name="SizeUnitMeasureCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="WeightUnitMeasureCode">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Weight">
+        <datatype type="DECIMAL" maxDigits="8" maxFractionalDigits="2"/>
+      </element>
+      <element name="DaysToManufacture" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ProductLine">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Class">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="Style">
+        <datatype type="STRING" minLength="2" maxLength="2"/>
+      </element>
+      <element name="ProductSubcategoryID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ProductModelID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SellStartDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SellEndDate">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="DiscontinuedDate">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Production/UnitMeasure" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="UnitMeasureCode" nullable="false">
+        <datatype type="STRING" minLength="3" maxLength="3"/>
+      </element>
+      <element name="Name" nullable="false">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1583935451965</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1583935451965</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1583935451965</attribute>
+</metadata>

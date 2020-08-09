@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DBMS_GSM_NOPRIV.GETCATALOGLOCK2" path="/shared/folder/big folder/Ora12/GSMADMIN_INTERNAL/DBMS_GSM_NOPRIV.GETCATALOGLOCK2" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[GETCATALOGLOCK is a procedure in an Oracle package &apos;DBMS_GSM_NOPRIV&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="CURRENTCHANGESEQ" direction="OUT" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="PRIVS" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="GDSCTL_VERSION" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="CATALOG_VERSION" direction="OUT" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="UPDATE_MODE" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876802168</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876802168</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">DBMS_GSM_NOPRIV</attribute>
+  <attribute name="procedureName" type="STRING">GETCATALOGLOCK</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876802168</attribute>
+  <attribute name="version" type="INTEGER">2</attribute>
+</metadata>

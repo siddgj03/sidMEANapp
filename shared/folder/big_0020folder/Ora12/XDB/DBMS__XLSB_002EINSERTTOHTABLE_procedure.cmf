@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="DBMS_XLSB.INSERTTOHTABLE" path="/shared/folder/big folder/Ora12/XDB/DBMS_XLSB.INSERTTOHTABLE" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[INSERTTOHTABLE is a procedure in an Oracle package &apos;DBMS_XLSB&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="CONTENT" direction="IN" nullable="unknown">
+      <datatype name="CLOB" extendedName="CLOB" subType="DATASOURCE_TYPE" type="CLOB" maxLength="4294967295"/>
+    </parameter>
+    <parameter name="ACLOID" direction="IN" nullable="unknown">
+      <datatype name="RAW" extendedName="RAW" subType="DATASOURCE_TYPE" type="BINARY" maxLength="2000"/>
+    </parameter>
+    <parameter name="OWNER" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="OWNER_FORMAT" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="OID" direction="IN" nullable="unknown">
+      <datatype name="RAW" extendedName="RAW" subType="DATASOURCE_TYPE" type="BINARY" maxLength="2000"/>
+    </parameter>
+    <parameter name="FLAGS" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="SCHEMA" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876799608</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876799608</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">DBMS_XLSB</attribute>
+  <attribute name="procedureName" type="STRING">INSERTTOHTABLE</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876799608</attribute>
+</metadata>

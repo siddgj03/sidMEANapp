@@ -1,0 +1,228 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="SalesOrderDetail" path="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesOrderDetail" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="SalesOrderID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SalesOrderDetailID" nullable="false">
+      <datatype name="int identity" extendedName="int identity" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CarrierTrackingNumber" nullable="true">
+      <datatype name="nvarchar" extendedName="nvarchar(25)" subType="DATASOURCE_TYPE" type="STRING" maxLength="25"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OrderQty" nullable="false">
+      <datatype name="smallint" extendedName="smallint" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-32768" maxValue="32767"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ProductID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="SpecialOfferID" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="UnitPrice" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="UnitPriceDiscount" nullable="false">
+      <datatype name="money" extendedName="money(19,4)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LineTotal" nullable="false">
+      <datatype name="numeric" extendedName="numeric(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" minFractionalDigits="6" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="rowguid" nullable="false">
+      <datatype name="uniqueidentifier" extendedName="uniqueidentifier" subType="DATASOURCE_TYPE" type="STRING" minLength="36" maxLength="36"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ModifiedDate" nullable="false">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="PK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="SalesOrderID" sortOrder="ASCENDING"/>
+      <indexColumn name="SalesOrderDetailID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="AK_SalesOrderDetail_rowguid" type="OTHER" unique="true">
+      <indexColumn name="rowguid" sortOrder="ASCENDING"/>
+    </index>
+    <index name="IX_SalesOrderDetail_ProductID" type="OTHER" unique="false">
+      <indexColumn name="ProductID" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys>
+    <foreignKey name="FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID" primaryKeyName="PK_SpecialOfferProduct_SpecialOfferID_ProductID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SpecialOfferProduct">
+      <foreignKeyColumn primaryColumnName="SpecialOfferID" foreignColumnName="SpecialOfferID"/>
+      <foreignKeyColumn primaryColumnName="ProductID" foreignColumnName="ProductID"/>
+    </foreignKey>
+    <foreignKey name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" primaryKeyName="PK_SalesOrderHeader_SalesOrderID" primaryKeyTableName="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesOrderHeader">
+      <foreignKeyColumn primaryColumnName="SalesOrderID" foreignColumnName="SalesOrderID"/>
+    </foreignKey>
+  </foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SalesOrderHeader" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="SalesOrderID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="RevisionNumber" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="255"/>
+      </element>
+      <element name="OrderDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="DueDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="ShipDate">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Status" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="255"/>
+      </element>
+      <element name="OnlineOrderFlag" nullable="false">
+        <datatype type="INTEGER" minValue="0" maxValue="1"/>
+      </element>
+      <element name="SalesOrderNumber" nullable="false">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="PurchaseOrderNumber">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="AccountNumber">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="CustomerID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ContactID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SalesPersonID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="TerritoryID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="BillToAddressID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ShipToAddressID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ShipMethodID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CreditCardID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="CreditCardApprovalCode">
+        <datatype type="STRING" maxLength="15"/>
+      </element>
+      <element name="CurrencyRateID">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="SubTotal" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="TaxAmt" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="Freight" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="TotalDue" nullable="false">
+        <datatype type="DECIMAL" maxDigits="19" maxFractionalDigits="4" minValue="-922337203685477.5808" maxValue="922337203685477.5807"/>
+      </element>
+      <element name="Comment">
+        <datatype type="STRING" maxLength="128"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/Sales/SpecialOfferProduct" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="SpecialOfferID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="ProductID" nullable="false">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="rowguid" nullable="false">
+        <datatype type="STRING" minLength="36" maxLength="36"/>
+      </element>
+      <element name="ModifiedDate" nullable="false">
+        <datatype type="DATETIME"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1583935455942</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1583935455942</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1583935455942</attribute>
+</metadata>

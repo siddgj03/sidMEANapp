@@ -1,0 +1,40 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="uspUpdateEmployeeLogin" path="/shared/folder/big folder/SQL_Server_2016_AdventureWorks/AdventureWorks/HumanResources/uspUpdateEmployeeLogin" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="@RETURN_VALUE" direction="RETURN" nullable="false">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+    </parameter>
+    <parameter name="@EmployeeID" direction="IN" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+    </parameter>
+    <parameter name="@ManagerID" direction="IN" nullable="true">
+      <datatype name="int" extendedName="int" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+    </parameter>
+    <parameter name="@LoginID" direction="IN" nullable="true">
+      <datatype name="nvarchar" extendedName="nvarchar(512)" subType="DATASOURCE_TYPE" type="STRING" maxLength="512"/>
+    </parameter>
+    <parameter name="@Title" direction="IN" nullable="true">
+      <datatype name="nvarchar" extendedName="nvarchar(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+    </parameter>
+    <parameter name="@HireDate" direction="IN" nullable="true">
+      <datatype name="datetime" extendedName="datetime" subType="DATASOURCE_TYPE" type="DATETIME"/>
+    </parameter>
+    <parameter name="@CurrentFlag" direction="IN" nullable="true">
+      <datatype name="Flag" extendedName="Flag" subType="DATASOURCE_TYPE" type="INTEGER" minValue="0" maxValue="1"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1583935463071</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1583935463071</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="orgName" type="STRING">uspUpdateEmployeeLogin;1</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1583935463071</attribute>
+</metadata>

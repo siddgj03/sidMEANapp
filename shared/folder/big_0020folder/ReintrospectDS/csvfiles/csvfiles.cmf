@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="csvfiles" path="/shared/folder/big folder/ReintrospectDS/csvfiles" type="DATA_SOURCE" subtype="FILE" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
+  <attribute name="charset" type="STRING">iso-8859-1</attribute>
+  <attribute name="creationDate" type="LONG">1596558713714</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="delimiter" type="STRING">,</attribute>
+  <attribute name="driverName" type="STRING">File-Delimited</attribute>
+  <attribute name="filters" type="STRING">*.csv,*.txt</attribute>
+  <attribute name="hasHeaders" type="BOOLEAN">false</attribute>
+  <attribute name="ignoreTrailingDelimiter" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596560023180</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="local" type="BOOLEAN">true</attribute>
+  <attribute name="name" type="STRING">csvfiles</attribute>
+  <attribute name="qualifier" type="STRING">&quot;</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1596558713714</attribute>
+  <attribute name="root" type="STRING">C:\Sid</attribute>
+  <attribute name="startRow" type="INTEGER">1</attribute>
+  <attribute name="type" type="STRING">File</attribute>
+  <attribute name="useFileShareCredential" type="BOOLEAN">false</attribute>
+</metadata>

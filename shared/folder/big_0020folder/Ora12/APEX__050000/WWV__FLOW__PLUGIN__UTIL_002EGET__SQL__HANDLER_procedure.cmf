@@ -1,0 +1,89 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="WWV_FLOW_PLUGIN_UTIL.GET_SQL_HANDLER" path="/shared/folder/big folder/Ora12/APEX_050000/WWV_FLOW_PLUGIN_UTIL.GET_SQL_HANDLER" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <annotation>&lt;![CDATA[GET_SQL_HANDLER is a procedure in an Oracle package &apos;WWV_FLOW_PLUGIN_UTIL&apos;.]]&gt;</annotation>
+  <parameters>
+    <parameter name="RETURN" direction="RETURN" nullable="unknown">
+      <datatype name="PL/SQL RECORD" extendedName="PL/SQL RECORD" subType="DATASOURCE_TYPE" type="TABLE" refId="256">
+        <element name="CURSOR_HANDLER" nullable="unknown">
+          <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+        </element>
+        <element name="BASE_STATEMENT" nullable="unknown">
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(32767)" subType="DATASOURCE_TYPE" type="STRING" maxLength="32767"/>
+        </element>
+        <element name="COLUMN_LIST" nullable="unknown">
+          <datatype name="PL/SQL TABLE" extendedName="PL/SQL TABLE" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_TYPE" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_MAX_LEN" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_NAME" nullable="unknown">
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(32767)" subType="DATASOURCE_TYPE" type="STRING" maxLength="32767"/>
+        </element>
+        <element name="COL_NAME_LEN" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_SCHEMA_NAME" nullable="unknown">
+          <datatype name="VARCHAR2" extendedName="VARCHAR2(32)" subType="DATASOURCE_TYPE" type="STRING" maxLength="32"/>
+        </element>
+        <element name="COL_SCHEMA_NAME_LEN" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_PRECISION" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_SCALE" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_CHARSETID" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_CHARSETFORM" nullable="unknown">
+          <datatype name="BINARY_INTEGER" extendedName="BINARY_INTEGER" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+        <element name="COL_NULL_OK" nullable="unknown">
+          <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+        </element>
+      </datatype>
+    </parameter>
+    <parameter name="P_SQL_STATEMENT" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_MIN_COLUMNS" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_MAX_COLUMNS" direction="IN" nullable="unknown">
+      <datatype name="NUMBER" extendedName="NUMBER(22,0)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="22" maxFractionalDigits="0"/>
+    </parameter>
+    <parameter name="P_DATA_TYPE_LIST" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL TABLE" extendedName="PL/SQL TABLE" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="P_COMPONENT_NAME" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR2" extendedName="VARCHAR2" subType="DATASOURCE_TYPE" type="STRING" maxLength="4000"/>
+    </parameter>
+    <parameter name="P_AUTO_BIND_ITEMS" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL BOOLEAN" extendedName="PL/SQL BOOLEAN" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+    <parameter name="P_BIND_LIST" direction="IN" nullable="unknown">
+      <datatype name="PL/SQL TABLE" extendedName="PL/SQL TABLE" subType="DATASOURCE_TYPE" type="OTHER"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1539876804190</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="isPackage" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1539876804190</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="packageName" type="STRING">WWV_FLOW_PLUGIN_UTIL</attribute>
+  <attribute name="procedureName" type="STRING">GET_SQL_HANDLER</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1539876804190</attribute>
+</metadata>

@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:17e7fe08-bcc6-4a2d-8a6e-29158cac599e -->
+<metadata name="GetRequestAliasDefinitions" path="/shared/folder/big folder/historianProd/GetRequestAliasDefinitions" type="DEFINITION_SET" subtype="XML_SCHEMA_DEFINITION_SET" changeToken="0">
+  <definitions>
+    <definition name="Wrapper" type="ELEMENT">
+      <attribute name="creationDate" type="LONG">0</attribute>
+      <attribute name="creatorUserDomain" type="STRING"/>
+      <attribute name="creatorUserId" type="INTEGER">0</attribute>
+      <attribute name="creatorUserName" type="STRING"/>
+      <attribute name="lastModifiedDate" type="LONG">0</attribute>
+      <attribute name="lastModifiedUserDomain" type="STRING"/>
+      <attribute name="lastModifiedUserId" type="INTEGER">0</attribute>
+      <attribute name="lastModifiedUserName" type="STRING"/>
+      <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">0</attribute>
+    </definition>
+  </definitions>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1573681377406</attribute>
+  <attribute name="creatorUserDomain" type="STRING">monsanto</attribute>
+  <attribute name="creatorUserId" type="INTEGER">290263</attribute>
+  <attribute name="creatorUserName" type="STRING">gkvdc</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">true</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1573681377497</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">monsanto</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">290263</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">gkvdc</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1573681377406</attribute>
+  <attribute name="sources" type="LIST">
+    <list type="OBJECT">rO0ABXNyADVjb20uY29tcG9zaXRlc3cuY29tbW9uLnJlcG9zaXRvcnkuRGVmaW5pdGlvblNldFNvdXJjZVYpv6Zr2hqJAgACTAAIbG9jYXRpb250ABJMamF2YS9sYW5nL1N0cmluZztMAApzb3VyY2VUZXh0cQB+AAF4cHQAC3NjaGVtYV9iYXNldAO9PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48eHM6c2NoZW1hIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgYXR0cmlidXRlRm9ybURlZmF1bHQ9InVucXVhbGlmaWVkIiBlbGVtZW50Rm9ybURlZmF1bHQ9InF1YWxpZmllZCI+DQogIDx4czplbGVtZW50IG5hbWU9IldyYXBwZXIiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpzZXF1ZW5jZT4NCiAgICAgICAgPHhzOmVsZW1lbnQgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiIG1pbk9jY3Vycz0iMCIgbmFtZT0iV3JhcHBlckl0ZW0iPg0KICAgICAgICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgICAgICAgIDx4czpzZXF1ZW5jZT4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0icmVxdWVzdGlkIiB0eXBlPSJ4czpzdHJpbmciLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iY3JlYXRlZHQiIHR5cGU9InhzOnN0cmluZyIvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJjcmVhdGVieSIgdHlwZT0ieHM6c3RyaW5nIi8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9Im1vZGR0IiB0eXBlPSJ4czpzdHJpbmciLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0ibW9kYnkiIHR5cGU9InhzOnN0cmluZyIvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJ3b3JrcGxhbiIgdHlwZT0ieHM6ZmxvYXQiLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0id29ya3BsYW5fZ3JvdXAiIHR5cGU9InhzOnN0cmluZyIvPg0KICAgICAgICAgICAgPC94czpzZXF1ZW5jZT4NCiAgICAgICAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICAgICAgICA8L3hzOmVsZW1lbnQ+DQogICAgICA8L3hzOnNlcXVlbmNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCjwveHM6c2NoZW1hPg0K</list>
+  </attribute>
+</metadata>

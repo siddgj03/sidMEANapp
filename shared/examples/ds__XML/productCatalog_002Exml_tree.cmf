@@ -1,0 +1,62 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:c0f64438-d52c-436c-b30c-5bbc78bb5d06 -->
+<metadata name="productCatalog.xml" path="/shared/examples/ds_XML/productCatalog.xml" type="TREE" subtype="XMLFILE" changeToken="0">
+  <dataType>
+    <datatype name="catalog" referenceDefinitionSet="/shared/examples/ds_XML/productCatalogDefinitions" referenceType="catalog" subType="ELEMENT_DECL" type="XML" contentConstraint="SEQUENCE" schemaConstraint="ANY" componentType="ELEMENT" componentName="catalog">
+      <schemaDatatype>
+        <datatype name="catalog" superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="ELEMENT_DECL" anonymous="true" type="TREE" refId="257">
+          <element name="category" maxOccurs="2147483647" minOccurs="0">
+            <datatype superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="COMPLEX_TYPE" type="TREE" refId="513">
+              <element name="CategoryID">
+                <datatype name="byte" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="short" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="INTEGER" minValue="-128" maxValue="127"/>
+              </element>
+              <element name="CategoryName">
+                <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+              </element>
+              <element name="products" minOccurs="0">
+                <datatype superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="COMPLEX_TYPE" type="TREE" refId="769">
+                  <element name="product" maxOccurs="2147483647" minOccurs="0">
+                    <datatype superTypeName="anyType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" subType="COMPLEX_TYPE" type="TREE" refId="1025">
+                      <element name="ProductID">
+                        <datatype name="byte" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="short" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="INTEGER" minValue="-128" maxValue="127"/>
+                      </element>
+                      <element name="ProductName">
+                        <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                      </element>
+                      <element name="ProductDescription">
+                        <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                      </element>
+                      <element name="SerialNumber">
+                        <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                      </element>
+                      <element name="UnitPrice">
+                        <datatype name="float" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="FLOAT"/>
+                      </element>
+                      <element name="ReorderLevel">
+                        <datatype name="byte" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="short" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="INTEGER" minValue="-128" maxValue="127"/>
+                      </element>
+                      <element name="LeadTime">
+                        <datatype name="string" namespace="http://www.w3.org/2001/XMLSchema" superTypeName="anySimpleType" superTypeNamespace="http://www.w3.org/2001/XMLSchema" type="STRING" maxLength="2147483647"/>
+                      </element>
+                    </datatype>
+                  </element>
+                </datatype>
+              </element>
+            </datatype>
+          </element>
+        </datatype>
+      </schemaDatatype>
+    </datatype>
+  </dataType>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege group="all" domain="composite" privileges="READ SELECT"/>
+  </security>
+  <attribute name="charset" type="STRING">&lt;auto detect&gt;</attribute>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING"/>
+  <attribute name="creatorUserName" type="STRING"/>
+  <attribute name="schemaLocation" type="NULL"/>
+  <attribute name="selectionState" type="INTEGER">2</attribute>
+  <attribute name="url" type="STRING">file:///C:/Program%20Files/TIBCO/TDV%20Server%208.3-9850/docs/examples/productCatalog.xml</attribute>
+</metadata>

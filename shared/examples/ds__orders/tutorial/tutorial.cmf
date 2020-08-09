@@ -1,0 +1,12 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:c0f64438-d52c-436c-b30c-5bbc78bb5d06 -->
+<metadata name="tutorial" path="/shared/examples/ds_orders/tutorial" type="CONTAINER" subtype="SCHEMA" changeToken="0">
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege group="all" domain="composite" privileges="READ EXECUTE SELECT"/>
+  </security>
+  <attribute name="autoAddChildren" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1395102483600</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+</metadata>

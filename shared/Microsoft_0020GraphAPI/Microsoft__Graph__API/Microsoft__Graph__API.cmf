@@ -1,0 +1,55 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:c0f64438-d52c-436c-b30c-5bbc78bb5d06 -->
+<metadata name="Microsoft_Graph_API" path="/shared/Microsoft GraphAPI/Microsoft_Graph_API" type="DATA_SOURCE" subtype="NONE" changeToken="0">
+  <security>
+    <owner user="nobody" domain="composite"/>
+  </security>
+  <attribute name="BadgerFish" type="STRING">false</attribute>
+  <attribute name="JSONFormat" type="STRING">false</attribute>
+  <attribute name="OAuthConfig" type="STRING">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;OAuthConfig&gt;
+    &lt;OAuthFlowConfig useRefreshToken=&quot;false&quot; useProcessors=&quot;false&quot; useCustomFlow=&quot;false&quot; timeStamp=&quot;1596152546652&quot; state=&quot;&quot; scope=&quot;https://graph.microsoft.com/.default&quot; redirectUri=&quot;&quot; processors=&quot;&amp;lt;Authorization&amp;gt; &amp;lt;AuthorizationProcessors&amp;gt; &amp;lt;AuthorizationProcessor&amp;gt; document.getElementById(&apos;Username&apos;).value=&apos;*username*&apos;; document.getElementById(&apos;Password&apos;).value=&apos;*password*&apos;; document.getElementsByName(&apos;button&apos;)[0].click(); &amp;lt;/AuthorizationProcessor&amp;gt; &amp;lt;/AuthorizationProcessors&amp;gt; &amp;lt;/Authorization&amp;gt;&quot; oAuthFlowType=&quot;ClientCredentials&quot; exprTime=&quot;3599&quot; customFlow=&quot;&quot; clientSecret=&quot;hN@iO06i9tyTM=Gn7hrctXa=eatHi[DX&quot; clientId=&quot;77cb5b00-0c2c-433d-8baf-7488ef97db52&quot; authrizationUri=&quot;&quot; accessTokenUri=&quot;https://login.microsoftonline.com/a3ecbd48-a972-4e71-bae3-1339ccdfdd34/oauth2/v2.0/token&quot; accessTokenType=&quot;Query&quot; accessToken=&quot;eyJ0eXAiOiJKV1QiLCJub25jZSI6Imw5V3BDNS0xbU4za3dZVzdIUTFVODJMRmRXeXlsRDZrNE41ZU9IYUJxLVUiLCJhbGciOiJSUzI1NiIsIng1dCI6Imh1Tjk1SXZQZmVocTM0R3pCRFoxR1hHaXJuTSIsImtpZCI6Imh1Tjk1SXZQZmVocTM0R3pCRFoxR1hHaXJuTSJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9hM2VjYmQ0OC1hOTcyLTRlNzEtYmFlMy0xMzM5Y2NkZmRkMzQvIiwiaWF0IjoxNTk2MTUyMjQ2LCJuYmYiOjE1OTYxNTIyNDYsImV4cCI6MTU5NjE1NjE0NiwiYWlvIjoiRTJCZ1lGajN2bkZSMDQ0MjN4bE11cjhuU3E5K0FnQT0iLCJhcHBfZGlzcGxheW5hbWUiOiJya2Vhcm5leS1HcmFwaEFQSVRlc3QiLCJhcHBpZCI6Ijc3Y2I1YjAwLTBjMmMtNDMzZC04YmFmLTc0ODhlZjk3ZGI1MiIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2EzZWNiZDQ4LWE5NzItNGU3MS1iYWUzLTEzMzljY2RmZGQzNC8iLCJvaWQiOiI3MjQ2M2EzMC01OWI4LTRhZDktYTZhYi1mY2EyZmJhYWE3NTYiLCJyb2xlcyI6WyJVc2VyLlJlYWQuQWxsIiwiUmVwb3J0cy5SZWFkLkFsbCJdLCJzdWIiOiI3MjQ2M2EzMC01OWI4LTRhZDktYTZhYi1mY2EyZmJhYWE3NTYiLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiTkEiLCJ0aWQiOiJhM2VjYmQ0OC1hOTcyLTRlNzEtYmFlMy0xMzM5Y2NkZmRkMzQiLCJ1dGkiOiJ2THprMG9fZGxraS1mWXN0MTB3WEFBIiwidmVyIjoiMS4wIiwieG1zX3RjZHQiOjE0MDM2MzM5MDR9.jJ575NzyKx7fxmBRSSTWdcURPi4Ctr84LDW3perqVLYFikyLSoZcxcLwA7mV6R9z-8DVA0H6MLDUhNa4t4OGYzSfa597HGIAj5bS4RZrw-_YXSACjB6GoCJoRpb9XFAG5DpkYvBnccLMfaAUinRQ8WEgaZrM-LlynY4obAbK1cIN0RJrwruLrONdzt7-3L3vTB9O2w-jBRBVgfTEFgCMsuQJsKruJctsCGQVedakzffMyJI8YJKNMtdoWY4riaeK6s4PqGUy5UvkDsycQsK564uwMeN2jJ1BGE1qgobpYtEVSrh03PeMNGhnADWBcrwADH_oaKnPojxogz0zz6KliQ&quot;&gt;
+        &lt;SensitiveKeyWords/&gt;
+    &lt;/OAuthFlowConfig&gt;
+&lt;/OAuthConfig&gt;
+</attribute>
+  <attribute name="PackageName" type="STRING"/>
+  <attribute name="PrimitiveValue" type="STRING">false</attribute>
+  <attribute name="RestOperations" type="STRING">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;bindingModel&gt;&lt;portBindings/&gt;&lt;/bindingModel&gt;</attribute>
+  <attribute name="accessToken" type="STRING">eyJ0eXAiOiJKV1QiLCJub25jZSI6Imw5V3BDNS0xbU4za3dZVzdIUTFVODJMRmRXeXlsRDZrNE41ZU9IYUJxLVUiLCJhbGciOiJSUzI1NiIsIng1dCI6Imh1Tjk1SXZQZmVocTM0R3pCRFoxR1hHaXJuTSIsImtpZCI6Imh1Tjk1SXZQZmVocTM0R3pCRFoxR1hHaXJuTSJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9hM2VjYmQ0OC1hOTcyLTRlNzEtYmFlMy0xMzM5Y2NkZmRkMzQvIiwiaWF0IjoxNTk2MTUyMjQ2LCJuYmYiOjE1OTYxNTIyNDYsImV4cCI6MTU5NjE1NjE0NiwiYWlvIjoiRTJCZ1lGajN2bkZSMDQ0MjN4bE11cjhuU3E5K0FnQT0iLCJhcHBfZGlzcGxheW5hbWUiOiJya2Vhcm5leS1HcmFwaEFQSVRlc3QiLCJhcHBpZCI6Ijc3Y2I1YjAwLTBjMmMtNDMzZC04YmFmLTc0ODhlZjk3ZGI1MiIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2EzZWNiZDQ4LWE5NzItNGU3MS1iYWUzLTEzMzljY2RmZGQzNC8iLCJvaWQiOiI3MjQ2M2EzMC01OWI4LTRhZDktYTZhYi1mY2EyZmJhYWE3NTYiLCJyb2xlcyI6WyJVc2VyLlJlYWQuQWxsIiwiUmVwb3J0cy5SZWFkLkFsbCJdLCJzdWIiOiI3MjQ2M2EzMC01OWI4LTRhZDktYTZhYi1mY2EyZmJhYWE3NTYiLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiTkEiLCJ0aWQiOiJhM2VjYmQ0OC1hOTcyLTRlNzEtYmFlMy0xMzM5Y2NkZmRkMzQiLCJ1dGkiOiJ2THprMG9fZGxraS1mWXN0MTB3WEFBIiwidmVyIjoiMS4wIiwieG1zX3RjZHQiOjE0MDM2MzM5MDR9.jJ575NzyKx7fxmBRSSTWdcURPi4Ctr84LDW3perqVLYFikyLSoZcxcLwA7mV6R9z-8DVA0H6MLDUhNa4t4OGYzSfa597HGIAj5bS4RZrw-_YXSACjB6GoCJoRpb9XFAG5DpkYvBnccLMfaAUinRQ8WEgaZrM-LlynY4obAbK1cIN0RJrwruLrONdzt7-3L3vTB9O2w-jBRBVgfTEFgCMsuQJsKruJctsCGQVedakzffMyJI8YJKNMtdoWY4riaeK6s4PqGUy5UvkDsycQsK564uwMeN2jJ1BGE1qgobpYtEVSrh03PeMNGhnADWBcrwADH_oaKnPojxogz0zz6KliQ</attribute>
+  <attribute name="authentication" type="STRING">OAUTH 2.0</attribute>
+  <attribute name="autoAddChildren" type="BOOLEAN">true</attribute>
+  <attribute name="cacheStatusAndTrackingDS" type="STRING"/>
+  <attribute name="cacheStatusTable" type="STRING"/>
+  <attribute name="cacheTrackingTable" type="STRING"/>
+  <attribute name="chunkedTransferCoding" type="BOOLEAN">false</attribute>
+  <attribute name="circularRedirectsAllowed" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1586965374672</attribute>
+  <attribute name="creatorUserDomain" type="STRING">rich-ad</attribute>
+  <attribute name="creatorUserId" type="INTEGER">110764</attribute>
+  <attribute name="creatorUserName" type="STRING">lbuajdz</attribute>
+  <attribute name="domain" type="STRING"/>
+  <attribute name="driverName" type="STRING">REST</attribute>
+  <attribute name="encodeUrl" type="BOOLEAN">true</attribute>
+  <attribute name="environmentPassThrough" type="STRING"/>
+  <attribute name="execTimeout" type="LONG">0</attribute>
+  <attribute name="isPassThrough" type="STRING">Disabled</attribute>
+  <attribute name="jsonResponseWrapper" type="STRING"/>
+  <attribute name="keystore" type="MAP"></attribute>
+  <attribute name="lastModifiedDate" type="LONG">1596152546659</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">110764</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="login" type="STRING"/>
+  <attribute name="name" type="STRING">Microsoft_Graph_API</attribute>
+  <attribute name="noPresentCert" type="BOOLEAN">false</attribute>
+  <attribute name="password" type="PASSWORD_STRING">ENC(AGwnWMU3TbxA8kVVfolpUw==$rKPaEd+zgqngBC6/aYxgow==)</attribute>
+  <attribute name="persistPassword" type="BOOLEAN">true</attribute>
+  <attribute name="propertyPassThrough" type="STRING"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1586965374672</attribute>
+  <attribute name="retrieveToken" type="STRING">true</attribute>
+  <attribute name="spn" type="STRING"/>
+  <attribute name="type" type="STRING">Rest</attribute>
+  <attribute name="url" type="STRING">https://graph.microsoft.com/v1.0/reports/getEmailActivityUserDetail(period=%27D7%27)</attribute>
+  <attribute name="userDeletedSet" type="SET"></attribute>
+</metadata>
